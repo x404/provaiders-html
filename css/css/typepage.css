@@ -1,0 +1,186 @@
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
+h1 {
+  font-size: 36px;
+  font-size: 3.6rem;
+}
+h2 {
+  font-size: 32px;
+  font-size: 3.2rem;
+}
+h3 {
+  font-size: 30px;
+  font-size: 3rem;
+}
+h4 {
+  font-size: 28px;
+  font-size: 2.8rem;
+}
+h5 {
+  font-size: 26px;
+  font-size: 2.6rem;
+}
+h6 {
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "MyriadProLightExt";
+  font-weight: normal;
+  color: #181818;
+}
+@font-face {
+  font-family: "MyriadProRegular";
+  src: url("../fonts/MyriadProRegular/MyriadProRegular.eot");
+  src: url("../fonts/MyriadProRegular/MyriadProRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/MyriadProRegular/MyriadProRegular.woff") format("woff"), url("../fonts/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+.regular {
+  font-family: "MyriadProRegular";
+}
+@font-face {
+  font-family: 'MyriadProLightExt';
+  src: url('../fonts/MyriadPro-LightSemiExt.otf') format('truetype');
+  font-style: normal;
+  font-weight: 300;
+}
+.regularlightext {
+  font-family: "MyriadProLightExt";
+}
+a {
+  color: #0090db;
+  text-decoration: none;
+}
+a:hover {
+  color: #00bfdb;
+}
+table {
+  border-spacing: 0;
+  padding: 0;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+blockquote {
+  background-color: #eef3fa;
+  border: 1px solid #dfe8f0;
+  border-left: 19px solid #0f78e9;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.6;
+  margin: 15px 0;
+  padding: 23px;
+}
+.alignleft {
+  float: left;
+  margin: 12px 28px 28px 0;
+}
+.alignright {
+  float: right;
+  margin: 7px 0 28px 28px;
+}
+.aligncenter {
+  clear: both;
+  display: block;
+  margin: 7px auto;
+}
+table {
+  border-left: 1px solid #dfe8f0;
+  border-right: 1px solid #dfe8f0;
+  margin-top: 18px;
+  width: 100%;
+}
+table th,
+table td {
+  padding-left: 18px;
+}
+table th {
+  font-family: "MyriadProRegular";
+  color: #8a939f;
+  font-weight: normal;
+  background-color: #eef3fa;
+  padding-top: 1.8rem;
+  padding-bottom: 1.6rem;
+  text-align: left;
+}
+table td {
+  font-size: 15px;
+  font-size: 1.5rem;
+  color: #282828;
+  border-bottom: 1px solid #dfe8f0;
+  padding-top: 14px;
+  padding-bottom: 11px;
+}
+ul {
+  list-style: none;
+  margin: 15px 0;
+}
+ul li {
+  margin-top: 10px;
+  padding-left: 19px;
+  position: relative;
+}
+ul li:before {
+  background-color: #0f78e9;
+  content: "";
+  display: block;
+  height: 3px;
+  left: 0;
+  position: absolute;
+  top: 10px;
+  width: 10px;
+}
+ul li ul {
+  margin: 10px 0;
+}
+ul li ul li:before {
+  width: 4px;
+  height: 4px;
+  top: 8px;
+}
+ol {
+  counter-reset: li;
+  margin-left: 0;
+  list-style: none;
+}
+ol li {
+  margin-top: 10px;
+  position: relative;
+  padding-left: 30px;
+}
+ol li:before {
+  content: counter(li) ")";
+  /* В качестве данных используем счетчик */
+  counter-increment: li;
+  /* Увеличиваем значение счетчика на 1 */
+  /* Позиционируем и стилизируем цифры */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  color: #0f78e9;
+  font-size: 18px;
+}
+ol li ol {
+  counter-reset: li;
+}
+ol li ol li {
+  padding-left: 30px;
+}
+ol li ol li:before {
+  font-size: 16px;
+  content: counter(li) ".";
+}
