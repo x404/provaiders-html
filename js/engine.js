@@ -409,6 +409,17 @@ $(document).ready(function(){
 	})
 
 
+	// карточка провайдера
+	$('.about-us, .how').find('.more a').click(function(e){
+		e.preventDefault();
+		var $this = $(this);
+
+		$this.parent().prev('.moretext').slideToggle();
+		($this.hasClass('expand')) ?  $this.text('Показать продолжение').removeClass('expand') : $this.text('Свернуть').addClass('expand');
+	})
+
+
+
 	// mobile-menu
 	$('.mobile-menu').each(function(){
 		var $this = $(this),
