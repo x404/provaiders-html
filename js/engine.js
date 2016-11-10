@@ -410,7 +410,7 @@ $(document).ready(function(){
 
 
 	// карточка провайдера
-	$('.about-us, .how').find('.more a').click(function(e){
+	$('.about-us, .how, .expert_reviews_body').find('.more a').click(function(e){
 		e.preventDefault();
 		var $this = $(this);
 
@@ -418,23 +418,6 @@ $(document).ready(function(){
 		($this.hasClass('expand')) ?  $this.text('Показать продолжение').removeClass('expand') : $this.text('Свернуть').addClass('expand');
 	});
 
-	$('.reviewers_item_body .more a').click(function(e){
-		e.preventDefault();
-		var $this = $(this),
-			el = $('.reviewers_item_body'),
-			curHeight = el.height(),
-			autoHeight = el.css('height', 'auto').height() + 60;
-
-		if ($this.hasClass('expand')){
-			$this.text('Показать продолжение').removeClass('expand');
-			el.height(curHeight).animate({height: '193px'}, 500);
-		} else {
-			el.height(curHeight).animate({height: autoHeight}, 500);
-			$this.text('Свернуть').addClass('expand')
-		}
-
-		$this.closest('.reviewers_item_body').toggleClass('reviewers_item_body-expand');
-	});
 
 	$('.like a').click(function(e){
 		e.preventDefault();
@@ -611,6 +594,25 @@ $(document).on('click','.btn-compare-in', function(e){
 	$this.removeClass('btn-compare-in').addClass('to-compare');
 });
 
+
+// карточка провайдера
+	$(document).on('click', '.reviewers_item_body .more a', function(e){
+		e.preventDefault();
+		var $this = $(this),
+			el = $this.closest('.reviewers_item_body'),
+			curHeight = el.height(),
+			autoHeight = el.css('height', 'auto').height() + 60;
+
+		if ($this.hasClass('expand')){
+			$this.text('Показать продолжение').removeClass('expand');
+			el.height(curHeight).animate({height: '193px'}, 300);
+		} else {
+			el.height(curHeight).animate({height: autoHeight}, 300);
+			$this.text('Свернуть').addClass('expand')
+		}
+
+		$this.closest('.reviewers_item_body').toggleClass('reviewers_item_body-expand');
+	});
 
 
 
