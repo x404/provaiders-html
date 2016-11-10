@@ -416,7 +416,51 @@ $(document).ready(function(){
 
 		$this.parent().prev('.moretext').slideToggle();
 		($this.hasClass('expand')) ?  $this.text('Показать продолжение').removeClass('expand') : $this.text('Свернуть').addClass('expand');
+	});
+
+	$('.reviewers_item_body .more a').click(function(e){
+		e.preventDefault();
+		var $this = $(this),
+			el = $('.reviewers_item_body'),
+			curHeight = el.height(),
+			autoHeight = el.css('height', 'auto').height() + 60;
+
+		if ($this.hasClass('expand')){
+			$this.text('Показать продолжение').removeClass('expand');
+			el.height(curHeight).animate({height: '193px'}, 500);
+		} else {
+			el.height(curHeight).animate({height: autoHeight}, 500);
+			$this.text('Свернуть').addClass('expand')
+		}
+
+		$this.closest('.reviewers_item_body').toggleClass('reviewers_item_body-expand');
+	});
+
+	$('.like a').click(function(e){
+		e.preventDefault();
+		var $this = $(this);
+		$this.toggleClass('active'); // подсвечиваем иконку
 	})
+
+
+	// подгрузка отзывов в карточке провайдера
+	$('.reviewers_more a').click(function(e){
+		e.preventDefault();
+		var $this = $(this);
+
+		// тут должна быть
+		$.ajax({
+			url: "/reviewers/",
+			cache: false,
+			success: function(html){
+				$("#reviewers_load").append(html);
+			}
+		});
+
+	})
+
+	// #карточка провайдера
+
 
 
 
