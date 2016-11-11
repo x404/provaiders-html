@@ -405,11 +405,51 @@ $(document).ready(function(){
 		$this.closest('.tarif_item').addClass('remove').fadeOut('normal',function(){
 			this.remove();
 		})
-
-	})
+	});
 
 
 	// карточка провайдера
+	// $('.mainmenu .container').scrollspy();   
+
+	// scroll page
+	$('.mainmenu a[href*=\\#]:not([href=\\#])').click(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			if (target.length) {
+				$('html,body').animate({
+					scrollTop: target.offset().top-50
+				}, 1000);
+				return false;
+			}
+		}
+	});	
+
+
+	// scroll Page
+	var panel = $('.mainmenu'),
+		pos = panel.offset();
+
+	$(window).scroll(function(){
+		$this = $(this);
+
+		h = $('.top').height() + $('header.header').height() + $('.neck_card').height()+5;
+		/* =header */
+		if($this.scrollTop() > h && panel.hasClass('default')) {
+			panel.removeClass('default').addClass('fixed');
+			$("body").addClass('bodyFixed');
+		}
+		else {
+			if ($this.scrollTop() < h){
+				if($this.scrollTop() <= pos.top && panel.hasClass('fixed')) {
+					panel.removeClass('fixed').addClass('default');
+					$("body").removeClass('bodyFixed');
+				}
+			}
+		}
+	});
+
+
 	$('.about-us, .how, .expert_reviews_body').find('.more a').click(function(e){
 		e.preventDefault();
 		var $this = $(this);
