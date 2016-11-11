@@ -151,7 +151,7 @@ $(document).ready(function(){
 
 
 	// интерактивный поиск в полее ввода
-	$('#street').typeahead({
+	$('#street, #check-street').typeahead({
 		items: 5, 
 		ajax: { 
 			url: '/address/list',
@@ -160,7 +160,8 @@ $(document).ready(function(){
 		onSelect: function(item) {
 		}
 	});
-	$('#house').typeahead({
+
+	$('#house, #check-house').typeahead({
 		items: 5, 
 		ajax: { 
 			url: '/house/list',
@@ -409,10 +410,27 @@ $(document).ready(function(){
 
 
 	// карточка провайдера
-	// $('.mainmenu .container').scrollspy();   
+
+	// проверка адреса
+	$('#check-address .submit').click(function(e){
+		e.preventDefault();
+		$.ajax({
+			url: "/check/", // по url находится ajax эмулятор - mockajax
+			cache: false,
+			success: function(result){
+				if (result == 'ok'){
+					html = '<div class="result result-ok">Адрес обслуживается</div>';
+				} else {
+					html = '<div class="result result-error">Адрес не обслуживается</div>';
+				};
+
+				$('.card_tarifs .verify form').append(html);
+			}
+		});		
+	});
 
 	// scroll page
-	$('.mainmenu a[href*=\\#]:not([href=\\#])').click(function() {
+	$('.mainmenu a[href*=\\#]:not([href=\\#]), .graduate_info_box-experts a').click(function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 			var target = $(this.hash);
 			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -463,7 +481,26 @@ $(document).ready(function(){
 		e.preventDefault();
 		var $this = $(this);
 		$this.toggleClass('active'); // подсвечиваем иконку
-	})
+	});
+
+
+	// подгрузка тарифов в карточке провайдера
+	$('.tarifs_more a').click(function(e){
+		e.preventDefault();
+		var $this = $(this);
+
+		$.ajax({
+			url: "/tarifs/", // по url находится ajax эмулятор - mockajax
+			cache: false,
+			success: function(html){
+				$('#tarifs_load').append('<div class="toggle">' + html + '</div>');
+				$('#tarifs_load .toggle').slideDown('normal', function(){
+					$('#tarifs_load .toggle').removeClass('toggle');
+					$('.tarifs_more').remove();
+				});	
+			}
+		});
+	});	
 
 
 	// подгрузка отзывов в карточке провайдера
@@ -478,7 +515,7 @@ $(document).ready(function(){
 				$('#reviewers_load').append('<div class="toggle">' + html + '</div>');
 				$('#reviewers_load .toggle').slideDown('normal', function(){
 					$('#reviewers_load .toggle').removeClass('toggle');
-				});				
+				});
 			}
 		});
 	});

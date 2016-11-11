@@ -193,7 +193,7 @@
 									<div class="num">5.0</div>
 									<div class="text">
 										<p class="title">Мнение эксперта</p>
-										<p><a href="#" title="">Посмотреть отзыв от эксперта</a></p>
+										<p><a href="#expert" title="">Посмотреть отзыв от эксперта</a></p>
 									</div>
 								</div>
 								<div class="bottom">
@@ -226,146 +226,160 @@
 
 	
 	<!-- =tarifs -->
-	<section id="tarifs" class="card-tarifs">
+	<section id="tarifs" class="card_tarifs">
 		<div class="container">
 			<header>
 				<h1>Тарифы Beeline</h1>
+				<div class="filter_header">
+					<input class="toggle toggle-input" type="checkbox" name="internet" id="internet" value="Интернет" checked="" />
+					<label class="tpTitle" for="internet">Интернет</label>
+					<input class="toggle toggle-input" type="checkbox" name="tv" id="tv" value="ТВ" />
+					<label class="tpTitle" for="tv">ТВ</label>
+				</div>
 			</header>
 
 			<div class="row">
 				<div class="col-lg-9">
-					<article class="tarif_box tarif_item">
-						<div class="tarif_item_description">
-							<div class="tarif_item_top">
-								<div class="head">
-									<div class="title-cat">
-										<h3 class="ctitle"><a href="#" title="">Моно Min + WiFi</a></h3>
-									</div>
-								</div>
-								<div class="params">
-									<div class="params_wrapper">
-										<div class="speed">
-											<div class="num">100</div>
-											<p>Мбит<br>сек</p>
-										</div>
-										<div class="channels">
-											<div class="num">222</div>
-											<p>каналов</p>
-										</div>
-										<div class="price">
-											<div class="price_top">
-												<div class="num">350</div>
-												<p>руб <br> месяц</p>															
-											</div>
-											<div class="price_bottom">
-												555 руб/мес
-											</div>
+					<div class="card_tarifs_list">
+						<article class="tarif_box tarif_item">
+							<div class="tarif_item_description">
+								<div class="tarif_item_top">
+									<div class="head">
+										<div class="title-cat">
+											<h3 class="ctitle"><a href="#" title="">Моно Min + WiFi</a></h3>
 										</div>
 									</div>
+									<div class="params">
+										<div class="params_wrapper">
+											<div class="speed">
+												<div class="num">100</div>
+												<p>Мбит<br>сек</p>
+											</div>
+											<div class="channels">
+												<div class="num">222</div>
+												<p>каналов</p>
+											</div>
+											<div class="price">
+												<div class="price_top">
+													<div class="num">350</div>
+													<p>руб <br> месяц</p>															
+												</div>
+												<div class="price_bottom">
+													555 руб/мес
+												</div>
+											</div>
+										</div>
+									</div>
+									</div>
 								</div>
+							<div class="buttons">
+								<div class="buttons_wrapper">
+									<a href="#" class="btn-compare to-compare"></a>
+									<a href="#" class="btn-connect btn btn-rounded" data-toggle="modal" data-target="#connect">Подключить</a>
+									<button type="button" class="btn-fav btn-fav-in" title=""></button>											
 								</div>
 							</div>
-						<div class="buttons">
-							<div class="buttons_wrapper">
-								<a href="#" class="btn-compare to-compare"></a>
-								<a href="#" class="btn-connect btn btn-rounded" data-toggle="modal" data-target="#connect">Подключить</a>
-								<button type="button" class="btn-fav btn-fav-in" title=""></button>											
-							</div>
-						</div>
-						<div class="label label-action"><img src="images/label-action3.png" alt="Акция" /></div>
-					</article>
-					<article class="tarif_box tarif_item">
-						<div class="tarif_item_description">
-							<div class="tarif_item_top">
-								<div class="head">
-									<div class="title-cat">
-										<h3 class="ctitle"><a href="#" title="">Orion 600x</a></h3>
-									</div>
-								</div>
-								<div class="params">
-									<div class="params_wrapper">
-										<div class="speed">
-											<div class="num">80</div>
-											<p>Мбит<br>сек</p>
+							<div class="label label-action"><img src="images/label-action3.png" alt="Акция" /></div>
+						</article>
+						<article class="tarif_box tarif_item">
+							<div class="tarif_item_description">
+								<div class="tarif_item_top">
+									<div class="head">
+										<div class="title-cat">
+											<h3 class="ctitle"><a href="#" title="">Orion 600x</a></h3>
 										</div>
+									</div>
+									<div class="params">
+										<div class="params_wrapper">
+											<div class="speed">
+												<div class="num">80</div>
+												<p>Мбит<br>сек</p>
+											</div>
 
-										<div class="price">
-											<div class="price_top">
-												<div class="num">600</div>
-												<p>руб <br> месяц</p>
+											<div class="price">
+												<div class="price_top">
+													<div class="num">600</div>
+													<p>руб <br> месяц</p>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="buttons">
-							<div class="buttons_wrapper">
-								<a href="#" class="btn-compare to-compare"></a>
-								<a href="#" class="btn-connect btn btn-rounded" data-toggle="modal" data-target="#connect">Подключить</a>
-								<button type="button" class="btn-fav to-fav" title=""></button>		
-							</div>
-						</div>
-					</article>
-					<article class="tarif_box tarif_item">
-						<div class="tarif_item_description">
-							<div class="tarif_item_top">
-								<div class="head">
-									<div class="title-cat">
-										<h3 class="ctitle"><a href="#" title="">Домашний интернет и ТВ за 500</a></h3>
-									</div>
+							<div class="buttons">
+								<div class="buttons_wrapper">
+									<a href="#" class="btn-compare to-compare"></a>
+									<a href="#" class="btn-connect btn btn-rounded" data-toggle="modal" data-target="#connect">Подключить</a>
+									<button type="button" class="btn-fav to-fav" title=""></button>		
 								</div>
-								<div class="params">
-									<div class="params_wrapper">
-										<div class="speed">
-											<div class="num">100</div>
-											<p>Мбит<br>сек</p>
+							</div>
+						</article>
+						<article class="tarif_box tarif_item">
+							<div class="tarif_item_description">
+								<div class="tarif_item_top">
+									<div class="head">
+										<div class="title-cat">
+											<h3 class="ctitle"><a href="#" title="">Домашний интернет и ТВ за 500</a></h3>
 										</div>
-										<div class="channels">
-											<div class="num">56</div>
-											<p>каналов</p>
-										</div>
-										<div class="price">
-											<div class="price_top">
-												<div class="num">500</div>
-												<p>руб <br> месяц</p>
+									</div>
+									<div class="params">
+										<div class="params_wrapper">
+											<div class="speed">
+												<div class="num">100</div>
+												<p>Мбит<br>сек</p>
+											</div>
+											<div class="channels">
+												<div class="num">56</div>
+												<p>каналов</p>
+											</div>
+											<div class="price">
+												<div class="price_top">
+													<div class="num">500</div>
+													<p>руб <br> месяц</p>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="buttons">
-							<div class="buttons_wrapper">
-								<a href="#" class="btn-compare to-compare"></a>
-								<a href="#" class="btn-connect btn btn-rounded" data-toggle="modal" data-target="#connect">Подключить</a>
-								<button type="button" class="btn-fav to-fav" title=""></button>		
+							<div class="buttons">
+								<div class="buttons_wrapper">
+									<a href="#" class="btn-compare to-compare"></a>
+									<a href="#" class="btn-connect btn btn-rounded" data-toggle="modal" data-target="#connect">Подключить</a>
+									<button type="button" class="btn-fav to-fav" title=""></button>		
+								</div>
 							</div>
-						</div>
-					</article>
+						</article>
 
-					<div class="more text-center">
+						<div id="tarifs_load"></div>
+					</div>
+
+					<div class="tarifs_more more text-center">
 						<a href="#"><span class="ico-list-dark">Показать все тарифы</span></a>
 					</div>
 				</div>
 				<div class="col-lg-3">
 					<div class="verify">
-						<div class="title">Проверьте адрес</div>
-						<form action="#" method="post" id="check-address" name="check-address">
-							<fieldset>
-								<div class="input-field">
-									<label for="check-street" class="name-field">Название улицы</label>
-									<label for="check-street" class="helper-field helper-field-street-connect">Название улицы</label>
-									<input type="text" id="check-street" name="street" class="form-control required" value="" autocomplete="off"  />
-								</div>
-								<div class="input-field">
-									<label for="check-house" class="name-field">Номер дома</label>
-									<label for="check-house" class="helper-field helper-field-house-connect">Номер дома</label>
-									<input type="text" id="check-house" name="house" class="form-control required" value="" autocomplete="off"  />
-								</div>
-								<a href="#" class="btn btn-rounded submit" onclick="document.getElementById('check-address').submit()">Проверить адрес</a>
-							</fieldset>
-						</form>
+						<div class="form">
+							<div class="title">Проверьте адрес</div>
+							<form action="#" method="post" id="check-address" name="check-address">
+								<fieldset>
+									<div class="input-field">
+										<label for="check-street" class="name-field">Название улицы</label>
+										<label for="check-street" class="helper-field helper-field-street-connect">Название улицы</label>
+										<input type="text" id="check-street" name="street" id="street" class="form-control required" value="" autocomplete="off"  />
+									</div>
+									<div class="input-field">
+										<label for="check-house" class="name-field">Номер дома</label>
+										<label for="check-house" class="helper-field helper-field-house-connect">Номер дома</label>
+										<input type="text" id="check-house" name="house" id="house" class="form-control required" value="" autocomplete="off"  />
+									</div>
+									<a href="#" class="btn btn-rounded submit">Проверить адрес</a>
+								</fieldset>
+							</form>
+						</div>
+						<!-- <div class="result result-ok">Адрес обслуживается</div> -->
+						<!-- <div class="result result-error">Адрес не обслуживается</div> -->
 					</div>					
 				</div>
 			</div>
@@ -537,7 +551,7 @@
 	</section>
 
 	<!-- =expert_reviews -->
-	<section class="expert_reviews">
+	<section class="expert_reviews" id="expert">
 		<div class="container">
 			<div class="expert_reviews_wrapper">
 				<img src="tmp/expert.png" alt="" class="expert-photo" />
