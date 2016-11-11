@@ -451,7 +451,7 @@ $(document).ready(function(){
 	$(window).scroll(function(){
 		$this = $(this);
 
-		h = $('.top').height() + $('header.header').height() + $('.neck_card').height()+5;
+		h = $('.top').height() + $('header.header').height() + $('.neck_card').height()-1;
 		/* =header */
 		if($this.scrollTop() > h && panel.hasClass('default')) {
 			panel.removeClass('default').addClass('fixed');
