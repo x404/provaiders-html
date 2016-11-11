@@ -431,17 +431,68 @@ $(document).ready(function(){
 		e.preventDefault();
 		var $this = $(this);
 
-		// тут должна быть
 		$.ajax({
-			url: "/reviewers/",
+			url: "/reviewers/", // по url находится ajax эмулятор - mockajax
 			cache: false,
 			success: function(html){
-				$("#reviewers_load").append(html);
+				$('#reviewers_load').append('<div class="toggle">' + html + '</div>');
+				$('#reviewers_load .toggle').slideDown('normal', function(){
+					$('#reviewers_load .toggle').removeClass('toggle');
+				});				
 			}
 		});
+	});
 
-	})
 
+	// подгрузка вопрос-ответов в карточке провайдера
+	$('.faq_providers_more a').click(function(e){
+		e.preventDefault();
+		var $this = $(this);
+
+		// тут должна быть
+		$.ajax({
+			url: "/faq/", // по url находится ajax эмулятор - mockajax
+			cache: false,
+			success: function(html){
+				$('#faq_providers_load').append('<div class="toggle">' + html + '</div>');
+				$('#faq_providers_load .toggle').slideDown('normal', function(){
+					$('#faq_providers_load .toggle').removeClass('toggle');
+				});
+			}
+		});
+	});
+
+	// подгрузка новостей в карточке провайдера
+	$('.others-company-news a').click(function(e){
+		e.preventDefault();
+		var $this = $(this);
+
+		// тут должна быть
+		$.ajax({
+			url: "/news/", // по url находится ajax эмулятор - mockajax
+			cache: false,
+			success: function(html){
+				$('.others-company-news .others_wrapper').append(html);
+				$('.news_item_toggle').animate({'opacity' : '1'}, 700).removeClass('news_item_toggle');
+			}
+		});
+	});
+
+	// подгрузка акций в карточке провайдера
+	$('.others-company-actions a').click(function(e){
+		e.preventDefault();
+		var $this = $(this);
+
+		// тут должна быть
+		$.ajax({
+			url: "/actions/", // по url находится ajax эмулятор - mockajax
+			cache: false,
+			success: function(html){
+				$('.others-company-actions .others_wrapper').append(html);
+				$('.actions_item_toggle').animate({'opacity' : '1'}, 700);
+			}
+		});
+	});	
 	// #карточка провайдера
 
 

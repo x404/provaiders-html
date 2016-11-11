@@ -213,10 +213,10 @@
 		<div class="container">
 			<ul class="nav col-lg-9">
 				<li class="active"><a href="#tarifs" title="">Тарифы</a></li>
-				<li><a href="#about" title="">О компании</a></li>
+				<li><a href="#about-us" title="">О компании</a></li>
 				<li><a href="#how" title="">Как подключить</a></li>
-				<li class="nav-reviews"><a href="#ereviews" title="">Отзывы</a><i class="counter">56</i></li>
-				<li><a href="#faq" title="">Вопросы</a></li>
+				<li class="nav-reviews"><a href="#reviewers" title="">Отзывы</a><i class="counter">56</i></li>
+				<li><a href="#faq-providers" title="">Вопросы</a></li>
 				<li><a href="#news" title="">Новости</a></li>
 				<li class="nav-action"><a href="#actions" title=""><span>Акции</span></a></li>
 			</ul>
@@ -402,9 +402,8 @@
 	</div>
 	<!-- =/how -->	
 
-
 	<!-- =reviewers -->
-	<section class="reviewers">
+	<section class="reviewers" id="reviewers">
 		<div class="container">
 			<header>
 				<div class="title">Отзывы о Beeline <span class="count">56</span></div>
@@ -527,17 +526,15 @@
 						</div>
 					</div>
 				</div>
-
-				<div id="reviewers_load">
-					<!-- подгрузка отзывов в верстке сделана через эмулятор ajax запросов mockajax -->
-				</div>
 			</div>
-			<div class="reviewers_more text-center">
+			<div id="reviewers_load">
+				<!-- подгрузка отзывов в верстке сделана через эмулятор ajax запросов mockajax -->
+			</div>
+			<div class="reviewers_more text-center more-full">
 				<a href="#"><span class="ico-list-gray">Показать еще отзывы</span></a>
 			</div>
 		</div>
 	</section>
-
 
 	<!-- =expert_reviews -->
 	<section class="expert_reviews">
@@ -591,10 +588,84 @@
 	</section>
 	<!-- =/reviewers -->
 
-	<!--  -->
+	<!-- =faq-providers -->
+	<section class="faq_providers" id="faq_providers">
+		<div class="container">
+			<header>
+				<div class="title">Вопросы провайдеру<span class="count">56</span></div>
+				<a href="#" class="btn btn-rounded btn-faq">Задать вопрос</a>
+			</header>
+
+			<article class="faq_item">
+				<div class="faq_item_wrapper">
+					<div class="faq_item_top">
+						<p class="name">Переверзев Владислав <span class="date dateicon">16 октября 2016, в 22:00</span></p>						
+					</div>
+					<div class="faq_item_body">
+						<div class="text">
+							<p>Две недели не буду пользоваться интернетом и телевидением, как можно заблокировать лицевой счет и как потом его разблокировать? Спасибо.</p>
+						</div>
+						<div class="faq_item_answer">
+							<p class="answer_name">Ответ от Beeline</p>
+							<div class="answer_text">
+								<p>Дмитрий, здравствуйте!<br>
+								Для приостановки подачи услуг связи, Вам необходимо написать заявление в любом из наших офисов, и Вам приостановят подачу Интернета и телевидения. Для разблокировки, Вам необходимо будет позвонить по номеру, либо прийти в любой из офисов нашей компании и попросить возобновить подачу услуг связи. Стоимость приостановки подачи телевидения составит 50 руб., блокировка Интернета - бесплатная.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+			<article class="faq_item">
+				<div class="faq_item_wrapper">
+					<div class="faq_item_top">
+						<p class="name">Иванова Александра <span class="date dateicon">16 октября 2016, в 22:00</span></p>						
+					</div>
+					<div class="faq_item_body">
+						<div class="text">
+							<p>Каков срок подключения после подачи заявки?</p>
+						</div>
+						<div class="faq_item_answer">
+							<p class="answer_name">Ответ от Beeline</p>
+							<div class="answer_text">
+								<p>Подключение будет осуществлено в течение  трех дней.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+			<article class="faq_item">
+				<div class="faq_item_wrapper">
+					<div class="faq_item_top">
+						<p class="name">Саша <span class="date dateicon">16 октября 2016, в 22:00</span></p>						
+					</div>
+					<div class="faq_item_body">
+						<div class="text">
+							<p>Есть ли возможность подключения по моему адресу?</p>
+						</div>
+						<div class="faq_item_answer">
+							<p class="answer_name">Ответ от Beeline</p>
+							<div class="answer_text">
+								<p>Проверить существует ли возможность подключения к вашему дому Вы можете на нашем сайте. Также Вы можете оформить на сайте заявку на подключение.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+
+			<div id="faq_providers_load">
+				<!-- подгрузка вопросов в верстке сделана через эмулятор ajax запросов mockajax -->
+			</div>
+
+			<div class="faq_providers_more text-center more-full">
+				<a href="#"><span class="ico-list-gray">Показать еще вопросы</span></a>
+			</div>			
+		</div>
+	</section>
+	<!-- =/faq-providers -->
 
 	<!-- =others -->
-	<section class="others container">
+	<section class="others others-company-news container" id="news">
 		<header>Новости Beeline</header>
 		<div class="others_wrapper">
 			<div class="others_item news_item">
@@ -606,7 +677,6 @@
 						<div class="date dateicon">16 октября 2016</div>
 						<a href="new.html" title="" class="news_item_link">С 15 октября 2016 г. прекращает вещание «ШАНТ ТВ» и становится доступным «ШАНТ Премиум HD»</a>
 					</div>
-					<a href="#" class="category_link btn-type-4" title="">Ростелеком</a>
 				</div>
 			</div>
 			<div class="others_item news_item">
@@ -618,7 +688,6 @@
 						<div class="date dateicon">16 октября 2016</div>
 						<a href="new.html" title="" class="news_item_link">Плановая профилактика на телеканалах</a>
 					</div>
-					<a href="#" class="category_link btn-type-4" title="">Beeline</a>
 				</div>
 			</div>
 			<div class="others_item news_item">
@@ -630,18 +699,28 @@
 						<div class="date dateicon">16 октября 2016</div>
 						<a href="new.html" title="" class="news_item_link">Страхование имущества на выгодных условиях — для тех, у кого «Всё в одном»!</a>
 					</div>
-					<a href="#" class="category_link btn-type-4" title="">Домру</a>
+				</div>
+			</div>
+			<div class="others_item news_item">
+				<div class="news_item_wrapper">
+					<div class="news_item_pic">
+						<img src="tmp/new-3.jpg" alt="" class="img-responsive" />
+					</div>
+					<div class="news_item_desc">
+						<div class="date dateicon">16 октября 2016</div>
+						<a href="new.html" title="" class="news_item_link">Акция «5% за оплату картой «Билайн» на АЗС, в ресторанах и аптеках» продлена</a>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="more text-center">
-			<a href="providers.html" title="Показать еще новости">Показать еще новости</a>				
+		<div class="more text-center more-full">
+			<a href="#" title="Показать еще новости"><span class="ico-list-gray">Показать еще новости</span></a>
 		</div>
 	</section>
 
-	<section class="others container">
+	<section class="others others-company-actions container" id="actions">
 		<header>Акции Beeline</header>
-		<div class="clearfix others_wrapper">
+		<div class="others_wrapper">
 			<div class="others_item actions_item">
 				<div class="actions_item_wrapper">
 					<div class="pic">
@@ -649,7 +728,7 @@
 					</div>
 					<div class="info">
 						<div class="row">
-							<a href="#" class="category_link">ТТК Сибирь</a>
+							<span class="stroke-1">До завершения 11 дней</span>
 							<a href="#" class="label">% Акция</a>
 						</div>
 						<h3><a href="#" title="">Подключи три услуги и получи в подарок телефон</a></h3>
@@ -663,7 +742,7 @@
 					</div>
 					<div class="info">
 						<div class="row">
-							<a href="#" class="category_link">Орион Телеком</a>
+							<span class="stroke-1">До завершения 11 дней</span>
 							<a href="#" class="label">% Акция</a>
 						</div>
 						<h3><a href="#" title="">Подключи три услуги и получи в подарок телефон</a></h3>
@@ -677,7 +756,7 @@
 					</div>
 					<div class="info">
 						<div class="row">
-							<a href="#" class="category_link">Домру</a>
+							<span class="stroke-1">До завершения 11 дней</span>
 							<a href="#" class="label">% Акция</a>
 						</div>
 						<h3><a href="#" title="">Позаботьтесь о здоровье вашего компьютера по выгодной цене!</a></h3>
@@ -685,8 +764,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="more text-center">
-			<a href="providers.html" title="Показать еще новости">Показать еще новости</a>				
+		<div class="more text-center more-full">
+			<a href="#" title="Показать еще акции"><span class="ico-list-gray">Показать еще акции</span></a>				
 		</div>		
 	</section>
 	<!-- =/others -->	
