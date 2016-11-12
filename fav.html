@@ -726,6 +726,364 @@
 </div>
 <!-- =/add-connect -->
 
+<!-- =add-opinion -->
+<div class="modal fade" id="add-opinion" tabindex="-1" role="dialog" aria-labelledby="add-opinionLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-title" id="add-opinionLabel">Оставить отзыв</div>
+			<form action="#" method="post" id="add-opinion-form">
+				<fieldset>
+					<div class="row">
+						<div class="col-md-6 col-sm-6 col-xs-6">
+							<div class="input-field">
+								<label for="name-opinion" class="name-field">Ваше имя</label>
+								<label for="name-opinion" class="helper-field helper-field-name">Ваше имя</label>
+								<input type="text" id="name-opinion" name="name" class="form-control required" value="" />
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-6">
+							<div class="input-field">
+								<label for="tel-opinion" class="name-field">Телефон</label>
+								<label for="tel-opinion" class="helper-field helper-field-tel">Телефон</label>
+								<input type="tel" id="tel-opinion" name="tel" class="form-control required tel" value="" />
+							</div>
+						</div>
+					</div>
+
+					<div class="param_wrapper duration">
+						<span class="title">Сколько пользуетесь услугами?</span>
+
+						<input type="radio" id="duration-down" name="duration" value="Хорошо" checked />
+						<label for="duration-down">Менее 3х месяцев</label>
+
+						<input type="radio" id="duration-up" name="duration" value="Плохо" />
+						<label for="duration-up">Более 3х месяцев</label>
+					</div>
+
+					<div class="param_wrapper estimate">
+						<div class="title">Оценка</div>
+						<div class="item">
+							<div class="item_title">Качество и скорость подключения</div>
+							<div class="item_field">
+								<div class="item_field_radio">
+									<input type="radio" id="quality-1" name="quality" value="1" />
+									<label for="quality-1">1</label>
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="quality-2" name="quality" value="2" />
+									<label for="quality-2">2</label>
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="quality-3" name="quality" value="3" />
+									<label for="quality-3">3</label>
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="quality-4" name="quality" value="4" />
+									<label for="quality-4">4</label>	
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="quality-5" name="quality" value="5" />
+									<label for="quality-5">5</label>
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="quality-6" name="quality" value="6" />
+									<label for="quality-6">6</label>	
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="quality-7" name="quality" value="7" />
+									<label for="quality-7">7</label>
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="quality-8" name="quality" value="8" />
+									<label for="quality-8">8</label>
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="quality-9" name="quality" value="9" />
+									<label for="quality-9">9</label>
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="quality-10" name="quality" value="10" checked />
+									<label for="quality-10">10</label>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="item_title">Стабильность соединения интернета</div>
+							<div class="item_field">
+								<div class="item_field_radio">
+									<input type="radio" id="stability-lan-1" name="stability-lan" value="1" />
+									<label for="stability-lan-1">1</label>
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="stability-lan-2" name="stability-lan" value="2" />
+									<label for="stability-lan-2">2</label>
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="stability-lan-3" name="stability-lan" value="3" />
+									<label for="stability-lan-3">3</label>
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="stability-lan-4" name="stability-lan" value="4" />
+									<label for="stability-lan-4">4</label>	
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="stability-lan-5" name="stability-lan" value="5" />
+									<label for="stability-lan-5">5</label>
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="stability-lan-6" name="stability-lan" value="6" />
+									<label for="stability-lan-6">6</label>	
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="stability-lan-7" name="stability-lan" value="7" />
+									<label for="stability-lan-7">7</label>
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="stability-lan-8" name="stability-lan" value="8" />
+									<label for="stability-lan-8">8</label>
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="stability-lan-9" name="stability-lan" value="9" />
+									<label for="stability-lan-9">9</label>
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="stability-lan-10" name="stability-lan" value="10" checked />
+									<label for="stability-lan-10">10</label>
+								</div>
+
+								<div class="item_field_radio item_field_radio-wauto">
+									<input type="radio" id="stability-lan-11" class="wauto1" name="stability-lan" value="0" />
+									<label for="stability-lan-11">Нет интернета</label>							
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="item_title">Стабильность соединения ТВ</div>
+							<div class="item_field">
+								<div class="item_field_radio">
+									<input type="radio" id="stability-tv-1" name="stability-tv" value="1" />
+									<label for="stability-tv-1">1</label>
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="stability-tv-2" name="stability-tv" value="2" />
+									<label for="stability-tv-2">2</label>
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="stability-tv-3" name="stability-tv" value="3" />
+									<label for="stability-tv-3">3</label>
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="stability-tv-4" name="stability-tv" value="4" />
+									<label for="stability-tv-4">4</label>	
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="stability-tv-5" name="stability-tv" value="5" />
+									<label for="stability-tv-5">5</label>
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="stability-tv-6" name="stability-tv" value="6" />
+									<label for="stability-tv-6">6</label>	
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="stability-tv-7" name="stability-tv" value="7" />
+									<label for="stability-tv-7">7</label>
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="stability-tv-8" name="stability-tv" value="8" />
+									<label for="stability-tv-8">8</label>
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="stability-tv-9" name="stability-tv" value="9" />
+									<label for="stability-tv-9">9</label>
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="stability-tv-10" name="stability-tv" value="10" checked />
+									<label for="stability-tv-10">10</label>
+								</div>
+
+								<div class="item_field_radio item_field_radio-wauto">
+									<input type="radio" id="stability-tv-11" class="wauto1" name="stability-tv" value="0" />
+									<label for="stability-tv-11">Нет ТВ</label>							
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="item_title">Служба поддержки</div>
+							<div class="item_field">
+								<div class="item_field_radio">
+									<input type="radio" id="support-1" name="support" value="1" />
+									<label for="support-1">1</label>
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="support-2" name="support" value="2" />
+									<label for="support-2">2</label>
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="support-3" name="support" value="3" />
+									<label for="support-3">3</label>
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="support-4" name="support" value="4" />
+									<label for="support-4">4</label>	
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="support-5" name="support" value="5" />
+									<label for="support-5">5</label>
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="support-6" name="support" value="6" />
+									<label for="support-6">6</label>	
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="support-7" name="support" value="7" />
+									<label for="support-7">7</label>
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="support-8" name="support" value="8" />
+									<label for="support-8">8</label>
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="support-9" name="support" value="9" />
+									<label for="support-9">9</label>
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="support-10" name="support" value="10" checked />
+									<label for="support-10">10</label>
+								</div>
+
+								<div class="item_field_radio item_field_radio-wauto">
+									<input type="radio" id="support-11" class="wauto1" name="support" value="" />
+									<label for="support-11">Не обращался</label>							
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="item_title">Соответствует ли скорость заявленной?</div>
+							<div class="item_field">
+								<div class="item_field_radio">
+									<input type="radio" id="speed-1" name="speed" value="1" />
+									<label for="speed-1">1</label>
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="speed-2" name="speed" value="2" />
+									<label for="speed-2">2</label>
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="speed-3" name="speed" value="3" />
+									<label for="speed-3">3</label>
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="speed-4" name="speed" value="4" />
+									<label for="speed-4">4</label>	
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="speed-5" name="speed" value="5" />
+									<label for="speed-5">5</label>
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="speed-6" name="speed" value="6" />
+									<label for="speed-6">6</label>	
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="speed-7" name="speed" value="7" />
+									<label for="speed-7">7</label>
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="speed-8" name="speed" value="8" />
+									<label for="speed-8">8</label>
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="speed-9" name="speed" value="9" />
+									<label for="speed-9">9</label>
+								</div>
+
+								<div class="item_field_radio">
+									<input type="radio" id="speed-10" name="speed" value="10" checked />
+									<label for="speed-10">10</label>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="param_wrapper">
+						<div class="title">Отзыв</div>
+
+						<div class="input-field">
+							<label for="advantage" class="name-field">Достоинства</label>
+							<label for="advantage" class="helper-field helper-field-advantage">Достоинства</label>
+							<textarea id="advantage" name="advantage" class="form-control"></textarea>
+						</div>
+						<div class="input-field">
+							<label for="defect" class="name-field">Недостатки</label>
+							<label for="defect" class="helper-field helper-field-defect">Недостатки</label>
+							<textarea id="defect" name="defect" class="form-control"></textarea>
+						</div>
+						<div class="input-field">
+							<label for="msg" class="name-field">Комментарий</label>
+							<label for="msg" class="helper-field helper-field-msg">Комментарий</label>
+							<textarea id="msg" name="msg" class="form-control"></textarea>
+						</div>
+					</div>
+
+					<div class="bottom row">
+						<div class="captcha">
+							<img src="tmp/captcha.jpg" alt="" class="img-responsive" />
+						</div>
+						<input type="submit" class="submit" value="Отправить отзыв" />
+					</div>
+				</fieldset>
+			</form>
+			<button type="button" class="close" data-dismiss="modal"><img src="images/close-modal.png" alt="" /></button>
+		</div>
+	</div>
+</div>
+<!-- =/add-opinion -->
+
 <!-- =/city-choose-popup -->
 <div class="city-choose-popup">
 	<p class="title">Выберите город</p>

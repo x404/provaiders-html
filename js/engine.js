@@ -291,8 +291,42 @@ $(document).ready(function(){
 			if (element.attr('name') == 'address') $('#connect-form .helper-field-address').text('Заполните поле');
 			if (element.attr('name') == 'house') $('#connect-form .helper-field-house').text('Заполните поле');
 		}
+	});
+
+	$('#add-opinion-form').validate({
+		rules: {
+			name:{required : true},
+			tel: {validphone:true}
+		},
+		errorPlacement: function(error, element) {
+			if (element.attr('name') == 'name') $('#add-opinion .helper-field-name').text('Заполните поле');
+			if (element.attr('name') == 'tel') $('#add-opinion .helper-field-tel').text('Заполните поле');
+		},
+		submitHandler: function(form){
+			$problem = false;
+			$(form).find('.estimate input[type=radio]:checked').each(function(){
+				// if ($(this).val() > 0 && $(this).val()<=5) $problem = true;
+				if ($(this).val() > 0 && $(this).val()<=5) $('#add-quality').modal('show');
+			});
+		}
+	});	
+
+	$('#add-quality-form').validate({
+		rules: {
+			name:{required : true},
+			tel: {validphone:true}
+		},
+		errorPlacement: function(error, element) {
+			if (element.attr('name') == 'name') $('#add-opinion .helper-field-name').text('Заполните поле');
+			if (element.attr('name') == 'tel') $('#add-opinion .helper-field-tel').text('Заполните поле');
+		},
+		submitHandler: function(form){
+		}
 	});	
 	// #validate
+
+
+
 
 
 
