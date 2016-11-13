@@ -174,7 +174,7 @@
 						<div class="neck_card_info">
 							<div class="logo"><img src="tmp/beeline.png" alt="Билайн" /></div>
 							<p class="ico-alert alert">Информация актуальна до 31 октября 2016 года</p>
-							<a href="#" class="open-map btn-sprite btn-sprite-balloon">Карта покрытия</a>
+							<a href="#" class="open-map btn-sprite btn-sprite-balloon"><span>Карта покрытия</span></a>
 						</div>
 					</div>
 
@@ -235,7 +235,7 @@
 	<!-- =menu -->
 	<div class="mainmenu default">
 		<div class="container">
-			<ul class="nav col-lg-9">
+			<ul class="nav col-lg-9 col-md-12">
 				<li class="active"><a href="#tarifs" title="">Тарифы</a></li>
 				<li><a href="#about-us" title="">О компании</a></li>
 				<li><a href="#how" title="">Как подключить</a></li>
@@ -263,7 +263,7 @@
 			</header>
 
 			<div class="row">
-				<div class="col-lg-9">
+				<div class="col-lg-9 col-md-12">
 					<div class="card_tarifs_list">
 						<article class="tarif_box tarif_item">
 							<div class="tarif_item_description">
@@ -382,18 +382,18 @@
 						<a href="#"><span class="ico-list-dark">Показать все тарифы</span></a>
 					</div>
 				</div>
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-md-12">
 					<div class="verify">
 						<div class="form">
 							<div class="title">Проверьте адрес</div>
 							<form action="#" method="post" id="check-address" name="check-address">
 								<fieldset>
-									<div class="input-field">
+									<div class="input-field street">
 										<label for="check-street" class="name-field">Название улицы</label>
 										<label for="check-street" class="helper-field helper-field-street-connect">Название улицы</label>
 										<input type="text" id="check-street" name="street" class="form-control required" value="" autocomplete="off"  />
 									</div>
-									<div class="input-field">
+									<div class="input-field house">
 										<label for="check-house" class="name-field">Номер дома</label>
 										<label for="check-house" class="helper-field helper-field-house-connect">Номер дома</label>
 										<input type="text" id="check-house" name="house" class="form-control required" value="" autocomplete="off"  />
@@ -510,7 +510,7 @@
 					<div class="reviewers_item">
 						<!-- top -->
 						<div class="reviewers_item_top">
-							<div class="name-rating">
+							<div class="name-rank">
 								<div class="left">
 									<p class="name">Переверзев Владислав</p>
 									<p class="date dateicon">16 октября 2016, в 22:00</p>
@@ -607,11 +607,16 @@
 						</div>
 					</div>
 					<div class="expert_reviews_description">
-						<div class="expert_reviews_top">
-							<p class="name">Иванов Иван Иванович</p>
-							<div class="stroke-1">Дополнил отзыв 23.10.16</div>
+						<div class="expert_reviews_head">
+							<div class="pic-small"><img src="tmp/expert-sm.png" alt="" /></div>
+							<div class="expert_reviews_right">
+								<div class="expert_reviews_top">
+									<p class="name">Иванов Иван Иванович</p>
+									<div class="stroke-1 add-time">Дополнил отзыв 23.10.16</div>
+								</div>
+								<div class="expert_reviews_meta">Заместитель директора экспертно-оценочкной компании «Провайдерс»</div>							
+							</div>
 						</div>
-						<div class="expert_reviews_meta">Заместитель директора экспертно-оценочкной компании «Провайдерс»</div>
 						<div class="expert_reviews_body">
 							<p>Уже являясь абонентом данной компании (кабельное), решили обзавестись и интернетом. Обратились, оформили заявку. На следующий день в назначенное время пришел мастер. Возился, копался, но провел в квартиру кабель, подулючил роутер,что очень порадовало. С этим проблем нет, но на вопрос "а по квартире кабель не прокладываете"? Мастер ответил, что такие услуги не оказывают. Хотя когда подключали кабельное они прокладывали кабель по комнате под плинтус...</p>
 							<div class="moretext">
@@ -702,108 +707,112 @@
 	<!-- =/faq-providers -->
 
 	<!-- =others -->
-	<section class="others others-company-news container" id="news">
-		<header>Новости Beeline</header>
-		<div class="others_wrapper">
-			<div class="others_item news_item">
-				<div class="news_item_wrapper">
-					<div class="news_item_pic">
-						<img src="tmp/new-1.jpg" alt="" class="img-responsive" />
+	<section class="others others-company-news" id="news">
+		<div class="container">
+			<header>Новости Beeline</header>
+			<div class="others_wrapper">
+				<div class="others_item news_item">
+					<div class="news_item_wrapper">
+						<div class="news_item_pic">
+							<img src="tmp/new-1.jpg" alt="" class="img-responsive" />
+						</div>
+						<div class="news_item_desc">
+							<div class="date dateicon">16 октября 2016</div>
+							<a href="new.html" title="" class="news_item_link">С 15 октября 2016 г. прекращает вещание «ШАНТ ТВ» и становится доступным «ШАНТ Премиум HD»</a>
+						</div>
 					</div>
-					<div class="news_item_desc">
-						<div class="date dateicon">16 октября 2016</div>
-						<a href="new.html" title="" class="news_item_link">С 15 октября 2016 г. прекращает вещание «ШАНТ ТВ» и становится доступным «ШАНТ Премиум HD»</a>
+				</div>
+				<div class="others_item news_item">
+					<div class="news_item_wrapper">
+						<div class="news_item_pic">
+							<img src="tmp/new-2.jpg" alt="" class="img-responsive" />
+						</div>
+						<div class="news_item_desc">
+							<div class="date dateicon">16 октября 2016</div>
+							<a href="new.html" title="" class="news_item_link">Плановая профилактика на телеканалах</a>
+						</div>
+					</div>
+				</div>
+				<div class="others_item news_item">
+					<div class="news_item_wrapper">
+						<div class="news_item_pic">
+							<img src="tmp/new-3.jpg" alt="" class="img-responsive" />
+						</div>
+						<div class="news_item_desc">
+							<div class="date dateicon">16 октября 2016</div>
+							<a href="new.html" title="" class="news_item_link">Страхование имущества на выгодных условиях — для тех, у кого «Всё в одном»!</a>
+						</div>
+					</div>
+				</div>
+				<div class="others_item news_item">
+					<div class="news_item_wrapper">
+						<div class="news_item_pic">
+							<img src="tmp/new-3.jpg" alt="" class="img-responsive" />
+						</div>
+						<div class="news_item_desc">
+							<div class="date dateicon">16 октября 2016</div>
+							<a href="new.html" title="" class="news_item_link">Акция «5% за оплату картой «Билайн» на АЗС, в ресторанах и аптеках» продлена</a>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="others_item news_item">
-				<div class="news_item_wrapper">
-					<div class="news_item_pic">
-						<img src="tmp/new-2.jpg" alt="" class="img-responsive" />
-					</div>
-					<div class="news_item_desc">
-						<div class="date dateicon">16 октября 2016</div>
-						<a href="new.html" title="" class="news_item_link">Плановая профилактика на телеканалах</a>
-					</div>
-				</div>
+			<div class="more text-center more-full">
+				<a href="#" title="Показать еще новости"><span class="ico-list-gray">Показать еще новости</span></a>
 			</div>
-			<div class="others_item news_item">
-				<div class="news_item_wrapper">
-					<div class="news_item_pic">
-						<img src="tmp/new-3.jpg" alt="" class="img-responsive" />
-					</div>
-					<div class="news_item_desc">
-						<div class="date dateicon">16 октября 2016</div>
-						<a href="new.html" title="" class="news_item_link">Страхование имущества на выгодных условиях — для тех, у кого «Всё в одном»!</a>
-					</div>
-				</div>
-			</div>
-			<div class="others_item news_item">
-				<div class="news_item_wrapper">
-					<div class="news_item_pic">
-						<img src="tmp/new-3.jpg" alt="" class="img-responsive" />
-					</div>
-					<div class="news_item_desc">
-						<div class="date dateicon">16 октября 2016</div>
-						<a href="new.html" title="" class="news_item_link">Акция «5% за оплату картой «Билайн» на АЗС, в ресторанах и аптеках» продлена</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="more text-center more-full">
-			<a href="#" title="Показать еще новости"><span class="ico-list-gray">Показать еще новости</span></a>
 		</div>
 	</section>
 
-	<section class="others others-company-actions container" id="actions">
-		<header>Акции Beeline</header>
-		<div class="others_wrapper">
-			<div class="others_item actions_item">
-				<div class="actions_item_wrapper">
-					<div class="pic">
-						<img src="tmp/big-action-4.jpg" alt="" class="img-responsive" />
-					</div>
-					<div class="info">
-						<div class="row">
-							<span class="stroke-1">До завершения 11 дней</span>
-							<a href="#" class="label">% Акция</a>
+	<section class="others others-company-actions" id="actions">
+		<div class="container">
+			<header>Акции Beeline</header>
+			<div class="others_wrapper">
+				<div class="others_item actions_item">
+					<div class="actions_item_wrapper">
+						<div class="pic">
+							<img src="tmp/big-action-4.jpg" alt="" class="img-responsive" />
 						</div>
-						<h3><a href="#" title="">Подключи три услуги и получи в подарок телефон</a></h3>
+						<div class="info">
+							<div class="row">
+								<span class="stroke-1">До завершения 11 дней</span>
+								<a href="#" class="label">% Акция</a>
+							</div>
+							<h3><a href="#" title="">Подключи три услуги и получи в подарок телефон</a></h3>
+						</div>
+					</div>
+				</div>
+				<div class="others_item actions_item">
+					<div class="actions_item_wrapper">
+						<div class="pic">
+							<img src="tmp/big-action-2.jpg" alt="" class="img-responsive" />
+						</div>
+						<div class="info">
+							<div class="row">
+								<span class="stroke-1">До завершения 11 дней</span>
+								<a href="#" class="label">% Акция</a>
+							</div>
+							<h3><a href="#" title="">Подключи три услуги и получи в подарок телефон</a></h3>
+						</div>
+					</div>
+				</div>
+				<div class="others_item actions_item">
+					<div class="actions_item_wrapper">
+						<div class="pic">
+							<img src="tmp/big-action-3.jpg" alt="" class="img-responsive" />
+						</div>
+						<div class="info">
+							<div class="row">
+								<span class="stroke-1">До завершения 11 дней</span>
+								<a href="#" class="label">% Акция</a>
+							</div>
+							<h3><a href="#" title="">Позаботьтесь о здоровье вашего компьютера по выгодной цене!</a></h3>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="others_item actions_item">
-				<div class="actions_item_wrapper">
-					<div class="pic">
-						<img src="tmp/big-action-2.jpg" alt="" class="img-responsive" />
-					</div>
-					<div class="info">
-						<div class="row">
-							<span class="stroke-1">До завершения 11 дней</span>
-							<a href="#" class="label">% Акция</a>
-						</div>
-						<h3><a href="#" title="">Подключи три услуги и получи в подарок телефон</a></h3>
-					</div>
-				</div>
-			</div>
-			<div class="others_item actions_item">
-				<div class="actions_item_wrapper">
-					<div class="pic">
-						<img src="tmp/big-action-3.jpg" alt="" class="img-responsive" />
-					</div>
-					<div class="info">
-						<div class="row">
-							<span class="stroke-1">До завершения 11 дней</span>
-							<a href="#" class="label">% Акция</a>
-						</div>
-						<h3><a href="#" title="">Позаботьтесь о здоровье вашего компьютера по выгодной цене!</a></h3>
-					</div>
-				</div>
+			<div class="more text-center more-full">
+				<a href="#" title="Показать еще акции"><span class="ico-list-gray">Показать еще акции</span></a>				
 			</div>
 		</div>
-		<div class="more text-center more-full">
-			<a href="#" title="Показать еще акции"><span class="ico-list-gray">Показать еще акции</span></a>				
-		</div>		
 	</section>
 	<!-- =/others -->	
 
