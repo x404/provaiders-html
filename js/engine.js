@@ -303,11 +303,12 @@ $(document).ready(function(){
 			if (element.attr('name') == 'tel') $('#add-opinion .helper-field-tel').text('Заполните поле');
 		},
 		submitHandler: function(form){
+			$('#add-opinion').modal('hide');
 			$problem = false;
 			$(form).find('.estimate input[type=radio]:checked').each(function(){
-				// if ($(this).val() > 0 && $(this).val()<=5) $problem = true;
 				if ($(this).val() > 0 && $(this).val()<=5) $('#add-quality').modal('show');
 			});
+
 		}
 	});	
 
@@ -323,6 +324,10 @@ $(document).ready(function(){
 		submitHandler: function(form){
 		}
 	});	
+
+	$('#add-quality').on('hidden.bs.modal', function (e) {
+		$('body').css('padding-right', '0px');
+	});
 	// #validate
 
 
