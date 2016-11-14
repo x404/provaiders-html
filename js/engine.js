@@ -189,16 +189,12 @@ $(document).ready(function(){
 		var $this = $(this),
 			isChecked = ($this.is(':checked')) ? true : false,
 			el = $this.attr('name');
-
 		if (isChecked) {
 			$('aside .filter').find('#' + el).prop('checked', true);
 		} else {
 			$('.filter .param').filter('[data-param=' + el + ']').slideUp();
 			$('aside .filter').find('#' + el).prop('checked', false);
-			// $('.filter-sm').find('#' + el + '-sm').prop('checked', false);
 		}
-
-			// $('aside .filter').find('input[name=' + el + ']').trigger('click');
 	});
 
 
@@ -236,9 +232,6 @@ $(document).ready(function(){
 			$('aside .services input[data-service="' + el + '"]').prop('checked', false);
 		}
 	});
-
-
-
 	// #inputs
 
 
@@ -578,6 +571,19 @@ $(document).ready(function(){
 
 
 	// карточка провайдера
+	$('.card_tarifs .filter_header input[type=checkbox]').on('click', function(){
+		var $this = $(this),
+			isChecked = ($this.is(':checked')) ? true : false,
+			val = $this.data('service');
+
+			console.log($this.val());
+
+		if (isChecked) {
+			$('.card_tarifs_list article[data-tarif=' + $this.val() + ']').slideDown();
+		} else {
+			$('.card_tarifs_list article[data-tarif=' + $this.val() + ']').slideUp();
+		}
+	});	
 
 	// проверка адреса
 	$('#check-address .submit').click(function(e){
@@ -611,30 +617,6 @@ $(document).ready(function(){
 		}
 	});	
 
-
-	// scroll Page
-/*	var panel = $('.mainmenu'),
-		pos = panel.offset();
-
-	$(window).scroll(function(){
-		$this = $(this);
-
-		h = $('.top').height() + $('header.header').height() + $('.neck_card').height()-1;
-
-		if($this.scrollTop() > h && panel.hasClass('default')) {
-			panel.removeClass('default').addClass('fixed');
-			$("body").addClass('bodyFixed');
-		}
-		else {
-			if ($this.scrollTop() < h){
-				if($this.scrollTop() <= pos.top && panel.hasClass('fixed')) {
-					panel.removeClass('fixed').addClass('default');
-					$("body").removeClass('bodyFixed');
-				}
-			}
-		}
-	});
-*/
 
 	$('.about-us, .how, .expert_reviews_body').find('.more a').click(function(e){
 		e.preventDefault();
