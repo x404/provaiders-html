@@ -190,10 +190,10 @@
 
 
 											<div class="place" data-param="internet">
-												<input type="radio" id="radio-3-sm" name="place" value="Домой" checked />
+												<input type="radio" id="radio-3-sm" name="place" value="Домой" data-place="place1"  checked />
 												<label for="radio-3-sm">Домой</label>
 
-												<input type="radio" id="radio-4-sm" name="place" value="В офис" />
+												<input type="radio" id="radio-4-sm" name="place" data-place="place2"  value="В офис" />
 												<label for="radio-4-sm">В офис</label>
 											</div>
 										</div>
@@ -217,8 +217,8 @@
 													<div class="param param-tv hide" data-param="tv">
 														<p class="param_title">Количество ТВ-каналов</p>
 														<div class="slider_controls">
-															<input type="text" id="tv-to-sm" name="tv-to" class="param_control" placeholder="до" readonly />
 															<input type="text" id="tv-from-sm" name="tv-from" class="param_control" placeholder="от" readonly />
+															<input type="text" id="tv-to-sm" name="tv-to" class="param_control" placeholder="до" readonly />
 														</div>
 														<div class="slider">
 															<div id="slider-tv-sm"></div>
@@ -250,11 +250,11 @@
 											<div class="param services">
 												<p class="param_title">Дополнительные услуги</p>
 												<div class="param_item">
-													<input type="checkbox" name="checkbox1" id="checkbox1-sm" value="" />
+													<input type="checkbox" name="checkbox1" data-service="service1" id="checkbox1-sm" value="Wi-fi роутер" />
 													<label for="checkbox1-sm">Wi-fi роутер</label>
 												</div>
 												<div class="param_item">
-													<input type="checkbox" name="checkbox2" id="checkbox2-sm" value="" />
+													<input type="checkbox" name="checkbox2" data-service="service2" id="checkbox2-sm" value="Тв-приставка" />
 													<label for="checkbox2-sm">Тв-приставка</label>
 												</div>
 											</div>
@@ -1024,10 +1024,10 @@
 									</div>
 									<div class="filter_body">
 										<div class="place" data-param="internet">
-											<input type="radio" id="radio3" name="place" value="Домой" checked />
+											<input type="radio" id="radio3" name="place" value="Домой" data-place="place1" checked />
 											<label for="radio3">Домой</label>
 
-											<input type="radio" id="radio4" name="place" value="В офис" />
+											<input type="radio" id="radio4" name="place" value="В офис" data-place="place2" />
 											<label for="radio4">В офис</label>
 										</div>
 										<div class="param param-speed" data-param="internet">
@@ -1071,11 +1071,11 @@
 										<div class="param services">
 											<p class="param_title">Дополнительные услуги</p>
 											<div class="param_item">
-												<input type="checkbox" name="checkbox1" id="checkbox1" value="" />
+												<input type="checkbox" name="checkbox1" data-service="service1" id="checkbox1" value="Wi-fi роутер" />
 												<label for="checkbox1">Wi-fi роутер</label>
 											</div>
 											<div class="param_item">
-												<input type="checkbox" name="checkbox2" id="checkbox2" value="" />
+												<input type="checkbox" name="checkbox2" data-service="service2" id="checkbox2" value="Тв-приставка" />
 												<label for="checkbox2">Тв-приставка</label>
 											</div>
 										</div>

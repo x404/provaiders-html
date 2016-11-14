@@ -47,7 +47,8 @@ $(document).ready(function(){
 		cutoff : '1'
 	});
 
-	$( "#slider-speed, #slider-speed-sm" ).slider({
+	// слайдер со скоростью сети
+	$("#slider-speed, #slider-speed-sm").slider({
 		range: true,
 		min: 20,
 		max: 150,
@@ -59,8 +60,26 @@ $(document).ready(function(){
 			$('#speed-to-sm').val(ui.values[ 1 ]);
 		}
 	});
+	$("#slider-speed").on( "slidechange", function( event, ui ) {
+		$("#slider-speed-sm").slider({
+			range: true,
+			min: 20,
+			max: 150,
+			values: [$('#speed-from').val(), $('#speed-to').val()]
+		});
+	});
+	$("#slider-speed-sm").on( "slidestop", function( event, ui ) {
+		$("#slider-speed").slider({
+			range: true,
+			min: 20,
+			max: 150,
+			values: [$('#speed-from-sm').val(), $('#speed-to-sm').val()]
+		});
+	});
 
-	$("#slider-cost, #slider-cost-sm").slider({
+
+	// слайдер со стоимостью 
+	$("#slider-cost,#slider-cost-sm").slider({
 		range: true,
 		min: 20,
 		max: 150,
@@ -72,7 +91,25 @@ $(document).ready(function(){
 			$('#cost-to-sm').val(ui.values[ 1 ]);
 		}
 	});
+	$("#slider-cost").on( "slidechange", function( event, ui ) {
+		$("#slider-cost-sm").slider({
+			range: true,
+			min: 20,
+			max: 150,
+			values: [$('#cost-from').val(), $('#cost-to').val()]
+		});
+	});
+	$("#slider-cost-sm").on( "slidestop", function( event, ui ) {
+		$("#slider-cost").slider({
+			range: true,
+			min: 20,
+			max: 150,
+			values: [$('#cost-from-sm').val(), $('#cost-to-sm').val()]
+		});
+	});
 
+
+	// слайдер с ТВ
 	$("#slider-tv, #slider-tv-sm").slider({
 		range: true,
 		min: 20,
@@ -85,11 +122,22 @@ $(document).ready(function(){
 			$('#tv-to-sm').val(ui.values[ 1 ]);
 		}
 	});	
-
-
-
-
-    // $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+	$("#slider-tv").on( "slidechange", function( event, ui ) {
+		$("#slider-tv-sm").slider({
+			range: true,
+			min: 20,
+			max: 150,
+			values: [$('#tv-from').val(), $('#tv-to').val()]
+		});
+	});
+	$("#slider-tv-sm").on( "slidestop", function( event, ui ) {
+		$("#slider-tv").slider({
+			range: true,
+			min: 20,
+			max: 150,
+			values: [$('#tv-from-sm').val(), $('#tv-to-sm').val()]
+		});
+	});
 
 
 
@@ -115,19 +163,82 @@ $(document).ready(function(){
 	});
 
 
-	$('.filter #internet').attr('checked',true);
-	$('.filter #tv').attr('checked',false);
-	$('.filter .filter_header input[type="checkbox"]').on('click', function(){
+	// чекбоксы фильтра в боковом меню + синхрон
+	$('.filter #internet').prop('checked',true);
+	$('.filter #tv').prop('checked',false);
+	// чекбоксы в каталоге тарифов
+	$('.filter #internet-sm').prop('checked',true);
+	$('.filter #tv-sm').prop('checked',false);
+
+
+	$('aside .filter .filter_header input[type="checkbox"]').on('click', function(){
 		var $this = $(this),
 			isChecked = ($this.is(':checked')) ? true : false,
 			el = $this.attr('name');
 
 		if (isChecked) {
-			$('.filter .param').filter('[data-param=' + el + ']').slideDown()
+			$('.filter .param').filter('[data-param=' + el + ']').slideDown();
+			$('.filter-sm').find('#' + el + '-sm').prop('checked', true);
 		} else {
-			$('.filter .param').filter('[data-param=' + el + ']').slideUp()			
+			$('.filter .param').filter('[data-param=' + el + ']').slideUp();
+			$('.filter-sm').find('#' + el + '-sm').prop('checked', false);
 		}
 	});
+
+	$('.filter-sm .filter_header .toggle').on('click', function(){
+		var $this = $(this),
+			isChecked = ($this.is(':checked')) ? true : false,
+			el = $this.attr('name');
+
+		if (isChecked) {
+			$('aside .filter').find('#' + el).prop('checked', true);
+		} else {
+			$('.filter .param').filter('[data-param=' + el + ']').slideUp();
+			$('aside .filter').find('#' + el).prop('checked', false);
+			// $('.filter-sm').find('#' + el + '-sm').prop('checked', false);
+		}
+
+			// $('aside .filter').find('input[name=' + el + ']').trigger('click');
+	});
+
+
+	// клик по "домой" или "в офис"
+	$('aside input[name="place"]').on('click', function(){
+		var $this = $(this),
+			el = $this.data('place');
+		$('.filter-sm input[name=place][data-place="' + el + '"]').prop('checked', true);
+	});
+	$('.filter-sm input[name="place"]').on('click', function(){
+		var $this = $(this),
+			el = $this.data('place');
+		$('aside input[name=place][data-place="' + el + '"]').prop('checked', true);
+	});
+
+
+	// клик по доп.услугам в фильтре
+	$('aside .services input[type=checkbox]').on('click', function(){
+		var $this = $(this),
+			isChecked = ($this.is(':checked')) ? true : false,
+			el = $this.data('service');
+		if (isChecked) {
+			$('.filter-sm .services input[data-service="' + el + '"]').prop('checked', true);
+		} else {
+			$('.filter-sm .services input[data-service="' + el + '"]').prop('checked', false);
+		}
+	});
+	$('.filter-sm .services input[type=checkbox]').on('click', function(){
+		var $this = $(this),
+			isChecked = ($this.is(':checked')) ? true : false,
+			el = $this.data('service');
+		if (isChecked) {
+			$('aside .services input[data-service="' + el + '"]').prop('checked', true);
+		} else {
+			$('aside .services input[data-service="' + el + '"]').prop('checked', false);
+		}
+	});
+
+
+
 	// #inputs
 
 
@@ -502,14 +613,14 @@ $(document).ready(function(){
 
 
 	// scroll Page
-	var panel = $('.mainmenu'),
+/*	var panel = $('.mainmenu'),
 		pos = panel.offset();
 
 	$(window).scroll(function(){
 		$this = $(this);
 
 		h = $('.top').height() + $('header.header').height() + $('.neck_card').height()-1;
-		/* =header */
+
 		if($this.scrollTop() > h && panel.hasClass('default')) {
 			panel.removeClass('default').addClass('fixed');
 			$("body").addClass('bodyFixed');
@@ -523,7 +634,7 @@ $(document).ready(function(){
 			}
 		}
 	});
-
+*/
 
 	$('.about-us, .how, .expert_reviews_body').find('.more a').click(function(e){
 		e.preventDefault();
