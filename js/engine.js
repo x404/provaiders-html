@@ -47,7 +47,7 @@ $(document).ready(function(){
 		cutoff : '1'
 	});
 
-	$( "#slider-speed" ).slider({
+	$( "#slider-speed, #slider-speed-sm" ).slider({
 		range: true,
 		min: 20,
 		max: 150,
@@ -55,10 +55,12 @@ $(document).ready(function(){
 		slide: function( event, ui ) {
 			$('#speed-from').val(ui.values[ 0 ]);
 			$('#speed-to').val(ui.values[ 1 ]);
+			$('#speed-from-sm').val(ui.values[ 0 ]);
+			$('#speed-to-sm').val(ui.values[ 1 ]);
 		}
 	});
 
-	$("#slider-cost").slider({
+	$("#slider-cost, #slider-cost-sm").slider({
 		range: true,
 		min: 20,
 		max: 150,
@@ -66,10 +68,12 @@ $(document).ready(function(){
 		slide: function( event, ui ) {
 			$('#cost-from').val(ui.values[ 0 ]);
 			$('#cost-to').val(ui.values[ 1 ]);
+			$('#cost-from-sm').val(ui.values[ 0 ]);
+			$('#cost-to-sm').val(ui.values[ 1 ]);
 		}
 	});
 
-	$("#slider-tv").slider({
+	$("#slider-tv, #slider-tv-sm").slider({
 		range: true,
 		min: 20,
 		max: 150,
@@ -77,8 +81,14 @@ $(document).ready(function(){
 		slide: function( event, ui ) {
 			$('#tv-from').val(ui.values[ 0 ]);
 			$('#tv-to').val(ui.values[ 1 ]);
+			$('#tv-from-sm').val(ui.values[ 0 ]);
+			$('#tv-to-sm').val(ui.values[ 1 ]);
 		}
 	});	
+
+
+
+
     // $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + $( "#slider-range" ).slider( "values", 1 ) );
 
 
@@ -105,8 +115,6 @@ $(document).ready(function(){
 	});
 
 
-
-
 	$('.filter #internet').attr('checked',true);
 	$('.filter #tv').attr('checked',false);
 	$('.filter .filter_header input[type="checkbox"]').on('click', function(){
@@ -121,6 +129,16 @@ $(document).ready(function(){
 		}
 	});
 	// #inputs
+
+
+	// фильтр в каталоге тарифов
+	$('.filter-sm .filter_title .toggle').click(function(e){
+		e.preventDefault();
+		var $this = $(this);
+		$('.filter-sm .filter_wrapper').slideToggle('normal', function(){
+			$this.toggleClass('toggle-up');
+		});
+	})
 
 
 	// comparison

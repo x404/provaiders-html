@@ -164,915 +164,1014 @@
 	<!-- =main -->
 	<div class="main">
 		<div class="container">
-			<div class="row">
-				<div class="col-lg-9 col-md-8 col-sm-12 col-xs-12">
-					<section class="list_tarifs">
-						<header>
-							<h1>Тарифы на интернет и ТВ в Красноярске</h1>
-						</header>
-						<!-- =sortbox -->
-						<div class="sortbox">
-							<ul>
-								<li class="sort-label">Сортировать:</li>
-								<li>
-									<a href="#" class="selected up">По популярности</a>
-								</li>
-								<li>
-									<a href="#">По стоимости</a>
-								</li>
-							</ul>
-						</div>
-						<!-- =/sortbox -->
+			<div class="tarifs_page">
+				<div class="row">
+					<div class="tarifs_page_left col-lg-9 col-md-8 col-sm-12 col-xs-12">
+						<section class="list_tarifs">
+							<header>
+								<h1>Тарифы на интернет и ТВ в Красноярске</h1>
+							</header>
 
-						<div class="row">
-							<div class="col-lg-12">
-								<article class="tarif_box tarif_item">
-									<div class="tarif_item_description">
-										<div class="tarif_item_top">
-											<div class="head">
-												<div class="logo"><img src="tmp/logo-beeline.jpg" alt="Beeline" /></div>
-												<div class="title-cat">
-													<h3 class="ctitle"><a href="#" title="">Моно Min + WiFi</a></h3>
-													<div class="category"><a href="#" class="category_link" title="">Beeline</a></div>	
+							<!-- =filter -->
+							<div class="filter filter-sm">
+								<form action="#" method="post">
+									<div class="filter_title">
+										Фильтр тарифов <a href="#" class="toggle toggle-up"></a>
+									</div>
+									<div class="filter_wrapper">
+										<div class="filter_header">
+											<div class="types">
+												<input class="toggle toggle-input" type="checkbox" name="internet" id="internet-sm" value="Интернет" checked="" />
+												<label class="tpTitle" for="internet-sm">Интернет</label>
+
+												<input class="toggle toggle-input" type="checkbox" name="tv" id="tv-sm" value="ТВ" />
+												<label class="tpTitle" for="tv-sm">ТВ</label>
+											</div>
+
+
+											<div class="place" data-param="internet">
+												<input type="radio" id="radio-3-sm" name="place" value="Домой" checked />
+												<label for="radio-3-sm">Домой</label>
+
+												<input type="radio" id="radio-4-sm" name="place" value="В офис" />
+												<label for="radio-4-sm">В офис</label>
+											</div>
+										</div>
+										<div class="filter_body">
+											<div class="param_wrapper">
+												<div class="cell">
+													<div class="param param-speed" data-param="internet">
+														<p class="param_title">Скорость, Мбит/с</p>
+														<div class="slider_controls">
+															<input type="text" id="speed-from-sm" name="speed-from" class="param_control" placeholder="от" readonly />
+															<input type="text" id="speed-to-sm" name="speed-to" class="param_control" placeholder="до" readonly />
+														</div>
+														<div class="slider">
+															<div id="slider-speed-sm"></div>
+															<p class="slider_start">20</p>
+															<p class="slider_end">150</p>
+														</div>
+													</div>													
+												</div>
+												<div class="cell">
+													<div class="param param-tv hide" data-param="tv">
+														<p class="param_title">Количество ТВ-каналов</p>
+														<div class="slider_controls">
+															<input type="text" id="tv-to-sm" name="tv-to" class="param_control" placeholder="до" readonly />
+															<input type="text" id="tv-from-sm" name="tv-from" class="param_control" placeholder="от" readonly />
+														</div>
+														<div class="slider">
+															<div id="slider-tv-sm"></div>
+															<p class="slider_start">20</p>
+															<p class="slider_end">150</p>
+														</div>
+													</div>													
+												</div>
+												<div class="cell">
+													<div class="param param-cost">
+														<p class="param_title">Абонентская плата, Руб/мес</p>
+														<div class="slider">
+															<div class="slider_controls">
+																<input type="text" id="cost-from-sm" class="param_control" placeholder="от" readonly />
+																<input type="text" id="cost-to-sm" class="param_control" placeholder="до" readonly />
+															</div>
+															<div class="slider">
+																<div id="slider-cost-sm"></div>
+																<p class="slider_start">20</p>
+																<p class="slider_end">150</p>
+															</div>
+														</div>
+													</div>													
+												</div>
+
+
+
+											</div>
+											<div class="param services">
+												<p class="param_title">Дополнительные услуги</p>
+												<div class="param_item">
+													<input type="checkbox" name="checkbox1" id="checkbox1-sm" value="" />
+													<label for="checkbox1-sm">Wi-fi роутер</label>
+												</div>
+												<div class="param_item">
+													<input type="checkbox" name="checkbox2" id="checkbox2-sm" value="" />
+													<label for="checkbox2-sm">Тв-приставка</label>
 												</div>
 											</div>
-											<div class="params">
-												<div class="params_wrapper">
-													<div class="speed">
-														<div class="num">100</div>
-														<p>Мбит<br>сек</p>
-													</div>
-													<div class="channels">
-														<div class="num">222</div>
-														<p>каналов</p>
-													</div>
-													<div class="price">
-														<div class="price_top">
-															<div class="num">350</div>
-															<p>руб <br> месяц</p>															
-														</div>
-														<div class="price_bottom">
-															555 руб/мес
-														</div>
-													</div>
-												</div>
+											<div class="param param-submit">
+												<a href="#" class="submit btn btn-rounded">Подобрать тариф</a>										
 											</div>
- 										</div>
- 										<div class="tarif_item_bottom">
-	 										<span><strong>Подключение:</strong> 0 руб</span>
-	 										<span class="ico-wifi"><strong>Wi-fi роутер</strong> в комплекте</span>
-	 										<span class="ico-tv"><strong>Тв-приставка</strong> в комплекте</span>
- 										</div>
- 									</div>
-									<div class="buttons">
-										<div class="buttons_wrapper">
-											<a href="#" class="btn-compare to-compare"></a>
-											<a href="#" class="btn-connect btn btn-rounded" data-toggle="modal" data-target="#connect">Подключить</a>
-											<button type="button" class="btn-fav btn-fav-in" title=""></button>											
 										</div>
 									</div>
-									<div class="label label-action"><img src="images/label-action3.png" alt="Акция" /></div>
-								</article>
-								<article class="tarif_box tarif_item">
- 									<div class="tarif_item_description">
- 										<div class="tarif_item_top">
-											<div class="head">
-												<div class="logo"><img src="tmp/logo-orion.png" alt="Орион телеком" /></div>
-												<div class="title-cat">
-													<h3 class="ctitle"><a href="#" title="">Orion 600x</a></h3>
-													<div class="category"><a href="#" class="category_link" title="">Орион телеком</a></div>	
-												</div>
-											</div>
-											<div class="params">
-												<div class="params_wrapper">
-													<div class="speed">
-														<div class="num">80</div>
-														<p>Мбит<br>сек</p>
-													</div>
-													<div class="price">
-														<div class="price_top">
-															<div class="num">600</div>
-															<p>руб <br> месяц</p>															
-														</div>
-													</div>
-												</div>
-											</div>
- 										</div>
- 										<div class="tarif_item_bottom">
-	 										<span><strong>Подключение:</strong> 0 руб</span>
-	 										<span class="ico-wifi"><strong>Wi-fi роутер</strong> 1 руб/мес</span>
- 										</div>
- 									</div>
-									<div class="buttons">
-										<div class="buttons_wrapper">
-											<a href="#" class="btn-compare to-compare"></a>
-											<a href="#" class="btn-connect btn btn-rounded" data-toggle="modal" data-target="#connect">Подключить</a>
-											<button type="button" class="btn-fav to-fav" title=""></button>		
-										</div>
-									</div>
-								</article>
-								<article class="tarif_box tarif_item">
- 									<div class="tarif_item_description">
- 										<div class="tarif_item_top">
-											<div class="head">
-												<div class="logo"><img src="tmp/logo-domru.jpg" alt="Домру" /></div>
-												<div class="title-cat">
-													<h3 class="ctitle"><a href="#" title="">Домашний интернет и ТВ за 500</a></h3>
-													<div class="category"><a href="#" class="category_link" title="">Домру</a></div>	
-												</div>
-											</div>
-											<div class="params">
-												<div class="params_wrapper">
-													<div class="speed">
-														<div class="num">100</div>
-														<p>Мбит<br>сек</p>
-													</div>
-													<div class="channels">
-														<div class="num">222</div>
-														<p>каналов</p>
-													</div>
-													<div class="price">
-														<div class="price_top">
-															<div class="num">500</div>
-															<p>руб <br> месяц</p>															
-														</div>
-														<div class="price_bottom">
-															555 руб/мес
-														</div>
-													</div>
-												</div>
-											</div>
- 										</div>
- 										<div class="tarif_item_bottom">
-	 										<span><strong>Подключение:</strong> 0 руб</span>
-	 										<span class="ico-wifi"><strong>Wi-fi роутер</strong> в комплекте</span>
-	 										<span class="ico-tv"><strong>Тв-приставка</strong> в комплекте</span>
- 										</div>
- 									</div>
-									<div class="buttons">
-										<div class="buttons_wrapper">
-											<a href="#" class="btn-compare to-compare"></a>
-											<a href="#" class="btn-connect btn btn-rounded" data-toggle="modal" data-target="#connect">Подключить</a>
-											<button type="button" class="btn-fav btn-fav-in" title=""></button>		
-										</div>
-									</div>
-								</article>
-								<article class="tarif_box tarif_item">
-									<div class="tarif_item_description">
-										<div class="tarif_item_top">
-											<div class="head">
-												<div class="logo"><img src="tmp/logo-beeline.jpg" alt="Beeline" /></div>
-												<div class="title-cat">
-													<h3 class="ctitle"><a href="#" title="">Моно Min + WiFi</a></h3>
-													<div class="category"><a href="#" class="category_link" title="">Beeline</a></div>	
-												</div>
-											</div>
-											<div class="params">
-												<div class="params_wrapper">
-													<div class="speed">
-														<div class="num">100</div>
-														<p>Мбит<br>сек</p>
-													</div>
-													<div class="channels">
-														<div class="num">222</div>
-														<p>каналов</p>
-													</div>
-													<div class="price">
-														<div class="price_top">
-															<div class="num">350</div>
-															<p>руб <br> месяц</p>															
-														</div>
-														<div class="price_bottom">
-															555 руб/мес
-														</div>
-													</div>
-												</div>
-											</div>
- 										</div>
- 										<div class="tarif_item_bottom">
-	 										<span><strong>Подключение:</strong> 0 руб</span>
-	 										<span class="ico-wifi"><strong>Wi-fi роутер</strong> в комплекте</span>
-	 										<span class="ico-tv"><strong>Тв-приставка</strong> в комплекте</span>
- 										</div>
- 									</div>
-									<div class="buttons">
-										<div class="buttons_wrapper">
-											<a href="#" class="btn-compare to-compare"></a>
-											<a href="#" class="btn-connect btn btn-rounded" data-toggle="modal" data-target="#connect">Подключить</a>
-											<button type="button" class="btn-fav btn-fav-in" title=""></button>											
-										</div>
-									</div>
-									<div class="label label-action"><img src="images/label-action3.png" alt="Акция" /></div>
-								</article>
-								<article class="tarif_box tarif_item">
- 									<div class="tarif_item_description">
- 										<div class="tarif_item_top">
-											<div class="head">
-												<div class="logo"><img src="tmp/logo-orion.png" alt="Орион телеком" /></div>
-												<div class="title-cat">
-													<h3 class="ctitle"><a href="#" title="">Orion 600x</a></h3>
-													<div class="category"><a href="#" class="category_link" title="">Орион телеком</a></div>	
-												</div>
-											</div>
-											<div class="params">
-												<div class="params_wrapper">
-													<div class="speed">
-														<div class="num">80</div>
-														<p>Мбит<br>сек</p>
-													</div>
-													<div class="price">
-														<div class="price_top">
-															<div class="num">600</div>
-															<p>руб <br> месяц</p>															
-														</div>
-													</div>
-												</div>
-											</div>
- 										</div>
- 										<div class="tarif_item_bottom">
-	 										<span><strong>Подключение:</strong> 0 руб</span>
-	 										<span class="ico-wifi"><strong>Wi-fi роутер</strong> 1 руб/мес</span>
- 										</div>
- 									</div>
-									<div class="buttons">
-										<div class="buttons_wrapper">
-											<a href="#" class="btn-compare to-compare"></a>
-											<a href="#" class="btn-connect btn btn-rounded" data-toggle="modal" data-target="#connect">Подключить</a>
-											<button type="button" class="btn-fav to-fav" title=""></button>		
-										</div>
-									</div>
-								</article>
-								<article class="tarif_box tarif_item">
- 									<div class="tarif_item_description">
- 										<div class="tarif_item_top">
-											<div class="head">
-												<div class="logo"><img src="tmp/logo-domru.jpg" alt="Домру" /></div>
-												<div class="title-cat">
-													<h3 class="ctitle"><a href="#" title="">Домашний интернет и ТВ за 500</a></h3>
-													<div class="category"><a href="#" class="category_link" title="">Домру</a></div>	
-												</div>
-											</div>
-											<div class="params">
-												<div class="params_wrapper">
-													<div class="speed">
-														<div class="num">100</div>
-														<p>Мбит<br>сек</p>
-													</div>
-													<div class="channels">
-														<div class="num">222</div>
-														<p>каналов</p>
-													</div>
-													<div class="price">
-														<div class="price_top">
-															<div class="num">500</div>
-															<p>руб <br> месяц</p>															
-														</div>
-														<div class="price_bottom">
-															555 руб/мес
-														</div>
-													</div>
-												</div>
-											</div>
- 										</div>
- 										<div class="tarif_item_bottom">
-	 										<span><strong>Подключение:</strong> 0 руб</span>
-	 										<span class="ico-wifi"><strong>Wi-fi роутер</strong> в комплекте</span>
-	 										<span class="ico-tv"><strong>Тв-приставка</strong> в комплекте</span>
- 										</div>
- 									</div>
-									<div class="buttons">
-										<div class="buttons_wrapper">
-											<a href="#" class="btn-compare to-compare"></a>
-											<a href="#" class="btn-connect btn btn-rounded" data-toggle="modal" data-target="#connect">Подключить</a>
-											<button type="button" class="btn-fav to-fav" title=""></button>		
-										</div>
-									</div>
-								</article>
-								<article class="tarif_box tarif_item">
-									<div class="tarif_item_description">
-										<div class="tarif_item_top">
-											<div class="head">
-												<div class="logo"><img src="tmp/logo-beeline.jpg" alt="Beeline" /></div>
-												<div class="title-cat">
-													<h3 class="ctitle"><a href="#" title="">Моно Min + WiFi</a></h3>
-													<div class="category"><a href="#" class="category_link" title="">Beeline</a></div>	
-												</div>
-											</div>
-											<div class="params">
-												<div class="params_wrapper">
-													<div class="speed">
-														<div class="num">100</div>
-														<p>Мбит<br>сек</p>
-													</div>
-													<div class="channels">
-														<div class="num">222</div>
-														<p>каналов</p>
-													</div>
-													<div class="price">
-														<div class="price_top">
-															<div class="num">350</div>
-															<p>руб <br> месяц</p>															
-														</div>
-														<div class="price_bottom">
-															555 руб/мес
-														</div>
-													</div>
-												</div>
-											</div>
- 										</div>
- 										<div class="tarif_item_bottom">
-	 										<span><strong>Подключение:</strong> 0 руб</span>
-	 										<span class="ico-wifi"><strong>Wi-fi роутер</strong> в комплекте</span>
-	 										<span class="ico-tv"><strong>Тв-приставка</strong> в комплекте</span>
- 										</div>
- 									</div>
-									<div class="buttons">
-										<div class="buttons_wrapper">
-											<a href="#" class="btn-compare to-compare"></a>
-											<a href="#" class="btn-connect btn btn-rounded" data-toggle="modal" data-target="#connect">Подключить</a>
-											<button type="button" class="btn-fav to-fav" title=""></button>											
-										</div>
-									</div>
-									<div class="label label-action"><img src="images/label-action3.png" alt="Акция" /></div>
-								</article>
-								<article class="tarif_box tarif_item">
- 									<div class="tarif_item_description">
- 										<div class="tarif_item_top">
-											<div class="head">
-												<div class="logo"><img src="tmp/logo-orion.png" alt="Орион телеком" /></div>
-												<div class="title-cat">
-													<h3 class="ctitle"><a href="#" title="">Orion 600x</a></h3>
-													<div class="category"><a href="#" class="category_link" title="">Орион телеком</a></div>	
-												</div>
-											</div>
-											<div class="params">
-												<div class="params_wrapper">
-													<div class="speed">
-														<div class="num">80</div>
-														<p>Мбит<br>сек</p>
-													</div>
-													<div class="price">
-														<div class="price_top">
-															<div class="num">600</div>
-															<p>руб <br> месяц</p>															
-														</div>
-													</div>
-												</div>
-											</div>
- 										</div>
- 										<div class="tarif_item_bottom">
-	 										<span><strong>Подключение:</strong> 0 руб</span>
-	 										<span class="ico-wifi"><strong>Wi-fi роутер</strong> 1 руб/мес</span>
- 										</div>
- 									</div>
-									<div class="buttons">
-										<div class="buttons_wrapper">
-											<a href="#" class="btn-compare to-compare"></a>
-											<a href="#" class="btn-connect btn btn-rounded" data-toggle="modal" data-target="#connect">Подключить</a>
-											<button type="button" class="btn-fav btn-fav-in" title=""></button>		
-										</div>
-									</div>
-								</article>
-								<article class="tarif_box tarif_item">
- 									<div class="tarif_item_description">
- 										<div class="tarif_item_top">
-											<div class="head">
-												<div class="logo"><img src="tmp/logo-domru.jpg" alt="Домру" /></div>
-												<div class="title-cat">
-													<h3 class="ctitle"><a href="#" title="">Домашний интернет и ТВ за 500</a></h3>
-													<div class="category"><a href="#" class="category_link" title="">Домру</a></div>	
-												</div>
-											</div>
-											<div class="params">
-												<div class="params_wrapper">
-													<div class="speed">
-														<div class="num">100</div>
-														<p>Мбит<br>сек</p>
-													</div>
-													<div class="channels">
-														<div class="num">222</div>
-														<p>каналов</p>
-													</div>
-													<div class="price">
-														<div class="price_top">
-															<div class="num">500</div>
-															<p>руб <br> месяц</p>															
-														</div>
-														<div class="price_bottom">
-															555 руб/мес
-														</div>
-													</div>
-												</div>
-											</div>
- 										</div>
- 										<div class="tarif_item_bottom">
-	 										<span><strong>Подключение:</strong> 0 руб</span>
-	 										<span class="ico-wifi"><strong>Wi-fi роутер</strong> в комплекте</span>
-	 										<span class="ico-tv"><strong>Тв-приставка</strong> в комплекте</span>
- 										</div>
- 									</div>
-									<div class="buttons">
-										<div class="buttons_wrapper">
-											<a href="#" class="btn-compare to-compare"></a>
-											<a href="#" class="btn-connect btn btn-rounded" data-toggle="modal" data-target="#connect">Подключить</a>
-											<button type="button" class="btn-fav btn-fav-in" title=""></button>		
-										</div>
-									</div>
-								</article>
-								<article class="tarif_box tarif_item">
-									<div class="tarif_item_description">
-										<div class="tarif_item_top">
-											<div class="head">
-												<div class="logo"><img src="tmp/logo-beeline.jpg" alt="Beeline" /></div>
-												<div class="title-cat">
-													<h3 class="ctitle"><a href="#" title="">Моно Min + WiFi</a></h3>
-													<div class="category"><a href="#" class="category_link" title="">Beeline</a></div>	
-												</div>
-											</div>
-											<div class="params">
-												<div class="params_wrapper">
-													<div class="speed">
-														<div class="num">100</div>
-														<p>Мбит<br>сек</p>
-													</div>
-													<div class="channels">
-														<div class="num">222</div>
-														<p>каналов</p>
-													</div>
-													<div class="price">
-														<div class="price_top">
-															<div class="num">350</div>
-															<p>руб <br> месяц</p>															
-														</div>
-														<div class="price_bottom">
-															555 руб/мес
-														</div>
-													</div>
-												</div>
-											</div>
- 										</div>
- 										<div class="tarif_item_bottom">
-	 										<span><strong>Подключение:</strong> 0 руб</span>
-	 										<span class="ico-wifi"><strong>Wi-fi роутер</strong> в комплекте</span>
-	 										<span class="ico-tv"><strong>Тв-приставка</strong> в комплекте</span>
- 										</div>
- 									</div>
-									<div class="buttons">
-										<div class="buttons_wrapper">
-											<a href="#" class="btn-compare to-compare"></a>
-											<a href="#" class="btn-connect btn btn-rounded" data-toggle="modal" data-target="#connect">Подключить</a>
-											<button type="button" class="btn-fav to-fav" title=""></button>											
-										</div>
-									</div>
-									<div class="label label-action"><img src="images/label-action3.png" alt="Акция" /></div>
-								</article>
-								<article class="tarif_box tarif_item">
- 									<div class="tarif_item_description">
- 										<div class="tarif_item_top">
-											<div class="head">
-												<div class="logo"><img src="tmp/logo-orion.png" alt="Орион телеком" /></div>
-												<div class="title-cat">
-													<h3 class="ctitle"><a href="#" title="">Orion 600x</a></h3>
-													<div class="category"><a href="#" class="category_link" title="">Орион телеком</a></div>	
-												</div>
-											</div>
-											<div class="params">
-												<div class="params_wrapper">
-													<div class="speed">
-														<div class="num">80</div>
-														<p>Мбит<br>сек</p>
-													</div>
-													<div class="price">
-														<div class="price_top">
-															<div class="num">600</div>
-															<p>руб <br> месяц</p>															
-														</div>
-													</div>
-												</div>
-											</div>
- 										</div>
- 										<div class="tarif_item_bottom">
-	 										<span><strong>Подключение:</strong> 0 руб</span>
-	 										<span class="ico-wifi"><strong>Wi-fi роутер</strong> 1 руб/мес</span>
- 										</div>
- 									</div>
-									<div class="buttons">
-										<div class="buttons_wrapper">
-											<a href="#" class="btn-compare to-compare"></a>
-											<a href="#" class="btn-connect btn btn-rounded" data-toggle="modal" data-target="#connect">Подключить</a>
-											<button type="button" class="btn-fav to-fav" title=""></button>		
-										</div>
-									</div>
-								</article>
-								<article class="tarif_box tarif_item">
- 									<div class="tarif_item_description">
- 										<div class="tarif_item_top">
-											<div class="head">
-												<div class="logo"><img src="tmp/logo-domru.jpg" alt="Домру" /></div>
-												<div class="title-cat">
-													<h3 class="ctitle"><a href="#" title="">Домашний интернет и ТВ за 500</a></h3>
-													<div class="category"><a href="#" class="category_link" title="">Домру</a></div>	
-												</div>
-											</div>
-											<div class="params">
-												<div class="params_wrapper">
-													<div class="speed">
-														<div class="num">100</div>
-														<p>Мбит<br>сек</p>
-													</div>
-													<div class="channels">
-														<div class="num">222</div>
-														<p>каналов</p>
-													</div>
-													<div class="price">
-														<div class="price_top">
-															<div class="num">500</div>
-															<p>руб <br> месяц</p>															
-														</div>
-														<div class="price_bottom">
-															555 руб/мес
-														</div>
-													</div>
-												</div>
-											</div>
- 										</div>
- 										<div class="tarif_item_bottom">
-	 										<span><strong>Подключение:</strong> 0 руб</span>
-	 										<span class="ico-wifi"><strong>Wi-fi роутер</strong> в комплекте</span>
-	 										<span class="ico-tv"><strong>Тв-приставка</strong> в комплекте</span>
- 										</div>
- 									</div>
-									<div class="buttons">
-										<div class="buttons_wrapper">
-											<a href="#" class="btn-compare to-compare"></a>
-											<a href="#" class="btn-connect btn btn-rounded" data-toggle="modal" data-target="#connect">Подключить</a>
-											<button type="button" class="btn-fav btn-fav-in" title=""></button>		
-										</div>
-									</div>
-								</article>
-								<article class="tarif_box tarif_item">
-									<div class="tarif_item_description">
-										<div class="tarif_item_top">
-											<div class="head">
-												<div class="logo"><img src="tmp/logo-beeline.jpg" alt="Beeline" /></div>
-												<div class="title-cat">
-													<h3 class="ctitle"><a href="#" title="">Моно Min + WiFi</a></h3>
-													<div class="category"><a href="#" class="category_link" title="">Beeline</a></div>	
-												</div>
-											</div>
-											<div class="params">
-												<div class="params_wrapper">
-													<div class="speed">
-														<div class="num">100</div>
-														<p>Мбит<br>сек</p>
-													</div>
-													<div class="channels">
-														<div class="num">222</div>
-														<p>каналов</p>
-													</div>
-													<div class="price">
-														<div class="price_top">
-															<div class="num">350</div>
-															<p>руб <br> месяц</p>															
-														</div>
-														<div class="price_bottom">
-															555 руб/мес
-														</div>
-													</div>
-												</div>
-											</div>
- 										</div>
- 										<div class="tarif_item_bottom">
-	 										<span><strong>Подключение:</strong> 0 руб</span>
-	 										<span class="ico-wifi"><strong>Wi-fi роутер</strong> в комплекте</span>
-	 										<span class="ico-tv"><strong>Тв-приставка</strong> в комплекте</span>
- 										</div>
- 									</div>
-									<div class="buttons">
-										<div class="buttons_wrapper">
-											<a href="#" class="btn-compare to-compare"></a>
-											<a href="#" class="btn-connect btn btn-rounded" data-toggle="modal" data-target="#connect">Подключить</a>
-											<button type="button" class="btn-fav btn-fav-in" title=""></button>											
-										</div>
-									</div>
-									<div class="label label-action"><img src="images/label-action3.png" alt="Акция" /></div>
-								</article>
-								<article class="tarif_box tarif_item">
- 									<div class="tarif_item_description">
- 										<div class="tarif_item_top">
-											<div class="head">
-												<div class="logo"><img src="tmp/logo-orion.png" alt="Орион телеком" /></div>
-												<div class="title-cat">
-													<h3 class="ctitle"><a href="#" title="">Orion 600x</a></h3>
-													<div class="category"><a href="#" class="category_link" title="">Орион телеком</a></div>	
-												</div>
-											</div>
-											<div class="params">
-												<div class="params_wrapper">
-													<div class="speed">
-														<div class="num">80</div>
-														<p>Мбит<br>сек</p>
-													</div>
-													<div class="price">
-														<div class="price_top">
-															<div class="num">600</div>
-															<p>руб <br> месяц</p>															
-														</div>
-													</div>
-												</div>
-											</div>
- 										</div>
- 										<div class="tarif_item_bottom">
-	 										<span><strong>Подключение:</strong> 0 руб</span>
-	 										<span class="ico-wifi"><strong>Wi-fi роутер</strong> 1 руб/мес</span>
- 										</div>
- 									</div>
-									<div class="buttons">
-										<div class="buttons_wrapper">
-											<a href="#" class="btn-compare to-compare"></a>
-											<a href="#" class="btn-connect btn btn-rounded" data-toggle="modal" data-target="#connect">Подключить</a>
-											<button type="button" class="btn-fav btn-fav-in" title=""></button>		
-										</div>
-									</div>
-								</article>
-								<article class="tarif_box tarif_item">
- 									<div class="tarif_item_description">
- 										<div class="tarif_item_top">
-											<div class="head">
-												<div class="logo"><img src="tmp/logo-domru.jpg" alt="Домру" /></div>
-												<div class="title-cat">
-													<h3 class="ctitle"><a href="#" title="">Домашний интернет и ТВ за 500</a></h3>
-													<div class="category"><a href="#" class="category_link" title="">Домру</a></div>	
-												</div>
-											</div>
-											<div class="params">
-												<div class="params_wrapper">
-													<div class="speed">
-														<div class="num">100</div>
-														<p>Мбит<br>сек</p>
-													</div>
-													<div class="channels">
-														<div class="num">222</div>
-														<p>каналов</p>
-													</div>
-													<div class="price">
-														<div class="price_top">
-															<div class="num">500</div>
-															<p>руб <br> месяц</p>															
-														</div>
-														<div class="price_bottom">
-															555 руб/мес
-														</div>
-													</div>
-												</div>
-											</div>
- 										</div>
- 										<div class="tarif_item_bottom">
-	 										<span><strong>Подключение:</strong> 0 руб</span>
-	 										<span class="ico-wifi"><strong>Wi-fi роутер</strong> в комплекте</span>
-	 										<span class="ico-tv"><strong>Тв-приставка</strong> в комплекте</span>
- 										</div>
- 									</div>
-									<div class="buttons">
-										<div class="buttons_wrapper">
-											<a href="#" class="btn-compare to-compare"></a>
-											<a href="#" class="btn-connect btn btn-rounded" data-toggle="modal" data-target="#connect">Подключить</a>
-											<button type="button" class="btn-fav to-fav" title=""></button>		
-										</div>
-									</div>
-								</article>
-								<article class="tarif_box tarif_item">
-									<div class="tarif_item_description">
-										<div class="tarif_item_top">
-											<div class="head">
-												<div class="logo"><img src="tmp/logo-beeline.jpg" alt="Beeline" /></div>
-												<div class="title-cat">
-													<h3 class="ctitle"><a href="#" title="">Моно Min + WiFi</a></h3>
-													<div class="category"><a href="#" class="category_link" title="">Beeline</a></div>	
-												</div>
-											</div>
-											<div class="params">
-												<div class="params_wrapper">
-													<div class="speed">
-														<div class="num">100</div>
-														<p>Мбит<br>сек</p>
-													</div>
-													<div class="channels">
-														<div class="num">222</div>
-														<p>каналов</p>
-													</div>
-													<div class="price">
-														<div class="price_top">
-															<div class="num">350</div>
-															<p>руб <br> месяц</p>															
-														</div>
-														<div class="price_bottom">
-															555 руб/мес
-														</div>
-													</div>
-												</div>
-											</div>
- 										</div>
- 										<div class="tarif_item_bottom">
-	 										<span><strong>Подключение:</strong> 0 руб</span>
-	 										<span class="ico-wifi"><strong>Wi-fi роутер</strong> в комплекте</span>
-	 										<span class="ico-tv"><strong>Тв-приставка</strong> в комплекте</span>
- 										</div>
- 									</div>
-									<div class="buttons">
-										<div class="buttons_wrapper">
-											<a href="#" class="btn-compare to-compare"></a>
-											<a href="#" class="btn-connect btn btn-rounded" data-toggle="modal" data-target="#connect">Подключить</a>
-											<button type="button" class="btn-fav btn-fav-in" title=""></button>											
-										</div>
-									</div>
-									<div class="label label-action"><img src="images/label-action3.png" alt="Акция" /></div>
-								</article>
+								</form>
 							</div>
-						</div>
-					</section>
-
-					<!-- =pagination -->
-					<div class="pagination">
-						<span class="current">1</span>
-						<a href="#" title="">2</a>
-						<a href="#" title="">3</a>
-						<a href="#" title="">4</a>
-						<a href="#" title="">5</a>
-						<a href="#" class="next">Дальше</a>
-					</div>
-					<!-- =/pagination -->
+							<!-- =/filter -->
 
 
-					<!-- =main -->
-					<main>
-						<h1>ПОДКЛЮЧЕНИЕ ИНТЕРНЕТА И ТЕЛЕВИДЕНИЯ В КРАСНОЯРСКЕ</h1>
-						<p>В Красноярске насчитывается 74 интернет провайдеров. Из них 12 предоставляют доступ в интернет своим пользователям по технологии ADSL (на базе обыкновенной телефонной линии), 48 проводят в квартиру витую пару (технология Ethernet, она же абонентов в частном секторе и административных зданиях ряд провайдеров также используют и другие технологии: в первую распространение имеет мобильный интернет во всех его проявлениях.</p>
-						<p>Среди провайдеров Красноярска домашний интернет подключают 50 компаний, интернет в офис – 55, в частный сектор – 10, и, наконец, обеспечивают нас мобильным интернетом 6 провайдеров.</p>
-					</main>
-					<!-- =/main -->
-				</div>
-				<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-					<aside>
-						<!-- =filter -->
-						<div class="filter">
-							<form action="#" method="post">
-								<div class="filter_header">
-									<input class="toggle toggle-input" type="checkbox" name="internet" id="internet" value="Интернет" checked="" />
-									<label class="tpTitle" for="internet">Интернет</label>
+							<!-- =sortbox -->
+							<div class="sortbox">
+								<ul>
+									<li class="sort-label">Сортировать:</li>
+									<li>
+										<a href="#" class="selected up">По популярности</a>
+									</li>
+									<li>
+										<a href="#">По стоимости</a>
+									</li>
+								</ul>
+							</div>
+							<!-- =/sortbox -->
 
-									<input class="toggle toggle-input" type="checkbox" name="tv" id="tv" value="ТВ" />
-									<label class="tpTitle" for="tv">ТВ</label>
+							<div class="row">
+								<div class="col-lg-12">
+									<article class="tarif_box tarif_item">
+										<div class="tarif_item_description">
+											<div class="tarif_item_top">
+												<div class="head">
+													<div class="logo"><img src="tmp/logo-beeline.jpg" alt="Beeline" /></div>
+													<div class="title-cat">
+														<h3 class="ctitle"><a href="#" title="">Моно Min + WiFi</a></h3>
+														<div class="category"><a href="#" class="category_link" title="">Beeline</a></div>	
+													</div>
+												</div>
+												<div class="params">
+													<div class="params_wrapper">
+														<div class="speed">
+															<div class="num">100</div>
+															<p>Мбит<br>сек</p>
+														</div>
+														<div class="channels">
+															<div class="num">222</div>
+															<p>каналов</p>
+														</div>
+														<div class="price">
+															<div class="price_top">
+																<div class="num">350</div>
+																<p>руб <br> месяц</p>															
+															</div>
+															<div class="price_bottom">
+																555 руб/мес
+															</div>
+														</div>
+													</div>
+												</div>
+	 										</div>
+	 										<div class="tarif_item_bottom">
+		 										<span><strong>Подключение:</strong> 0 руб</span>
+		 										<span class="ico-wifi"><strong>Wi-fi роутер</strong> в комплекте</span>
+		 										<span class="ico-tv"><strong>Тв-приставка</strong> в комплекте</span>
+	 										</div>
+	 									</div>
+										<div class="buttons">
+											<div class="buttons_wrapper">
+												<a href="#" class="btn-compare to-compare"></a>
+												<a href="#" class="btn-connect btn btn-rounded" data-toggle="modal" data-target="#connect">Подключить</a>
+												<button type="button" class="btn-fav btn-fav-in" title=""></button>											
+											</div>
+										</div>
+										<div class="label label-action"><img src="images/label-action3.png" alt="Акция" /></div>
+									</article>
+									<article class="tarif_box tarif_item">
+	 									<div class="tarif_item_description">
+	 										<div class="tarif_item_top">
+												<div class="head">
+													<div class="logo"><img src="tmp/logo-orion.png" alt="Орион телеком" /></div>
+													<div class="title-cat">
+														<h3 class="ctitle"><a href="#" title="">Orion 600x</a></h3>
+														<div class="category"><a href="#" class="category_link" title="">Орион телеком</a></div>	
+													</div>
+												</div>
+												<div class="params">
+													<div class="params_wrapper">
+														<div class="speed">
+															<div class="num">80</div>
+															<p>Мбит<br>сек</p>
+														</div>
+														<div class="price">
+															<div class="price_top">
+																<div class="num">600</div>
+																<p>руб <br> месяц</p>															
+															</div>
+														</div>
+													</div>
+												</div>
+	 										</div>
+	 										<div class="tarif_item_bottom">
+		 										<span><strong>Подключение:</strong> 0 руб</span>
+		 										<span class="ico-wifi"><strong>Wi-fi роутер</strong> 1 руб/мес</span>
+	 										</div>
+	 									</div>
+										<div class="buttons">
+											<div class="buttons_wrapper">
+												<a href="#" class="btn-compare to-compare"></a>
+												<a href="#" class="btn-connect btn btn-rounded" data-toggle="modal" data-target="#connect">Подключить</a>
+												<button type="button" class="btn-fav to-fav" title=""></button>		
+											</div>
+										</div>
+									</article>
+									<article class="tarif_box tarif_item">
+	 									<div class="tarif_item_description">
+	 										<div class="tarif_item_top">
+												<div class="head">
+													<div class="logo"><img src="tmp/logo-domru.jpg" alt="Домру" /></div>
+													<div class="title-cat">
+														<h3 class="ctitle"><a href="#" title="">Домашний интернет и ТВ за 500</a></h3>
+														<div class="category"><a href="#" class="category_link" title="">Домру</a></div>	
+													</div>
+												</div>
+												<div class="params">
+													<div class="params_wrapper">
+														<div class="speed">
+															<div class="num">100</div>
+															<p>Мбит<br>сек</p>
+														</div>
+														<div class="channels">
+															<div class="num">222</div>
+															<p>каналов</p>
+														</div>
+														<div class="price">
+															<div class="price_top">
+																<div class="num">500</div>
+																<p>руб <br> месяц</p>															
+															</div>
+															<div class="price_bottom">
+																555 руб/мес
+															</div>
+														</div>
+													</div>
+												</div>
+	 										</div>
+	 										<div class="tarif_item_bottom">
+		 										<span><strong>Подключение:</strong> 0 руб</span>
+		 										<span class="ico-wifi"><strong>Wi-fi роутер</strong> в комплекте</span>
+		 										<span class="ico-tv"><strong>Тв-приставка</strong> в комплекте</span>
+	 										</div>
+	 									</div>
+										<div class="buttons">
+											<div class="buttons_wrapper">
+												<a href="#" class="btn-compare to-compare"></a>
+												<a href="#" class="btn-connect btn btn-rounded" data-toggle="modal" data-target="#connect">Подключить</a>
+												<button type="button" class="btn-fav btn-fav-in" title=""></button>		
+											</div>
+										</div>
+									</article>
+									<article class="tarif_box tarif_item">
+										<div class="tarif_item_description">
+											<div class="tarif_item_top">
+												<div class="head">
+													<div class="logo"><img src="tmp/logo-beeline.jpg" alt="Beeline" /></div>
+													<div class="title-cat">
+														<h3 class="ctitle"><a href="#" title="">Моно Min + WiFi</a></h3>
+														<div class="category"><a href="#" class="category_link" title="">Beeline</a></div>	
+													</div>
+												</div>
+												<div class="params">
+													<div class="params_wrapper">
+														<div class="speed">
+															<div class="num">100</div>
+															<p>Мбит<br>сек</p>
+														</div>
+														<div class="channels">
+															<div class="num">222</div>
+															<p>каналов</p>
+														</div>
+														<div class="price">
+															<div class="price_top">
+																<div class="num">350</div>
+																<p>руб <br> месяц</p>															
+															</div>
+															<div class="price_bottom">
+																555 руб/мес
+															</div>
+														</div>
+													</div>
+												</div>
+	 										</div>
+	 										<div class="tarif_item_bottom">
+		 										<span><strong>Подключение:</strong> 0 руб</span>
+		 										<span class="ico-wifi"><strong>Wi-fi роутер</strong> в комплекте</span>
+		 										<span class="ico-tv"><strong>Тв-приставка</strong> в комплекте</span>
+	 										</div>
+	 									</div>
+										<div class="buttons">
+											<div class="buttons_wrapper">
+												<a href="#" class="btn-compare to-compare"></a>
+												<a href="#" class="btn-connect btn btn-rounded" data-toggle="modal" data-target="#connect">Подключить</a>
+												<button type="button" class="btn-fav btn-fav-in" title=""></button>											
+											</div>
+										</div>
+										<div class="label label-action"><img src="images/label-action3.png" alt="Акция" /></div>
+									</article>
+									<article class="tarif_box tarif_item">
+	 									<div class="tarif_item_description">
+	 										<div class="tarif_item_top">
+												<div class="head">
+													<div class="logo"><img src="tmp/logo-orion.png" alt="Орион телеком" /></div>
+													<div class="title-cat">
+														<h3 class="ctitle"><a href="#" title="">Orion 600x</a></h3>
+														<div class="category"><a href="#" class="category_link" title="">Орион телеком</a></div>	
+													</div>
+												</div>
+												<div class="params">
+													<div class="params_wrapper">
+														<div class="speed">
+															<div class="num">80</div>
+															<p>Мбит<br>сек</p>
+														</div>
+														<div class="price">
+															<div class="price_top">
+																<div class="num">600</div>
+																<p>руб <br> месяц</p>															
+															</div>
+														</div>
+													</div>
+												</div>
+	 										</div>
+	 										<div class="tarif_item_bottom">
+		 										<span><strong>Подключение:</strong> 0 руб</span>
+		 										<span class="ico-wifi"><strong>Wi-fi роутер</strong> 1 руб/мес</span>
+	 										</div>
+	 									</div>
+										<div class="buttons">
+											<div class="buttons_wrapper">
+												<a href="#" class="btn-compare to-compare"></a>
+												<a href="#" class="btn-connect btn btn-rounded" data-toggle="modal" data-target="#connect">Подключить</a>
+												<button type="button" class="btn-fav to-fav" title=""></button>		
+											</div>
+										</div>
+									</article>
+									<article class="tarif_box tarif_item">
+	 									<div class="tarif_item_description">
+	 										<div class="tarif_item_top">
+												<div class="head">
+													<div class="logo"><img src="tmp/logo-domru.jpg" alt="Домру" /></div>
+													<div class="title-cat">
+														<h3 class="ctitle"><a href="#" title="">Домашний интернет и ТВ за 500</a></h3>
+														<div class="category"><a href="#" class="category_link" title="">Домру</a></div>	
+													</div>
+												</div>
+												<div class="params">
+													<div class="params_wrapper">
+														<div class="speed">
+															<div class="num">100</div>
+															<p>Мбит<br>сек</p>
+														</div>
+														<div class="channels">
+															<div class="num">222</div>
+															<p>каналов</p>
+														</div>
+														<div class="price">
+															<div class="price_top">
+																<div class="num">500</div>
+																<p>руб <br> месяц</p>															
+															</div>
+															<div class="price_bottom">
+																555 руб/мес
+															</div>
+														</div>
+													</div>
+												</div>
+	 										</div>
+	 										<div class="tarif_item_bottom">
+		 										<span><strong>Подключение:</strong> 0 руб</span>
+		 										<span class="ico-wifi"><strong>Wi-fi роутер</strong> в комплекте</span>
+		 										<span class="ico-tv"><strong>Тв-приставка</strong> в комплекте</span>
+	 										</div>
+	 									</div>
+										<div class="buttons">
+											<div class="buttons_wrapper">
+												<a href="#" class="btn-compare to-compare"></a>
+												<a href="#" class="btn-connect btn btn-rounded" data-toggle="modal" data-target="#connect">Подключить</a>
+												<button type="button" class="btn-fav to-fav" title=""></button>		
+											</div>
+										</div>
+									</article>
+									<article class="tarif_box tarif_item">
+										<div class="tarif_item_description">
+											<div class="tarif_item_top">
+												<div class="head">
+													<div class="logo"><img src="tmp/logo-beeline.jpg" alt="Beeline" /></div>
+													<div class="title-cat">
+														<h3 class="ctitle"><a href="#" title="">Моно Min + WiFi</a></h3>
+														<div class="category"><a href="#" class="category_link" title="">Beeline</a></div>	
+													</div>
+												</div>
+												<div class="params">
+													<div class="params_wrapper">
+														<div class="speed">
+															<div class="num">100</div>
+															<p>Мбит<br>сек</p>
+														</div>
+														<div class="channels">
+															<div class="num">222</div>
+															<p>каналов</p>
+														</div>
+														<div class="price">
+															<div class="price_top">
+																<div class="num">350</div>
+																<p>руб <br> месяц</p>															
+															</div>
+															<div class="price_bottom">
+																555 руб/мес
+															</div>
+														</div>
+													</div>
+												</div>
+	 										</div>
+	 										<div class="tarif_item_bottom">
+		 										<span><strong>Подключение:</strong> 0 руб</span>
+		 										<span class="ico-wifi"><strong>Wi-fi роутер</strong> в комплекте</span>
+		 										<span class="ico-tv"><strong>Тв-приставка</strong> в комплекте</span>
+	 										</div>
+	 									</div>
+										<div class="buttons">
+											<div class="buttons_wrapper">
+												<a href="#" class="btn-compare to-compare"></a>
+												<a href="#" class="btn-connect btn btn-rounded" data-toggle="modal" data-target="#connect">Подключить</a>
+												<button type="button" class="btn-fav to-fav" title=""></button>											
+											</div>
+										</div>
+										<div class="label label-action"><img src="images/label-action3.png" alt="Акция" /></div>
+									</article>
+									<article class="tarif_box tarif_item">
+	 									<div class="tarif_item_description">
+	 										<div class="tarif_item_top">
+												<div class="head">
+													<div class="logo"><img src="tmp/logo-orion.png" alt="Орион телеком" /></div>
+													<div class="title-cat">
+														<h3 class="ctitle"><a href="#" title="">Orion 600x</a></h3>
+														<div class="category"><a href="#" class="category_link" title="">Орион телеком</a></div>	
+													</div>
+												</div>
+												<div class="params">
+													<div class="params_wrapper">
+														<div class="speed">
+															<div class="num">80</div>
+															<p>Мбит<br>сек</p>
+														</div>
+														<div class="price">
+															<div class="price_top">
+																<div class="num">600</div>
+																<p>руб <br> месяц</p>															
+															</div>
+														</div>
+													</div>
+												</div>
+	 										</div>
+	 										<div class="tarif_item_bottom">
+		 										<span><strong>Подключение:</strong> 0 руб</span>
+		 										<span class="ico-wifi"><strong>Wi-fi роутер</strong> 1 руб/мес</span>
+	 										</div>
+	 									</div>
+										<div class="buttons">
+											<div class="buttons_wrapper">
+												<a href="#" class="btn-compare to-compare"></a>
+												<a href="#" class="btn-connect btn btn-rounded" data-toggle="modal" data-target="#connect">Подключить</a>
+												<button type="button" class="btn-fav btn-fav-in" title=""></button>		
+											</div>
+										</div>
+									</article>
+									<article class="tarif_box tarif_item">
+	 									<div class="tarif_item_description">
+	 										<div class="tarif_item_top">
+												<div class="head">
+													<div class="logo"><img src="tmp/logo-domru.jpg" alt="Домру" /></div>
+													<div class="title-cat">
+														<h3 class="ctitle"><a href="#" title="">Домашний интернет и ТВ за 500</a></h3>
+														<div class="category"><a href="#" class="category_link" title="">Домру</a></div>	
+													</div>
+												</div>
+												<div class="params">
+													<div class="params_wrapper">
+														<div class="speed">
+															<div class="num">100</div>
+															<p>Мбит<br>сек</p>
+														</div>
+														<div class="channels">
+															<div class="num">222</div>
+															<p>каналов</p>
+														</div>
+														<div class="price">
+															<div class="price_top">
+																<div class="num">500</div>
+																<p>руб <br> месяц</p>															
+															</div>
+															<div class="price_bottom">
+																555 руб/мес
+															</div>
+														</div>
+													</div>
+												</div>
+	 										</div>
+	 										<div class="tarif_item_bottom">
+		 										<span><strong>Подключение:</strong> 0 руб</span>
+		 										<span class="ico-wifi"><strong>Wi-fi роутер</strong> в комплекте</span>
+		 										<span class="ico-tv"><strong>Тв-приставка</strong> в комплекте</span>
+	 										</div>
+	 									</div>
+										<div class="buttons">
+											<div class="buttons_wrapper">
+												<a href="#" class="btn-compare to-compare"></a>
+												<a href="#" class="btn-connect btn btn-rounded" data-toggle="modal" data-target="#connect">Подключить</a>
+												<button type="button" class="btn-fav btn-fav-in" title=""></button>		
+											</div>
+										</div>
+									</article>
+									<article class="tarif_box tarif_item">
+										<div class="tarif_item_description">
+											<div class="tarif_item_top">
+												<div class="head">
+													<div class="logo"><img src="tmp/logo-beeline.jpg" alt="Beeline" /></div>
+													<div class="title-cat">
+														<h3 class="ctitle"><a href="#" title="">Моно Min + WiFi</a></h3>
+														<div class="category"><a href="#" class="category_link" title="">Beeline</a></div>	
+													</div>
+												</div>
+												<div class="params">
+													<div class="params_wrapper">
+														<div class="speed">
+															<div class="num">100</div>
+															<p>Мбит<br>сек</p>
+														</div>
+														<div class="channels">
+															<div class="num">222</div>
+															<p>каналов</p>
+														</div>
+														<div class="price">
+															<div class="price_top">
+																<div class="num">350</div>
+																<p>руб <br> месяц</p>															
+															</div>
+															<div class="price_bottom">
+																555 руб/мес
+															</div>
+														</div>
+													</div>
+												</div>
+	 										</div>
+	 										<div class="tarif_item_bottom">
+		 										<span><strong>Подключение:</strong> 0 руб</span>
+		 										<span class="ico-wifi"><strong>Wi-fi роутер</strong> в комплекте</span>
+		 										<span class="ico-tv"><strong>Тв-приставка</strong> в комплекте</span>
+	 										</div>
+	 									</div>
+										<div class="buttons">
+											<div class="buttons_wrapper">
+												<a href="#" class="btn-compare to-compare"></a>
+												<a href="#" class="btn-connect btn btn-rounded" data-toggle="modal" data-target="#connect">Подключить</a>
+												<button type="button" class="btn-fav to-fav" title=""></button>											
+											</div>
+										</div>
+										<div class="label label-action"><img src="images/label-action3.png" alt="Акция" /></div>
+									</article>
+									<article class="tarif_box tarif_item">
+	 									<div class="tarif_item_description">
+	 										<div class="tarif_item_top">
+												<div class="head">
+													<div class="logo"><img src="tmp/logo-orion.png" alt="Орион телеком" /></div>
+													<div class="title-cat">
+														<h3 class="ctitle"><a href="#" title="">Orion 600x</a></h3>
+														<div class="category"><a href="#" class="category_link" title="">Орион телеком</a></div>	
+													</div>
+												</div>
+												<div class="params">
+													<div class="params_wrapper">
+														<div class="speed">
+															<div class="num">80</div>
+															<p>Мбит<br>сек</p>
+														</div>
+														<div class="price">
+															<div class="price_top">
+																<div class="num">600</div>
+																<p>руб <br> месяц</p>															
+															</div>
+														</div>
+													</div>
+												</div>
+	 										</div>
+	 										<div class="tarif_item_bottom">
+		 										<span><strong>Подключение:</strong> 0 руб</span>
+		 										<span class="ico-wifi"><strong>Wi-fi роутер</strong> 1 руб/мес</span>
+	 										</div>
+	 									</div>
+										<div class="buttons">
+											<div class="buttons_wrapper">
+												<a href="#" class="btn-compare to-compare"></a>
+												<a href="#" class="btn-connect btn btn-rounded" data-toggle="modal" data-target="#connect">Подключить</a>
+												<button type="button" class="btn-fav to-fav" title=""></button>		
+											</div>
+										</div>
+									</article>
+									<article class="tarif_box tarif_item">
+	 									<div class="tarif_item_description">
+	 										<div class="tarif_item_top">
+												<div class="head">
+													<div class="logo"><img src="tmp/logo-domru.jpg" alt="Домру" /></div>
+													<div class="title-cat">
+														<h3 class="ctitle"><a href="#" title="">Домашний интернет и ТВ за 500</a></h3>
+														<div class="category"><a href="#" class="category_link" title="">Домру</a></div>	
+													</div>
+												</div>
+												<div class="params">
+													<div class="params_wrapper">
+														<div class="speed">
+															<div class="num">100</div>
+															<p>Мбит<br>сек</p>
+														</div>
+														<div class="channels">
+															<div class="num">222</div>
+															<p>каналов</p>
+														</div>
+														<div class="price">
+															<div class="price_top">
+																<div class="num">500</div>
+																<p>руб <br> месяц</p>															
+															</div>
+															<div class="price_bottom">
+																555 руб/мес
+															</div>
+														</div>
+													</div>
+												</div>
+	 										</div>
+	 										<div class="tarif_item_bottom">
+		 										<span><strong>Подключение:</strong> 0 руб</span>
+		 										<span class="ico-wifi"><strong>Wi-fi роутер</strong> в комплекте</span>
+		 										<span class="ico-tv"><strong>Тв-приставка</strong> в комплекте</span>
+	 										</div>
+	 									</div>
+										<div class="buttons">
+											<div class="buttons_wrapper">
+												<a href="#" class="btn-compare to-compare"></a>
+												<a href="#" class="btn-connect btn btn-rounded" data-toggle="modal" data-target="#connect">Подключить</a>
+												<button type="button" class="btn-fav btn-fav-in" title=""></button>		
+											</div>
+										</div>
+									</article>
+									<article class="tarif_box tarif_item">
+										<div class="tarif_item_description">
+											<div class="tarif_item_top">
+												<div class="head">
+													<div class="logo"><img src="tmp/logo-beeline.jpg" alt="Beeline" /></div>
+													<div class="title-cat">
+														<h3 class="ctitle"><a href="#" title="">Моно Min + WiFi</a></h3>
+														<div class="category"><a href="#" class="category_link" title="">Beeline</a></div>	
+													</div>
+												</div>
+												<div class="params">
+													<div class="params_wrapper">
+														<div class="speed">
+															<div class="num">100</div>
+															<p>Мбит<br>сек</p>
+														</div>
+														<div class="channels">
+															<div class="num">222</div>
+															<p>каналов</p>
+														</div>
+														<div class="price">
+															<div class="price_top">
+																<div class="num">350</div>
+																<p>руб <br> месяц</p>															
+															</div>
+															<div class="price_bottom">
+																555 руб/мес
+															</div>
+														</div>
+													</div>
+												</div>
+	 										</div>
+	 										<div class="tarif_item_bottom">
+		 										<span><strong>Подключение:</strong> 0 руб</span>
+		 										<span class="ico-wifi"><strong>Wi-fi роутер</strong> в комплекте</span>
+		 										<span class="ico-tv"><strong>Тв-приставка</strong> в комплекте</span>
+	 										</div>
+	 									</div>
+										<div class="buttons">
+											<div class="buttons_wrapper">
+												<a href="#" class="btn-compare to-compare"></a>
+												<a href="#" class="btn-connect btn btn-rounded" data-toggle="modal" data-target="#connect">Подключить</a>
+												<button type="button" class="btn-fav btn-fav-in" title=""></button>											
+											</div>
+										</div>
+										<div class="label label-action"><img src="images/label-action3.png" alt="Акция" /></div>
+									</article>
+									<article class="tarif_box tarif_item">
+	 									<div class="tarif_item_description">
+	 										<div class="tarif_item_top">
+												<div class="head">
+													<div class="logo"><img src="tmp/logo-orion.png" alt="Орион телеком" /></div>
+													<div class="title-cat">
+														<h3 class="ctitle"><a href="#" title="">Orion 600x</a></h3>
+														<div class="category"><a href="#" class="category_link" title="">Орион телеком</a></div>	
+													</div>
+												</div>
+												<div class="params">
+													<div class="params_wrapper">
+														<div class="speed">
+															<div class="num">80</div>
+															<p>Мбит<br>сек</p>
+														</div>
+														<div class="price">
+															<div class="price_top">
+																<div class="num">600</div>
+																<p>руб <br> месяц</p>															
+															</div>
+														</div>
+													</div>
+												</div>
+	 										</div>
+	 										<div class="tarif_item_bottom">
+		 										<span><strong>Подключение:</strong> 0 руб</span>
+		 										<span class="ico-wifi"><strong>Wi-fi роутер</strong> 1 руб/мес</span>
+	 										</div>
+	 									</div>
+										<div class="buttons">
+											<div class="buttons_wrapper">
+												<a href="#" class="btn-compare to-compare"></a>
+												<a href="#" class="btn-connect btn btn-rounded" data-toggle="modal" data-target="#connect">Подключить</a>
+												<button type="button" class="btn-fav btn-fav-in" title=""></button>		
+											</div>
+										</div>
+									</article>
+									<article class="tarif_box tarif_item">
+	 									<div class="tarif_item_description">
+	 										<div class="tarif_item_top">
+												<div class="head">
+													<div class="logo"><img src="tmp/logo-domru.jpg" alt="Домру" /></div>
+													<div class="title-cat">
+														<h3 class="ctitle"><a href="#" title="">Домашний интернет и ТВ за 500</a></h3>
+														<div class="category"><a href="#" class="category_link" title="">Домру</a></div>	
+													</div>
+												</div>
+												<div class="params">
+													<div class="params_wrapper">
+														<div class="speed">
+															<div class="num">100</div>
+															<p>Мбит<br>сек</p>
+														</div>
+														<div class="channels">
+															<div class="num">222</div>
+															<p>каналов</p>
+														</div>
+														<div class="price">
+															<div class="price_top">
+																<div class="num">500</div>
+																<p>руб <br> месяц</p>															
+															</div>
+															<div class="price_bottom">
+																555 руб/мес
+															</div>
+														</div>
+													</div>
+												</div>
+	 										</div>
+	 										<div class="tarif_item_bottom">
+		 										<span><strong>Подключение:</strong> 0 руб</span>
+		 										<span class="ico-wifi"><strong>Wi-fi роутер</strong> в комплекте</span>
+		 										<span class="ico-tv"><strong>Тв-приставка</strong> в комплекте</span>
+	 										</div>
+	 									</div>
+										<div class="buttons">
+											<div class="buttons_wrapper">
+												<a href="#" class="btn-compare to-compare"></a>
+												<a href="#" class="btn-connect btn btn-rounded" data-toggle="modal" data-target="#connect">Подключить</a>
+												<button type="button" class="btn-fav to-fav" title=""></button>		
+											</div>
+										</div>
+									</article>
+									<article class="tarif_box tarif_item">
+										<div class="tarif_item_description">
+											<div class="tarif_item_top">
+												<div class="head">
+													<div class="logo"><img src="tmp/logo-beeline.jpg" alt="Beeline" /></div>
+													<div class="title-cat">
+														<h3 class="ctitle"><a href="#" title="">Моно Min + WiFi</a></h3>
+														<div class="category"><a href="#" class="category_link" title="">Beeline</a></div>	
+													</div>
+												</div>
+												<div class="params">
+													<div class="params_wrapper">
+														<div class="speed">
+															<div class="num">100</div>
+															<p>Мбит<br>сек</p>
+														</div>
+														<div class="channels">
+															<div class="num">222</div>
+															<p>каналов</p>
+														</div>
+														<div class="price">
+															<div class="price_top">
+																<div class="num">350</div>
+																<p>руб <br> месяц</p>															
+															</div>
+															<div class="price_bottom">
+																555 руб/мес
+															</div>
+														</div>
+													</div>
+												</div>
+	 										</div>
+	 										<div class="tarif_item_bottom">
+		 										<span><strong>Подключение:</strong> 0 руб</span>
+		 										<span class="ico-wifi"><strong>Wi-fi роутер</strong> в комплекте</span>
+		 										<span class="ico-tv"><strong>Тв-приставка</strong> в комплекте</span>
+	 										</div>
+	 									</div>
+										<div class="buttons">
+											<div class="buttons_wrapper">
+												<a href="#" class="btn-compare to-compare"></a>
+												<a href="#" class="btn-connect btn btn-rounded" data-toggle="modal" data-target="#connect">Подключить</a>
+												<button type="button" class="btn-fav btn-fav-in" title=""></button>											
+											</div>
+										</div>
+										<div class="label label-action"><img src="images/label-action3.png" alt="Акция" /></div>
+									</article>
 								</div>
-								<div class="filter_body">
-									<div class="place" data-param="internet">
-										<input type="radio" id="radio3" name="place" value="Домой" checked />
-										<label for="radio3">Домой</label>
+							</div>
+						</section>
 
-										<input type="radio" id="radio4" name="place" value="В офис" />
-										<label for="radio4">В офис</label>
+						<!-- =pagination -->
+						<div class="pagination">
+							<span class="current">1</span>
+							<a href="#" title="">2</a>
+							<a href="#" title="">3</a>
+							<a href="#" title="">4</a>
+							<a href="#" title="">5</a>
+							<a href="#" class="next">Дальше</a>
+						</div>
+						<!-- =/pagination -->
+
+
+						<!-- =main -->
+						<main>
+							<h1>ПОДКЛЮЧЕНИЕ ИНТЕРНЕТА И ТЕЛЕВИДЕНИЯ В КРАСНОЯРСКЕ</h1>
+							<p>В Красноярске насчитывается 74 интернет провайдеров. Из них 12 предоставляют доступ в интернет своим пользователям по технологии ADSL (на базе обыкновенной телефонной линии), 48 проводят в квартиру витую пару (технология Ethernet, она же абонентов в частном секторе и административных зданиях ряд провайдеров также используют и другие технологии: в первую распространение имеет мобильный интернет во всех его проявлениях.</p>
+							<p>Среди провайдеров Красноярска домашний интернет подключают 50 компаний, интернет в офис – 55, в частный сектор – 10, и, наконец, обеспечивают нас мобильным интернетом 6 провайдеров.</p>
+						</main>
+						<!-- =/main -->
+					</div>
+					<div class="tarifs_page_right col-lg-3 col-md-4 col-sm-12 col-xs-12">
+						<aside>
+							<!-- =filter -->
+							<div class="filter">
+								<form action="#" method="post">
+									<div class="filter_header">
+										<input class="toggle toggle-input" type="checkbox" name="internet" id="internet" value="Интернет" checked="" />
+										<label class="tpTitle" for="internet">Интернет</label>
+
+										<input class="toggle toggle-input" type="checkbox" name="tv" id="tv" value="ТВ" />
+										<label class="tpTitle" for="tv">ТВ</label>
 									</div>
-									<div class="param param-speed" data-param="internet">
-										<p class="param_title">Скорость, Мбит/с</p>
-										<div class="slider_controls row">
-											<input type="text" id="speed-from" class="param_control" placeholder="от" readonly />
-											<input type="text" id="speed-to" class="param_control" placeholder="до" readonly />
+									<div class="filter_body">
+										<div class="place" data-param="internet">
+											<input type="radio" id="radio3" name="place" value="Домой" checked />
+											<label for="radio3">Домой</label>
+
+											<input type="radio" id="radio4" name="place" value="В офис" />
+											<label for="radio4">В офис</label>
 										</div>
-										<div class="slider">
-											<div id="slider-speed"></div>
-											<p class="slider_start">20</p>
-											<p class="slider_end">150</p>
-										</div>
-									</div>
-									<div class="param param-tv hide" data-param="tv">
-										<p class="param_title">Количество ТВ-каналов</p>
-										<div class="slider_controls row">
-											<input type="text" id="tv-from" class="param_control" placeholder="от" readonly />
-											<input type="text" id="tv-to" class="param_control" placeholder="до" readonly />
-										</div>
-										<div class="slider">
-											<div id="slider-tv"></div>
-											<p class="slider_start">20</p>
-											<p class="slider_end">150</p>
-										</div>
-									</div>
-									<div class="param param-cost">
-										<p class="param_title">Абонентская плата, Руб/мес</p>
-										<div class="slider">
+										<div class="param param-speed" data-param="internet">
+											<p class="param_title">Скорость, Мбит/с</p>
 											<div class="slider_controls row">
-												<input type="text" id="cost-from" class="param_control" placeholder="от" readonly />
-												<input type="text" id="cost-to" class="param_control" placeholder="до" readonly />
+												<input type="text" id="speed-from" name="speed-from" class="param_control" placeholder="от" readonly />
+												<input type="text" id="speed-to" name="speed-to" class="param_control" placeholder="до" readonly />
 											</div>
 											<div class="slider">
-												<div id="slider-cost"></div>
+												<div id="slider-speed"></div>
 												<p class="slider_start">20</p>
 												<p class="slider_end">150</p>
 											</div>
 										</div>
-									</div>
-									<div class="param services">
-										<p class="param_title">Дополнительные услуги</p>
-										<div class="param_item">
-											<input type="checkbox" name="checkbox1" id="checkbox1" value="" />
-											<label for="checkbox1">Wi-fi роутер</label>
+										<div class="param param-tv hide" data-param="tv">
+											<p class="param_title">Количество ТВ-каналов</p>
+											<div class="slider_controls row">
+												<input type="text" id="tv-from" class="param_control" placeholder="от" readonly />
+												<input type="text" id="tv-to" class="param_control" placeholder="до" readonly />
+											</div>
+											<div class="slider">
+												<div id="slider-tv"></div>
+												<p class="slider_start">20</p>
+												<p class="slider_end">150</p>
+											</div>
 										</div>
-										<div class="param_item">
-											<input type="checkbox" name="checkbox2" id="checkbox2" value="" />
-											<label for="checkbox2">Тв-приставка</label>
+										<div class="param param-cost">
+											<p class="param_title">Абонентская плата, Руб/мес</p>
+											<div class="slider">
+												<div class="slider_controls row">
+													<input type="text" id="cost-from" class="param_control" placeholder="от" readonly />
+													<input type="text" id="cost-to" class="param_control" placeholder="до" readonly />
+												</div>
+												<div class="slider">
+													<div id="slider-cost"></div>
+													<p class="slider_start">20</p>
+													<p class="slider_end">150</p>
+												</div>
+											</div>
+										</div>
+										<div class="param services">
+											<p class="param_title">Дополнительные услуги</p>
+											<div class="param_item">
+												<input type="checkbox" name="checkbox1" id="checkbox1" value="" />
+												<label for="checkbox1">Wi-fi роутер</label>
+											</div>
+											<div class="param_item">
+												<input type="checkbox" name="checkbox2" id="checkbox2" value="" />
+												<label for="checkbox2">Тв-приставка</label>
+											</div>
+										</div>
+										<div class="param param-submit">
+											<a href="#" class="submit btn btn-rounded">Подобрать тариф</a>										
 										</div>
 									</div>
-									<div class="param param-submit">
-										<a href="#" class="submit btn btn-rounded">Подобрать тариф</a>										
-									</div>
-								</div>
-							</form>
-						</div>
-						<!-- =/filter -->
-
-						<!-- =links -->
-						<div class="links">
-							<ul>
-								<li><a href="#" title="">Быстрый интернет</a></li>
-								<li><a href="#" title="">Интернетв офис</a></li>
-								<li><a href="#" title="">Интернет с телевидением</a></li>
-								<li><a href="#" title="">Дешевый интернет</a></li>
-								<li><a href="#" title="">Цифровое ТВ</a></li>
-								<li><a href="#" title="">Качественный интернет</a></li>
-							</ul>
-						</div>
-						<!-- =/links -->
-
-						<!-- =visual -->
-						<div class="box visual">
-							<a href="#" class="btn" data-toggle="modal" data-target="#callback">подберите мне</a>
-							ЛУЧШИЙ ТАРИФ
-						</div>
-						<!-- =/visual -->
-
-						<!-- =rating -->
-						<div class="box rating">
-							<div class="rating_header">
-								<p class="title">Рейтинг провайдеров</p>
-								<a href="#" class="link btn-type-2 btn-sprite btn-sprite-balloon">Красноярск</a>
+								</form>
 							</div>
+							<!-- =/filter -->
 
-							<div class="rating_body">
-								<div class="item">
-									<div class="cifr">1</div>
-									<div class="logo"><img src="tmp/logo-beeline.jpg" alt="Beeline" class="img-responsive" /></div>
-									<div class="name">
-										<a href="#">Билайн</a>
-										<div class="rate">
-											Рейтинг <span>100.00</span>
-										</div>
-									</div>
-								</div>
-								<div class="item">
-									<div class="cifr">2</div>
-									<div class="logo"><img src="tmp/logo-domru.jpg" alt="Дом.РУ" class="img-responsive" /></div>
-									<div class="name">
-										<a href="#">Дом.ру</a>
-										<div class="rate">
-											Рейтинг <span>89.45</span>
-										</div>
-									</div>
-								</div>
-								<div class="item">
-									<div class="cifr">3</div>
-									<div class="logo"><img src="tmp/logo-orion.png" alt="Орион Телеком" class="img-responsive" /></div>
-									<div class="name">
-										<a href="#">Орион Телеком</a>
-										<div class="rate">
-											Рейтинг <span>88.42</span>
-										</div>
-									</div>
-								</div>
-								<div class="item">
-									<div class="cifr">4</div>
-									<div class="logo"><img src="tmp/logo-igra.png" alt="Игра сервис" class="img-responsive" /></div>
-									<div class="name">
-										<a href="#">Игра сервис</a>
-										<div class="rate">
-											Рейтинг <span>75.33</span>
-										</div>
-									</div>
-								</div>
-								<div class="item">
-									<div class="cifr">5</div>
-									<div class="logo"><img src="tmp/logo-axioma.png" alt="Axioma" class="img-responsive" /></div>
-									<div class="name">
-										<a href="#">Axioma</a>
-										<div class="rate">
-											Рейтинг <span>74.22</span>
-										</div>
-									</div>
-								</div>	
+							<!-- =links -->
+							<div class="links">
+								<ul>
+									<li><a href="#" title="">Быстрый интернет</a></li>
+									<li><a href="#" title="">Интернетв офис</a></li>
+									<li><a href="#" title="">Интернет с телевидением</a></li>
+									<li><a href="#" title="">Дешевый интернет</a></li>
+									<li><a href="#" title="">Цифровое ТВ</a></li>
+									<li><a href="#" title="">Качественный интернет</a></li>
+								</ul>
 							</div>
+							<!-- =/links -->
 
-							<div class="more text-center"><a href="#" title="Посмотреть всех провайдеров"><i></i>Посмотреть всех провайдеров</a></div>
-						</div>
-						<!-- =/rating -->						
-					</aside>
+							<!-- =visual -->
+							<div class="box visual">
+								<a href="#" class="btn" data-toggle="modal" data-target="#callback">подберите мне</a>
+								ЛУЧШИЙ ТАРИФ
+							</div>
+							<!-- =/visual -->
+
+							<!-- =rating -->
+							<div class="box rating">
+								<div class="rating_header">
+									<p class="title">Рейтинг провайдеров</p>
+									<a href="#" class="link btn-type-2 btn-sprite btn-sprite-balloon">Красноярск</a>
+								</div>
+
+								<div class="rating_body">
+									<div class="item">
+										<div class="cifr">1</div>
+										<div class="logo"><img src="tmp/logo-beeline.jpg" alt="Beeline" class="img-responsive" /></div>
+										<div class="name">
+											<a href="#">Билайн</a>
+											<div class="rate">
+												Рейтинг <span>100.00</span>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="cifr">2</div>
+										<div class="logo"><img src="tmp/logo-domru.jpg" alt="Дом.РУ" class="img-responsive" /></div>
+										<div class="name">
+											<a href="#">Дом.ру</a>
+											<div class="rate">
+												Рейтинг <span>89.45</span>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="cifr">3</div>
+										<div class="logo"><img src="tmp/logo-orion.png" alt="Орион Телеком" class="img-responsive" /></div>
+										<div class="name">
+											<a href="#">Орион Телеком</a>
+											<div class="rate">
+												Рейтинг <span>88.42</span>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="cifr">4</div>
+										<div class="logo"><img src="tmp/logo-igra.png" alt="Игра сервис" class="img-responsive" /></div>
+										<div class="name">
+											<a href="#">Игра сервис</a>
+											<div class="rate">
+												Рейтинг <span>75.33</span>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="cifr">5</div>
+										<div class="logo"><img src="tmp/logo-axioma.png" alt="Axioma" class="img-responsive" /></div>
+										<div class="name">
+											<a href="#">Axioma</a>
+											<div class="rate">
+												Рейтинг <span>74.22</span>
+											</div>
+										</div>
+									</div>	
+								</div>
+
+								<div class="more text-center"><a href="#" title="Посмотреть всех провайдеров"><i></i>Посмотреть всех провайдеров</a></div>
+							</div>
+							<!-- =/rating -->						
+						</aside>
+					</div>
 				</div>
 			</div>
 		</div>
