@@ -723,6 +723,15 @@ $(document).ready(function(){
 	// #карточка провайдера
 
 
+	$('.services .item .toggle').click(function(e){
+		e.preventDefault();
+		var $this = $(this);
+		$this.toggleClass('toggle-up');
+		$this.closest('.item').find('.item_body').slideToggle();
+
+	})
+
+
 
 
 	// mobile-menu

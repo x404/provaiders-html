@@ -170,12 +170,17 @@
 						<!-- =left -->
 						<div class="neck_card_left">
 							<div class="neck_card_head">
-								Пакет «Домашний интернет и ТВ за 500»
+								<p>Пакет «Домашний интернет и ТВ за 500»</p>
+								<a href="#" class="back_btn btn-type-3">Назад</a>
 							</div>
 							<div class="neck_card_info">
 								<div class="logo"><img src="tmp/beeline.png" alt="Билайн" /></div>
 								<p class="ico-alert alert">Информация актуальна до 31 октября 2016 года</p>
-								<a href="#" class="open-map btn-sprite btn-sprite-balloon"><span>Задать вопрос</span></a>
+								<div class="right">
+									<a href="#" class="btn btn-fav to-fav"></a>
+									<a href="#" class="btn btn-compare to-compare"></a>
+									<a href="#" class="btn-sprite btn-faq"><span>Задать вопрос</span></a>		
+								</div>
 							</div>
 							<div class="tarif_about">
 								<div class="params">
@@ -225,7 +230,7 @@
 		<!-- =/neck -->
 
 		<!-- =connect -->
-		<div class="connect">
+		<div class="connect hide">
 			<div class="connect_header">
 				<div class="container">
 					Подключить тариф <a href="#" class="toggle toggle-up"></a>				
@@ -276,7 +281,7 @@
 					<!-- =actions -->
 					<div class="tarif_action">
 						<div class="label"><span>акция</span></div>
-						<span class="stroke-1">До завершения 11 дней</span>
+						<span class="end">До завершения 11 дней</span>
 						<a href="#" class="more">Подробности акции</a>
 						<p class="remark">Бесплатный wi-fi роутер при подключении интернета</p>
 					</div>
@@ -300,29 +305,38 @@
 					<div class="services">
 						<div class="item">
 							<div class="item_title">Тип оказываемых услуг</div>
-							<div class="item_field">Интернет, ТВ</div>
+							<div class="item_field"><strong>Интернет, ТВ</strong></div>
 						</div>
 						<div class="item">
 							<div class="item_title">Скорость интернета днем</div>
-							<div class="item_field">80 Мбит/сек</div>
+							<div class="item_field"><strong>80 Мбит/сек</strong></div>
 						</div>
 						<div class="item">
 							<div class="item_title">Скорость интернета ночью</div>
-							<div class="item_field">100 Мбит/сек</div>
+							<div class="item_field"><strong>100 Мбит/сек</strong></div>
 						</div>
 						<div class="item">
 							<div class="item_title">
 								<p>Количество каналов</p>
-								<p class="sub">Из них в формате HD</p>
+								<ul>
+									<li>Из них в формате HD</li>
+								</ul>
 							</div>
 							<div class="item_field">
-								<p>150 <a href="#" class="channels_packet">Какие каналы?</a></p>
-								<p class="sub">23</p>
+								<p><strong>150</strong> <a href="#" class="channels_packet">Какие каналы?</a></p>
+								
+								<ul>
+									<li>23</li>
+								</ul>
 							</div>
 						</div>
 						<div class="item">
 							<div class="item_title">Абонентская плата:</div>
-							<div class="item_field">500 руб/мес <p class="old">650 руб/мес</p></div>
+							<div class="item_field">
+								<div class="str">
+									<strong>500 руб/мес</strong> <span class="old">650 руб/мес</span>
+								</div>
+							</div>
 						</div>
 						<div class="item">
 							<div class="item_title">
@@ -336,8 +350,10 @@
 								</ul>
 							</div>
 							<div class="item_field">
-								2000 руб/мес 
-								<p class="old">1000 руб/мес</p>
+								<div class="str">
+									<strong>2000 руб/мес </strong>
+									<span class="old">1000 руб/мес</span>
+								</div>
 								<ul>
 									<li>1500 руб</li>
 									<li>50 руб</li>
@@ -347,10 +363,182 @@
 								</ul>
 							</div>
 						</div>
+
+						<div class="item">
+							<div class="item_header checkboxes">
+								<input type="checkbox" name="router-switch" id="router-switch">
+								<label for="router-switch">Wi-fi роутер</label>
+								<button type="button" class="toggle"></button>
+							</div>
+
+							<div class="item_body">
+								<div class="item_body_wrapper">
+									<div class="cell">
+										<div class="pic"><img src="tmp/device.png" alt="" /></div>
+										<div class="check">
+											<input type="radio" name="router" id="router1" value="Аренда роутера" checked />
+											<label for="router1">Аренда роутера</label>
+										</div>
+										<div class="text">
+											<p>Быстрый интернет подходит для загрузки контента, для просмотра видео онлайн без подзагрузки</p>
+										</div>
+										<div class="price">
+											<p><strong>100 руб/мес</strong> <span class="old">200 руб/мес</span></p>
+										</div>
+									</div>
+									<div class="cell">
+										<div class="pic"><img src="tmp/device.png" alt="" /></div>
+										<div class="check">
+											<input type="radio" name="router" id="router2" value="Аренда роутера" />
+											<label for="router2">Wi-fi роутер Лайт</label>
+										</div>
+										<div class="text">
+											<p>Подходит для загрузки контента, для просмотра видео онлайн без подзагрузки</p>
+										</div>
+										<div class="price">
+											<p><strong>3500 руб/мес</strong> <span class="old">4500 руб/мес</span></p>
+										</div>
+										<div class="more">
+											<a href="#" title="">Подробнее</a>
+										</div>
+									</div>
+									<div class="cell">
+										<div class="pic"><img src="tmp/device.png" alt="" /></div>
+										<div class="check">
+											<input type="radio" name="router" id="router3" value="Аренда роутера" />
+											<label for="router3">Wi-fi роутер Лайт</label>
+										</div>
+										<div class="text">
+											<p>Для загрузки контента, для просмотра видео онлайн без подзагрузки</p>
+										</div>
+										<div class="price">
+											<p><strong>8000 руб/мес</strong></p>
+										</div>
+										<div class="more">
+											<a href="#" title="">Подробнее</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="item_header checkboxes">
+								<input type="checkbox" name="console-switch" id="console-switch" value="" />
+								<label for="console-switch">ТВ-приставка</label>
+								<button type="button" class="toggle"></button>
+							</div>
+
+							<div class="item_body">
+								<div class="item_body_wrapper">
+									<div class="cell">
+										<div class="pic"><img src="tmp/device.png" alt="" /></div>
+										<div class="check">
+											<input type="radio" name="console" id="console1" value="Аренда приставки" checked />
+											<label for="console1">Аренда приставки</label>
+										</div>
+										<div class="text">
+											<p>Быстрый интернет подходит для загрузки контента, для просмотра видео онлайн без подзагрузки</p>
+										</div>
+										<div class="price">
+											<p><strong>100 руб/мес</strong> <span class="old">200 руб/мес</span></p>
+										</div>
+									</div>
+									<div class="cell">
+										<div class="pic"><img src="tmp/device.png" alt="" /></div>
+										<div class="check">
+											<input type="radio" name="console" id="console2" value="Приставка лайт" />
+											<label for="console2">Приставка лайт</label>
+										</div>
+										<div class="text">
+											<p>Подходит для загрузки контента, для просмотра видео онлайн без подзагрузки</p>
+										</div>
+										<div class="price">
+											<p><strong>3500 руб/мес</strong> <span class="old">4500 руб/мес</span></p>
+										</div>
+										<div class="more">
+											<a href="#" title="">Подробнее</a>
+										</div>
+									</div>
+									<div class="cell">
+										<div class="pic"><img src="tmp/device.png" alt="" /></div>
+										<div class="check">
+											<input type="radio" name="console" id="console3" value="Приставка Медиум" />
+											<label for="console3">Приставка Медиум</label>
+										</div>
+										<div class="text">
+											<p>Для загрузки контента, для просмотра видео онлайн без подзагрузки</p>
+										</div>
+										<div class="price">
+											<p><strong>8000 руб/мес</strong></p>
+										</div>
+										<div class="more">
+											<a href="#" title="">Подробнее</a>
+										</div>
+									</div>
+									<div class="cell">
+										<div class="pic"><img src="tmp/device.png" alt="" /></div>
+										<div class="check">
+											<input type="radio" name="console" id="console4" value="Аренда роутера" />
+											<label for="console4">Приставка Медиум</label>
+										</div>
+										<div class="text">
+											<p>Для загрузки контента, для просмотра видео онлайн без подзагрузки</p>
+										</div>
+										<div class="price">
+											<p><strong>8000 руб/мес</strong></p>
+										</div>
+										<div class="more">
+											<a href="#" title="">Подробнее</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="item_header checkboxes">
+								<input type="checkbox" name="add-service-switch" id="add-service-switch">
+								<label for="add-service-switch">Дополнительные услуги</label>
+								<button type="button" class="toggle"></button>
+							</div>
+
+							<div class="item_body item_body_additional">
+								<div class="item_body_wrapper">
+									<div class="cell_row">
+										<div class="control">
+											<input type="checkbox" name="add-service1" id="add-service1" value="Дополнительный пакет каналов (+200 руб)" />
+											<label for="add-service1">Дополнительный пакет каналов (+200 руб)</label>										
+										</div>
+										<p>По данным независимого сервиса NetIndex в большинстве городов присутствия Дом.ru подтверждает самую высокую скорость Интернет для своих Абонентов.</p>
+										<p><a href="#" class="channels_packet">Какие каналы?</a></p>
+									</div>
+									<div class="cell_row">
+										<div class="control">
+											<input type="checkbox" name="add-service2" id="add-service2" value="Видеотека (+100 руб)" />
+											<label for="add-service2">Видеотека (+100 руб)</label>										
+										</div>
+									</div>
+									<div class="cell_row">
+										<div class="control">
+											<input type="checkbox" name="add-service3" id="add-service3" value="Мобильное телевидение (+100 руб)" />
+											<label for="add-service3">Мобильное телевидение (+100 руб)</label>										
+										</div>
+									</div>
+									<div class="cell_row">
+										<div class="control">
+											<input type="checkbox" name="add-service4" id="add-service4" value="Антивирус на месяц (+500 руб)" />
+											<label for="add-service4">Антивирус на месяц (+500 руб)</label>										
+										</div>
+										<p>Антивирус касперского</p>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 					<!-- =/services -->
 
-					<!-- =popular-tarifs -->
+
+
+					<!-- =similar-tarifs -->
 					<div class="similar_tarifs">
 						<div class="header">
 							<span class="title">Похожие тарифы</span>
@@ -439,7 +627,7 @@
 							</div>
 						</div>
 					</div>
-					<!-- =/popular-tarifs -->
+					<!-- =/similar-tarifs -->
 				</div>
 			</div>
 		</div>
