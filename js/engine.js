@@ -672,7 +672,7 @@ $(document).ready(function(){
 
 
 	// подгрузка вопрос-ответов в карточке провайдера
-	$('.faq_providers_more a').click(function(e){
+	$('.faq_content-providers .faq_content_more a').click(function(e){
 		e.preventDefault();
 		var $this = $(this);
 
