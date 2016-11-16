@@ -445,7 +445,28 @@ $(document).ready(function(){
 		},
 		submitHandler: function(form){
 		}
-	});	
+	});
+
+	$('#add-faqtarif-form').validate({
+		rules: {
+			name:{
+				required : true
+			},
+			tel: {
+				validphone:true
+			},
+			msg: {
+				required:true
+			}
+		},
+		errorPlacement: function(error, element) {
+			if (element.attr('name') == 'name') $('#add-faqtarif-form .helper-field-name').text('Заполните поле');
+			if (element.attr('name') == 'tel') $('#add-faqtarif-form .helper-field-tel').text('Заполните поле');
+			if (element.attr('name') == 'theme') $('#add-faqtarif-form .helper-field-theme').text('Заполните поле');
+			if (element.attr('name') == 'msg') $('#add-faqtarif-form .helper-field-msg').text('Заполните поле');
+		}
+	});
+
 
 	$('#add-quality').on('hidden.bs.modal', function (e) {
 		$('body').css('padding-right', '0px');
