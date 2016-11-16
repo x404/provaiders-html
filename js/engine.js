@@ -819,6 +819,14 @@ $(document).ready(function(){
 
 
 
+	$('.connect_header').click(function(e){
+		e.preventDefault();
+		var $this = $(this);
+		$this.toggleClass('connect_header-down');
+		$('.connect_wrapper').slideToggle('nomral', function(){
+		});
+	})
+
 	// =заглушка для IE
 	var browser = navigator.userAgent.indexOf("MSIE");
 	var version = parseInt(navigator.userAgent.substr(browser + 5, 2));

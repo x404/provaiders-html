@@ -230,85 +230,85 @@
 		</div>
 		<!-- =/neck -->
 
-
-		<div class="container tarif_content">
-			<!-- =connect -->
-			<script>
-			$(document).ready(function(){
-				$.fn.scrollStopped = function(callback) {
-					var that = this, $this = $(that);
-					$this.scroll(function(ev) {
-						clearTimeout($this.data('scrollTimeout'));
-						$this.data('scrollTimeout', setTimeout(callback.bind(that), 250, ev));
-					});
-				};	
-					
-				var elem = $(".connect");
-				$(window).scrollStopped(function(){
-					if (elem.css('display') == 'block') {
-						var win_top = $(window).scrollTop(),
-							win_height = $(window).height(),
-							height_block = $(elem).height();
-						if (win_height>height_block && win_top > 350){
-							elem.animate({
-								marginTop : Math.round(win_top+(win_height-height_block)/2)-400+"px"
-							}, 1000)
-						} else{
-							elem.animate({
-								marginTop : 0
-							}, 1000)
-						}
-
+		<!-- =connect -->
+		<script>
+		$(document).ready(function(){
+			$.fn.scrollStopped = function(callback) {
+				var that = this, $this = $(that);
+				$this.scroll(function(ev) {
+					clearTimeout($this.data('scrollTimeout'));
+					$this.data('scrollTimeout', setTimeout(callback.bind(that), 250, ev));
+				});
+			};	
+				
+			var elem = $(".connect");
+			$(window).scrollStopped(function(){
+				if (elem.css('display') == 'block') {
+					var win_top = $(window).scrollTop(),
+						win_height = $(window).height(),
+						height_block = $(elem).height();
+					if (win_height>height_block && win_top > 350){
+						elem.animate({
+							marginTop : Math.round(win_top+(win_height-height_block)/2)-400+"px"
+						}, 1000)
+					} else{
+						elem.animate({
+							marginTop : 0
+						}, 1000)
 					}
-				});	
-			})
-			</script>
-			<div class="connect">
-				<div class="connect_header">
-					<div class="container">
-						Подключить тариф <a href="#" class="toggle toggle-up"></a>				
-					</div>
+
+				}
+			});	
+		})
+		</script>
+		<div class="connect">
+			<div class="connect_header">
+				<div class="container">
+					Подключить тариф <a href="#" class="toggle"></a>
 				</div>
-				<div class="connect_wrapper">
-					<div class="connect_top">
-						<div class="container">
-							<div class="connect_title">
-								<p>Пакет «Домашний интернет и ТВ за 500»</p>
+			</div>
+			<div class="connect_wrapper">
+				<div class="connect_top">
+					<div class="container">
+						<div class="connect_title">
+							<p>Пакет «Домашний интернет и ТВ за 500»</p>
+						</div>
+						<div class="connect_body">
+							<div class="cell">
+								<div class="cell_title">Ежемесячная абонентская плата</div>
+								<div class="cell_field">1 500 руб/мес</div>
 							</div>
-							<div class="connect_body">
-								<div class="cell">
-									<div class="cell_title">Ежемесячная абонентская плата</div>
-									<div class="cell_field">1 500 руб/мес</div>
-								</div>
-								<div class="cell">
-									<div class="cell_title">Стоимость подключения</div>
-									<div class="cell_field">0 руб</div>
-								</div>
-								<div class="cell">
-									<div class="cell_title">Оборудование:</div>
-									<div class="cell_field">5 000 руб</div>
-								</div>
-								<div class="cell">
-									<div class="cell_title">Дополнительные услуги:</div>
-									<div class="cell_field">0 руб</div>
-								</div>
+							<div class="cell">
+								<div class="cell_title">Стоимость подключения</div>
+								<div class="cell_field">0 руб</div>
+							</div>
+							<div class="cell">
+								<div class="cell_title">Оборудование:</div>
+								<div class="cell_field">5 000 руб</div>
+							</div>
+							<div class="cell">
+								<div class="cell_title">Дополнительные услуги:</div>
+								<div class="cell_field">0 руб</div>
 							</div>
 						</div>
 					</div>
-					<div class="connect_footer">
-						<div class="container">
-							<div class="sum">
-								<div class="left">Итого</div>
-								<div class="right"><strong>6 500</strong><sup>руб</sup></div>
-							</div>
-							<div class="button">
-								<a href="#" class="btn btn-rounded" data-toggle="modal" data-target="#connect_tarif">Подключить тариф</a>
-							</div>
+				</div>
+				<div class="connect_footer">
+					<div class="container">
+						<div class="sum">
+							<div class="left">Итого</div>
+							<div class="right"><strong>6 500</strong><sup>руб</sup></div>
+						</div>
+						<div class="button">
+							<a href="#" class="btn btn-rounded" data-toggle="modal" data-target="#connect_tarif">Подключить тариф</a>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- =/connect -->
+		</div>
+		<!-- =/connect -->
+
+		<div class="container tarif_content">
 
 
 			<div class="row">
