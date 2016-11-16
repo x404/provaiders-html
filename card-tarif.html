@@ -179,7 +179,7 @@
 								<div class="right">
 									<a href="#" class="btn btn-fav to-fav"></a>
 									<a href="#" class="btn btn-compare to-compare"></a>
-									<a href="#" class="btn-sprite btn-faq"><span>Задать вопрос</span></a>		
+									<a href="#" class="btn-sprite btn-faq" data-toggle="modal" data-target="#add-faq-provider"><span>Задать вопрос</span></a>		
 								</div>
 							</div>
 							<div class="tarif_about">
@@ -232,6 +232,36 @@
 
 		<div class="container tafif_content">
 			<!-- =connect -->
+			<script>
+			$(document).ready(function(){
+				$.fn.scrollStopped = function(callback) {
+					var that = this, $this = $(that);
+					$this.scroll(function(ev) {
+						clearTimeout($this.data('scrollTimeout'));
+						$this.data('scrollTimeout', setTimeout(callback.bind(that), 250, ev));
+					});
+				};	
+					
+				var elem = $(".connect");
+				$(window).scrollStopped(function(){
+					if (elem.css('display') == 'block') {
+						var win_top = $(window).scrollTop(),
+							win_height = $(window).height(),
+							height_block = $(elem).height();
+						if (win_height>height_block && win_top > 350){
+							elem.animate({
+								marginTop : Math.round(win_top+(win_height-height_block)/2)-400+"px"
+							}, 1000)
+						} else{
+							elem.animate({
+								marginTop : 0
+							}, 1000)
+						}
+
+					}
+				});	
+			})
+			</script>
 			<div class="connect">
 				<div class="connect_header">
 					<div class="container">
@@ -278,6 +308,8 @@
 				</div>
 			</div>
 			<!-- =/connect -->
+
+
 			<div class="row">
 				<div class="col-lg-9">
 					<!-- =actions -->
@@ -698,7 +730,7 @@
 						</div>
 					</article>
 
-					<div id="faq_providers_load">
+					<div id="faq_tarif_load">
 						<!-- подгрузка вопросов в верстке сделана через эмулятор ajax запросов mockajax -->
 					</div>
 
@@ -896,6 +928,50 @@
 	</div>
 </div>
 <!-- =/add-faq -->
+
+<!-- =add-faq-provider -->
+<div class="modal fade" id="add-faq-provider" tabindex="-1" role="dialog" aria-labelledby="add-faq-providerLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-title" id="add-faq-providerLabel">Задать вопрос</div>
+			<form action="#" method="post" id="add-faq-form">
+				<fieldset>
+					<div class="row">
+						<div class="col-md-6 col-sm-6 col-xs-6">
+							<div class="input-field">
+								<label for="namefaq" class="name-field">Ваше имя</label>
+								<label for="namefaq" class="helper-field helper-field-name">Ваше имя</label>					
+								<input type="text" id="namefaq" name="name" class="form-control required" value="" />
+							</div>							
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-6">
+							<div class="input-field">
+								<label for="telfaq" class="name-field">Телефон</label>
+								<label for="telfaq" class="helper-field helper-field-tel">Телефон</label>
+								<input type="tel" id="telfaq" name="tel" class="form-control required tel" value="" />
+							</div>
+						</div>
+					</div>
+
+					<div class="input-field">
+						<label for="msgfaq" class="name-field">Текст вопроса</label>
+						<label for="msgfaq" class="helper-field helper-field-msg">Текст вопроса</label>
+						<textarea id="msgfaq" name="msg" class="form-control required"></textarea>
+					</div>
+
+					<div class="bottom row">
+						<div class="captcha">
+							<img src="tmp/captcha.jpg" alt="" class="img-responsive" />
+						</div>
+						<input type="submit" class="submit" value="Отправить вопрос">						
+					</div>
+				</fieldset>
+			</form>
+			<button type="button" class="close" data-dismiss="modal"><img src="images/close-modal.png" alt="" /></button>
+		</div>
+	</div>
+</div>
+<!-- =/add-faq-provider -->
 
 <!-- =order connect -->
 <div class="modal fade" id="connect" tabindex="-1" role="dialog" aria-labelledby="add-connectLabel">
@@ -1323,37 +1399,6 @@
 	</div>
 </div>
 <!-- =/add-opinion -->
-
-
-<div class="modal fade" id="add-quality" tabindex="-1" role="dialog" aria-labelledby="add-opinionLabel">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-title" id="add-qualityLabel">В одном из пунктов вы поставили оценку ниже 5</div>
-			<p class="remark">Мы следим за качеством отзывов, поэтому просим оставить данные для решения возникшей проблемы</p>
-			<form action="#" method="post" id="add-quality-form">
-				<fieldset>
-					<div class="input-field">
-						<label for="numcontract" class="name-field">Номер договора</label>
-						<label for="numcontract" class="helper-field helper-field-numcontract">Номер договора</label>
-						<input type="text" id="numcontract" name="numcontract" class="form-control required" value="" />
-					</div>
-					<p class="br"><span>или</span></p>
-					<div class="input-field">
-						<label for="tel-quality" class="name-field">Телефон</label>
-						<label for="tel-quality" class="helper-field helper-field-tel">Телефон</label>
-						<input type="tel" id="tel-quality" name="tel" class="form-control required tel" value="" />
-					</div>
-					<div class="bottom row">
-						<input type="submit" class="submit" value="Отправить" />
-					</div>
-				</fieldset>
-			</form>
-			<button type="button" class="close" data-dismiss="modal"><img src="images/close-modal.png" alt="" /></button>
-		</div>
-	</div>
-</div>
-
-
 
 <!-- =/city-choose-popup -->
 <div class="city-choose-popup">

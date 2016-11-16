@@ -220,4 +220,13 @@ $(document).ready(function(){
 			this.responseText = '<div class="others_item actions_item actions_item_toggle"> <div class="actions_item_wrapper"> <div class="pic"> <img src="tmp/big-action-4.jpg" alt="" class="img-responsive" /> </div> <div class="info"> <div class="row"> <span class="stroke-1">До завершения 11 дней</span> <a href="#" class="label">% Акция</a> </div> <h3><a href="#" title="">Подключи три услуги и получи в подарок телефон</a></h3> </div> </div> </div> <div class="others_item actions_item actions_item_toggle"> <div class="actions_item_wrapper"> <div class="pic"> <img src="tmp/big-action-2.jpg" alt="" class="img-responsive" /> </div> <div class="info"> <div class="row"> <span class="stroke-1">До завершения 11 дней</span> <a href="#" class="label">% Акция</a> </div> <h3><a href="#" title="">Подключи три услуги и получи в подарок телефон</a></h3> </div> </div> </div> <div class="others_item actions_item actions_item_toggle"> <div class="actions_item_wrapper"> <div class="pic"> <img src="tmp/big-action-3.jpg" alt="" class="img-responsive" /> </div> <div class="info"> <div class="row"> <span class="stroke-1">До завершения 11 дней</span> <a href="#" class="label">% Акция</a> </div> <h3><a href="#" title="">Позаботьтесь о здоровье вашего компьютера по выгодной цене!</a></h3> </div> </div> </div>'
 		}
 	});
+
+
+	$.mockjax({ // эмулятор ajax ответов для вопросов-ответов
+		url: '/faq-tarif/',
+		response: function() {
+			this.responseText = '<article class="faq_item"> <div class="faq_item_wrapper"> <div class="faq_item_top"> <p class="name">Саша <span class="date dateicon">16 октября 2016, в 22:00</span></p> </div> <div class="faq_item_body"> <div class="text"> <p>Есть ли возможность подключения по моему адресу?</p> </div> <div class="faq_item_answer"> <p class="answer_name">Ответ от Beeline</p> <div class="answer_text"> <p>Проверить существует ли возможность подключения к вашему дому Вы можете на нашем сайте. Также Вы можете оформить на сайте заявку на подключение.</p> </div> </div> </div> </div> </article>';
+		} 
+	});
+
 })

@@ -516,6 +516,50 @@
 </div>
 <!-- =/add-faq -->
 
+<!-- =add-faq-provider -->
+<div class="modal fade" id="add-faq-provider" tabindex="-1" role="dialog" aria-labelledby="add-faq-providerLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-title" id="add-faq-providerLabel">Задать вопрос</div>
+			<form action="#" method="post" id="add-faq-form">
+				<fieldset>
+					<div class="row">
+						<div class="col-md-6 col-sm-6 col-xs-6">
+							<div class="input-field">
+								<label for="namefaq" class="name-field">Ваше имя</label>
+								<label for="namefaq" class="helper-field helper-field-name">Ваше имя</label>					
+								<input type="text" id="namefaq" name="name" class="form-control required" value="" />
+							</div>							
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-6">
+							<div class="input-field">
+								<label for="telfaq" class="name-field">Телефон</label>
+								<label for="telfaq" class="helper-field helper-field-tel">Телефон</label>
+								<input type="tel" id="telfaq" name="tel" class="form-control required tel" value="" />
+							</div>
+						</div>
+					</div>
+
+					<div class="input-field">
+						<label for="msgfaq" class="name-field">Текст вопроса</label>
+						<label for="msgfaq" class="helper-field helper-field-msg">Текст вопроса</label>
+						<textarea id="msgfaq" name="msg" class="form-control required"></textarea>
+					</div>
+
+					<div class="bottom row">
+						<div class="captcha">
+							<img src="tmp/captcha.jpg" alt="" class="img-responsive" />
+						</div>
+						<input type="submit" class="submit" value="Отправить вопрос">						
+					</div>
+				</fieldset>
+			</form>
+			<button type="button" class="close" data-dismiss="modal"><img src="images/close-modal.png" alt="" /></button>
+		</div>
+	</div>
+</div>
+<!-- =/add-faq-provider -->
+
 <!-- =order connect -->
 <div class="modal fade" id="connect" tabindex="-1" role="dialog" aria-labelledby="add-connectLabel">
 	<div class="modal-dialog" role="document">

@@ -723,43 +723,29 @@ $(document).ready(function(){
 	// #карточка провайдера
 
 
+	// подгрузка вопрос-ответ в карточке тарифа
+	$('.faq_content-tarif .faq_content_more a').click(function(e){
+		e.preventDefault();
+		var $this = $(this);
+
+		$.ajax({
+			url: "/faq-tarif/", // по url находится ajax эмулятор - mockajax
+			cache: false,
+			success: function(html){
+				$('#faq_tarif_load').append('<div class="toggle">' + html + '</div>');
+				$('#faq_tarif_load .toggle').slideDown('normal', function(){
+					$('#faq_tarif_load .toggle').removeClass('toggle');
+				});
+			}
+		});
+	});
+
 	$('.services .item .toggle').click(function(e){
 		e.preventDefault();
 		var $this = $(this);
 		$this.toggleClass('toggle-up');
 		$this.closest('.item').find('.item_body').slideToggle();
-
 	})
-
-
-
-$.fn.scrollStopped = function(callback) {
-  var that = this, $this = $(that);
-  $this.scroll(function(ev) {
-    clearTimeout($this.data('scrollTimeout'));
-    $this.data('scrollTimeout', setTimeout(callback.bind(that), 250, ev));
-  });
-};	
-	
-var elem = $(".connect");	
-$(window).scrollStopped(function(){
-	if (elem.css('display') == 'block') {		
-		var win_top = $(window).scrollTop(),
-			win_height = $(window).height(),
-			height_block = $(elem).height();
-		if (win_height>height_block && win_top > 350){
-			elem.animate({
-				marginTop : Math.round(win_top+(win_height-height_block)/2)-400+"px"
-			}, 1000)
-		} else{
-			elem.animate({
-				marginTop : 0
-			}, 1000)
-		}
-
-	}
-});
-
 
 
 
