@@ -294,7 +294,7 @@ $(document).ready(function(){
 	});
 	
 
-	$('#city-connect').typeahead({
+	$('#city-connect, #city-connect_tarif').typeahead({
 		items: 5, 
 		ajax: { 
 			url: '/cities/list',
@@ -304,7 +304,7 @@ $(document).ready(function(){
 			$('#city-connect').valid();
 		}
 	});	
-	$('#address-connect').typeahead({
+	$('#address-connect, #address-connect_tarif').typeahead({
 		items: 5, 
 		ajax: { 
 			url: '/address/list',
@@ -314,7 +314,7 @@ $(document).ready(function(){
 			$('#address-connect').valid();
 		}
 	});
-	$('#house-connect').typeahead({
+	$('#house-connect, #house-connect_tarif').typeahead({
 		items: 5, 
 		ajax: { 
 			url: '/house/list',
@@ -414,6 +414,23 @@ $(document).ready(function(){
 			if (element.attr('name') == 'house') $('#connect-form .helper-field-house').text('Заполните поле');
 		}
 	});
+
+	$('#connect_tarif-form').validate({
+		rules: {
+			name:{required : true},
+			tel: {validphone:true},
+			city: {required:true},
+			address: {required:true},
+			house: {required:true}
+		},
+		errorPlacement: function(error, element) {
+			if (element.attr('name') == 'name') $('#connect_tarif-form .helper-field-name').text('Заполните поле');
+			if (element.attr('name') == 'tel') $('#connect_tarif-form .helper-field-tel').text('Заполните поле');
+			if (element.attr('name') == 'city') $('#connect_tarif-form .helper-field-city').text('Заполните поле');
+			if (element.attr('name') == 'address') $('#connect_tarif-form .helper-field-address').text('Заполните поле');
+			if (element.attr('name') == 'house') $('#connect_tarif-form .helper-field-house').text('Заполните поле');
+		}
+	});	
 
 	$('#add-opinion-form').validate({
 		rules: {

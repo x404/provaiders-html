@@ -13,8 +13,7 @@
 <!-- InstanceBeginEditable name="doctitle" -->
 <title>Статьи</title>
 <!-- InstanceEndEditable -->
-<!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"> -->
-<!-- <link rel="stylesheet" href="css/bootstrap.css" /> -->
+
 <link rel="stylesheet" href="css/owl.carousel.css" />
 <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
 <link rel="stylesheet" href="css/styles.css" />
@@ -730,6 +729,98 @@
 </div>
 <!-- =/add-connect -->
 
+<!-- =order connect tarif -->
+<div class="modal fade" id="connect_tarif" tabindex="-1" role="dialog" aria-labelledby="add-connectLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-title" id="add-connect_tarifLabel">Заявка на подключение</div>
+			<form action="#" method="post" id="connect_tarif-form">
+				<fieldset>
+					<div class="connect_info">
+						<div class="connect_info_header">
+							<div class="left">
+								<p>Оформление заявки на подключение тарифа:</p>
+								<p class="tarif-title"><img src="tmp/logo-beeline.jpg" alt="" /> Пакет «<span>Домашний интернет и ТВ за 500</span>»</p>
+							</div>
+							<div class="right">
+								<p>Итого к оплате</p>
+								<p class="sum">3000 руб.</p>
+							</div>
+						</div>
+						<div class="connect_info_body">
+							<p>Скорость: 100 Мбит/сек</p>
+							<p>Кол-во каналов: 100</p>
+							<p>Абонентская плата: 100 руб/мес</p>
+							<p>Wi-fi роутер: классик</p>
+							<p>Тв-приставка: в комплекте</p>
+							<p>Дополнительные услуги: пакет каналов “18+”, дополнительный ip-адрес</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-sm-6 col-xs-6">
+							<div class="input-field">
+								<label for="name-connect_tarif" class="name-field">ФИО</label>
+								<label for="name-connect_tarif" class="helper-field helper-field-name-connect_tarif">ФИО</label>					
+								<input type="text" id="name-connect_tarif" name="name" class="form-control required" value="" />
+							</div>							
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-6">
+							<div class="input-field">
+								<label for="tel-connect_tarif" class="name-field">Телефон</label>
+								<label for="tel-connect_tarif" class="helper-field helper-field-tel">Телефон</label>
+								<input type="tel" id="tel-connect_tarif" name="tel" class="form-control required tel" value="" />
+							</div>
+						</div>
+					</div>
+
+					<div class="address-area">
+						<p class="title">Проверка адреса</p>
+						<div class="row">
+							<div class="col-city">
+								<div class="input-field">
+									<label for="city-connect_tarif" class="name-field">Город</label>
+									<label for="city-connect_tarif" class="helper-field helper-field-city">Город</label>
+									<input type="text" id="city-connect_tarif" name="city" class="form-control required" value="" autocomplete="off" />
+								</div>							
+							</div>
+							<div class="col-address">
+								<div class="input-field">
+									<label for="address-connect_tarif" class="name-field">Адрес</label>
+									<label for="address-connect_tarif" class="helper-field helper-field-address">Адрес</label>
+									<input type="text" id="address-connect_tarif" name="address" class="form-control required" value="" autocomplete="off"  />
+								</div>							
+							</div>
+							<div class="col-house">
+								<div class="input-field">
+									<label for="house-connect_tarif" class="name-field">Номер дома</label>
+									<label for="house-connect_tarif" class="helper-field helper-field-house-connect_tarif">Номер дома</label>
+									<input type="text" id="house-connect_tarif" name="house" class="form-control required" value="" autocomplete="off"  />
+								</div>
+							</div>
+							<div class="col-flat">
+								<div class="input-field">
+									<label for="flat-connect_tarif" class="name-field">Квартира</label>
+									<label for="flat-connect_tarif" class="helper-field helper-field-flat-connect_tarif">Квартира</label>
+									<input type="text" id="flat-connect_tarif" name="flat" class="form-control required" value="" autocomplete="off"  />
+								</div>	
+							</div>
+						</div>
+					</div>
+
+					<div class="bottom row">
+						<div class="captcha">
+							<img src="tmp/captcha.jpg" alt="" class="img-responsive" />
+						</div>
+						<input type="submit" class="submit" value="Отправить запрос">						
+					</div>
+				</fieldset>
+			</form>
+			<button type="button" class="close" data-dismiss="modal"><img src="images/close-modal.png" alt="" /></button>
+		</div>
+	</div>
+</div>
+<!-- =/order connect tarif -->
+
 <!-- =add-opinion -->
 <div class="modal fade" id="add-opinion" tabindex="-1" role="dialog" aria-labelledby="add-opinionLabel">
 	<div class="modal-dialog" role="document">
@@ -1216,7 +1307,6 @@
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<!--script src="../js/modal.js"></script-->
 
 <script src="js/inputmask/inputmask.js"></script>
 <script src="js/inputmask/inputmask.phone.extensions.js"></script>
