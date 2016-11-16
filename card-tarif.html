@@ -356,7 +356,7 @@
 								</ul>
 							</div>
 							<div class="item_field">
-								<p><strong>150</strong> <a href="#" class="channels_packet">Какие каналы?</a></p>
+								<p><strong>150</strong> <a href="#" class="channels_packet" data-toggle="modal" data-target="#channels">Какие каналы?</a></p>
 								
 								<ul>
 									<li>23</li>
@@ -542,7 +542,7 @@
 											<label for="add-service1">Дополнительный пакет каналов (+200 руб)</label>										
 										</div>
 										<p>По данным независимого сервиса NetIndex в большинстве городов присутствия Дом.ru подтверждает самую высокую скорость Интернет для своих Абонентов.</p>
-										<p><a href="#" class="channels_packet">Какие каналы?</a></p>
+										<p><a href="#" class="channels_packet" data-toggle="modal" data-target="#channels">Какие каналы?</a></p>
 									</div>
 									<div class="cell_row">
 										<div class="control">
@@ -826,58 +826,6 @@
 </div>
 <!-- =/callback -->
 
-<!-- =add-review -->
-<div class="modal fade" id="add-review" tabindex="-1" role="dialog" aria-labelledby="add-reviewLabel">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-title" id="add-reviewLabel">Оставить отзыв</div>
-			<form action="#" method="post" id="add-review-form">
-				<fieldset>
-					<div class="grade">
-						<span>Ваша оценка</span>
-						<input type="radio" id="grade-good" name="grade" value="Хорошо" checked="" />
-						<label for="grade-good">Хорошо</label>
-
-						<input type="radio" id="grade-bad" name="grade" value="Плохо" checked="" />
-						<label for="grade-bad">Плохо</label>
-					</div>
-					<div class="row">
-						<div class="col-md-6 col-sm-6 col-xs-6">
-							<div class="input-field">
-								<label for="name" class="name-field">Ваше имя</label>
-								<label for="name" class="helper-field helper-field-name">Ваше имя</label>					
-								<input type="text" id="name" name="name" class="form-control required" value="" />
-							</div>							
-						</div>
-						<div class="col-md-6 col-sm-6 col-xs-6">
-							<div class="input-field">
-								<label for="tel2" class="name-field">Телефон</label>
-								<label for="tel2" class="helper-field helper-field-tel">Телефон</label>
-								<input type="tel" id="tel2" name="tel" class="form-control required tel" value="" />
-							</div>
-						</div>
-					</div>
-
-					<div class="input-field">
-						<label for="msg" class="name-field">Текст отзыва</label>
-						<label for="msg" class="helper-field helper-field-msg">Текст отзыва</label>
-						<textarea id="msg" name="msg" class="form-control required"></textarea>
-					</div>
-
-					<div class="bottom row">
-						<div class="captcha">
-							<img src="tmp/captcha.jpg" alt="" class="img-responsive" />
-						</div>
-						<input type="submit" class="submit" value="Отправить отзыв" />
-					</div>
-				</fieldset>
-			</form>
-			<button type="button" class="close" data-dismiss="modal"><img src="images/close-modal.png" alt="" /></button>
-		</div>
-	</div>
-</div>
-<!-- =/add-review -->
-
 <!-- =add-faq -->
 <div class="modal fade" id="add-faq" tabindex="-1" role="dialog" aria-labelledby="add-faqLabel">
 	<div class="modal-dialog" role="document">
@@ -927,50 +875,6 @@
 	</div>
 </div>
 <!-- =/add-faq -->
-
-<!-- =add-faq-tarif -->
-<div class="modal fade" id="add-faqtarif" tabindex="-1" role="dialog" aria-labelledby="add-faqtarifLabel">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-title" id="add-faqtarifLabel">Задать вопрос</div>
-			<form action="#" method="post" id="add-faqtarif-form">
-				<fieldset>
-					<div class="row">
-						<div class="col-md-6 col-sm-6 col-xs-6">
-							<div class="input-field">
-								<label for="namefaqtarif" class="name-field">Ваше имя</label>
-								<label for="namefaqtarif" class="helper-field helper-field-name">Ваше имя</label>					
-								<input type="text" id="namefaqtarif" name="name" class="form-control required" value="" />
-							</div>							
-						</div>
-						<div class="col-md-6 col-sm-6 col-xs-6">
-							<div class="input-field">
-								<label for="telfaqtarif" class="name-field">Телефон</label>
-								<label for="telfaqtarif" class="helper-field helper-field-tel">Телефон</label>
-								<input type="tel" id="telfaqtarif" name="tel" class="form-control required tel" value="" />
-							</div>
-						</div>
-					</div>
-
-					<div class="input-field">
-						<label for="msgfaqtarif" class="name-field">Текст вопроса</label>
-						<label for="msgfaqtarif" class="helper-field helper-field-msg">Текст вопроса</label>
-						<textarea id="msgfaqtarif" name="msg" class="form-control required"></textarea>
-					</div>
-
-					<div class="bottom row">
-						<div class="captcha">
-							<img src="tmp/captcha.jpg" alt="" class="img-responsive" />
-						</div>
-						<input type="submit" class="submit" value="Отправить вопрос">						
-					</div>
-				</fieldset>
-			</form>
-			<button type="button" class="close" data-dismiss="modal"><img src="images/close-modal.png" alt="" /></button>
-		</div>
-	</div>
-</div>
-<!-- =/add-faq-tarif -->
 
 <!-- =order connect -->
 <div class="modal fade" id="connect" tabindex="-1" role="dialog" aria-labelledby="add-connectLabel">
@@ -1041,8 +945,446 @@
 </div>
 <!-- =/add-connect -->
 
+<!-- =/city-choose-popup -->
+<div class="city-choose-popup">
+	<p class="title">Выберите город</p>
+	<div class="searchCity">
+		<input class="form-control" type="text" name="text"  value="" placeholder="Название города" onfocus="this.placeholder='';" onblur="this.placeholder='Название города';" autocomplete="off" />
+	</div>
+	<div class="cities">
+		<div class="column">
+			<dl>
+				<dt>А</dt>
+				<dd data-id="1"><a href="#" title="">Абакан</a></dd>
+			</dl>
+			<dl>
+				<dt>Б</dt>
+				<dd data-id="9"><a href="#" title="">Барнаул</a></dd>
+				<dd data-id="10"><a href="#" title="">Белгород </a></dd>
+			</dl>
+			<dl>
+				<dt>В</dt>
+				<dd data-id="18"><a href="#" title="">Владивосток</a></dd>
+			</dl>
+			<dl>
+				<dt>Е</dt>
+				<dd data-id="27"><a href="#" title="">Екатеринбург</a></dd>
+			</dl>
+		</div>
+		<div class="column">
+			<dl>
+				<dt>И</dt>
+				<dd data-id="31"><a href="#" title="">Иваново</a></dd>
+				<dd data-id="32"><a href="#" title="">Ижевск</a></dd>
+				<dd data-id="33"><a href="#" title="">Иркутск</a></dd>
+			</dl>
+			<dl>
+				<dt>К</dt>
+				<dd data-id="34"><a href="#" title="">Казань</a></dd>
+				<dd data-id="35"><a href="#" title="">Калининград</a></dd>
+				<dd data-id="39"><a href="#" title="">Кемерово</a></dd>
+				<dd data-id="46"><a href="#" title="">Краснодар</a></dd>
+				<dd data-id="47" class="current"><a href="#" title="">Красноярск</a></dd>
+			</dl>
+		</div>
+		<div class="column">
+			<dl>
+				<dt>М</dt>
+				<dd data-id="53"><a href="#" title="">Москва</a></dd>
+				<dd data-id="54"><a href="#" title="">Мурманск</a></dd>
+				<dd data-id="55"><a href="#" title="">Муром</a></dd>
+				<dd data-id="56"><a href="#" title="">Мытищи</a></dd>
+			</dl>
+			<dl>
+				<dt>Н</dt>
+				<dd data-id="65"><a href="#" title="">Новосибирск</a></dd>
+			</dl>
+
+			<dl>
+				<dt>О</dt>
+				<dd data-id="68"><a href="#" title="">Омск</a></dd>
+			</dl>
+		</div>
+	</div>
+	<a href="#" class="close"><img src="images/close2.png" alt="Закрыть" /></a>
+</div>
+<!-- =/city-choose-popup -->
+
+<!--  =mobile-menu -->
+<div class="mobile-menu">
+	<button type="button" class="close"><img src="images/close-modal.png" alt="" /></button>
+
+	<div class="mobile-menu-top">
+		<!--  =city-select -->
+		<div class="city-select">
+			<div id="city-chooser-mobile">
+				<a href="#" title="" class="city-select-link open-city-select">
+					Санкт-Петербург
+				</a>
+			</div>
+		</div>
+		<!--  =/city-select -->
+
+		<!-- =buttons -->
+		<div class="buttons">
+			<div class="buttons_box wishlist hub">
+				<a href="#" class="wishlist_link">
+					<span class="hub_count">7</span>
+				</a>
+			</div>
+			<div class="buttons_box comparison hub">
+				<a href="compare.html" class="comparison_link">
+					<span class="hub_count">5</span>
+				</a>
+			</div>
+		</div>
+		<!-- =/buttons -->		
+	</div>
+
+	<ul class="menu">
+		<li><a href="#">Провайдеры</a></li>
+		<li><a href="#">Тарифы</a></li>
+		<li><a href="#">Ретийнг</a></li>
+		<li><a href="#">Акции</a></li>
+		<li>
+			<a href="#">Полезное</a>
+			<ul>
+				<li><a href="#">О сервисе</a></li>
+				<li><a href="#">Отзывы</a></li>
+				<li><a href="#">Вопрос-ответ</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+		</li>
+	</ul>
+
+	<!--  =phones -->
+	<div class="support">
+		<a class="phone" href="tel:88002000000">8 800 200-00-00</a>
+		<a href="#" class="callback btn" data-toggle="modal" data-target="#callback">Заказать звонок</a>
+	</div>
+	<!--  =/phones -->
+</div>
+<!--  =/mobile-menu -->
+
+
+<!-- InstanceBeginEditable name="EditRegion4" -->
+<div class="modal fade" id="channels" tabindex="-1" role="dialog" aria-labelledby="channelsLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-title" id="channelsLabel">Каналы тарифа</div>
+
+			<div class="list_channels">
+<ul>
+	<li>1 канал</li>
+	<li>Россия 1</li>
+	<li>Матч</li>
+	<li>НТВ (+4)</li>
+	<li>5 канал</li>
+	<li>Россия К</li>
+	<li>7 канал</li>
+	<li>СТС-Прима</li>
+	<li>ТВК</li>
+	<li>ТНТ</li>
+	<li>12 канал</li>
+	<li>Афонтово</li>
+	<li>Енисей-регион</li>
+	<li>Че</li>
+	<li>8 Канал - Красноярский край</li>
+	<li>Fashion One HD</li>
+	<li>HD Life</li>
+	<li>Mezzo Live HD</li>
+	<li>MGM HD</li>
+	<li>MTV Live HD</li>
+	<li>Nat Geo Wild HD</li>
+	<li>Outdoor HD</li>
+	<li>Sony Entertainment HD</li>
+	<li>Travel + Adventure HD</li>
+	<li>Travel Channel HD</li>
+	<li>КХЛ HD</li>
+	<li>Матч ТВ HD</li>
+	<li>Первый HD</li>
+	<li>Первый HD +4</li>
+	<li>Россия HD</li>
+	<li>24 Док</li>
+	<li>Animal Planet</li>
+	<li>Discovery Channel</li>
+	<li>Discovery Science</li>
+	<li>DTX</li>
+	<li>Nano TV</li>
+	<li>NatGeo Wild</li>
+	<li>National Geographic</li>
+	<li>Ocean TV</li>
+	<li>Russian Travel Guide</li>
+	<li>TLC</li>
+	<li>Travel Channel</li>
+	<li>Viasat Explorer</li>
+	<li>Viasat History</li>
+	<li>Viasat Nature</li>
+	<li>Время</li>
+	<li>История</li>
+	<li>Совершенно секретно</li>
+	<li>Т 24</li>
+	<li>Da Vinci Learning</li>
+	<li>Disney Channel (+2)</li>
+	<li>Nickelodeon</li>
+	<li>TiJi</li>
+	<li>Travel + Adventure</li>
+	<li>Zoo парк</li>
+	<li>Детский</li>
+	<li>Детский мир</li>
+	<li>Канал 2х2 (+5)</li>
+	<li>Мать и дитя</li>
+	<li>Радость моя</li>
+	<li>Пятница (+7)</li>
+	<li>РЕН ТВ (+4)</li>
+	<li>СТС (+4)</li>
+	<li>ТВ 3</li>
+	<li>ТВ Центр (+7)</li>
+	<li>ТВ-3 (+7)</li>
+	<li>ТНТ +4 (+4)</li>
+	<li>ТНТ +7 (+7)</li>
+	<li>Бакхористон</li>
+	<li>Сафина</li>
+	<li>Точикистон 1</li>
+	<li>Чахоннамо</li>
+	<li>[ Национальные ]</li>
+	<li>18: МИР (+3)</li>
+	<li>InterAz</li>
+	<li>Shant TV</li>
+	<li>МИР</li>
+	<li>МИР 24</li>
+	<li>ТНВ Планета</li>
+	<li>ТРО</li>
+	<li>09: ОТР</li>
+	<li>France 24[eng]</li>
+	<li>France 24[fra]</li>
+	<li>Reuters WNS</li>
+	<li>Anyday 3D</li>
+	<li>Glazella 3D</li>
+	<li>Mute 3D	</li>
+	<li>Улыбка ребенка</li>
+	<li>Наш Спорт</li>
+	<li>Eurosport</li>
+	<li>Eurosport 2</li>
+	<li>Viasat Sport</li>
+	<li>Живи</li>
+	<li>КХЛ ТВ</li>
+	<li>Матч ТВ HD</li>
+	<li>МАТЧ! БОЕЦ</li>
+	<li>8 канал</li>
+	<li>Paramount Comedy</li>
+	<li>Парк развлечений</li>
+	<li>РазТВ</li>
+	<li>Театр</li>
+	<li>ТНТ4</li>
+	<li>Юмор BOX</li>
+	<li>Россия 24</li>
+	<li>EuroNews</li>
+	<li>Life News</li>
+	<li>Russia Today</li>
+	<li>Бизнес 24</li>
+	<li>Ваш успех</li>
+	<li>Инфоканал</li>
+	<li>НТВ Мир</li>
+	<li>РБК</li>
+	<li>РТР Планета</li>
+	<li>Fashion TV</li>
+	<li>Авто+</li>
+	<li>Домашние животные</li>
+	<li>Драйв ТВ</li>
+	<li>Загородная жизнь</li>
+	<li>Здоровое ТВ</li>
+	<li>Мужской</li>
+	<li>Оружие</li>
+	<li>Охота и рыбалка</li>
+	<li>Психология 21</li>
+	<li>СТС (+4)</li>
+	<li>Телекафе</li>
+	<li>Усадьба</li>
+	<li>365 дней</li>
+	<li>AMedia 1</li>
+	<li>AXN Sci-Fi</li>
+	<li>Fox</li>
+	<li>Fox Life</li>
+	<li>Sony Turbo</li>
+	<li>TV1000</li>
+	<li>TV1000 Action</li>
+	<li>TV1000 Русское кино</li>
+	<li>TVXXI</li>
+	<li>Zee Russia</li>
+	<li>Дом кино</li>
+	<li>Еврокино</li>
+	<li>Иллюзион +</li>
+	<li>Индия ТВ</li>
+	<li>Комедия ТВ</li>
+	<li>Любимое кино</li>
+	<li>Настоящее страшное</li>
+	<li>Русский Иллюзион</li>
+	<li>Мир сериала</li>
+	<li>Русский бестселлер</li>
+	<li>20: МузТВ Музыка</li>
+	<li>27: Пятница (+4)</li>
+	<li>Bridge TV</li>
+	<li>Europa Plus TV</li>
+	<li>Music Box RU</li>
+	<li>Music Box TV</li>
+	<li>RU.TV</li>
+	<li>RuSong</li>
+	<li>Музыка первого</li>
+	<li>Ретро ТВ</li>
+	<li>ТНТ Music</li>
+	<li>Шансон</li>
+	<li>Ю.ТВ (+7)</li>
+	<li>Союз</li>
+	<li>Первый образовательный</li>
+	<li>S:9мая-78Д.б.</li>
+	<li>S:9мая-Авиаторов</li>
+	<li>S:9мая-Водопьянова</li>
+	<li>S:9мая-Комсомольский</li>
+	<li>S:9мая-Урванцева</li>
+	<li>S:9мая-Шахтеров</li>
+	<li>S:9мая-Шумяцкого</li>
+	<li>S:Алексеева-Авиаторов</li>
+	<li>S:Алексеева-Водопьянова</li>
+	<li>S:Брянская-Игарская</li>
+	<li>S:Высотная-Гусарова</li>
+	<li>S:Зенит</li>
+	<li>Юмор BOX</li>
+	<li>Россия 24</li>
+	<li>EuroNews</li>
+	<li>Life News</li>
+	<li>Russia Today</li>
+	<li>Бизнес 24</li>
+	<li>Ваш успех</li>
+	<li>Инфоканал</li>
+	<li>НТВ Мир</li>
+	<li>РБК</li>
+	<li>РТР Планета</li>
+	<li>Fashion TV</li>
+	<li>Авто+</li>
+	<li>Домашние животные</li>
+	<li>Драйв ТВ</li>
+	<li>Загородная жизнь</li>
+	<li>Здоровое ТВ</li>
+	<li>Мужской</li>
+	<li>Оружие</li>
+	<li>Охота и рыбалка</li>
+	<li>Психология 21</li>
+	<li>СТС (+4)</li>
+	<li>Телекафе</li>
+	<li>Усадьба</li>
+	<li>365 дней</li>
+	<li>AMedia 1</li>
+	<li>AXN Sci-Fi</li>
+	<li>Fox</li>
+	<li>Fox Life</li>
+	<li>Sony Turbo</li>
+	<li>TV1000</li>
+	<li>TV1000 Action</li>
+	<li>TV1000 Русское кино</li>
+	<li>TVXXI</li>
+	<li>Zee Russia</li>
+	<li>Дом кино</li>
+	<li>Еврокино</li>
+	<li>Иллюзион +</li>
+	<li>Индия ТВ</li>
+	<li>Комедия ТВ</li>
+	<li>Любимое кино</li>
+	<li>Настоящее страшное</li>
+	<li>Русский Иллюзион</li>
+	<li>Мир сериала</li>
+	<li>Русский бестселлер</li>
+	<li>20: МузТВ Музыка</li>
+	<li>27: Пятница (+4)</li>
+	<li>Bridge TV</li>
+	<li>Europa Plus TV</li>
+	<li>Music Box RU</li>
+	<li>Music Box TV</li>
+	<li>RU.TV</li>
+	<li>RuSong</li>
+	<li>Музыка первого</li>
+	<li>Ретро ТВ</li>
+	<li>ТНТ Music</li>
+	<li>Шансон</li>
+	<li>Ю.ТВ (+7)</li>
+	<li>Союз</li>
+	<li>Первый образовательный</li>
+	<li>S:9мая-78Д.б.</li>
+	<li>S:9мая-Авиаторов</li>
+	<li>S:9мая-Водопьянова</li>
+	<li>S:9мая-Комсомольский</li>
+	<li>S:9мая-Урванцева</li>
+	<li>S:9мая-Шахтеров</li>
+	<li>S:9мая-Шумяцкого</li>
+	<li>S:Алексеева-Авиаторов</li>
+	<li>S:Алексеева-Водопьянова</li>
+	<li>S:Брянская-Игарская</li>
+	<li>S:Высотная-Гусарова</li>
+	<li>S:Зенит</li>
+	<li>S:Коммунальный мост</li>
+	<li>S:Кр.армии-Л.Кецховели</li>
+	<li>S:Красноярский рабочий</li>
+	<li>S:Матросова</li>
+	<li>S:Молокова-78ДБ-Авиаторов</li>
+	<li>S:Молокова-Батурина</li>
+	<li>S:Свободный-Годенко</li>
+	<li>S:Шахтеров-Взл-Мол</li>
+	<li>Shopping Live</li>
+</ul>				
+			</div>
+
+			<button type="button" class="close" data-dismiss="modal"><img src="images/close2.png" alt="" /></button>
+		</div>
+	</div>
+</div>
+
+
+<!-- =add-faq-tarif -->
+<div class="modal fade" id="add-faqtarif" tabindex="-1" role="dialog" aria-labelledby="add-faqtarifLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-title" id="add-faqtarifLabel">Задать вопрос</div>
+			<form action="#" method="post" id="add-faqtarif-form">
+				<fieldset>
+					<div class="row">
+						<div class="col-md-6 col-sm-6 col-xs-6">
+							<div class="input-field">
+								<label for="namefaqtarif" class="name-field">Ваше имя</label>
+								<label for="namefaqtarif" class="helper-field helper-field-name">Ваше имя</label>					
+								<input type="text" id="namefaqtarif" name="name" class="form-control required" value="" />
+							</div>							
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-6">
+							<div class="input-field">
+								<label for="telfaqtarif" class="name-field">Телефон</label>
+								<label for="telfaqtarif" class="helper-field helper-field-tel">Телефон</label>
+								<input type="tel" id="telfaqtarif" name="tel" class="form-control required tel" value="" />
+							</div>
+						</div>
+					</div>
+
+					<div class="input-field">
+						<label for="msgfaqtarif" class="name-field">Текст вопроса</label>
+						<label for="msgfaqtarif" class="helper-field helper-field-msg">Текст вопроса</label>
+						<textarea id="msgfaqtarif" name="msg" class="form-control required"></textarea>
+					</div>
+
+					<div class="bottom row">
+						<div class="captcha">
+							<img src="tmp/captcha.jpg" alt="" class="img-responsive" />
+						</div>
+						<input type="submit" class="submit" value="Отправить вопрос">						
+					</div>
+				</fieldset>
+			</form>
+			<button type="button" class="close" data-dismiss="modal"><img src="images/close-modal.png" alt="" /></button>
+		</div>
+	</div>
+</div>
+<!-- =/add-faq-tarif -->
+
 <!-- =order connect tarif -->
-<div class="modal fade" id="connect_tarif" tabindex="-1" role="dialog" aria-labelledby="add-connectLabel">
+<div class="modal fade" id="connect_tarif" tabindex="-1" role="dialog" aria-labelledby="add-connect_tarifLabel">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-title" id="add-connect_tarifLabel">Заявка на подключение</div>
@@ -1132,486 +1474,7 @@
 	</div>
 </div>
 <!-- =/order connect tarif -->
-
-<!-- =add-opinion -->
-<div class="modal fade" id="add-opinion" tabindex="-1" role="dialog" aria-labelledby="add-opinionLabel">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-title" id="add-opinionLabel">Оставить отзыв</div>
-			<form action="#" method="post" id="add-opinion-form">
-				<fieldset>
-					<div class="row">
-						<div class="col-md-6 col-sm-6 col-xs-6">
-							<div class="input-field">
-								<label for="name-opinion" class="name-field">Ваше имя</label>
-								<label for="name-opinion" class="helper-field helper-field-name">Ваше имя</label>
-								<input type="text" id="name-opinion" name="name" class="form-control required" value="" />
-							</div>
-						</div>
-						<div class="col-md-6 col-sm-6 col-xs-6">
-							<div class="input-field">
-								<label for="tel-opinion" class="name-field">Телефон</label>
-								<label for="tel-opinion" class="helper-field helper-field-tel">Телефон</label>
-								<input type="tel" id="tel-opinion" name="tel" class="form-control required tel" value="" />
-							</div>
-						</div>
-					</div>
-
-					<div class="param_wrapper duration">
-						<span class="title">Сколько пользуетесь услугами?</span>
-
-						<input type="radio" id="duration-down" name="duration" value="Хорошо" checked />
-						<label for="duration-down">Менее 3х месяцев</label>
-
-						<input type="radio" id="duration-up" name="duration" value="Плохо" />
-						<label for="duration-up">Более 3х месяцев</label>
-					</div>
-
-					<div class="param_wrapper estimate">
-						<div class="title">Оценка</div>
-						<div class="item">
-							<div class="item_title">Качество и скорость подключения</div>
-							<div class="item_field">
-								<div class="item_field_radio">
-									<input type="radio" id="quality-1" name="quality" value="1" />
-									<label for="quality-1">1</label>
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="quality-2" name="quality" value="2" />
-									<label for="quality-2">2</label>
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="quality-3" name="quality" value="3" />
-									<label for="quality-3">3</label>
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="quality-4" name="quality" value="4" />
-									<label for="quality-4">4</label>	
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="quality-5" name="quality" value="5" />
-									<label for="quality-5">5</label>
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="quality-6" name="quality" value="6" />
-									<label for="quality-6">6</label>	
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="quality-7" name="quality" value="7" />
-									<label for="quality-7">7</label>
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="quality-8" name="quality" value="8" />
-									<label for="quality-8">8</label>
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="quality-9" name="quality" value="9" />
-									<label for="quality-9">9</label>
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="quality-10" name="quality" value="10" checked />
-									<label for="quality-10">10</label>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="item_title">Стабильность соединения интернета</div>
-							<div class="item_field">
-								<div class="item_field_radio">
-									<input type="radio" id="stability-lan-1" name="stability-lan" value="1" />
-									<label for="stability-lan-1">1</label>
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="stability-lan-2" name="stability-lan" value="2" />
-									<label for="stability-lan-2">2</label>
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="stability-lan-3" name="stability-lan" value="3" />
-									<label for="stability-lan-3">3</label>
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="stability-lan-4" name="stability-lan" value="4" />
-									<label for="stability-lan-4">4</label>	
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="stability-lan-5" name="stability-lan" value="5" />
-									<label for="stability-lan-5">5</label>
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="stability-lan-6" name="stability-lan" value="6" />
-									<label for="stability-lan-6">6</label>	
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="stability-lan-7" name="stability-lan" value="7" />
-									<label for="stability-lan-7">7</label>
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="stability-lan-8" name="stability-lan" value="8" />
-									<label for="stability-lan-8">8</label>
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="stability-lan-9" name="stability-lan" value="9" />
-									<label for="stability-lan-9">9</label>
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="stability-lan-10" name="stability-lan" value="10" checked />
-									<label for="stability-lan-10">10</label>
-								</div>
-
-								<div class="item_field_radio item_field_radio-wauto">
-									<input type="radio" id="stability-lan-11" class="wauto1" name="stability-lan" value="0" />
-									<label for="stability-lan-11">Нет интернета</label>							
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="item_title">Стабильность соединения ТВ</div>
-							<div class="item_field">
-								<div class="item_field_radio">
-									<input type="radio" id="stability-tv-1" name="stability-tv" value="1" />
-									<label for="stability-tv-1">1</label>
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="stability-tv-2" name="stability-tv" value="2" />
-									<label for="stability-tv-2">2</label>
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="stability-tv-3" name="stability-tv" value="3" />
-									<label for="stability-tv-3">3</label>
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="stability-tv-4" name="stability-tv" value="4" />
-									<label for="stability-tv-4">4</label>	
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="stability-tv-5" name="stability-tv" value="5" />
-									<label for="stability-tv-5">5</label>
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="stability-tv-6" name="stability-tv" value="6" />
-									<label for="stability-tv-6">6</label>	
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="stability-tv-7" name="stability-tv" value="7" />
-									<label for="stability-tv-7">7</label>
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="stability-tv-8" name="stability-tv" value="8" />
-									<label for="stability-tv-8">8</label>
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="stability-tv-9" name="stability-tv" value="9" />
-									<label for="stability-tv-9">9</label>
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="stability-tv-10" name="stability-tv" value="10" checked />
-									<label for="stability-tv-10">10</label>
-								</div>
-
-								<div class="item_field_radio item_field_radio-wauto">
-									<input type="radio" id="stability-tv-11" class="wauto1" name="stability-tv" value="0" />
-									<label for="stability-tv-11">Нет ТВ</label>							
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="item_title">Служба поддержки</div>
-							<div class="item_field">
-								<div class="item_field_radio">
-									<input type="radio" id="support-1" name="support" value="1" />
-									<label for="support-1">1</label>
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="support-2" name="support" value="2" />
-									<label for="support-2">2</label>
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="support-3" name="support" value="3" />
-									<label for="support-3">3</label>
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="support-4" name="support" value="4" />
-									<label for="support-4">4</label>	
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="support-5" name="support" value="5" />
-									<label for="support-5">5</label>
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="support-6" name="support" value="6" />
-									<label for="support-6">6</label>	
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="support-7" name="support" value="7" />
-									<label for="support-7">7</label>
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="support-8" name="support" value="8" />
-									<label for="support-8">8</label>
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="support-9" name="support" value="9" />
-									<label for="support-9">9</label>
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="support-10" name="support" value="10" checked />
-									<label for="support-10">10</label>
-								</div>
-
-								<div class="item_field_radio item_field_radio-wauto">
-									<input type="radio" id="support-11" class="wauto1" name="support" value="" />
-									<label for="support-11">Не обращался</label>							
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="item_title">Соответствует ли скорость заявленной?</div>
-							<div class="item_field">
-								<div class="item_field_radio">
-									<input type="radio" id="speed-1" name="speed" value="1" />
-									<label for="speed-1">1</label>
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="speed-2" name="speed" value="2" />
-									<label for="speed-2">2</label>
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="speed-3" name="speed" value="3" />
-									<label for="speed-3">3</label>
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="speed-4" name="speed" value="4" />
-									<label for="speed-4">4</label>	
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="speed-5" name="speed" value="5" />
-									<label for="speed-5">5</label>
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="speed-6" name="speed" value="6" />
-									<label for="speed-6">6</label>	
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="speed-7" name="speed" value="7" />
-									<label for="speed-7">7</label>
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="speed-8" name="speed" value="8" />
-									<label for="speed-8">8</label>
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="speed-9" name="speed" value="9" />
-									<label for="speed-9">9</label>
-								</div>
-
-								<div class="item_field_radio">
-									<input type="radio" id="speed-10" name="speed" value="10" checked />
-									<label for="speed-10">10</label>
-								</div>
-							</div>
-						</div>
-					</div>
-
-
-					<div class="param_wrapper">
-						<div class="title">Отзыв</div>
-
-						<div class="input-field">
-							<label for="advantage" class="name-field">Достоинства</label>
-							<label for="advantage" class="helper-field helper-field-advantage">Достоинства</label>
-							<textarea id="advantage" name="advantage" class="form-control"></textarea>
-						</div>
-						<div class="input-field">
-							<label for="defect" class="name-field">Недостатки</label>
-							<label for="defect" class="helper-field helper-field-defect">Недостатки</label>
-							<textarea id="defect" name="defect" class="form-control"></textarea>
-						</div>
-						<div class="input-field">
-							<label for="msg" class="name-field">Комментарий</label>
-							<label for="msg" class="helper-field helper-field-msg">Комментарий</label>
-							<textarea id="msg" name="msg" class="form-control"></textarea>
-						</div>
-					</div>
-
-					<div class="bottom row">
-						<div class="captcha">
-							<img src="tmp/captcha.jpg" alt="" class="img-responsive" />
-						</div>
-						<input type="submit" class="submit" value="Отправить отзыв" />
-					</div>
-				</fieldset>
-			</form>
-			<button type="button" class="close" data-dismiss="modal"><img src="images/close-modal.png" alt="" /></button>
-		</div>
-	</div>
-</div>
-<!-- =/add-opinion -->
-
-<!-- =/city-choose-popup -->
-<div class="city-choose-popup">
-	<p class="title">Выберите город</p>
-	<div class="searchCity">
-		<input class="form-control" type="text" name="text"  value="" placeholder="Название города" onfocus="this.placeholder='';" onblur="this.placeholder='Название города';" autocomplete="off" />
-	</div>
-	<div class="cities">
-		<div class="column">
-			<dl>
-				<dt>А</dt>
-				<dd data-id="1"><a href="#" title="">Абакан</a></dd>
-			</dl>
-			<dl>
-				<dt>Б</dt>
-				<dd data-id="9"><a href="#" title="">Барнаул</a></dd>
-				<dd data-id="10"><a href="#" title="">Белгород </a></dd>
-			</dl>
-			<dl>
-				<dt>В</dt>
-				<dd data-id="18"><a href="#" title="">Владивосток</a></dd>
-			</dl>
-			<dl>
-				<dt>Е</dt>
-				<dd data-id="27"><a href="#" title="">Екатеринбург</a></dd>
-			</dl>
-		</div>
-		<div class="column">
-			<dl>
-				<dt>И</dt>
-				<dd data-id="31"><a href="#" title="">Иваново</a></dd>
-				<dd data-id="32"><a href="#" title="">Ижевск</a></dd>
-				<dd data-id="33"><a href="#" title="">Иркутск</a></dd>
-			</dl>
-			<dl>
-				<dt>К</dt>
-				<dd data-id="34"><a href="#" title="">Казань</a></dd>
-				<dd data-id="35"><a href="#" title="">Калининград</a></dd>
-				<dd data-id="39"><a href="#" title="">Кемерово</a></dd>
-				<dd data-id="46"><a href="#" title="">Краснодар</a></dd>
-				<dd data-id="47" class="current"><a href="#" title="">Красноярск</a></dd>
-			</dl>
-		</div>
-		<div class="column">
-			<dl>
-				<dt>М</dt>
-				<dd data-id="53"><a href="#" title="">Москва</a></dd>
-				<dd data-id="54"><a href="#" title="">Мурманск</a></dd>
-				<dd data-id="55"><a href="#" title="">Муром</a></dd>
-				<dd data-id="56"><a href="#" title="">Мытищи</a></dd>
-			</dl>
-			<dl>
-				<dt>Н</dt>
-				<dd data-id="65"><a href="#" title="">Новосибирск</a></dd>
-			</dl>
-
-			<dl>
-				<dt>О</dt>
-				<dd data-id="68"><a href="#" title="">Омск</a></dd>
-			</dl>
-		</div>
-	</div>
-	<a href="#" class="close"><img src="images/close2.png" alt="Закрыть" /></a>
-</div>
-<!-- =/city-choose-popup -->
-
-
-<!--  =mobile-menu -->
-<div class="mobile-menu">
-	<button type="button" class="close"><img src="images/close-modal.png" alt="" /></button>
-
-	<div class="mobile-menu-top">
-		<!--  =city-select -->
-		<div class="city-select">
-			<div id="city-chooser-mobile">
-				<a href="#" title="" class="city-select-link open-city-select">
-					Санкт-Петербург
-				</a>
-			</div>
-		</div>
-		<!--  =/city-select -->
-
-		<!-- =buttons -->
-		<div class="buttons">
-			<div class="buttons_box wishlist hub">
-				<a href="#" class="wishlist_link">
-					<span class="hub_count">7</span>
-				</a>
-			</div>
-			<div class="buttons_box comparison hub">
-				<a href="compare.html" class="comparison_link">
-					<span class="hub_count">5</span>
-				</a>
-			</div>
-		</div>
-		<!-- =/buttons -->		
-	</div>
-
-	<ul class="menu">
-		<li><a href="#">Провайдеры</a></li>
-		<li><a href="#">Тарифы</a></li>
-		<li><a href="#">Ретийнг</a></li>
-		<li><a href="#">Акции</a></li>
-		<li>
-			<a href="#">Полезное</a>
-			<ul>
-				<li><a href="#">О сервисе</a></li>
-				<li><a href="#">Отзывы</a></li>
-				<li><a href="#">Вопрос-ответ</a></li>
-				<li><a href="#">Контакты</a></li>
-			</ul>
-		</li>
-	</ul>
-
-	<!--  =phones -->
-	<div class="support">
-		<a class="phone" href="tel:88002000000">8 800 200-00-00</a>
-		<a href="#" class="callback btn" data-toggle="modal" data-target="#callback">Заказать звонок</a>
-	</div>
-	<!--  =/phones -->
-</div>
-<!--  =/mobile-menu -->
+<!-- InstanceEndEditable -->
 
 <script src="http://ajax.microsoft.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/jquery.validate.min.js"><\/script>')</script>

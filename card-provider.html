@@ -961,58 +961,6 @@ $(document).ready(function(){
 </div>
 <!-- =/callback -->
 
-<!-- =add-review -->
-<div class="modal fade" id="add-review" tabindex="-1" role="dialog" aria-labelledby="add-reviewLabel">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-title" id="add-reviewLabel">Оставить отзыв</div>
-			<form action="#" method="post" id="add-review-form">
-				<fieldset>
-					<div class="grade">
-						<span>Ваша оценка</span>
-						<input type="radio" id="grade-good" name="grade" value="Хорошо" checked="" />
-						<label for="grade-good">Хорошо</label>
-
-						<input type="radio" id="grade-bad" name="grade" value="Плохо" checked="" />
-						<label for="grade-bad">Плохо</label>
-					</div>
-					<div class="row">
-						<div class="col-md-6 col-sm-6 col-xs-6">
-							<div class="input-field">
-								<label for="name" class="name-field">Ваше имя</label>
-								<label for="name" class="helper-field helper-field-name">Ваше имя</label>					
-								<input type="text" id="name" name="name" class="form-control required" value="" />
-							</div>							
-						</div>
-						<div class="col-md-6 col-sm-6 col-xs-6">
-							<div class="input-field">
-								<label for="tel2" class="name-field">Телефон</label>
-								<label for="tel2" class="helper-field helper-field-tel">Телефон</label>
-								<input type="tel" id="tel2" name="tel" class="form-control required tel" value="" />
-							</div>
-						</div>
-					</div>
-
-					<div class="input-field">
-						<label for="msg" class="name-field">Текст отзыва</label>
-						<label for="msg" class="helper-field helper-field-msg">Текст отзыва</label>
-						<textarea id="msg" name="msg" class="form-control required"></textarea>
-					</div>
-
-					<div class="bottom row">
-						<div class="captcha">
-							<img src="tmp/captcha.jpg" alt="" class="img-responsive" />
-						</div>
-						<input type="submit" class="submit" value="Отправить отзыв" />
-					</div>
-				</fieldset>
-			</form>
-			<button type="button" class="close" data-dismiss="modal"><img src="images/close-modal.png" alt="" /></button>
-		</div>
-	</div>
-</div>
-<!-- =/add-review -->
-
 <!-- =add-faq -->
 <div class="modal fade" id="add-faq" tabindex="-1" role="dialog" aria-labelledby="add-faqLabel">
 	<div class="modal-dialog" role="document">
@@ -1062,50 +1010,6 @@ $(document).ready(function(){
 	</div>
 </div>
 <!-- =/add-faq -->
-
-<!-- =add-faq-tarif -->
-<div class="modal fade" id="add-faqtarif" tabindex="-1" role="dialog" aria-labelledby="add-faqtarifLabel">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-title" id="add-faqtarifLabel">Задать вопрос</div>
-			<form action="#" method="post" id="add-faqtarif-form">
-				<fieldset>
-					<div class="row">
-						<div class="col-md-6 col-sm-6 col-xs-6">
-							<div class="input-field">
-								<label for="namefaqtarif" class="name-field">Ваше имя</label>
-								<label for="namefaqtarif" class="helper-field helper-field-name">Ваше имя</label>					
-								<input type="text" id="namefaqtarif" name="name" class="form-control required" value="" />
-							</div>							
-						</div>
-						<div class="col-md-6 col-sm-6 col-xs-6">
-							<div class="input-field">
-								<label for="telfaqtarif" class="name-field">Телефон</label>
-								<label for="telfaqtarif" class="helper-field helper-field-tel">Телефон</label>
-								<input type="tel" id="telfaqtarif" name="tel" class="form-control required tel" value="" />
-							</div>
-						</div>
-					</div>
-
-					<div class="input-field">
-						<label for="msgfaqtarif" class="name-field">Текст вопроса</label>
-						<label for="msgfaqtarif" class="helper-field helper-field-msg">Текст вопроса</label>
-						<textarea id="msgfaqtarif" name="msg" class="form-control required"></textarea>
-					</div>
-
-					<div class="bottom row">
-						<div class="captcha">
-							<img src="tmp/captcha.jpg" alt="" class="img-responsive" />
-						</div>
-						<input type="submit" class="submit" value="Отправить вопрос">						
-					</div>
-				</fieldset>
-			</form>
-			<button type="button" class="close" data-dismiss="modal"><img src="images/close-modal.png" alt="" /></button>
-		</div>
-	</div>
-</div>
-<!-- =/add-faq-tarif -->
 
 <!-- =order connect -->
 <div class="modal fade" id="connect" tabindex="-1" role="dialog" aria-labelledby="add-connectLabel">
@@ -1176,98 +1080,129 @@ $(document).ready(function(){
 </div>
 <!-- =/add-connect -->
 
-<!-- =order connect tarif -->
-<div class="modal fade" id="connect_tarif" tabindex="-1" role="dialog" aria-labelledby="add-connectLabel">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-title" id="add-connect_tarifLabel">Заявка на подключение</div>
-			<form action="#" method="post" id="connect_tarif-form">
-				<fieldset>
-					<div class="connect_info">
-						<div class="connect_info_header">
-							<div class="left">
-								<p>Оформление заявки на подключение тарифа:</p>
-								<p class="tarif-title"><img src="tmp/logo-beeline.jpg" alt="" /> Пакет «<span>Домашний интернет и ТВ за 500</span>»</p>
-							</div>
-							<div class="right">
-								<p>Итого к оплате</p>
-								<p class="sum">3000 руб.</p>
-							</div>
-						</div>
-						<div class="connect_info_body">
-							<p>Скорость: 100 Мбит/сек</p>
-							<p>Кол-во каналов: 100</p>
-							<p>Абонентская плата: 100 руб/мес</p>
-							<p>Wi-fi роутер: классик</p>
-							<p>Тв-приставка: в комплекте</p>
-							<p>Дополнительные услуги: пакет каналов “18+”, дополнительный ip-адрес</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-6 col-sm-6 col-xs-6">
-							<div class="input-field">
-								<label for="name-connect_tarif" class="name-field">ФИО</label>
-								<label for="name-connect_tarif" class="helper-field helper-field-name-connect_tarif">ФИО</label>					
-								<input type="text" id="name-connect_tarif" name="name" class="form-control required" value="" />
-							</div>							
-						</div>
-						<div class="col-md-6 col-sm-6 col-xs-6">
-							<div class="input-field">
-								<label for="tel-connect_tarif" class="name-field">Телефон</label>
-								<label for="tel-connect_tarif" class="helper-field helper-field-tel">Телефон</label>
-								<input type="tel" id="tel-connect_tarif" name="tel" class="form-control required tel" value="" />
-							</div>
-						</div>
-					</div>
+<!-- =/city-choose-popup -->
+<div class="city-choose-popup">
+	<p class="title">Выберите город</p>
+	<div class="searchCity">
+		<input class="form-control" type="text" name="text"  value="" placeholder="Название города" onfocus="this.placeholder='';" onblur="this.placeholder='Название города';" autocomplete="off" />
+	</div>
+	<div class="cities">
+		<div class="column">
+			<dl>
+				<dt>А</dt>
+				<dd data-id="1"><a href="#" title="">Абакан</a></dd>
+			</dl>
+			<dl>
+				<dt>Б</dt>
+				<dd data-id="9"><a href="#" title="">Барнаул</a></dd>
+				<dd data-id="10"><a href="#" title="">Белгород </a></dd>
+			</dl>
+			<dl>
+				<dt>В</dt>
+				<dd data-id="18"><a href="#" title="">Владивосток</a></dd>
+			</dl>
+			<dl>
+				<dt>Е</dt>
+				<dd data-id="27"><a href="#" title="">Екатеринбург</a></dd>
+			</dl>
+		</div>
+		<div class="column">
+			<dl>
+				<dt>И</dt>
+				<dd data-id="31"><a href="#" title="">Иваново</a></dd>
+				<dd data-id="32"><a href="#" title="">Ижевск</a></dd>
+				<dd data-id="33"><a href="#" title="">Иркутск</a></dd>
+			</dl>
+			<dl>
+				<dt>К</dt>
+				<dd data-id="34"><a href="#" title="">Казань</a></dd>
+				<dd data-id="35"><a href="#" title="">Калининград</a></dd>
+				<dd data-id="39"><a href="#" title="">Кемерово</a></dd>
+				<dd data-id="46"><a href="#" title="">Краснодар</a></dd>
+				<dd data-id="47" class="current"><a href="#" title="">Красноярск</a></dd>
+			</dl>
+		</div>
+		<div class="column">
+			<dl>
+				<dt>М</dt>
+				<dd data-id="53"><a href="#" title="">Москва</a></dd>
+				<dd data-id="54"><a href="#" title="">Мурманск</a></dd>
+				<dd data-id="55"><a href="#" title="">Муром</a></dd>
+				<dd data-id="56"><a href="#" title="">Мытищи</a></dd>
+			</dl>
+			<dl>
+				<dt>Н</dt>
+				<dd data-id="65"><a href="#" title="">Новосибирск</a></dd>
+			</dl>
 
-					<div class="address-area">
-						<p class="title">Проверка адреса</p>
-						<div class="row">
-							<div class="col-city">
-								<div class="input-field">
-									<label for="city-connect_tarif" class="name-field">Город</label>
-									<label for="city-connect_tarif" class="helper-field helper-field-city">Город</label>
-									<input type="text" id="city-connect_tarif" name="city" class="form-control required" value="" autocomplete="off" />
-								</div>							
-							</div>
-							<div class="col-address">
-								<div class="input-field">
-									<label for="address-connect_tarif" class="name-field">Адрес</label>
-									<label for="address-connect_tarif" class="helper-field helper-field-address">Адрес</label>
-									<input type="text" id="address-connect_tarif" name="address" class="form-control required" value="" autocomplete="off"  />
-								</div>							
-							</div>
-							<div class="col-house">
-								<div class="input-field">
-									<label for="house-connect_tarif" class="name-field">Номер дома</label>
-									<label for="house-connect_tarif" class="helper-field helper-field-house-connect_tarif">Номер дома</label>
-									<input type="text" id="house-connect_tarif" name="house" class="form-control required" value="" autocomplete="off"  />
-								</div>
-							</div>
-							<div class="col-flat">
-								<div class="input-field">
-									<label for="flat-connect_tarif" class="name-field">Квартира</label>
-									<label for="flat-connect_tarif" class="helper-field helper-field-flat-connect_tarif">Квартира</label>
-									<input type="text" id="flat-connect_tarif" name="flat" class="form-control required" value="" autocomplete="off"  />
-								</div>	
-							</div>
-						</div>
-					</div>
-
-					<div class="bottom row">
-						<div class="captcha">
-							<img src="tmp/captcha.jpg" alt="" class="img-responsive" />
-						</div>
-						<input type="submit" class="submit" value="Отправить запрос">						
-					</div>
-				</fieldset>
-			</form>
-			<button type="button" class="close" data-dismiss="modal"><img src="images/close-modal.png" alt="" /></button>
+			<dl>
+				<dt>О</dt>
+				<dd data-id="68"><a href="#" title="">Омск</a></dd>
+			</dl>
 		</div>
 	</div>
+	<a href="#" class="close"><img src="images/close2.png" alt="Закрыть" /></a>
 </div>
-<!-- =/order connect tarif -->
+<!-- =/city-choose-popup -->
 
+<!--  =mobile-menu -->
+<div class="mobile-menu">
+	<button type="button" class="close"><img src="images/close-modal.png" alt="" /></button>
+
+	<div class="mobile-menu-top">
+		<!--  =city-select -->
+		<div class="city-select">
+			<div id="city-chooser-mobile">
+				<a href="#" title="" class="city-select-link open-city-select">
+					Санкт-Петербург
+				</a>
+			</div>
+		</div>
+		<!--  =/city-select -->
+
+		<!-- =buttons -->
+		<div class="buttons">
+			<div class="buttons_box wishlist hub">
+				<a href="#" class="wishlist_link">
+					<span class="hub_count">7</span>
+				</a>
+			</div>
+			<div class="buttons_box comparison hub">
+				<a href="compare.html" class="comparison_link">
+					<span class="hub_count">5</span>
+				</a>
+			</div>
+		</div>
+		<!-- =/buttons -->		
+	</div>
+
+	<ul class="menu">
+		<li><a href="#">Провайдеры</a></li>
+		<li><a href="#">Тарифы</a></li>
+		<li><a href="#">Ретийнг</a></li>
+		<li><a href="#">Акции</a></li>
+		<li>
+			<a href="#">Полезное</a>
+			<ul>
+				<li><a href="#">О сервисе</a></li>
+				<li><a href="#">Отзывы</a></li>
+				<li><a href="#">Вопрос-ответ</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+		</li>
+	</ul>
+
+	<!--  =phones -->
+	<div class="support">
+		<a class="phone" href="tel:88002000000">8 800 200-00-00</a>
+		<a href="#" class="callback btn" data-toggle="modal" data-target="#callback">Заказать звонок</a>
+	</div>
+	<!--  =/phones -->
+</div>
+<!--  =/mobile-menu -->
+
+
+<!-- InstanceBeginEditable name="EditRegion4" -->
 <!-- =add-opinion -->
 <div class="modal fade" id="add-opinion" tabindex="-1" role="dialog" aria-labelledby="add-opinionLabel">
 	<div class="modal-dialog" role="document">
@@ -1625,128 +1560,7 @@ $(document).ready(function(){
 	</div>
 </div>
 <!-- =/add-opinion -->
-
-<!-- =/city-choose-popup -->
-<div class="city-choose-popup">
-	<p class="title">Выберите город</p>
-	<div class="searchCity">
-		<input class="form-control" type="text" name="text"  value="" placeholder="Название города" onfocus="this.placeholder='';" onblur="this.placeholder='Название города';" autocomplete="off" />
-	</div>
-	<div class="cities">
-		<div class="column">
-			<dl>
-				<dt>А</dt>
-				<dd data-id="1"><a href="#" title="">Абакан</a></dd>
-			</dl>
-			<dl>
-				<dt>Б</dt>
-				<dd data-id="9"><a href="#" title="">Барнаул</a></dd>
-				<dd data-id="10"><a href="#" title="">Белгород </a></dd>
-			</dl>
-			<dl>
-				<dt>В</dt>
-				<dd data-id="18"><a href="#" title="">Владивосток</a></dd>
-			</dl>
-			<dl>
-				<dt>Е</dt>
-				<dd data-id="27"><a href="#" title="">Екатеринбург</a></dd>
-			</dl>
-		</div>
-		<div class="column">
-			<dl>
-				<dt>И</dt>
-				<dd data-id="31"><a href="#" title="">Иваново</a></dd>
-				<dd data-id="32"><a href="#" title="">Ижевск</a></dd>
-				<dd data-id="33"><a href="#" title="">Иркутск</a></dd>
-			</dl>
-			<dl>
-				<dt>К</dt>
-				<dd data-id="34"><a href="#" title="">Казань</a></dd>
-				<dd data-id="35"><a href="#" title="">Калининград</a></dd>
-				<dd data-id="39"><a href="#" title="">Кемерово</a></dd>
-				<dd data-id="46"><a href="#" title="">Краснодар</a></dd>
-				<dd data-id="47" class="current"><a href="#" title="">Красноярск</a></dd>
-			</dl>
-		</div>
-		<div class="column">
-			<dl>
-				<dt>М</dt>
-				<dd data-id="53"><a href="#" title="">Москва</a></dd>
-				<dd data-id="54"><a href="#" title="">Мурманск</a></dd>
-				<dd data-id="55"><a href="#" title="">Муром</a></dd>
-				<dd data-id="56"><a href="#" title="">Мытищи</a></dd>
-			</dl>
-			<dl>
-				<dt>Н</dt>
-				<dd data-id="65"><a href="#" title="">Новосибирск</a></dd>
-			</dl>
-
-			<dl>
-				<dt>О</dt>
-				<dd data-id="68"><a href="#" title="">Омск</a></dd>
-			</dl>
-		</div>
-	</div>
-	<a href="#" class="close"><img src="images/close2.png" alt="Закрыть" /></a>
-</div>
-<!-- =/city-choose-popup -->
-
-
-<!--  =mobile-menu -->
-<div class="mobile-menu">
-	<button type="button" class="close"><img src="images/close-modal.png" alt="" /></button>
-
-	<div class="mobile-menu-top">
-		<!--  =city-select -->
-		<div class="city-select">
-			<div id="city-chooser-mobile">
-				<a href="#" title="" class="city-select-link open-city-select">
-					Санкт-Петербург
-				</a>
-			</div>
-		</div>
-		<!--  =/city-select -->
-
-		<!-- =buttons -->
-		<div class="buttons">
-			<div class="buttons_box wishlist hub">
-				<a href="#" class="wishlist_link">
-					<span class="hub_count">7</span>
-				</a>
-			</div>
-			<div class="buttons_box comparison hub">
-				<a href="compare.html" class="comparison_link">
-					<span class="hub_count">5</span>
-				</a>
-			</div>
-		</div>
-		<!-- =/buttons -->		
-	</div>
-
-	<ul class="menu">
-		<li><a href="#">Провайдеры</a></li>
-		<li><a href="#">Тарифы</a></li>
-		<li><a href="#">Ретийнг</a></li>
-		<li><a href="#">Акции</a></li>
-		<li>
-			<a href="#">Полезное</a>
-			<ul>
-				<li><a href="#">О сервисе</a></li>
-				<li><a href="#">Отзывы</a></li>
-				<li><a href="#">Вопрос-ответ</a></li>
-				<li><a href="#">Контакты</a></li>
-			</ul>
-		</li>
-	</ul>
-
-	<!--  =phones -->
-	<div class="support">
-		<a class="phone" href="tel:88002000000">8 800 200-00-00</a>
-		<a href="#" class="callback btn" data-toggle="modal" data-target="#callback">Заказать звонок</a>
-	</div>
-	<!--  =/phones -->
-</div>
-<!--  =/mobile-menu -->
+<!-- InstanceEndEditable -->
 
 <script src="http://ajax.microsoft.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/jquery.validate.min.js"><\/script>')</script>
