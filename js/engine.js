@@ -518,41 +518,47 @@ $(document).ready(function(){
 
 
 	// ОБРАБОТКА СПИСКОВ ГОРОДОВ
+
+	$('#opencity').on('shown.bs.modal', function (e) {
+		$('body').addClass('modal-opencity');
+	});
+
+
 	// закрытие окна выбора городов
-	$('.city-choose-popup a.close').click(function(e){
-		e.preventDefault();
-			$('.city-choose-popup').removeClass('in');
-			$('.city-choose-popup').fadeOut('fast',function(){
-				$('.open-city-select').removeClass('active');
-			});
-	});
+	// $('.city-choose-popup a.close').click(function(e){
+	// 	e.preventDefault();
+	// 		$('.city-choose-popup').removeClass('in');
+	// 		$('.city-choose-popup').fadeOut('fast',function(){
+	// 			$('.open-city-select').removeClass('active');
+	// 		});
+	// });
 
 
-	$('.open-city-select').click(function(e){
-		e.preventDefault();
-		var $this = $(this),
-			$elem = $('.city-choose-popup');
+	// $('.open-city-select').click(function(e){
+	// 	e.preventDefault();
+	// 	var $this = $(this),
+	// 		$elem = $('.city-choose-popup');
 
-		$elem.fadeIn('fast').addClass('in');
-		$elem.css('marginTop', '130px');
-	});
+	// 	$elem.fadeIn('fast').addClass('in');
+	// 	$elem.css('marginTop', '130px');
+	// });
 
-	$('.rating .header .open-city-select').click(function(e){
-		e.preventDefault();
-		var $this = $(this),
-			$elem = $('.city-choose-popup');
-			$win_top = $(window).scrollTop(),
-			$pos_link = $this.offset().top,
-			win_height = $(window).height(),
-			height_block = $elem.height();		
+	// $('.rating .header .open-city-select').click(function(e){
+	// 	e.preventDefault();
+	// 	var $this = $(this),
+	// 		$elem = $('.city-choose-popup');
+	// 		$win_top = $(window).scrollTop(),
+	// 		$pos_link = $this.offset().top,
+	// 		win_height = $(window).height(),
+	// 		height_block = $elem.height();		
 
 
-		if (win_height>height_block){
-			$elem.css("marginTop", Math.round($pos_link - $win_top)+35+"px");
-		} else {
-			$elem.css("marginTop", Math.round($pos_link)+120+"px");			
-		}		
-	});
+	// 	if (win_height>height_block){
+	// 		$elem.css("marginTop", Math.round($pos_link - $win_top)+35+"px");
+	// 	} else {
+	// 		$elem.css("marginTop", Math.round($pos_link)+120+"px");			
+	// 	}		
+	// });
 
 
 	// faq

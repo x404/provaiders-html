@@ -97,7 +97,7 @@
 			<!--  =city-select -->
 			<div class="city-select">
 				<div id="city-chooser">
-					<a href="#" title="" class="city-select-link open-city-select">
+					<a href="#" title="" class="city-select-link open-city-select" data-toggle="modal" data-target="#opencity" data-backdrop="false">
 						<span>Красноярск</span>
 					</a>
 				</div>
@@ -105,9 +105,9 @@
 					<p>Вы действительно находитесь <br> в <span>Красноярск</span>?</p>
 					<div class="proof-city_buttons">
 						<button type="button" class="btn btn-rounded close">Да</button>
-						<button type="button" class="btn btn-rounded open-city-select">Нет</button>
+						<button type="button" class="btn btn-rounded open-city-select" data-toggle="modal" data-target="#opencity" data-backdrop="false">Нет</button>
 					</div>
-				</div>			
+				</div>
 			</div>
 			<!--  =/city-select -->
 			
@@ -672,68 +672,69 @@
 </div>
 <!-- =/add-connect -->
 
-<!-- =/city-choose-popup -->
-<div class="city-choose-popup">
-	<p class="title">Выберите город</p>
-	<div class="searchCity">
-		<input class="form-control" type="text" name="text"  value="" placeholder="Название города" onfocus="this.placeholder='';" onblur="this.placeholder='Название города';" autocomplete="off" />
-	</div>
-	<div class="cities">
-		<div class="column">
-			<dl>
-				<dt>А</dt>
-				<dd data-id="1"><a href="#" title="">Абакан</a></dd>
-			</dl>
-			<dl>
-				<dt>Б</dt>
-				<dd data-id="9"><a href="#" title="">Барнаул</a></dd>
-				<dd data-id="10"><a href="#" title="">Белгород </a></dd>
-			</dl>
-			<dl>
-				<dt>В</dt>
-				<dd data-id="18"><a href="#" title="">Владивосток</a></dd>
-			</dl>
-			<dl>
-				<dt>Е</dt>
-				<dd data-id="27"><a href="#" title="">Екатеринбург</a></dd>
-			</dl>
-		</div>
-		<div class="column">
-			<dl>
-				<dt>И</dt>
-				<dd data-id="31"><a href="#" title="">Иваново</a></dd>
-				<dd data-id="32"><a href="#" title="">Ижевск</a></dd>
-				<dd data-id="33"><a href="#" title="">Иркутск</a></dd>
-			</dl>
-			<dl>
-				<dt>К</dt>
-				<dd data-id="34"><a href="#" title="">Казань</a></dd>
-				<dd data-id="35"><a href="#" title="">Калининград</a></dd>
-				<dd data-id="39"><a href="#" title="">Кемерово</a></dd>
-				<dd data-id="46"><a href="#" title="">Краснодар</a></dd>
-				<dd data-id="47" class="current"><a href="#" title="">Красноярск</a></dd>
-			</dl>
-		</div>
-		<div class="column">
-			<dl>
-				<dt>М</dt>
-				<dd data-id="53"><a href="#" title="">Москва</a></dd>
-				<dd data-id="54"><a href="#" title="">Мурманск</a></dd>
-				<dd data-id="55"><a href="#" title="">Муром</a></dd>
-				<dd data-id="56"><a href="#" title="">Мытищи</a></dd>
-			</dl>
-			<dl>
-				<dt>Н</dt>
-				<dd data-id="65"><a href="#" title="">Новосибирск</a></dd>
-			</dl>
+<!-- =city-choose-popup -->
+<div class="modal fade city-choose-popup" id="opencity" tabindex="-1" role="dialog" aria-labelledby="add-opencityLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-title" id="add-opencityLabel">Выберите город</div>
+			<div class="searchCity">
+				<input class="form-control" type="text" name="text"  value="" placeholder="Название города" onfocus="this.placeholder='';" onblur="this.placeholder='Название города';" autocomplete="off" />
+			</div>
+			<div class="cities">
+				<div class="column">
+					<dl>
+						<dt>А</dt>
+						<dd data-id="1"><a href="#" title="">Абакан</a></dd>
+					</dl>
+					<dl>
+						<dt>Б</dt>
+						<dd data-id="9"><a href="#" title="">Барнаул</a></dd>
+						<dd data-id="10"><a href="#" title="">Белгород </a></dd>
+					</dl>
+					<dl>
+						<dt>В</dt>
+						<dd data-id="18"><a href="#" title="">Владивосток</a></dd>
+					</dl>
+					<dl>
+						<dt>Е</dt>
+						<dd data-id="27"><a href="#" title="">Екатеринбург</a></dd>
+					</dl>
+					<dl>
+						<dt>И</dt>
+						<dd data-id="31"><a href="#" title="">Иваново</a></dd>
+						<dd data-id="32"><a href="#" title="">Ижевск</a></dd>
+						<dd data-id="33"><a href="#" title="">Иркутск</a></dd>
+					</dl>
+					<dl>
+						<dt>К</dt>
+						<dd data-id="34"><a href="#" title="">Казань</a></dd>
+						<dd data-id="35"><a href="#" title="">Калининград</a></dd>
+						<dd data-id="39"><a href="#" title="">Кемерово</a></dd>
+						<dd data-id="46"><a href="#" title="">Краснодар</a></dd>
+						<dd data-id="47" class="current"><a href="#" title="">Красноярск</a></dd>
+					</dl>
+					<dl>
+						<dt>М</dt>
+						<dd data-id="53"><a href="#" title="">Москва</a></dd>
+						<dd data-id="54"><a href="#" title="">Мурманск</a></dd>
+						<dd data-id="55"><a href="#" title="">Муром</a></dd>
+						<dd data-id="56"><a href="#" title="">Мытищи</a></dd>
+					</dl>
+					<dl>
+						<dt>Н</dt>
+						<dd data-id="65"><a href="#" title="">Новосибирск</a></dd>
+					</dl>
 
-			<dl>
-				<dt>О</dt>
-				<dd data-id="68"><a href="#" title="">Омск</a></dd>
-			</dl>
+					<dl>
+						<dt>О</dt>
+						<dd data-id="68"><a href="#" title="">Омск</a></dd>
+					</dl>
+				</div>
+			</div>
+			<!-- <a href="#" class="close"><img src="images/close2.png" alt="Закрыть" /></a> -->
+			<button type="button" class="close" data-dismiss="modal"><img src="images/close2.png" alt="" /></button>
 		</div>
 	</div>
-	<a href="#" class="close"><img src="images/close2.png" alt="Закрыть" /></a>
 </div>
 <!-- =/city-choose-popup -->
 
