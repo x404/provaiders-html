@@ -26,5 +26,6 @@ __Используемые в проекте js плагины__
 * Валидация полей ввода в формах [http://jqueryvalidation.org/](jquery validation)
 * Маска ввода в поле с телефоном [https://github.com/RobinHerbots/Inputmask](inputmask)
 * Плагин эмуляции ajax ответов [http://github.com/appendto/jquery-mockjax](jquery.mockjax.js)
+* Всплывающие окна [http://getbootstrap.com/javascript/#modals-methods](bootstrap modal)
 
 ---------------------------------------------------------
