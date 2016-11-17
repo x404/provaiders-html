@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
 	$('.proof-city .close').click(function(e){
 		e.preventDefault();
 		$('.proof-city').fadeOut('normal',function(){
@@ -490,10 +489,6 @@ $(document).ready(function(){
 	// #validate
 
 
-
-
-
-
 	// popups
 	$('.lightbox').lightBox({
 		txtImage : 'Изображение',
@@ -522,43 +517,6 @@ $(document).ready(function(){
 	$('#opencity').on('shown.bs.modal', function (e) {
 		$('body').addClass('modal-opencity');
 	});
-
-
-	// закрытие окна выбора городов
-	// $('.city-choose-popup a.close').click(function(e){
-	// 	e.preventDefault();
-	// 		$('.city-choose-popup').removeClass('in');
-	// 		$('.city-choose-popup').fadeOut('fast',function(){
-	// 			$('.open-city-select').removeClass('active');
-	// 		});
-	// });
-
-
-	// $('.open-city-select').click(function(e){
-	// 	e.preventDefault();
-	// 	var $this = $(this),
-	// 		$elem = $('.city-choose-popup');
-
-	// 	$elem.fadeIn('fast').addClass('in');
-	// 	$elem.css('marginTop', '130px');
-	// });
-
-	// $('.rating .header .open-city-select').click(function(e){
-	// 	e.preventDefault();
-	// 	var $this = $(this),
-	// 		$elem = $('.city-choose-popup');
-	// 		$win_top = $(window).scrollTop(),
-	// 		$pos_link = $this.offset().top,
-	// 		win_height = $(window).height(),
-	// 		height_block = $elem.height();		
-
-
-	// 	if (win_height>height_block){
-	// 		$elem.css("marginTop", Math.round($pos_link - $win_top)+35+"px");
-	// 	} else {
-	// 		$elem.css("marginTop", Math.round($pos_link)+120+"px");			
-	// 	}		
-	// });
 
 
 	// faq
@@ -978,10 +936,6 @@ function showTime(form){
 	sec = sec-1;
 	if (sec <=0) {
 		stopClock();
-		// $('.thank').fadeOut('normal',function(){
-			// $('input.form-control, textarea').val('')
-			// this.remove();
-		// });
 	}
 }
 
@@ -995,10 +949,6 @@ function startClock(form){
 	if (!timer)
 	timer = window.setInterval("showTime('"+form+"')",1000);
 }
-
-
-
-
 
 
 /*
