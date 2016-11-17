@@ -29,7 +29,6 @@ $(document).ready(function(){
 	});	
 
 
-
 	$("#gallery").owlCarousel({
 		items : 4,
 		pagination : false,
@@ -823,7 +822,8 @@ $(document).ready(function(){
 		e.preventDefault();
 		var $this = $(this);
 		$this.toggleClass('connect_header-down');
-		$('.connect_wrapper').slideToggle('nomral', function(){
+		$('body').toggleClass('bodyConnectDown')
+		$('.connect_wrapper').slideToggle('normal', function(){
 		});
 	})
 
