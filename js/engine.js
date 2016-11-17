@@ -522,9 +522,9 @@ $(document).ready(function(){
 	$('.city-choose-popup a.close').click(function(e){
 		e.preventDefault();
 			$('.city-choose-popup').removeClass('in');
-		$('.city-choose-popup').fadeOut('fast',function(){
-			$('.open-city-select').removeClass('active');
-		});
+			$('.city-choose-popup').fadeOut('fast',function(){
+				$('.open-city-select').removeClass('active');
+			});
 	});
 
 
@@ -534,6 +534,7 @@ $(document).ready(function(){
 			$elem = $('.city-choose-popup');
 
 		$elem.fadeIn('fast').addClass('in');
+		$elem.css('marginTop', '130px');
 	});
 
 	$('.rating .header .open-city-select').click(function(e){
