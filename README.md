@@ -18,6 +18,7 @@ __Используемые в проекте js плагины__
 * Сворачивающееся меню [https://github.com/352Media/flexMenu](flexmenu)
 * Автовыпадание подсказок при вводе в поле ввода символов [http://plugins.upbootstrap.com/bootstrap-ajax-typeahead][Typeahead]
 * Горизонтальная прокрутка в сравнении тарифов (compare.html) [http://manos.malihu.gr/jquery-custom-content-scroller/?5](mCustomScrollbar)
-* Валидация полей ввода в формах [http://jqueryvalidation.org/  ](jquery validation)
+* Валидация полей ввода в формах [http://jqueryvalidation.org/](jquery validation)
 * Маска ввода в поле с телефоном [https://github.com/RobinHerbots/Inputmask](inputmask)
+
 ---------------------------------------------------------
