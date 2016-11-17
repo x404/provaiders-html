@@ -1,3 +1,115 @@
-textarea{overflow:hidden}       
-@media \0screen{
+::-ms-clear {
+        display: none;
+}
+
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	//ie11
+
+	body{
+		display: block;
+	}
+
+	h1, .title{
+		font-family: 'MyriadProLight';
+	}
+}
+
+
+/* ie9 */  
+
+// :root .advantages ul {display: block\9;}     
+:root .top .container {display: block\9;}     
+:root .top .container .top_menu {padding-top: 15px;\9;}     
+
+.top_menu,
+.top_support{
+	float: left;
+}
+
+.top_support{
+	padding-top: 10px;
+}
+
+.top_callback{
+	float: right;
+}
+
+
+header.header .container,
+.neck .info,
+.rating-actions-filter .container,
+.tarif_box .buttons{
+	display: block;
+}
+
+header.header .logo,
+header.header .city-select,
+header.header nav
+{
+	float: left;
+}
+
+header.header .logo{
+	width: 267px;
+	padding-top: 25px;
+}
+
+header.header .city-select{
+	width: 162px;
+}
+
+header.header .buttons{
+	float: right;
+	width: 170px;
+}
+
+.neck .info .cell{
+	float: left;
+	margin-right: 25px;
+}
+
+.neck .info .cell:last-child{
+	margin-right: 0;
+}
+
+
+.rating-actions-filter .rating{
+	width: 645px;
+}
+
+.rating-actions-filter .actions{
+	width: 250px;
+}
+.rating-actions-filter .right{
+	width: 300px;
+}
+
+.tarif_box .buttons{
+	overflow: hidden;
+}
+
+.tarif_box .buttons a{
+	float: left;
+}
+
+.tarif_box .buttons a.more{
+	margin-right: 30px;
+}
+
+.tarif_box .params .channels{
+	margin-left: 15%;
+}
+
+.steps .pic{
+	padding-top: 25px;
+}
+
+.about .left .item div{
+	padding-top: 30px;
+}
+
+#opencity .cities .column dl{
+	float: left;
+	width: 50%;
 }
