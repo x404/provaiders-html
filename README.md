@@ -3,7 +3,8 @@
 
 Верстка расположена по адресу [http://provaiders.proverstka.com.ua/](http://provaiders.proverstka.com.ua)
 
-Все комментарии вроде "InstanceBegin, InstanceBeginEditable, InstanceEndEditable" из кода при программировании убирать! Это от шаблонизатора.
+Все комментарии вроде "InstanceBegin, InstanceBeginEditable, InstanceEndEditable" из кода при программировании убирать! Такие комментарии оставляет шаблонизатор dreamweaver.
+
 
 
 **Каталог тарифов** (cat-tarifs.html)
