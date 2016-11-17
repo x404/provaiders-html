@@ -1,6 +1,7 @@
 Провайдеры
+================
 
-Верстка
+Верстка расположена по адресу [http://provaiders.proverstka.com.ua/](http://provaiders.proverstka.com.ua)
 
 Все комментарии вроде "InstanceBegin, InstanceBeginEditable, InstanceEndEditable" из кода при программировании убирать! Это от шаблонизатора.
 
@@ -14,4 +15,5 @@ cat-tarifs.html
 ---------------------------------------------------------
 __Используемые js плагины__
 * owl-carousel [http://owlgraphic.com/owlcarousel/#customizing](owlgraphic)
+
 ---------------------------------------------------------
