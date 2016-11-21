@@ -490,10 +490,14 @@ $(document).ready(function(){
 
 
 	// popups
-	$('.lightbox').lightBox({
-		txtImage : 'Изображение',
-		txtOf : 'из'
-	});
+	// $('.lightbox').lightBox({
+	// 	txtImage : 'Изображение',
+	// 	txtOf : 'из'
+	// });
+
+	lightbox.option({
+		'resizeDuration' : 200
+	})
 
 
 	$('#connect').on('show.bs.modal', function (e) {

@@ -39,6 +39,18 @@
 }
 
 
+:root .meta .date{
+	display: inline\9
+}
+
+:root .meta .back{
+	float: right;
+	display: inline\9
+}
+
+
+
+
 .top_menu,
 .top_support{
 	float: left;

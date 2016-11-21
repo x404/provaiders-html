@@ -38,5 +38,6 @@ __Используемые в проекте js плагины__
 * Плагин эмуляции ajax ответов [http://github.com/appendto/jquery-mockjax](jquery.mockjax.js)
 * Всплывающие окна [http://getbootstrap.com/javascript/#modals-methods](bootstrap modal)
 * Сообщение для устаревших браузеров [https://github.com/burocratik/outdated-browser](Outdated Browser v1.1.3) [http://outdatedbrowser.com/ru](Демо)
+* Лайтбокс [http://lokeshdhakar.com/projects/lightbox2/](lightbox)
 
 ---------------------------------------------------------
