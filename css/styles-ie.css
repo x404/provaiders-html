@@ -29,7 +29,14 @@
 :root .others .actions_item{float: left;\9}
 
 
+:root .others .news_item{
+	display: block\9;
+	float: left\9;
+}
 
+:root .others .news_item_wrapper{
+	min-height: 31rem\9
+}
 
 
 .top_menu,
@@ -123,5 +130,4 @@ header.header .buttons{
 	float: left;
 	width: 50%;
 }
-
 
