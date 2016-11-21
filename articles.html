@@ -26,13 +26,14 @@
 	<link href="css/styles-ie.css" rel="stylesheet" type="text/css" />
 <![endif]-->
 
+<!--[if !IE]><!-->
+<script>if(/*@cc_on!@*/false){document.documentElement.className+=' ie10';}</script>
+<!--<![endif]-->
+
 <!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
-<!--[if lte IE 8]>
-	<meta http-equiv="refresh" content="0; url=http://yoursite.com/ie6/ie6.html">
-<![endif]-->
 <!-- InstanceBeginEditable name="head" -->
 <!-- InstanceEndEditable -->
 </head>
@@ -476,6 +477,7 @@
 		</div>
 	</div>
 </footer>
+<div id="outdated"></div>
 <!-- =/footer  -->
 
 
@@ -754,7 +756,9 @@
 <!-- InstanceBeginEditable name="EditRegion4" -->
 
 <!-- InstanceEndEditable -->
+<link rel="stylesheet" property='stylesheet' href="outdatedbrowser/outdatedbrowser.min.css" />
 <link rel="stylesheet" property='stylesheet' href="css/responsive.css" />
+<script src="outdatedbrowser/outdatedbrowser.min.js"></script>
 <script src="http://ajax.microsoft.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/jquery.validate.min.js"><\/script>')</script>
 <script src="js/flexmenu.min.js"></script>
@@ -768,7 +772,6 @@
 
 <script src="js/jquery.lightbox-0.5.js"></script>
 <link rel="stylesheet" property='stylesheet' href="css/jquery.lightbox-0.5.css" />
-
 
 <!-- =temp JS -->
 <script src="tmp/jquery.mockjax.js"></script>

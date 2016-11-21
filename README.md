@@ -24,6 +24,8 @@
 
 Папка Templates при программировании не нужна - это шаблон для верстки
 
+
+
 ---------------------------------------------------------
 __Используемые в проекте js плагины__
 * Карусель owl-carousel [http://owlgraphic.com/owlcarousel/#customizing](owlgraphic)
@@ -34,5 +36,6 @@ __Используемые в проекте js плагины__
 * Маска ввода в поле с телефоном [https://github.com/RobinHerbots/Inputmask](inputmask)
 * Плагин эмуляции ajax ответов [http://github.com/appendto/jquery-mockjax](jquery.mockjax.js)
 * Всплывающие окна [http://getbootstrap.com/javascript/#modals-methods](bootstrap modal)
+* Сообщение для устаревших браузеров [https://github.com/burocratik/outdated-browser](Outdated Browser v1.1.3) [http://outdatedbrowser.com/ru][Демо]
 
 ---------------------------------------------------------

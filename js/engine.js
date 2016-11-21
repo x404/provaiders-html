@@ -791,29 +791,35 @@ $(document).ready(function(){
 		$('.connect_wrapper').slideToggle('normal', function(){
 		});
 	})
-
-	// =заглушка для IE
-	var browser = navigator.userAgent.indexOf("MSIE");
-	var version = parseInt(navigator.userAgent.substr(browser + 5, 2));
-	if (version !== -1) var IE = true;
-	if (IE && version < 9) {
-		var IEhelp = document.createElement("div");
-		IEhelp.style.width = "100%";
-		IEhelp.style.padding = "11px";
-		IEhelp.style.backgroundColor = "#CC3333";
-		IEhelp.style.color = "#FFFFFF";
-		IEhelp.style.textAlign = "center";
-		IEhelp.style.font = "normal 14px/1.2 Helvetica Neue, Tahoma, Verdana, Arial, sans-serif";
-		IEhelp.innerHTML = 'Внимание! Вы используете устаревший браузер. <a href="/ie6/ie6.html" target="_blank" style="color: #FFFFFF; text-decoration: underline;">Подробнее &#187;</a>';
-		if (document.body.firstChild) {
-			document.body.insertBefore(IEhelp, document.body.firstChild);
-		}
-		else {
-			document.body.appendChild(IEhelp);
-		}
-	}
-	// =/заглушка для IE
 })
+
+
+// =заглушка для IE
+//event listener: DOM ready
+function addLoadEvent(func) {
+    var oldonload = window.onload;
+    if (typeof window.onload != 'function') {
+        window.onload = func;
+    } else {
+        window.onload = function() {
+            if (oldonload) {
+                oldonload();
+            }
+            func();
+        }
+    }
+}
+//call plugin function after DOM ready
+addLoadEvent(function(){
+    outdatedBrowser({
+        bgColor: '#f25648',
+        color: '#ffffff',
+        lowerThan: 'transform',
+        languagePath: '/outdatedbrowser/lang/ru.html'
+    })
+});
+// =/заглушка для IE
+
 
 
 function centerWin(win){
