@@ -24,6 +24,7 @@
 
 Папка Templates при программировании не нужна - это шаблон для верстки
 
+На главной странице (homepage.html), в акциях (actions.html) - значок медальки в таблице сделан через css (на основании порядкового номера строчки). 
 
 
 ---------------------------------------------------------
@@ -36,6 +37,6 @@ __Используемые в проекте js плагины__
 * Маска ввода в поле с телефоном [https://github.com/RobinHerbots/Inputmask](inputmask)
 * Плагин эмуляции ajax ответов [http://github.com/appendto/jquery-mockjax](jquery.mockjax.js)
 * Всплывающие окна [http://getbootstrap.com/javascript/#modals-methods](bootstrap modal)
-* Сообщение для устаревших браузеров [https://github.com/burocratik/outdated-browser](Outdated Browser v1.1.3) [http://outdatedbrowser.com/ru][Демо]
+* Сообщение для устаревших браузеров [https://github.com/burocratik/outdated-browser](Outdated Browser v1.1.3) [http://outdatedbrowser.com/ru](Демо)
 
 ---------------------------------------------------------

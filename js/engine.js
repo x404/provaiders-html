@@ -2,7 +2,7 @@ $(document).ready(function(){
 	$('.proof-city .close').click(function(e){
 		e.preventDefault();
 		$('.proof-city').fadeOut('normal',function(){
-			this.remove();
+			$('.proof-city').remove();
 		});
 	});
 
