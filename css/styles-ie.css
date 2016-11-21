@@ -19,7 +19,9 @@
 /* ie9 */  
 
 // :root .advantages ul {display: block\9;}     
-:root h1, :root .title{
+:root h1, :root .title,
+:root .inner h1, :root .inner h2, :root .inner h3, :root .inner h4, :root .inner h5, :root .inner h6
+{
 	font-family: "MyriadProLight";
 }
 :root .top .container {display: block\9;}     
