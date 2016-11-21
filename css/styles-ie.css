@@ -19,8 +19,18 @@
 /* ie9 */  
 
 // :root .advantages ul {display: block\9;}     
+:root h1, :root .title{
+	font-family: "MyriadProLight";
+}
 :root .top .container {display: block\9;}     
 :root .top .container .top_menu {padding-top: 15px;\9;}     
+// others
+:root .others_wrapper{display: block;\9}
+:root .others .actions_item{float: left;\9}
+
+
+
+
 
 .top_menu,
 .top_support{
@@ -113,3 +123,5 @@ header.header .buttons{
 	float: left;
 	width: 50%;
 }
+
+
