@@ -54,6 +54,10 @@ textarea{
 	display: inline\9
 }
 
+:root .list_provaiders .provaiders_item .provaiders_item_wrapper{
+	min-height: 300px\9;
+}
+
 
 
 
