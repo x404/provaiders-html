@@ -58,6 +58,11 @@ textarea{
 	min-height: 300px\9;
 }
 
+	:root .img-responsive{
+		width: 100%\9;
+		height: 100%\9;
+		max-width: auto\9;
+	}	
 
 
 
