@@ -794,11 +794,9 @@ $(document).ready(function(){
 	});	
 
 
-
 	$('.mobile-menu').hammer().on('panleft', function(){
 		$('body').removeClass('o-menu');
 	});
-
 
 
 	$('.connect_header').click(function(e){
@@ -933,23 +931,23 @@ $(document).on('click','.btn-compare-in', function(e){
 
 
 // карточка провайдера
-	$(document).on('click', '.reviewers_item_body .more a', function(e){
-		e.preventDefault();
-		var $this = $(this),
-			el = $this.closest('.reviewers_item_body'),
-			curHeight = el.height(),
-			autoHeight = el.css('height', 'auto').height() + 60;
+$(document).on('click', '.reviewers_item_body .more a', function(e){
+	e.preventDefault();
+	var $this = $(this),
+		el = $this.closest('.reviewers_item_body'),
+		curHeight = el.height(),
+		autoHeight = el.css('height', 'auto').height() + 60;
 
-		if ($this.hasClass('expand')){
-			$this.text('Показать продолжение').removeClass('expand');
-			el.height(curHeight).animate({height: '193px'}, 300);
-		} else {
-			el.height(curHeight).animate({height: autoHeight}, 300);
-			$this.text('Свернуть').addClass('expand')
-		}
+	if ($this.hasClass('expand')){
+		$this.text('Показать продолжение').removeClass('expand');
+		el.height(curHeight).animate({height: '193px'}, 300);
+	} else {
+		el.height(curHeight).animate({height: autoHeight}, 300);
+		$this.text('Свернуть').addClass('expand')
+	}
 
-		$this.closest('.reviewers_item_body').toggleClass('reviewers_item_body-expand');
-	});
+	$this.closest('.reviewers_item_body').toggleClass('reviewers_item_body-expand');
+});
 
 
 

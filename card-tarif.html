@@ -241,23 +241,27 @@
 			};	
 				
 			var panel = $(".connect");
+			pospanel();
 			$(window).scrollStopped(function(){
+				pospanel();
+			});
+
+			function pospanel(){
 				if (panel.css('display') == 'block') {
 					var win_top = $(window).scrollTop(),
 						win_height = $(window).height(),
 						height_block = $(panel).height();
 					if (win_height>height_block && win_top > 350){
 						panel.animate({
-							marginTop : Math.round(win_top+(win_height-height_block)/2)-400+"px"
+							marginTop : Math.round(win_top+(win_height-height_block)/2)-win_height/2.3+"px"
 						}, 1000)
 					} else{
 						panel.animate({
 							marginTop : 0
 						}, 1000)
 					}
-
-				}
-			});	
+				}				
+			}
 
 
 			// scroll Page
