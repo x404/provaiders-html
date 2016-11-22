@@ -158,7 +158,7 @@
 				<div class="check_address">
 					<div class="header">
 						Проверьте ваш адрес
-						<a href="#" class="search-map-link btn-type-2 btn-sprite btn-sprite-balloon first-btn">Найти дом на карте</a>
+						<a href="#" class="search-map-link btn-type-2 btn-sprite btn-sprite-balloon first-btn" data-toggle="modal" data-target="#openmap" data-backdrop="true">Найти дом на карте</a>
 						<a href="#" class="search-map-link btn-type-2 btn-sprite btn-sprite-balloon sec-btn">На карте</a>
 					</div>
 					<div class="form">
@@ -1209,7 +1209,19 @@
 
 
 <!-- InstanceBeginEditable name="EditRegion4" -->
-
+<!-- =order connect -->
+<div class="modal fade" id="openmap" tabindex="-1" role="dialog" aria-labelledby="openmapLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-title" id="openmapLabel">Найдите адрес на карте</div>
+			<div class="modal-body">
+				
+			</div>
+			<button type="button" class="close" data-dismiss="modal"><img src="images/close3.png" alt="" /></button>
+		</div>
+	</div>
+</div>
+<!-- =/add-connect -->
 <!-- InstanceEndEditable -->
 <link rel="stylesheet" property='stylesheet' href="outdatedbrowser/outdatedbrowser.min.css" />
 <link rel="stylesheet" property='stylesheet' href="css/responsive.css" />
