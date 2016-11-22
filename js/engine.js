@@ -502,22 +502,25 @@ $(document).ready(function(){
 	// #validate
 
 
-	// popups
-	// $('.lightbox').lightBox({
-	// 	txtImage : 'Изображение',
-	// 	txtOf : 'из'
-	// });
-
-	lightbox.option({
-		'resizeDuration' : 200,
-		'alwaysShowNavOnTouchDevices' : true 
-	})
+	$("#gallery a").tosrus({
+		//	Default options
+		caption		: {
+			add			: true
+		}
+	}, {
+		//	Desktop-only options
+		buttons		: true,
+		drag		: false
+	}, {
+		//	Touchscreen-only options
+		buttons		: false,
+		drag		: true
+	});
 
 
 	$('#connect').on('show.bs.modal', function (e) {
-		// $('#connect .tarif-title span').text($(e.relatedTarget).prev('.ctitle').find('a').text())
 		$('#connect .tarif-title span').text($(e.relatedTarget).closest('.tarif_item').find('.ctitle').find('a').text())
-	})
+	});
 
 
 	$("#compare-scroller").mCustomScrollbar({
