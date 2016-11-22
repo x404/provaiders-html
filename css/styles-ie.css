@@ -58,11 +58,60 @@ textarea{
 	min-height: 300px\9;
 }
 
-	:root .img-responsive{
-		width: 100%\9;
-		height: 100%\9;
-		max-width: auto\9;
-	}	
+:root .img-responsive{
+	width: 100%\9;
+	height: 100%\9;
+	max-width: auto\9;
+}
+
+
+:root .list_tarifs .tarif_item_top{
+	overflow: hidden\9;
+}
+
+:root .list_tarifs .tarif_item_top .head{
+	display: block\9;
+	float: left\9;
+	width: 30%\9;
+}
+
+:root .list_tarifs .tarif_item_top .params{
+	float: right\9;
+	display: block\9;
+	width: 70%\9;
+}
+
+
+:root .list_tarifs .tarif_item_description:after{
+	display: none\9;
+}
+
+:root .list_tarifs .tarif_item_top .params .speed{
+	text-align: center\9;
+	margin-top: 1rem\9;
+}
+
+:root .tarif_box .params .channels{
+	margin-left: 30%\9;
+}
+
+:root .list_tarifs .tarif_item_top .params .speed p:before{
+	left: 30%\9;
+}
+
+
+:root .list_tarifs .tarif_item_top .params .channels {
+	margin-top: 1rem\9;
+}
+:root .list_tarifs .tarif_item_top .params .channels p{
+	padding-left: 0\9;
+}
+
+
+
+
+
+
 
 
 

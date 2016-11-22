@@ -172,25 +172,38 @@ $(document).ready(function(){
 	$('aside .filter .filter_header input[type="checkbox"]').on('click', function(){
 		var $this = $(this),
 			isChecked = ($this.is(':checked')) ? true : false,
-			el = $this.attr('name');
+			el = $this.attr('name'),
+			cellparam = $('.filter .param').filter('[data-param=' + el + ']');
+			cellparamsm = $('.filter-sm .param').filter('[data-param=' + el + ']');
 
 		if (isChecked) {
-			$('.filter .param').filter('[data-param=' + el + ']').slideDown();
+			cellparam.slideDown('normal',function(){
+				cellparamsm.parent().show();
+			});
 			$('.filter-sm').find('#' + el + '-sm').prop('checked', true);
 		} else {
-			$('.filter .param').filter('[data-param=' + el + ']').slideUp();
+			cellparam.slideUp('normal', function(){
+				cellparamsm.parent().hide();
+			});
 			$('.filter-sm').find('#' + el + '-sm').prop('checked', false);
 		}
 	});
 
+	// клик по "интернет", "тв"
 	$('.filter-sm .filter_header .toggle').on('click', function(){
 		var $this = $(this),
 			isChecked = ($this.is(':checked')) ? true : false,
-			el = $this.attr('name');
+			el = $this.attr('name'),
+			cellparam = $('.filter .param').filter('[data-param=' + el + ']');
+
 		if (isChecked) {
+			cellparam.parent().show();
+			cellparam.slideDown();
 			$('aside .filter').find('#' + el).prop('checked', true);
+
 		} else {
-			$('.filter .param').filter('[data-param=' + el + ']').slideUp();
+			cellparam.parent().hide();
+			cellparam.slideUp();
 			$('aside .filter').find('#' + el).prop('checked', false);
 		}
 	});
@@ -237,8 +250,8 @@ $(document).ready(function(){
 	$('.filter-sm .filter_title .toggle').click(function(e){
 		e.preventDefault();
 		var $this = $(this);
+		$('.filter-sm').toggleClass('filter-sm-up')
 		$('.filter-sm .filter_wrapper').slideToggle('normal', function(){
-			$this.toggleClass('toggle-up');
 		});
 	})
 
