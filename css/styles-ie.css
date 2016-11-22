@@ -1,5 +1,5 @@
 ::-ms-clear {
-        display: none;
+    display: none;
 }
 
 textarea{
@@ -9,7 +9,6 @@ textarea{
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
 	//ie11
-
 	body{
 		display: block;
 	}
@@ -108,8 +107,62 @@ textarea{
 }
 
 
+:root .card_tarifs .tarif_box{
+	overflow: hidden\9;
+}
+
+:root .card_tarifs .tarif_item_description{
+	float: left\9;
+	width: 69%\9;
+}
+
+:root .card_tarifs .tarif_item_top .head{
+	display: block\9;
+	float: left\9;
+	width: 30%\9;
+}
+
+:root .card_tarifs .tarif_item_top .params{
+	float: right\9;
+	display: block\9;
+	width: 70%\9;
+}
 
 
+:root .card_tarifs .tarif_item_description:after{
+	display: none\9;
+}
+
+:root .card_tarifs .tarif_item_top .params .speed{
+	text-align: center\9;
+	margin-top: 1rem\9;
+}
+
+:root .tarif_box .params .channels{
+	margin-left: 20%\9;
+}
+
+:root .card_tarifs .tarif_item_top .params .speed .num,
+:root .card_tarifs .tarif_item_top .params .speed p{
+	float: left\9;
+}
+
+:root .card_tarifs .tarif_item_top .params .speed p:before{
+	left: 12%\9;
+}
+
+:root .card_tarifs .tarif_item_top .params .channels {
+	margin-top: 1rem\9;
+}
+:root .card_tarifs .tarif_item_top .params .channels p{
+	padding-left: 0\9;
+}
+
+:root .card_tarifs .tarif_box .buttons{
+	float: right\9;
+	overflow: visible\9;
+	width: 30%\9;
+}
 
 
 

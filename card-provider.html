@@ -1561,6 +1561,35 @@
 	</div>
 </div>
 <!-- =/add-opinion -->
+
+<div class="modal fade" id="add-quality" tabindex="-1" role="dialog" aria-labelledby="add-opinionLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-title" id="add-qualityLabel">В одном из пунктов вы поставили оценку ниже 5</div>
+			<p class="remark">Мы следим за качеством отзывов, поэтому просим оставить данные для решения возникшей проблемы</p>
+			<form action="#" method="post" id="add-quality-form">
+				<fieldset>
+					<div class="input-field">
+						<label for="numcontract" class="name-field">Номер договора</label>
+						<label for="numcontract" class="helper-field helper-field-numcontract">Номер договора</label>
+						<input type="text" id="numcontract" name="numcontract" class="form-control required" value="" />
+					</div>
+					<p class="br"><span>или</span></p>
+					<div class="input-field">
+						<label for="tel-quality" class="name-field">Телефон</label>
+						<label for="tel-quality" class="helper-field helper-field-tel">Телефон</label>
+						<input type="tel" id="tel-quality" name="tel" class="form-control required tel" value="" />
+					</div>
+					<div class="bottom row">
+						<input type="submit" class="submit" value="Отправить" />
+					</div>
+				</fieldset>
+			</form>
+			<button type="button" class="close" data-dismiss="modal"><img src="images/close-modal.png" alt="" /></button>
+		</div>
+	</div>
+</div>
+
 <!-- InstanceEndEditable -->
 <link rel="stylesheet" property='stylesheet' href="outdatedbrowser/outdatedbrowser.min.css" />
 <link rel="stylesheet" property='stylesheet' href="css/responsive.css" />
