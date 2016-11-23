@@ -888,21 +888,23 @@ $(document).on('click','.btn-fav-in', function(e){
 // результат проверки адреса
 $(document).on('click','.check_address .submit', function(e){
 	e.preventDefault();
-	msg = '<div class="result-check result-check-ok"><div class="wrapper"><p>Адрес обслуживается. Найдено <a href="http://ya.ru">5 провайдеров</a></p><a href="#" class="link">Посмотреть провайдеров</a></div></div>';
-	// msg = '<div class="result-check result-check-error"><div class="wrapper"><p>Адрес не обслуживается провайдерами</div></div>';
+	msg = '<div class="result-check result-check-ok"><div class="wrapper"><p>Адрес обслуживается. Найдено <a href="http://ya.ru">5 провайдеров</a></p><a href="http://ya.ru" class="link">Посмотреть провайдеров</a></div></div>';
+	// msg = '<div class="result-check result-check-error text-center"><div class="wrapper"><p>Адрес не обслуживается провайдерами</div></div>';
 	$('body').append(msg).addClass('blur');
+	$('.result-check').css('cursor','pointer');
 });
 
 $(document).on('click','.result-check', function(e){
 	$('body.blur').removeClass('blur');
 	$(this).fadeOut('normal',function(){
 		this.remove();
-	})
-})
+	});
+});
 
 $(document).on('click','.result-check a', function(e){
 	e.stopPropagation();
 })
+
 // =/результат проверки адреса
 
 
