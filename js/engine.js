@@ -30,31 +30,112 @@ $(document).ready(function(){
 		$('.proof-city').remove();
 	});
 
-	$("#foo1").owlCarousel({
-		items : 4,
-		pagination : false,
-		navigation : true,
-		navigationText: ["", ""],
-		itemsCustom:[[100, 1], [480, 2], [700, 2], [900, 3], [1183, 4]]
+	$('#foo1').owlCarousel({
+		loop:false,
+		nav:true,
+		dots: false,
+		items:4,
+		lazyLoad: true,
+		navText: ["", ""],
+		responsive:{
+			0:{
+				items:1,
+				stagePadding: 30
+			},
+			480:{
+				items:2
+			},
+			700:{
+				items:2
+			},
+			900:{
+				items:3
+			},
+			1183:{
+				items:4
+			}
+		}
 	});
 
-	$("#foo2").owlCarousel({
-		items : 5,
-		pagination : false,
-		navigation : true,
-		navigationText: ["", ""],
-		itemsCustom:[[100, 1], [480, 2], [700, 3], [900, 4], [1198, 4]]
-	});	
+	$('#foo2').owlCarousel({
+		loop:false,
+		nav:true,
+		dots: false,
+		items:5,
+		lazyLoad: true,
+		navText: ["", ""],
+		responsive:{
+			0:{
+				items:1,
+				stagePadding: 30
+			},
+			480:{
+				items:2
+			},
+			700:{
+				items:3
+			},
+			900:{
+				items:4
+			},
+			1198:{
+				items:4
+			}
+		}
+	});
+
+	$('#gallery').owlCarousel({
+		loop:false,
+		nav:true,
+		dots: false,
+		items:4,
+		lazyLoad: true,
+		margin: 1,
+		navText: ["", ""],
+		responsive:{
+			0:{
+				items:1
+			},
+			480:{
+				items:2
+			},
+			850:{
+				items:2
+			},
+			900:{
+				items:3
+			},
+			1198:{
+				items:4
+			}
+		}
+	});		
+
+	// $("#foo1").owlCarousel({
+	// 	items : 4,
+	// 	pagination : false,
+	// 	navigation : true,
+	// 	navigationText: ["", ""],
+	// 	itemsCustom:[[100, 1], [480, 2], [700, 2], [900, 3], [1183, 4]]
+	// });
+
+	// $("#foo2").owlCarousel({
+	// 	items : 5,
+	// 	pagination : false,
+	// 	navigation : true,
+	// 	navigationText: ["", ""],
+	// 	itemsCustom:[[100, 1], [480, 2], [700, 3], [900, 4], [1198, 4]]
+	// });	
 
 
-	$("#gallery").owlCarousel({
-		items : 4,
-		pagination : false,
-		navigation : true,
-		navigationText: ["", ""],
-		autoHeight  : true,
-		itemsCustom:[[100, 1], [480, 2], [850, 2], [900, 3], [1198, 4]]
-	});	
+	// $("#gallery").owlCarousel({
+	// 	items : 4,
+	// 	pagination : false,
+	// 	navigation : true,
+	// 	navigationText: ["", ""],
+	// 	autoHeight  : true,
+	// 	itemsCustom:[[100, 1], [480, 2], [850, 2], [900, 3], [1198, 4]]
+	// });	
 
 
 	$('.top_menu_flex').flexMenu({
