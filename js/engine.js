@@ -341,7 +341,7 @@ $(document).ready(function(){
 
 
 	// mask
-	$('.tel').inputmask({
+	$('input.tel').inputmask({
 		mask: '+7(999)999-99-99',
 		showMaskOnHover : false
 	});
