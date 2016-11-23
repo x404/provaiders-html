@@ -230,7 +230,6 @@
 		<!-- =connect -->
 		<script>
 		$(document).ready(function(){
-
 			// плавная прокрутка блока на широких экранах
 			$.fn.scrollStopped = function(callback) {
 				var that = this, $this = $(that);
@@ -253,19 +252,18 @@
 						height_block = $(panel).height();
 					if (win_height>height_block && win_top > 350){
 						panel.animate({
-							marginTop : Math.round(win_top+(win_height-height_block)/2)-win_height/2.3+"px"
+							marginTop : Math.round(win_top+(win_height-height_block)/2)-win_height/2.1+"px"
 						}, 1000)
 					} else{
 						panel.animate({
 							marginTop : 0
 						}, 1000)
 					}
-				}				
+				}
 			}
 
 
 			// scroll Page
-			// var panel = $('.connect');
 			$(window).scroll(function(){
 				var $this = $(this),
 					pos = panel.offset();
