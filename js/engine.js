@@ -195,16 +195,16 @@ $(document).ready(function(){
 			isChecked = ($this.is(':checked')) ? true : false,
 			el = $this.attr('name'),
 			cellparam = $('.filter .param').filter('[data-param=' + el + ']');
+			cellparamsm = $('.filter-sm .param').filter('[data-param=' + el + ']');
 
 		if (isChecked) {
-			cellparam.parent().show();
-			cellparam.slideDown();
 			$('aside .filter').find('#' + el).prop('checked', true);
-
+			cellparamsm.parent().show();
+			cellparam.slideDown();
 		} else {
-			cellparam.parent().hide();
-			cellparam.slideUp();
 			$('aside .filter').find('#' + el).prop('checked', false);
+			cellparamsm.parent().hide();
+			cellparam.slideUp();
 		}
 	});
 
@@ -220,7 +220,6 @@ $(document).ready(function(){
 			el = $this.data('place');
 		$('aside input[name=place][data-place="' + el + '"]').prop('checked', true);
 	});
-
 
 	// клик по доп.услугам в фильтре
 	$('aside .services input[type=checkbox]').on('click', function(){
@@ -246,13 +245,12 @@ $(document).ready(function(){
 	// #inputs
 
 
-	// фильтр в каталоге тарифов
-	$('.filter-sm .filter_title .toggle').click(function(e){
+	//  клик по шапке фильтра в каталоге тарифов
+	$('.filter-sm .filter_title').click(function(e){
 		e.preventDefault();
 		var $this = $(this);
 		$('.filter-sm').toggleClass('filter-sm-up')
-		$('.filter-sm .filter_wrapper').slideToggle('normal', function(){
-		});
+		$('.filter-sm .filter_wrapper').slideToggle();
 	})
 
 

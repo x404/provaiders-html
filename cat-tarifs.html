@@ -172,7 +172,8 @@
 							<div class="filter filter-sm">
 								<form action="#" method="post">
 									<div class="filter_title">
-										Фильтр тарифов <a href="#" class="toggle"></a>
+										<span>Фильтр тарифов</span>
+										<!-- <a href="#" class="toggle"></a> -->
 									</div>
 									<div class="filter_wrapper">
 										<div class="filter_header">
@@ -184,7 +185,7 @@
 												<label class="tpTitle" for="tv-sm">ТВ</label>
 											</div>
 
-											<div class="place" data-param="internet">
+											<div class="place" data-param="place">
 												<input type="radio" id="radio-3-sm" name="place" value="Домой" data-place="place1"  checked />
 												<label for="radio-3-sm">Домой</label>
 
@@ -1018,23 +1019,25 @@
 										<label class="tpTitle" for="tv">ТВ</label>
 									</div>
 									<div class="filter_body">
-										<div class="place" data-param="internet">
+										<div class="place" data-param="place">
 											<input type="radio" id="radio3" name="place" value="Домой" data-place="place1" checked />
 											<label for="radio3">Домой</label>
 
 											<input type="radio" id="radio4" name="place" value="В офис" data-place="place2" />
 											<label for="radio4">В офис</label>
 										</div>
-										<div class="param param-speed" data-param="internet">
-											<p class="param_title">Скорость, Мбит/с</p>
-											<div class="slider_controls row">
-												<input type="text" id="speed-from" name="speed-from" class="param_control" placeholder="от" readonly />
-												<input type="text" id="speed-to" name="speed-to" class="param_control" placeholder="до" readonly />
-											</div>
-											<div class="slider">
-												<div id="slider-speed"></div>
-												<p class="slider_start">20</p>
-												<p class="slider_end">150</p>
+										<div class="cell">
+											<div class="param param-speed" data-param="internet">
+												<p class="param_title">Скорость, Мбит/с</p>
+												<div class="slider_controls row">
+													<input type="text" id="speed-from" name="speed-from" class="param_control" placeholder="от" readonly />
+													<input type="text" id="speed-to" name="speed-to" class="param_control" placeholder="до" readonly />
+												</div>
+												<div class="slider">
+													<div id="slider-speed"></div>
+													<p class="slider_start">20</p>
+													<p class="slider_end">150</p>
+												</div>
 											</div>
 										</div>
 										<div class="param param-tv hide" data-param="tv">
