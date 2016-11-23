@@ -32,16 +32,16 @@
 
 ---------------------------------------------------------
 __Используемые в проекте js плагины__
-* Слайдер цен в фильтре [http://jqueryui.com/slider/#range](jquery slider)
-* Карусель owl-carousel [http://owlgraphic.com/owlcarousel/#customizing](owlgraphic)
-* Сворачивающееся меню [https://github.com/352Media/flexMenu](flexmenu)
-* Автовыпадание подсказок при вводе в поле ввода символов [http://plugins.upbootstrap.com/bootstrap-ajax-typeahead](Typeahead)
-* Горизонтальная прокрутка в сравнении тарифов (compare.html) [http://manos.malihu.gr/jquery-custom-content-scroller/?5](mCustomScrollbar)
-* Валидация полей ввода в формах [http://jqueryvalidation.org/](jquery validation)
-* Маска ввода в поле с телефоном [https://github.com/RobinHerbots/Inputmask](inputmask)
-* Плагин эмуляции ajax ответов [http://github.com/appendto/jquery-mockjax](jquery.mockjax.js)
-* Всплывающие окна [http://getbootstrap.com/javascript/#modals-methods](bootstrap modal)
-* Сообщение для устаревших браузеров [https://github.com/burocratik/outdated-browser](Outdated Browser v1.1.3) [http://outdatedbrowser.com/ru](Демо)
-* Лайтбокс [http://tosrus.frebsite.nl/](lightbox - touch, adaptive)
+* Слайдер цен в фильтре [http://jqueryui.com/slider/#range](http://jqueryui.com/slider/#range)
+* Карусель owl-carousel [http://owlgraphic.com/owlcarousel/#customizing](http://owlgraphic.com/owlcarousel/#customizing)
+* Сворачивающееся меню [https://github.com/352Media/flexMenu](https://github.com/352Media/flexMenu)
+* Автовыпадание подсказок при вводе в поле ввода символов Typeahead [http://plugins.upbootstrap.com/bootstrap-ajax-typeahead](http://plugins.upbootstrap.com/bootstrap-ajax-typeahead)
+* Горизонтальная прокрутка в сравнении тарифов (compare.html) mCustomScrollbar [http://manos.malihu.gr/jquery-custom-content-scroller/?5](http://manos.malihu.gr/jquery-custom-content-scroller/?5)
+* Валидация полей ввода в формах jquery validation [http://jqueryvalidation.org/](http://jqueryvalidation.org/)
+* Маска ввода в поле с телефоном inputmask [https://github.com/RobinHerbots/Inputmask](https://github.com/RobinHerbots/Inputmask)
+* Плагин эмуляции ajax ответов jquery.mockjax.js[http://github.com/appendto/jquery-mockjax](http://github.com/appendto/jquery-mockjax)
+* Всплывающие окна bootstrap modal[http://getbootstrap.com/javascript/#modals-methods](http://getbootstrap.com/javascript/#modals-methods)
+* Сообщение для устаревших браузеров Outdated Browser v1.1.3[https://github.com/burocratik/outdated-browser](https://github.com/burocratik/outdated-browser) [Демо](http://outdatedbrowser.com/ru)
+* Лайтбокс - touch, adaptive[http://tosrus.frebsite.nl/](http://tosrus.frebsite.nl/)
 
 ---------------------------------------------------------
