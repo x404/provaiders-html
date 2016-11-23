@@ -763,10 +763,17 @@ $(document).ready(function(){
 		});
 	});
 
-	$('.services .item .toggle').click(function(e){
+	// устанавливает все чекбоксы в карточке тарифа в выключенное состояние
+	$('.services .item input[type=checkbox]').prop('checked', false);
+
+	// клик по заголовку разворачивающегося блока
+	$('.services .item .item_header').click(function(e){
 		e.preventDefault();
-		var $this = $(this);
-		$this.toggleClass('toggle-up');
+		var $this = $(this),
+			arrow = $this.find('.toggle'),
+			checkbox = $this.find('input[type=checkbox]');
+		arrow.toggleClass('toggle-up');
+		checkbox.prop('checked', !checkbox.prop('checked'));
 		$this.closest('.item').find('.item_body').slideToggle();
 	})
 
