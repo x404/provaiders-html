@@ -1,5 +1,5 @@
 ymaps.ready(function() {
-	var myMap = new ymaps.Map('map', {
+	var placeMap = new ymaps.Map('map', {
 		center: [56.042285,92.902513],
 		zoom: 17,
 		controls: ['zoomControl'],
@@ -26,6 +26,6 @@ ymaps.ready(function() {
 			iconImageOffset: [-60, -80]
 		},{
 	});
-	myMap.geoObjects.add(myPlacemark);
-	myMap.behaviors.disable('scrollZoom');
+	placeMap.geoObjects.add(myPlacemark);
+	placeMap.behaviors.disable('scrollZoom');
 });	

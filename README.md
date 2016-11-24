@@ -30,10 +30,12 @@
 
 В карточке провайдера результат проверки адреса (card-provider.html) должен сопровождаться появленим класса result-ok или result-error в зависимости от результата
 
+Файлы (ymaps.js / searchmap.js) для Яндекс-карт будет правильнее подключать только на страницах, где они нужны - главная, карточка провайдера, контакты
+
 ---------------------------------------------------------
 __Используемые в проекте js плагины__
 * Слайдер цен в фильтре [http://jqueryui.com/slider/#range](http://jqueryui.com/slider/#range)
-* Карусель owl-carousel [http://owlgraphic.com/owlcarousel/#customizing](http://owlgraphic.com/owlcarousel/#customizing)
+* Карусель owl-carousel [http://www.owlcarousel.owlgraphic.com/](http://www.owlcarousel.owlgraphic.com/)
 * Сворачивающееся меню [https://github.com/352Media/flexMenu](https://github.com/352Media/flexMenu)
 * Автовыпадание подсказок при вводе в поле ввода символов Typeahead [http://plugins.upbootstrap.com/bootstrap-ajax-typeahead](http://plugins.upbootstrap.com/bootstrap-ajax-typeahead)
 * Горизонтальная прокрутка в сравнении тарифов (compare.html) mCustomScrollbar [http://manos.malihu.gr/jquery-custom-content-scroller/?5](http://manos.malihu.gr/jquery-custom-content-scroller/?5)
