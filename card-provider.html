@@ -173,7 +173,7 @@
 							<div class="neck_card_info">
 								<div class="logo"><img src="tmp/beeline.png" alt="Билайн" /></div>
 								<p class="ico-alert alert">Информация актуальна до 31 октября 2016 года</p>
-								<a href="#" class="open-map btn-sprite btn-sprite-balloon"><span>Карта покрытия</span></a>
+								<a href="#" class="open-map btn-sprite btn-sprite-balloon" data-toggle="modal" data-target="#opencover" data-backdrop="true"><span>Карта покрытия</span></a>
 							</div>
 						</div>
 
@@ -1562,7 +1562,8 @@
 </div>
 <!-- =/add-opinion -->
 
-<div class="modal fade" id="add-quality" tabindex="-1" role="dialog" aria-labelledby="add-opinionLabel">
+<!-- =add-quality -->
+<div class="modal fade" id="add-quality" tabindex="-1" role="dialog" aria-labelledby="add-qualityLabel">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-title" id="add-qualityLabel">В одном из пунктов вы поставили оценку ниже 5</div>
@@ -1589,6 +1590,54 @@
 		</div>
 	</div>
 </div>
+<!-- =/add-quality -->
+
+<!-- =opencover popup -->
+<script>
+$(document).ready(function(){
+	ymaps.ready(init);
+
+	function init() {
+		// координаты точек
+		providerCoords = [[56.010599, 92.852545], [56.010717, 92.857260], [56.012076, 92.846896], [56.012965, 92.868053]];
+
+		var myMap = new ymaps.Map("mapYandexCover", {
+				center: [56.010599, 92.852545],
+				zoom: 13
+				}, {
+					searchControlProvider: 'yandex#search'
+				}
+			);
+
+		for (var i = 0, l = providerCoords.length; i < l; i++) {
+			myPlacemark = new ymaps.Placemark(
+				providerCoords[i],
+				{},
+				{
+					iconLayout: 'default#image',
+					iconImageHref: '/images/placemarksmall.png',
+					iconImageSize: [17, 17],
+					iconImageOffset: [-10, -10]
+				}
+			);
+			myMap.geoObjects.add(myPlacemark);
+		}
+	}	
+});
+</script>
+
+<div class="modal fade" id="opencover" tabindex="-1" role="dialog" aria-labelledby="opencoverLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-title" id="opencoverLabel">Карта покрытия</div>
+			<div class="modal-body">
+				<div id="mapYandexCover"></div>
+			</div>
+			<button type="button" class="close" data-dismiss="modal"><img src="images/close3.png" alt="" /></button>
+		</div>
+	</div>
+</div>
+<!-- =/opencover popup -->
 
 <!-- InstanceEndEditable -->
 <link rel="stylesheet" property='stylesheet' href="outdatedbrowser/outdatedbrowser.min.css" />
@@ -1614,7 +1663,7 @@
 <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="js/hammer.min.js"></script>
 
-<!-- =lightbox -->
+<!-- =lightbox --> 
 <script src="js/jquery.tosrus.min.all.js"></script>
 <link rel="stylesheet" property='stylesheet' href="css/jquery.tosrus.all.css" />
 <script src="js/FlameViewportScale.js"></script>
@@ -1622,7 +1671,6 @@
 
 <script src="js/placeholders.min.js"></script>
 <script src="js/engine.js"></script>
-<script src="js/searchmap.js"></script>
 <script src="js/modernizr.custom.js"></script>
 </body>
 <!-- InstanceEnd --></html>

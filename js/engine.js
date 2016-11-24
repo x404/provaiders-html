@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	// alert($(window).width());
 	$.fn.ForceNumericOnly =
 	function(){
 		return this.each(function()	{
