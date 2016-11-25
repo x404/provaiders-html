@@ -511,7 +511,7 @@
 
 <script src="../js/placeholders.min.js"></script>
 <script src="../js/engine.js"></script>
-<!-- TemplateBeginEditable name="EditRegion5" -->EditRegion5<!-- TemplateEndEditable --> 
+<!-- TemplateBeginEditable name="EditRegion5" --><!-- TemplateEndEditable --> 
 <script src="../js/modernizr.custom.js"></script>
 </body>
 </html>
