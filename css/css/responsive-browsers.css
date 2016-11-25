@@ -1,5 +1,0 @@
-@media screen and (-ms-high-contrast: active) and (max-width: 1100px), (-ms-high-contrast: none) and (max-width: 1100px) {
-  header.header .buttons .comparison .tooltip {
-    left: -31%;
-  }
-}
