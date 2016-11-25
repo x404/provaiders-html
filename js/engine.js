@@ -1,5 +1,78 @@
+/*
+var minslider = 20,
+	maxslider = 150,
+	handlesSlider1 = document.getElementById('slider-speed'),
+	handlesSlider2 = document.getElementById('slider-cost'),
+	handlesSlider3 = document.getElementById('slider-tv'),
+	speedfrom = document.getElementById('speed-from'),
+	speedto = document.getElementById('speed-to'),
+	costfrom = document.getElementById('cost-from'),
+	costto = document.getElementById('cost-to'),
+	tvfrom = document.getElementById('tv-from'),
+	tvto = document.getElementById('tv-to');
+
+noUiSlider.create(handlesSlider1, {
+	start: [ 40, 120 ],
+	connect: true,
+	range: {
+		'min': minslider,
+		'max': maxslider
+	}
+});
+handlesSlider1.noUiSlider.on('update', function(values, handle){
+	speedfrom.value = parseInt(values[0]);
+	speedto.value = parseInt(values[1]);
+});
+speedfrom.addEventListener('keyup', function ( ) {
+	handlesSlider1.noUiSlider.set([this.value, null]);
+});
+speedto.addEventListener('change', function ( ) {
+	handlesSlider1.noUiSlider.set([null, this.value]);
+});
+
+
+noUiSlider.create(handlesSlider2, {
+	start: [ 40, 120 ],
+	connect: true,
+	range: {
+		'min': minslider,
+		'max': maxslider
+	}
+});
+handlesSlider2.noUiSlider.on('update', function(values, handle){
+	costfrom.value = parseInt(values[0]);
+	costto.value = parseInt(values[1]);
+});
+costfrom.addEventListener('keyup', function ( ) {
+	handlesSlider2.noUiSlider.set([this.value, null]);
+});
+costto.addEventListener('change', function ( ) {
+	handlesSlider2.noUiSlider.set([null, this.value]);
+});
+
+noUiSlider.create(handlesSlider3, {
+	start: [ 40, 120 ],
+	connect: true,
+	range: {
+		'min': minslider,
+		'max': maxslider
+	}
+});
+handlesSlider3.noUiSlider.on('update', function(values, handle){
+	tvfrom.value = parseInt(values[0]);
+	tvto.value = parseInt(values[1]);
+});
+tvfrom.addEventListener('keyup', function ( ) {
+	handlesSlider3.noUiSlider.set([this.value, null]);
+});
+tvto.addEventListener('change', function ( ) {
+	handlesSlider3.noUiSlider.set([null, this.value]);
+});
+
+*/
+
 $(document).ready(function(){
-	// alert($(window).width());
+
 	$.fn.ForceNumericOnly =
 	function(){
 		return this.each(function()	{
@@ -18,6 +91,7 @@ $(document).ready(function(){
 	};
 
 
+	// "действительно находитесь в городе""
 	$('.proof-city .close').click(function(e){
 		e.preventDefault();
 		$('.proof-city').fadeOut('normal',function(){
@@ -30,6 +104,8 @@ $(document).ready(function(){
 		$('.proof-city').remove();
 	});
 
+
+	// карусели
 	$('#foo1').owlCarousel({
 		loop:false,
 		nav:true,
@@ -111,32 +187,6 @@ $(document).ready(function(){
 		}
 	});		
 
-	// $("#foo1").owlCarousel({
-	// 	items : 4,
-	// 	pagination : false,
-	// 	navigation : true,
-	// 	navigationText: ["", ""],
-	// 	itemsCustom:[[100, 1], [480, 2], [700, 2], [900, 3], [1183, 4]]
-	// });
-
-	// $("#foo2").owlCarousel({
-	// 	items : 5,
-	// 	pagination : false,
-	// 	navigation : true,
-	// 	navigationText: ["", ""],
-	// 	itemsCustom:[[100, 1], [480, 2], [700, 3], [900, 4], [1198, 4]]
-	// });	
-
-
-	// $("#gallery").owlCarousel({
-	// 	items : 4,
-	// 	pagination : false,
-	// 	navigation : true,
-	// 	navigationText: ["", ""],
-	// 	autoHeight  : true,
-	// 	itemsCustom:[[100, 1], [480, 2], [850, 2], [900, 3], [1198, 4]]
-	// });	
-
 
 	$('.top_menu_flex').flexMenu({
 		linkText: 'Еще',
@@ -145,408 +195,8 @@ $(document).ready(function(){
 		cutoff : '1'
 	});
 
-	var minslider = 20,
-		maxslider = 150;
-
 
 	$('.slider_controls .param_control').ForceNumericOnly();
-	// слайдер со скоростью сети
-	$('#slider-speed, #slider-speed-sm').slider({
-		range: true,
-		min: minslider,
-		max: maxslider,
-		values: [ 40, 120 ],
-		slide: function( event, ui ) {
-			$('#speed-from').val(ui.values[ 0 ]);
-			$('#speed-to').val(ui.values[ 1 ]);
-			$('#speed-from-sm').val(ui.values[ 0 ]);
-			$('#speed-to-sm').val(ui.values[ 1 ]);
-		}
-	});
-	$('#slider-speed').on('slidechange', function( event, ui ) {
-		$('#slider-speed-sm').slider({
-			range: true,
-			min: minslider,
-			max: maxslider,
-			values: [$('#speed-from').val(), $('#speed-to').val()]
-		});
-	});
-	$('#slider-speed-sm').on('slidestop', function( event, ui ) {
-		$('#slider-speed').slider({
-			range: true,
-			min: minslider,
-			max: maxslider,
-			values: [$('#speed-from-sm').val(), $('#speed-to-sm').val()]
-		});
-	});
-
-	// ручное изменение скорости "от"
-	$('#speed-from').keyup(function(){
-		var $this = $(this),
-			minval = $this.val();
-			maxval = parseInt($('#speed-to').val());
-
-		if (isNaN(maxval)){
-			maxval = $('#slider-speed').slider('values', 1);
-			$('#speed-to').val(maxval);
-		};
-
-		if (minval > maxval) {
-			minval = maxval;
-			$this.val(minval);
-		};
-
-		if (minval < minslider) minval = minslider;
-		$('#speed-from-sm').val(minval);
-		$('#speed-to-sm').val(maxval);
-
-		$("#slider-speed").slider({
-			range: true,
-			min: minslider,
-			max: maxslider,
-			values: [minval, maxval]
-		});
-	});
-	// ручное изменение скорости "до"
-	$('#speed-to').keyup(function(){
-		var $this = $(this),
-			minval = parseInt($('#speed-from').val());
-			maxval = $this.val();
-
-		if (isNaN(minval)){
-			minval = $('#slider-speed').slider('values', 0);
-			$('#speed-from').val(minval);
-		}
-
-		if (minval > maxval) maxval = minval;
-
-		$('#speed-from-sm').val(minval);
-		$('#speed-to-sm').val(maxval);
-
-		$("#slider-speed").slider({
-			range: true,
-			min: minslider,
-			max: maxslider,
-			values: [minval, maxval]
-		});
-	});
-	// ручное изменение скорости "от" в горизонтальном фильтре
-	$('#speed-from-sm').keyup(function(){
-		var $this = $(this),
-			minval = $this.val();
-			maxval = parseInt($('#speed-to-sm').val());
-
-		if (isNaN(maxval)){
-			maxval = $('#slider-speed-sm').slider('values', 1);
-			$('#speed-to-sm').val(maxval);
-		};
-
-		if (minval > maxval) {
-			minval = maxval;
-			$this.val(minval);
-		};
-
-		if (minval < minslider) minval = minslider;
-		$('#speed-from').val(minval);
-		$('#speed-to').val(maxval)
-
-		$('#slider-speed, #slider-speed-sm').slider({
-			range: true,
-			min: minslider,
-			max: maxslider,
-			values: [minval, maxval]
-		});
-	});
-	// ручное изменение скорости "до" в горизонтальном фильтре
-	$('#speed-to-sm').keyup(function(){
-		var $this = $(this),
-			minval = parseInt($('#speed-from-sm').val());
-			maxval = $this.val();
-
-		if (isNaN(minval)){
-			minval = $('#slider-speed').slider('values', 0);
-			$('#speed-from-sm').val(minval);
-		}
-
-		if (minval > maxval) maxval = minval;
-		$('#speed-from').val(minval);
-		$('#speed-to').val(maxval);
-
-		$("#slider-speed, #slider-speed-sm").slider({
-			range: true,
-			min: minslider,
-			max: maxslider,
-			values: [minval, maxval]
-		});
-	});
-
-
-
-	// слайдер со стоимостью 
-	$("#slider-cost,#slider-cost-sm").slider({
-		range: true,
-		min: minslider,
-		max: maxslider,
-		values: [ 40, 120 ],
-		slide: function( event, ui ) {
-			$('#cost-from').val(ui.values[ 0 ]);
-			$('#cost-to').val(ui.values[ 1 ]);
-			$('#cost-from-sm').val(ui.values[ 0 ]);
-			$('#cost-to-sm').val(ui.values[ 1 ]);
-		}
-	});
-	$("#slider-cost").on( "slidechange", function( event, ui ) {
-		$("#slider-cost-sm").slider({
-			range: true,
-			min: minslider,
-			max: maxslider,
-			values: [$('#cost-from').val(), $('#cost-to').val()]
-		});
-	});
-	$("#slider-cost-sm").on( "slidestop", function( event, ui ) {
-		$("#slider-cost").slider({
-			range: true,
-			min: minslider,
-			max: maxslider,
-			values: [$('#cost-from-sm').val(), $('#cost-to-sm').val()]
-		});
-	});
-
-	// ручное изменение стоимости "от"
-	$('#cost-from').keyup(function(){
-		var $this = $(this),
-			minval = $this.val();
-			maxval = parseInt($('#cost-to').val());
-
-		if (isNaN(maxval)){
-			maxval = $('#slider-cost').slider('values', 1);
-			$('#cost-to').val(maxval);
-		};
-
-		if (minval > maxval) {
-			minval = maxval;
-			$this.val(minval);
-		};
-
-		if (minval < minslider) minval = minslider;
-		$('#cost-from-sm').val(minval);
-		$('#cost-to-sm').val(maxval);
-
-		$("#slider-cost").slider({
-			range: true,
-			min: minslider,
-			max: maxslider,
-			values: [minval, maxval]
-		});
-	});
-	// ручное изменение стоимости "до"
-	$('#cost-to').keyup(function(){
-		var $this = $(this),
-			minval = parseInt($('#cost-from').val());
-			maxval = $this.val();
-
-		if (isNaN(minval)){
-			minval = $('#slider-cost').slider('values', 0);
-			$('#cost-from').val(minval);
-		}
-
-		if (minval > maxval) maxval = minval;
-
-		$('#cost-from-sm').val(minval);
-		$('#cost-to-sm').val(maxval);
-
-		$("#slider-cost").slider({
-			range: true,
-			min: minslider,
-			max: maxslider,
-			values: [minval, maxval]
-		});
-	});
-	// ручное изменение стоимости "от" в горизонтальном фильтре
-	$('#cost-from-sm').keyup(function(){
-		var $this = $(this),
-			minval = $this.val();
-			maxval = parseInt($('#cost-to-sm').val());
-
-		if (isNaN(maxval)){
-			maxval = $('#slider-cost-sm').slider('values', 1);
-			$('#cost-to-sm').val(maxval);
-		};
-
-		if (minval > maxval) {
-			minval = maxval;
-			$this.val(minval);
-		};
-
-		if (minval < minslider) minval = minslider;
-		$('#cost-from').val(minval);
-		$('#cost-to').val(maxval)
-
-		$('#slider-cost, #slider-cost-sm').slider({
-			range: true,
-			min: minslider,
-			max: maxslider,
-			values: [minval, maxval]
-		});
-	});
-	// ручное изменение стоимости "до" в горизонтальном фильтре
-	$('#cost-to-sm').keyup(function(){
-		var $this = $(this),
-			minval = parseInt($('#cost-from-sm').val());
-			maxval = $this.val();
-
-		if (isNaN(minval)){
-			minval = $('#slider-cost').slider('values', 0);
-			$('#cost-from-sm').val(minval);
-		}
-
-		if (minval > maxval) maxval = minval;
-		$('#cost-from').val(minval);
-		$('#cost-to').val(maxval);
-
-		$("#slider-cost, #slider-cost-sm").slider({
-			range: true,
-			min: minslider,
-			max: maxslider,
-			values: [minval, maxval]
-		});
-	});
-
-
-
-
-	// слайдер с ТВ
-	$("#slider-tv, #slider-tv-sm").slider({
-		range: true,
-		min: minslider,
-		max: maxslider,
-		values: [ 40, 120 ],
-		slide: function( event, ui ) {
-			$('#tv-from').val(ui.values[ 0 ]);
-			$('#tv-to').val(ui.values[ 1 ]);
-			$('#tv-from-sm').val(ui.values[ 0 ]);
-			$('#tv-to-sm').val(ui.values[ 1 ]);
-		}
-	});	
-	$("#slider-tv").on( "slidechange", function( event, ui ) {
-		$("#slider-tv-sm").slider({
-			range: true,
-			min: minslider,
-			max: maxslider,
-			values: [$('#tv-from').val(), $('#tv-to').val()]
-		});
-	});
-	$("#slider-tv-sm").on( "slidestop", function( event, ui ) {
-		$("#slider-tv").slider({
-			range: true,
-			min: minslider,
-			max: maxslider,
-			values: [$('#tv-from-sm').val(), $('#tv-to-sm').val()]
-		});
-	});
-
-	// ручное изменение количества каналов "от"
-	$('#tv-from').keyup(function(){
-		var $this = $(this),
-			minval = $this.val();
-			maxval = parseInt($('#tv-to').val());
-
-		if (isNaN(maxval)){
-			maxval = $('#slider-tv').slider('values', 1);
-			$('#tv-to').val(maxval);
-		};
-
-		if (minval > maxval) {
-			minval = maxval;
-			$this.val(minval);
-		};
-
-		if (minval < minslider) minval = minslider;
-		$('#tv-from-sm').val(minval);
-		$('#tv-to-sm').val(maxval);
-
-		$("#slider-tv").slider({
-			range: true,
-			min: minslider,
-			max: maxslider,
-			values: [minval, maxval]
-		});
-	});
-	// ручное изменение количества каналов "до"
-	$('#tv-to').keyup(function(){
-		var $this = $(this),
-			minval = parseInt($('#tv-from').val());
-			maxval = $this.val();
-
-		if (isNaN(minval)){
-			minval = $('#slider-tv').slider('values', 0);
-			$('#tv-from').val(minval);
-		}
-
-		if (minval > maxval) maxval = minval;
-
-		$('#tv-from-sm').val(minval);
-		$('#tv-to-sm').val(maxval);
-
-		$("#slider-tv").slider({
-			range: true,
-			min: minslider,
-			max: maxslider,
-			values: [minval, maxval]
-		});
-	});
-	// ручное изменение количества каналов "от" в горизонтальном фильтре
-	$('#tv-from-sm').keyup(function(){
-		var $this = $(this),
-			minval = $this.val();
-			maxval = parseInt($('#tv-to-sm').val());
-
-		if (isNaN(maxval)){
-			maxval = $('#slider-tv-sm').slider('values', 1);
-			$('#tv-to-sm').val(maxval);
-		};
-
-		if (minval > maxval) {
-			minval = maxval;
-			$this.val(minval);
-		};
-
-		if (minval < minslider) minval = minslider;
-		$('#tv-from').val(minval);
-		$('#tv-to').val(maxval)
-
-		$('#slider-tv, #slider-tv-sm').slider({
-			range: true,
-			min: minslider,
-			max: maxslider,
-			values: [minval, maxval]
-		});
-	});
-	// ручное изменение количества каналов "до" в горизонтальном фильтре
-	$('#tv-to-sm').keyup(function(){
-		var $this = $(this),
-			minval = parseInt($('#tv-from-sm').val());
-			maxval = $this.val();
-
-		if (isNaN(minval)){
-			minval = $('#slider-tv').slider('values', 0);
-			$('#tv-from-sm').val(minval);
-		}
-
-		if (minval > maxval) maxval = minval;
-		$('#tv-from').val(minval);
-		$('#tv-to').val(maxval);
-
-		$("#slider-tv, #slider-tv-sm").slider({
-			range: true,
-			min: minslider,
-			max: maxslider,
-			values: [minval, maxval]
-		});
-	});
-
-
-
 
 
 	// inputs

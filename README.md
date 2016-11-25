@@ -13,6 +13,7 @@
 
 На странице 2 фильтра - один в боковой колонке, другой скрыт в основной части. При ширине экрана в 991px и меньше, боковая колонка скрывается, и показывается фильтр в основной части. Позиции инпутов в фильтрах взаимодействуют между собой через js (см. engine.js)
 
+В каталоге тарифов(cat-tarifs.html) и каталоге провайдеров(providers.html) отдельно подключается файл для взаимодействия бегунков адаптивной и десктопной версии  - js/nouiengine.js
 ---------------------------------------------------------
 
 
@@ -30,9 +31,11 @@
 
 В карточке провайдера результат проверки адреса (card-provider.html) должен сопровождаться появленим класса result-ok или result-error в зависимости от результата
 
+
+
 ---------------------------------------------------------
 __Используемые в проекте js плагины__
-* Слайдер цен в фильтре [http://jqueryui.com/slider/#range](http://jqueryui.com/slider/#range)
+* Слайдер цен в фильтре [https://refreshless.com/nouislider/](https://refreshless.com/nouislider/)
 * Карусель owl-carousel [http://www.owlcarousel.owlgraphic.com/](http://www.owlcarousel.owlgraphic.com/)
 * Сворачивающееся меню [https://github.com/352Media/flexMenu](https://github.com/352Media/flexMenu)
 * Автовыпадание подсказок при вводе в поле ввода символов Typeahead [http://plugins.upbootstrap.com/bootstrap-ajax-typeahead](http://plugins.upbootstrap.com/bootstrap-ajax-typeahead)

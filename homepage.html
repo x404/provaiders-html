@@ -20,6 +20,7 @@
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="/js/jquery-1.12.4.min.js"><\/script>')</script>
+<script src="js/nouislider.js"></script>
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_UA" type="text/javascript"></script>    
 
 <!--[if IE]>
@@ -329,7 +330,7 @@
 					</div>
 				</div>		
 			</div>
-			<div class="grid right">
+			<div class="grid right">	
 				<div class="filter">
 					<form action="#" method="post">
 						<div class="filter_header">
@@ -378,6 +379,55 @@
 						</div>
 					</form>
 				</div>
+<script>
+var minslider = 20,
+	maxslider = 150,
+	handlesSlider1 = document.getElementById('slider-speed'),
+	handlesSlider2 = document.getElementById('slider-cost'),
+	speedfrom = document.getElementById('speed-from'),
+	speedto = document.getElementById('speed-to'),
+	costfrom = document.getElementById('cost-from'),
+	costto = document.getElementById('cost-to');
+
+noUiSlider.create(handlesSlider1, {
+	start: [ 40, 120 ],
+	connect: true,
+	range: {
+		'min': minslider,
+		'max': maxslider
+	}
+});
+handlesSlider1.noUiSlider.on('update', function(values, handle){
+	speedfrom.value = parseInt(values[0]);
+	speedto.value = parseInt(values[1]);
+});
+speedfrom.addEventListener('change', function ( ) {
+	handlesSlider1.noUiSlider.set([this.value, null]);
+});
+speedto.addEventListener('change', function ( ) {
+	handlesSlider1.noUiSlider.set([null, this.value]);
+});
+
+
+noUiSlider.create(handlesSlider2, {
+	start: [ 40, 120 ],
+	connect: true,
+	range: {
+		'min': minslider,
+		'max': maxslider
+	}
+});
+handlesSlider2.noUiSlider.on('update', function(values, handle){
+	costfrom.value = parseInt(values[0]);
+	costto.value = parseInt(values[1]);
+});
+costfrom.addEventListener('change', function ( ) {
+	handlesSlider2.noUiSlider.set([this.value, null]);
+});
+costto.addEventListener('change', function ( ) {
+	handlesSlider2.noUiSlider.set([null, this.value]);
+});
+</script>	
 			</div>
 		</div>
 	</div>
@@ -1272,7 +1322,6 @@ $(document).ready(function(){
 	ymaps.ready(init);
 });
 
-
 function init() {
 	var myPlacemark,
 		myMap = new ymaps.Map('mapYandex', {
@@ -1390,14 +1439,15 @@ function init() {
 <!-- =/openmap popup -->
 
 <!-- InstanceEndEditable -->
-<link rel="stylesheet" property='stylesheet' href="outdatedbrowser/outdatedbrowser.min.css" />
+<link rel="stylesheet" property='stylesheet' href="css/nouislider.css" />
 <link rel="stylesheet" property='stylesheet' href="css/responsive.css" />
+<link rel="stylesheet" property='stylesheet' href="outdatedbrowser/outdatedbrowser.min.css" />
+
 <script src="outdatedbrowser/outdatedbrowser.min.js"></script>
 <script src="http://ajax.microsoft.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/jquery.validate.min.js"><\/script>')</script>
 <script src="js/flexmenu.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
-<script src="js/jquery-ui.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 
 <script src="js/inputmask/inputmask.js"></script>
@@ -1421,6 +1471,7 @@ function init() {
 
 <script src="js/placeholders.min.js"></script>
 <script src="js/engine.js"></script>
+<!-- InstanceBeginEditable name="EditRegion5" -->EditRegion5<!-- InstanceEndEditable --> 
 <script src="js/modernizr.custom.js"></script>
 </body>
 <!-- InstanceEnd --></html>
