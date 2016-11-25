@@ -1,78 +1,4 @@
-/*
-var minslider = 20,
-	maxslider = 150,
-	handlesSlider1 = document.getElementById('slider-speed'),
-	handlesSlider2 = document.getElementById('slider-cost'),
-	handlesSlider3 = document.getElementById('slider-tv'),
-	speedfrom = document.getElementById('speed-from'),
-	speedto = document.getElementById('speed-to'),
-	costfrom = document.getElementById('cost-from'),
-	costto = document.getElementById('cost-to'),
-	tvfrom = document.getElementById('tv-from'),
-	tvto = document.getElementById('tv-to');
-
-noUiSlider.create(handlesSlider1, {
-	start: [ 40, 120 ],
-	connect: true,
-	range: {
-		'min': minslider,
-		'max': maxslider
-	}
-});
-handlesSlider1.noUiSlider.on('update', function(values, handle){
-	speedfrom.value = parseInt(values[0]);
-	speedto.value = parseInt(values[1]);
-});
-speedfrom.addEventListener('keyup', function ( ) {
-	handlesSlider1.noUiSlider.set([this.value, null]);
-});
-speedto.addEventListener('change', function ( ) {
-	handlesSlider1.noUiSlider.set([null, this.value]);
-});
-
-
-noUiSlider.create(handlesSlider2, {
-	start: [ 40, 120 ],
-	connect: true,
-	range: {
-		'min': minslider,
-		'max': maxslider
-	}
-});
-handlesSlider2.noUiSlider.on('update', function(values, handle){
-	costfrom.value = parseInt(values[0]);
-	costto.value = parseInt(values[1]);
-});
-costfrom.addEventListener('keyup', function ( ) {
-	handlesSlider2.noUiSlider.set([this.value, null]);
-});
-costto.addEventListener('change', function ( ) {
-	handlesSlider2.noUiSlider.set([null, this.value]);
-});
-
-noUiSlider.create(handlesSlider3, {
-	start: [ 40, 120 ],
-	connect: true,
-	range: {
-		'min': minslider,
-		'max': maxslider
-	}
-});
-handlesSlider3.noUiSlider.on('update', function(values, handle){
-	tvfrom.value = parseInt(values[0]);
-	tvto.value = parseInt(values[1]);
-});
-tvfrom.addEventListener('keyup', function ( ) {
-	handlesSlider3.noUiSlider.set([this.value, null]);
-});
-tvto.addEventListener('change', function ( ) {
-	handlesSlider3.noUiSlider.set([null, this.value]);
-});
-
-*/
-
 $(document).ready(function(){
-
 	$.fn.ForceNumericOnly =
 	function(){
 		return this.each(function()	{
@@ -229,11 +155,11 @@ $(document).ready(function(){
 	$('.filter #tv-sm').prop('checked',false);
 
 
-	$('aside .filter .filter_header input[type="checkbox"]').on('click', function(){
+	$('aside .filter .filter_header, .rating-actions-filter .filter_header').find('input[type="checkbox"]').on('click', function(){
 		var $this = $(this),
 			isChecked = ($this.is(':checked')) ? true : false,
 			el = $this.attr('name'),
-			cellparam = $('.filter .param').filter('[data-param=' + el + ']');
+			cellparam = $('.filter .param').filter('[data-param=' + el + ']').parent('.cell');
 			cellparamsm = $('.filter-sm .param').filter('[data-param=' + el + ']');
 
 		if (isChecked) {

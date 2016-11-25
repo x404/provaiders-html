@@ -348,31 +348,50 @@
 								<input type="radio" id="radio4" name="place" value="В офис" />
 								<label for="radio4">В офис</label>
 							</div>
-							<div class="param param-speed">
-								<p class="param_title">Скорость, Мбит/с</p>
-								<div class="slider_controls row">
-									<input type="text" id="speed-from" class="param_control" placeholder="от"  />
-									<input type="text" id="speed-to" class="param_control" placeholder="до"  />
-								</div>
-								<div class="slider">
-									<div id="slider-speed"></div>
-									<p class="slider_start">20</p>
-									<p class="slider_end">150</p>
-								</div>
-							</div>
-							<div class="param param-cost">
-								<p class="param_title">Абонентская плата, Руб/мес</p>
-								<div class="slider">
-									<div class="slider_controls row">
-										<input type="text" id="cost-from" class="param_control" placeholder="от"  />
-										<input type="text" id="cost-to" class="param_control" placeholder="до"  />
+							<div class="param_wrapper">
+								<div class="cell">
+									<div class="param param-speed" data-param="internet">
+										<p class="param_title">Скорость, Мбит/с</p>
+										<div class="slider_controls row">
+											<input type="text" id="speed-from" class="param_control" placeholder="от"  />
+											<input type="text" id="speed-to" class="param_control" placeholder="до"  />
+										</div>
+										<div class="slider">
+											<div id="slider-speed"></div>
+											<p class="slider_start">20</p>
+											<p class="slider_end">150</p>
+										</div>
 									</div>
-
-								<div class="slider">
-									<div id="slider-cost"></div>
-									<p class="slider_start">20</p>
-									<p class="slider_end">150</p>
 								</div>
+								<div class="cell hide">
+									<div class="param param-tv" data-param="tv">
+										<p class="param_title">Количество ТВ-каналов</p>
+										<div class="slider_controls row">
+											<input type="text" id="tv-from" name="tv-from" class="param_control" placeholder="от" />
+											<input type="text" id="tv-to" name="tv-to" class="param_control" placeholder="до" />
+										</div>
+										<div class="slider">
+											<div id="slider-tv"></div>
+											<p class="slider_start">20</p>
+											<p class="slider_end">150</p>
+										</div>
+									</div>
+								</div>
+								<div class="cell">
+									<div class="param param-cost" data-param="cost">
+										<p class="param_title">Абонентская плата, Руб/мес</p>
+										<div class="slider">
+											<div class="slider_controls row">
+												<input type="text" id="cost-from" class="param_control" placeholder="от"  />
+												<input type="text" id="cost-to" class="param_control" placeholder="до"  />
+											</div>
+											<div class="slider">
+												<div id="slider-cost"></div>
+												<p class="slider_start">20</p>
+												<p class="slider_end">150</p>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 							<a href="#" class="submit btn btn-rounded">Подобрать тариф</a>
@@ -384,10 +403,13 @@ var minslider = 20,
 	maxslider = 150,
 	handlesSlider1 = document.getElementById('slider-speed'),
 	handlesSlider2 = document.getElementById('slider-cost'),
+	handlesSlider3 = document.getElementById('slider-tv'),
 	speedfrom = document.getElementById('speed-from'),
 	speedto = document.getElementById('speed-to'),
 	costfrom = document.getElementById('cost-from'),
-	costto = document.getElementById('cost-to');
+	costto = document.getElementById('cost-to'),
+	tvfrom = document.getElementById('tv-from'),
+	tvto = document.getElementById('tv-to');
 
 noUiSlider.create(handlesSlider1, {
 	start: [ 40, 120 ],
@@ -426,6 +448,26 @@ costfrom.addEventListener('change', function ( ) {
 });
 costto.addEventListener('change', function ( ) {
 	handlesSlider2.noUiSlider.set([null, this.value]);
+});
+
+
+noUiSlider.create(handlesSlider3, {
+	start: [ 40, 120 ],
+	connect: true,
+	range: {
+		'min': minslider,
+		'max': maxslider
+	}
+});
+handlesSlider3.noUiSlider.on('update', function(values, handle){
+	tvfrom.value = parseInt(values[0]);
+	tvto.value = parseInt(values[1]);
+});
+tvfrom.addEventListener('change', function ( ) {
+	handlesSlider3.noUiSlider.set([this.value, null]);
+});
+tvto.addEventListener('change', function ( ) {
+	handlesSlider3.noUiSlider.set([null, this.value]);
 });
 </script>	
 			</div>
