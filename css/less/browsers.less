@@ -1,0 +1,331 @@
+::-ms-clear {
+        display: none;
+}
+
+@supports (-ms-ime-align:auto) {
+	// edge
+	header.header .buttons{
+		.comparison,
+		.wishlist{
+			.tooltip{
+				.transform(translateX(0));
+				left: -10%;
+				&:before{
+					left: 41%;
+					.transform(translateX(0));
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	//ie11
+	body{
+		display: block;
+	}	
+
+	textarea{
+		overflow: hidden;
+	}
+
+	h1, .title,
+	.modal-title,
+	.inner h1,
+	.inner h2,
+	.inner h3,
+	.inner h4,
+	.inner h5,
+	.inner h6,
+	.card_tarifs .verify label,
+	.connect_footer .sum .left{
+		.regularlight;
+	}
+
+	header.header .buttons{
+		.comparison,
+		.wishlist{
+			.tooltip{
+				.transform(translateX(0));
+				left: -10%;
+				&:before{
+					left: 41%;
+					.transform(translateX(0));
+				}
+			}
+		}
+	}
+
+	.img-responsive{
+		width: 100%;
+		height: 100%;
+		max-width: auto;
+	}	
+
+	.list_tarifs .tarif_item_description:after{
+		top: 38px;
+	}	
+}
+
+
+/* ie9 */  
+
+/* Safari 6.1+ (10.0 is the latest version of Safari at this time) */
+
+/* Safari 10.0+ */
+_::-webkit-:host:not(:root:root),header.header .logo_link{
+	padding-top: 5px;
+}
+
+_::-webkit-:host:not(:root:root), .hub_count{
+	padding-left: 1px;
+}
+
+_::-webkit-:host:not(:root:root),header.header .city-select-link span:before{
+	top: 5px;
+}
+
+_::-webkit-:host:not(:root:root), .pagination {
+	a:not(.next), span{
+		padding-top: 1.2rem;
+	}
+}
+
+
+_::-webkit-:host:not(:root:root), .proof-city .btn{
+	padding-top: .8rem;
+}
+
+_::-webkit-:host:not(:root:root), .label{
+	padding-top: 1rem;
+}
+_::-webkit-:host:not(:root:root), .actions_item .info .category_link{
+	padding: .7rem 1rem .3rem;
+}
+
+_::-webkit-:host:not(:root:root), .others_item{
+	width: 33%;
+}
+
+_::-webkit-:host:not(:root:root), .modal .form-control{
+	padding-top: .5rem;
+}
+
+_::-webkit-:host:not(:root:root), .callback{
+	padding-top: 1.6rem;
+}
+
+_::-webkit-:host:not(:root:root), aside .rating_body .item .cifr{
+	padding-top: 10px;
+}
+
+_::-webkit-:host:not(:root:root), .btn-type-3{
+	padding-bottom: .7rem;
+}
+
+_::-webkit-:host:not(:root:root), .back_btn{
+	padding-bottom: .7rem;
+}
+
+_::-webkit-:host:not(:root:root), footer .support-callback .callback{
+	padding-top: 1.4rem;
+}
+
+_::-webkit-:host:not(:root:root), .list_reviews .btn{
+	padding-top: 1.6rem;
+	padding-bottom: 1.3rem;
+}
+_::-webkit-:host:not(:root:root), .list_reviews .btn:before{
+	top: 13px;
+}
+
+_::-webkit-:host:not(:root:root), #add-review .grade label{
+	padding-top: 8px;
+} 
+
+_::-webkit-:host:not(:root:root), #add-opinion .grade label{
+	padding-top: 8px;
+} 
+_::-webkit-:host:not(:root:root), #add-faq .grade label{
+	padding-top: 8px;
+} 
+
+_::-webkit-:host:not(:root:root),#add-faqtarif .grade label{
+	padding-top: 8px;
+} 
+_::-webkit-:host:not(:root:root), #connect_tarif .grade label{
+	padding-top: 8px;
+}
+
+_::-webkit-:host:not(:root:root), .btn-faq{
+	padding-top: 1.8rem;
+}
+
+_::-webkit-:host:not(:root:root), aside .visual .btn{
+	padding-top: 1.3rem;
+}
+
+_::-webkit-:host:not(:root:root),.btn-faq-w{
+	padding-top: 2.3rem;
+}
+
+
+_::-webkit-:host:not(:root:root),.tarif_box .params .speed .num{
+	padding-top: 1.3rem;
+}
+
+
+_::-webkit-:host:not(:root:root),.tarif_box .params .channels .num{
+	padding-top: 1.3rem;
+}
+
+_::-webkit-:host:not(:root:root),.list_provaiders .provaiders_item.col-lg-4{
+	width: 33%;
+}
+
+_::-webkit-:host:not(:root:root),.main .comparison_body .comparison_column .comparison_cell .btn{
+	padding-top: 1.3rem;
+}
+
+
+
+_::-webkit-:host:not(:root:root), .list_tarifs .tarif_item_bottom span{
+	margin-right: 1.7rem;
+}
+
+_::-webkit-:host:not(:root:root), .list_tarifs .tarif_item_bottom span:last-child{
+	margin-right: 0;
+}
+
+
+_::-webkit-:host:not(:root:root), .ico-list-dark::before, .ico-list-gray::before{
+	top: 2px;
+}
+
+
+_::-webkit-:host:not(:root:root), .neck_card .bottom .btn-review{
+	padding-bottom: 1rem;
+}
+
+_::-webkit-:host:not(:root:root), .neck_card .bottom .btn-review:before{
+	top: 12px;
+}
+
+_::-webkit-:host:not(:root:root), .reviewers header .btn{
+	padding-top: 1.5rem;
+}
+
+_::-webkit-:host:not(:root:root), .faq_content header .btn{
+	padding-top: 1.5rem;	
+}
+
+_::-webkit-:host:not(:root:root), .reviewers header .btn:before{
+	top: 10px;
+}
+_::-webkit-:host:not(:root:root), .faq_content header .btn:before{
+	top: 10px;
+}
+
+_::-webkit-:host:not(:root:root), .neck_card .graduate_info_box .num .tooltip .mark div{
+	padding-top: .6rem;
+}
+
+_::-webkit-:host:not(:root:root), .neck_card_info .open-map{
+	padding-top: 1rem;
+}
+
+
+_::-webkit-:host:not(:root:root), .mainmenu .nav li.nav-action a span{
+	padding-top: .5rem;
+}
+
+
+_::-webkit-:host:not(:root:root),.card_tarif .services .item_header input[type="checkbox"] + label::before{
+	top: -1px;
+}
+
+_::-webkit-:host:not(:root:root),.card_tarif .services .item_header input[type="checkbox"] + label::after{
+	top: 4px;
+}
+
+_::-webkit-:host:not(:root:root), .tarif_about .params .channels .num,
+_::-webkit-:host:not(:root:root), .tarif_about .params .speed .num{
+	padding-top: 1.8rem;
+}
+
+_::-webkit-:host:not(:root:root), .neck_card_info .right .btn-faq{
+	padding-top: 11px;
+}
+
+
+
+.ie10{
+	.others .news_item{
+		display: block;
+		float: left;
+		.news_item_wrapper{
+			min-height: 31rem;
+		}
+	}
+
+	textarea{
+		overflow: hidden;
+	}
+
+	.tarif_box .buttons{
+		display: block;
+		overflow: hidden;
+		.more{
+			float: left;
+			margin-top: 10px;
+		}
+
+		.to-compare{
+			float: right;
+			margin-left: 10px;
+		}
+		.btn{
+			float: right;
+		}
+
+		@media (max-width: 600px){
+			text-align: center;
+			.to-compare,
+			.btn{
+				float: none;
+				display: inline-block;
+				vertical-align: top;
+				// margin-left: 10px;
+			}
+			.btn{
+				display: inline-block;
+				float: none;
+			}	
+		}
+	}
+
+	.tarif_box .buttons{
+		.buttons_wrapper{
+			margin-top: 25px;			
+		}
+	}
+
+
+	.neck_card_info .open-map{
+		padding-bottom: .8rem;
+	}
+
+	.neck_card_info .right .btn-faq{
+		padding-bottom: .8rem;
+	}
+
+	.neck_card_info .right{
+		.btn-compare{
+			display: block;
+		}
+		.btn-faq{
+			top: 10px;
+		}
+	}
+}

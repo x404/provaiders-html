@@ -1,0 +1,203 @@
+.btn-review{
+	&:before{
+		.sprite(-53px, 0);
+		height: 19px;
+		left: 11px;
+		width: 19px;
+	}
+	&-w{
+		&:before{
+			margin-left: -75px;
+			top: 20px;
+		}
+	}
+}
+
+.btn-faq{
+	&:before{
+		left: 9px;
+		.sprite(-132px, 0);
+		height: 22px;
+		width: 23px;
+		top: 14px;
+	}
+	&-w{
+		&:before{
+			background-position: -131px -22px;
+			height: 30px;
+			margin-left: -78px;
+			top: 15px;
+			width: 30px;
+		}
+	}
+}
+
+.btn-review,
+.btn-faq{
+	.semibold;
+	.font-size(1.5);
+	padding-left: 38px;
+	text-align: center;
+	
+	&:before{
+		.before;		
+	}
+	&-w{
+		.font-size(1.8);
+		display: block;
+		height: 6rem;
+		line-height: 1;
+		padding-top: 2.1rem;
+		margin-bottom: 6rem;
+		width: 100%;
+		margin-top: -2rem;
+		&:before{
+			left: 50%;
+		}
+	}
+}
+
+.list_reviews,
+.list_faq{
+	header{
+		.flex;
+		.flex-align-items(center);
+		h1{
+			flex: 1;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.list_reviews{
+	.reviews{
+		&_item{
+			@color: @color22;
+			border: 1px solid @color;
+			margin: 2rem 0;
+			&_wrapper{
+				position: relative;
+				padding: 1.8rem 30px 2.5rem 73px
+			}
+			&_grade{
+				position: absolute;
+				left: 20px;
+				top: 20px;
+			}
+			.name{
+				.font-size(1.6);
+				.semibold;
+			}
+			.date{
+				color: @color50;
+				margin-top: .2rem;
+			}
+			.text{
+				.font-size(1.5);
+				border-top: 1px solid @color;
+				color: @color50;
+				padding-top: 1.2rem;
+				margin-top: 1.2rem;
+			}
+		}
+	}
+}
+
+#add-review,
+#add-opinion,
+#add-faq,
+#add-faqtarif,
+#connect_tarif
+{
+	.modal-content{
+		padding-top: 4.7rem;
+		padding-left: 6rem;
+		padding-bottom: 5rem;
+	}
+	.modal-dialog{
+		margin-top: 7%;
+		width: 875px;		
+	}
+	.modal-title{
+		padding-bottom: .3rem;
+	}
+
+	.grade{
+		margin-bottom: -.7rem;
+		span{
+			.font-size(2);
+			.semibold;
+		}
+
+		input[type="radio"] {
+			display:none;
+		}
+		label{
+			color: @color2;
+			cursor: pointer;
+			display: inline-block;
+			height: 30px;
+			margin-left: 1rem;
+			padding-right: 19px;
+			padding-left: 40px;
+			padding-top: 4px;
+			position: relative;
+			&:before{
+				.before;
+				.sprite;
+				width: 19px;
+			}			
+
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+		input[type="radio"]:checked + label{
+			.font-size(1.5);
+			.rounded(30px);
+			background-color: @color2;
+			color: @color40;
+		}
+		
+		input#grade-good + label:before{
+			.sprite(-53px,0);
+			height: 19px;
+			left: 13px;
+			top: 2px;
+		}
+
+		input#grade-good:checked + label:before{
+			background-position: -93px 0;
+			height: 20px;
+		}
+
+		input#grade-bad + label:before{
+			.sprite(-73px,0);
+			height: 19px;
+			left: 13px;
+			top: 5px;
+		}
+
+		input#grade-bad:checked + label:before{
+			background-position: -113px 0;
+			height: 20px;
+			left: 16px;
+			top: 6px;
+		}
+	}
+	.bottom{
+		.flex;
+		margin-top: 1.8rem;
+	}
+	.row{
+		.col-md-6{
+			padding-left: 0;
+			&:last-child{
+				padding-right: 0;
+			}
+		}
+	}
+	textarea{
+		padding-top: 1rem;
+	}
+}

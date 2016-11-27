@@ -1,0 +1,118 @@
+.main{
+	.contacts-wrapper{
+		height: 650px;
+		margin-top: -2.7rem;
+		margin-bottom: -2rem;
+		overflow: hidden;
+		position: relative;
+	}
+
+	.title{
+		text-transform: uppercase;
+	}
+	.map{
+		height: 650px;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 0;
+	}
+	.contacts{
+		height: 650px;
+		margin-left: auto;
+		margin-right: auto;
+		padding-top: 2.7rem;
+		width: 1200px;
+		&:before{
+			.before;
+			background-color: @color2;
+			height: 650px;
+			left: 0;
+			top: 0;
+			width: 50%;
+			z-index: 1;
+		}
+
+		.title{
+			position: relative;
+			z-index: 1;
+			width: 50%;			
+		}
+
+		.address,
+		.email, 
+		.tel{
+			margin-top: 2rem;
+			padding-left: 38px;
+			position: relative;
+			width: 50%;
+			z-index: 1;
+			p{
+				line-height: 1;
+			}			
+		}
+
+		p.remark{
+			.font-size(1.4);
+			color: @color34;
+			padding-bottom: .4rem;
+		}
+		p:not('.remark'){
+			.font-size(1.6)
+		}
+		.address{
+			.font-size(1.6);
+			.remark{
+				padding-bottom: .9rem;
+			}
+		}
+		.email{
+			.font-size(2);
+			a{
+				color: @color9;
+				.tdn;
+			}
+		}
+		.tel{
+			.font-size(2.6);
+			color: @color46;
+		}
+
+		.address{
+			&:before{
+				left: 0;
+				.before;
+				.sprite(0,-187px);
+				height: 38px;
+				width: 28px;
+			}
+		}
+
+		.email{
+			&:before{
+				left: 0;
+				.sprite(-28px,-187px);
+				.before;
+				height: 33px;
+				width: 29px;
+				top: 5px;
+			}			
+		}
+
+		.callback{
+			display: inline-block;
+			line-height: 1;
+			margin-top: 1.6rem;
+			width: auto;
+			padding-top: 1.7rem;
+			padding-bottom: 1.7rem;
+			height: auto;
+			
+		}
+	}
+}
+
+#map{
+	height: 650px;
+}

@@ -1,0 +1,107 @@
+.list_faq{
+	.faq{
+		&_item{
+			@color: @color22;
+			border: 1px solid @color;
+			margin: 2rem 0;
+			.transition;
+			&:hover{
+				.drop-shadow(0,0,10px,.4);
+			}
+			&-expand{
+				background-color: @color11;
+			}
+			&-collapse{
+			}
+				.faq_item_answer{
+					display: none;
+				}
+			&_wrapper{
+				position: relative;
+				padding: 2.7rem 3rem 2.2rem 63px;
+			}
+			&_grade{
+				position: absolute;
+				left: 20px;
+				top: 20px;
+			}
+			.name{
+				.font-size(1.6);
+				.semibold;
+				span{
+					margin-left: .2rem;
+					.regular;
+					.font-size(1.4);
+				}
+			}
+			.date{
+				color: @color50;
+				margin-top: .2rem;
+			}
+			.theme{
+				.semibold;
+				.font-size(2);
+				padding-top: 1.8rem;
+			}
+			.text{
+				.font-size(1.6);
+				line-height: 1.6;
+				padding-top: .4rem;
+			}
+			.toggle{
+				.rounded(50%);
+		        -webkit-transition: background-color 0.2s linear;
+		        -moz-transition: background-color 0.2s linear;
+		        -o-transition: background-color 0.2s linear;
+		        -ms-transition: background-color 0.2s linear;
+		        transition: background-color 0.2s linear;
+
+				background-color: @color2;
+				border: 2px solid @color6;
+				cursor: pointer;
+				height: 36px;
+				left: 19px;
+				position: absolute;
+				top: 22px;
+				width: 36px;				
+				&:hover{
+					background-color: @color8;
+					border-color: @color8;
+				}
+				// &-expand{
+					background: url(../images/arrow.png) no-repeat center -33px;
+					&:hover{
+						background-position: center 12px;
+					}
+				// }
+				&-collapse{
+					background: url(../images/arrow.png) no-repeat center -33px;
+					.rotation(180deg);
+					&:hover{
+						background-position: center 12px;
+					}
+				}
+			}
+
+			&_answer{
+				background-color: @color2;
+				border: 1px solid @color22;
+				border-left: 5px solid #0f78e9;
+				line-height: 1.6;
+				margin-top: 1.5rem;
+				padding: 1.4rem 2rem 1.4rem 2.3rem;
+				.answer_name{
+					.semibold;
+				}
+				.answer_text{
+					.font-size(1.5);
+					border-top: 1px solid @color22;
+					color: @color48;
+					line-height: 1.4;
+					margin-top: .9rem;
+					padding-top: .8rem;
+				}				
+			}
+		}
+	}
+}

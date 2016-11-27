@@ -1,0 +1,45 @@
+.list_fav{
+	margin-left: 1px;
+	header{
+		padding-bottom: 2rem;
+	}
+	.tarif_item{
+		height: 25rem;
+		position: relative;
+		float: left;
+		width: 25%;
+		border: 1px solid @color22;
+		margin-bottom: 2rem;
+		margin-left: -1px;
+		.transition;
+		&:hover{
+			.drop-shadow(0,0,14px,0.4);
+			position: relative;
+			z-index: 99;
+		}
+		&.remove{
+			filter: blur(8px);
+		}
+		.label-action{
+			left: -6px;
+			top: -6px;
+		}
+	}
+	.btn-del{
+		background: none;
+		.sprite(-59px, -204px);
+		border: none;
+		cursor: pointer;
+		display: block;
+		height: 17px;
+		position: absolute;
+		right: 24px;
+		padding-left: 0;
+		padding-right: 0;
+		top: 20px;
+		width: 18px;
+		&:hover{
+			background-position: -77px -204px;
+		}		
+	}
+}

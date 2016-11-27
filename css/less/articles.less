@@ -1,0 +1,89 @@
+// часть стилей в news.less
+.list_articles{
+	padding-bottom: 3.5rem;
+	.articles{
+		&_item{
+			margin-top: 2rem;
+			&:hover{
+				.articles_item_wrapper{
+					.drop-shadow(0,0,20px, .4);
+					border-color: @color2;
+				}		
+			}			
+			&_wrapper{
+				overflow: hidden;
+			}
+			&_pic{
+				float: left;
+				width: 31%;
+				.category_link{
+					left: 19px;
+					top: 18px;
+				}
+			}
+			&_desc{
+				float: left;
+				padding: 1.5rem 2.1rem;				
+				width: 69%;
+				.date{
+					padding-bottom: .6rem;
+				}
+			}
+			&_link{
+				.semibold;
+				.font-size(1.8);
+			}
+			&_text{
+				.font-size(1.5);
+				color: @color12;
+				padding-top: .9rem;
+			}
+			
+			.more{
+				margin-top: 1.8rem;
+			}
+		}
+	}
+}
+
+.subcat{
+	.font-size(2);
+	padding: 1.4rem 0;
+	ul{
+		li{
+			display: inline-block;
+			margin-right: 48px;
+			position: relative;
+			padding-bottom: 3px;
+			&:after{
+				.font-size(1.8);
+				.regular;
+				color: @color22;
+				content: "|";
+				display: inline-block;
+				padding-left: 24px;
+				position: absolute;
+			}
+			&:last-child{
+				&:after{
+					display: none;					
+				}
+			}
+			&.active{
+				border-bottom: 2px solid @color4;
+				&:before{
+					.before;
+					.sprite(-28px, -15px);
+					height: 7px;
+					width: 9px;
+					left: 50%;
+					bottom: -7px;
+				}
+			}
+			a{
+				color: @color4;
+				.tdn;
+			}
+		}
+	}
+}

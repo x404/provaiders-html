@@ -1,0 +1,278 @@
+.main .comparison{
+	margin-top: 1.5rem;
+	margin-bottom: 7rem;
+	h1{
+		text-transform: uppercase;
+	}
+	@wfirst : 29.9rem;
+	.removeColumn .comparison_cell{
+		background-color: #fe5c70 !important;
+	}
+	&_column{
+		float: left;
+		.comparison_cell{
+			.font-size(1.5);
+			padding: 2rem 1.5rem 2rem;
+			width: 14.8rem;
+			&-first{
+				height: 25rem;
+			}
+			&-h{
+				.flex-direction(column);
+				.flex-justify-content(center);
+				.flex;
+				height: 6rem;
+				padding-bottom: 0;
+				padding-top: 0;
+			}
+			&:nth-child(even),
+			&.even{
+				background-color: @color11;
+			}
+			.logo{
+				height: 7rem;
+			}
+		}
+
+		&-first{
+			border-top: 1px solid @color2;
+			width: 25%;
+			.comparison_cell{
+				color: @color53;
+				width: @wfirst;
+				&-first{
+					height: 28.2rem;
+					padding-left: 0;
+					padding-top: 0;
+					h1{
+						line-height: 1;
+					}
+				}
+			}
+		}
+
+		.switch{
+			padding-top: 2.7rem;
+			label{
+				.font-size(1.7);
+				.semibold;
+				color: @color1;
+				display: inline-block;
+				margin-right: 0;
+				padding-right: 0;
+			}
+			input[type="checkbox"] + label:before{
+				right: -50px;
+				top: 10px;
+			}
+			input[type="checkbox"] + label::after{
+				right: -28px;
+				top: 15px;
+			}
+			input[type="checkbox"]:checked + label::after{
+				right: -45px;
+			}
+		}
+	}
+
+	&_body{
+		float: left;
+		width: 75%;
+		.logo{
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;			
+		}
+		.ctitle{
+			.font-size(1.6);
+			height: 7rem;
+			margin: 1.2rem 0 .3rem;
+			padding-left: 1.8rem;
+			padding-right: 1.8rem;
+			a{
+				color: @color4;
+				.tdn;
+				&:hover{
+					color: @color8;
+				}				
+			}
+		}
+		.comparison_column{
+			.transition;
+			border: 1px solid @color22;
+			position: relative;
+			.comparison_cell{
+				position: relative;
+				&-first{
+					border-bottom: 1px solid @color22;
+					padding-top: 0;
+					padding-left: 0;
+					padding-right: 0;
+				}
+				.btn{
+					padding: 1rem 1.3rem;
+				}
+				.tools{
+					padding-top: 1.2rem;
+					button{
+						margin: 0 .8rem;
+						vertical-align: top;						
+					}
+					.btn-fav{
+						display: inline-block;
+					}
+					.del{
+						background: none;
+						.sprite(-59px, -204px);
+						border: none;
+						cursor: pointer;
+						display: inline-block;
+						height: 17px;
+						margin-top: 1px;
+						padding-right: 0;
+						top: 20px;
+						width: 17px;
+						&:hover{
+							background-position: -77px -204px;
+						}
+					}					
+				}
+				.label{
+					background: none;
+					left: 0;
+					padding: 0;
+					position: absolute;
+					top: 0;
+				}
+				.old{
+					.font-size(1.4);
+					color: @color57;
+					text-decoration: line-through;
+				}
+			}
+			&:hover{
+				.drop-shadow(0,0,18px, .4);
+				z-index: 10;
+			}
+		}
+
+
+		.mCSB_scrollTools{
+			bottom: auto;
+			top: -3px;
+		}
+
+		.mCustomScrollBox{
+			top: 15px;
+		}
+	}
+
+	&.different{
+		.comparison_cell[data-name="different"]:nth-child(even){
+			background-color: red;
+		}
+	}
+}
+
+
+#connect,
+#connect_tarif{
+	.modal-dialog{
+		width: 87rem;		
+	}
+	.modal-content{
+		padding: 4.7rem 6rem 6.5rem;
+	}
+	.connect_info{
+		background-color: @color2;
+		padding: 2.6rem 3.1rem 2.5rem;
+		margin-bottom: 1rem;
+		p:not(.tarif-title){
+			color: @color55;
+			.font-size(1.5);
+		}
+		.tarif-title{
+			.semibold;
+			.font-size(2);
+			color: @color1;
+			padding-top: .5rem;
+		}
+	}
+	.bottom{
+		.flex;
+		margin-top: 1.8rem;
+	}
+	.row{
+		.col-md-6,
+		.col-md-3{
+			padding-left: 0;
+			&:last-child{
+				padding-right: 0;
+			}
+		}
+	}
+	.address-area{
+		padding-top: 2.2rem;
+		padding-bottom: 1rem;
+		.title{
+			.semibold;
+			.font-size(2);
+		}
+		.row{
+			margin-top: -0.7rem;
+		}
+		.col{
+			&-city,
+			&-address,
+			&-house{
+				float: left;
+			}
+			&-city,
+			&-address{
+				padding-right: 2rem;
+			}
+			&-city{
+				width: 28.5%;
+			}
+			&-address{
+				width: 53%;
+			}
+			&-house{
+				width: 18.5%;
+			}		
+		}
+	}
+	textarea{
+		padding-top: 1rem;
+	}
+}
+
+.dropdown-menu {
+	.drop-shadow(0,0,10px, .5);
+	background-color: #fff;
+	.rounded(3px);
+	display: none;
+	.font-size(1.6);
+	left: 0;
+	line-height: 3rem;
+	margin: 22px 0 0;
+	position: absolute;
+	text-align: left;
+	top: 120%;
+	z-index: 1000;
+	li{
+		a{
+			.transition;
+			color: @color21;
+			display: block;
+			padding-left: 1.8rem;
+			text-decoration: none;
+			strong{
+				color: @color1;
+			}
+			&:hover{
+				background-color: @color56;
+			}
+		}
+	}
+}

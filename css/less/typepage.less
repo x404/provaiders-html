@@ -1,0 +1,182 @@
+@import url('elements.less');
+
+h1{.font-size(3.6)}
+h2{.font-size(3.2)}
+h3{.font-size(3)}
+h4{.font-size(2.8)}
+h5{.font-size(2.6)}
+h6{.font-size(2.4)}
+
+h1,h2,h3,h4,h5,h6{
+	.regularlightext;
+	font-weight: normal;
+	color: #181818;
+}
+
+@font-face {
+	font-family: "MyriadProRegular";
+	src: url("../fonts/MyriadProRegular/MyriadProRegular.eot");
+	src: url("../fonts/MyriadProRegular/MyriadProRegular.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/MyriadProRegular/MyriadProRegular.woff") format("woff"),
+	url("../fonts/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+.regular{font-family: "MyriadProRegular";}
+
+
+@font-face { 
+	font-family: 'MyriadProLightExt';
+	src: url('../fonts/MyriadPro-LightSemiExt.otf') format('truetype');
+	font-style: normal;
+	font-weight: 300;
+}
+.regularlightext{font-family: "MyriadProLightExt";}
+
+@color11:#eef3fa;
+@color22:#dfe8f0;
+
+a{
+	color: #0090db;
+	text-decoration: none;
+	&:hover{
+		color: #00bfdb;
+	}
+}
+
+
+table{
+	border-spacing: 0;
+	padding: 0;
+}
+
+.text-center{
+	text-align: center;
+}
+.text-right{
+	text-align: right;
+}
+
+blockquote{
+	background-color: #eef3fa;
+	border: 1px solid #dfe8f0;
+	border-left: 19px solid #0f78e9;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 1.6;
+	margin: 15px 0;
+	padding: 23px;
+}
+
+
+.alignleft {
+	float: left;
+	margin: 12px 28px 28px 0;
+}
+
+.alignright {
+	float: right;
+	margin: 7px 0 28px 28px;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 7px auto;
+}
+
+
+table{
+	border-left: 1px solid @color22;
+	border-right: 1px solid @color22;
+	margin-top: 18px;
+	width: 100%;
+	th,
+	td{
+		padding-left: 18px;
+	}
+
+	th{
+		.regular;
+		color: #8a939f;
+		font-weight: normal;
+		background-color: @color11;
+		padding-top: 1.8rem;
+		padding-bottom: 1.6rem;
+		text-align: left;
+	}
+	td{
+		.font-size(1.5);
+		color: #282828;
+		border-bottom: 1px solid @color22;
+		padding-top: 14px;
+		padding-bottom: 11px;
+	}
+}
+
+ul{
+	list-style: none;
+	margin: 15px 0;
+	li{
+		margin-top: 10px;
+		padding-left: 19px;
+		position: relative;
+
+		&:before{
+			background-color: #0f78e9;
+			content: "";
+			display: block;
+			height: 3px;
+			left: 0;
+			position: absolute;
+			top: 10px;
+			width: 10px;
+		}
+
+		ul{
+			margin: 10px 0;
+			li{
+				&:before{
+					width: 4px;
+					height: 4px;
+					top: 8px;
+				}
+			}
+		}
+	}
+}
+
+ol{
+	counter-reset:li;
+	margin-left: 0;
+	list-style: none;
+	li{
+		margin-top: 10px;
+		position: relative;
+		padding-left: 30px;
+		&:before{
+			content:counter(li) ")"; /* В качестве данных используем счетчик */
+			counter-increment:li; /* Увеличиваем значение счетчика на 1 */
+			/* Позиционируем и стилизируем цифры */
+			position:absolute;
+			top:0;
+			left:0;
+			width:20px;
+			color: #0f78e9;
+			font-size: 18px;
+		}
+		ol{
+			counter-reset:li;
+			li{
+				padding-left: 30px;
+				&:before{
+					font-size: 16px;
+					content: counter(li) ".";
+				}
+			}
+		}
+	}
+}
+
+
+
