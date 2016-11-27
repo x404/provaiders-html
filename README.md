@@ -35,7 +35,8 @@
 
 Во всех html файлах прописана строка запрета индексации <meta name="robots" content="noindex,nofollow" /> - не забыть ее удалить. Также не нужен robots.txt, который идет в верстке. Это все запрет от индексации поисковиками на поддомене.
 
-На  страницах http://provaiders.proverstka.com.ua/card-provider.html , http://provaiders.proverstka.com.ua/card-tarif.html , 
+Less файлы/каталоге нужны только в верстке, при программировании они участия не принимают.
+
 ---------------------------------------------------------
 __Используемые в проекте js плагины__
 * Слайдер цен в фильтре [https://refreshless.com/nouislider/](https://refreshless.com/nouislider/)
