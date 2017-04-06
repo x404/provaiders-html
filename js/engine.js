@@ -788,11 +788,6 @@ $(document).ready(function(){
 	});	
 
 
-	$('.mobile-menu').hammer().on('panleft', function(){
-		$('body').removeClass('o-menu');
-	});
-
-
 	$('.connect_header').click(function(e){
 		e.preventDefault();
 		var $this = $(this);
