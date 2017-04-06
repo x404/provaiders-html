@@ -611,7 +611,7 @@ $(document).ready(function(){
 	});
 
 	// scroll page
-	$('.mainmenu a[href*=\\#]:not([href=\\#]), .graduate_info_box-experts a').click(function() {
+	$('.mainmenu a[href*=\\#]:not([href=\\#]), .graduate_info_box-experts a, .neck_card .graduate_info_box-users .title a').click(function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 			var target = $(this.hash);
 			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
