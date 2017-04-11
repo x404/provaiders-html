@@ -178,7 +178,8 @@ $(document).ready(function(){
 	$.mockjax({ // эмулятор ajax ответов для тарифов
 		url: '/check/',
 		response: function() {
-			this.responseText = 'error'
+			this.responseText = 'ok';
+			// this.responseText = 'error'
 		}
 	});
 

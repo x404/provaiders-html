@@ -600,7 +600,7 @@ $(document).ready(function(){
 			cache: false,
 			success: function(result){
 				if (result == 'ok'){
-					html = '<div class="result result-ok">Адрес обслуживается</div>';
+					html = '<div class="result result-ok">Адрес обслуживается <p class="text">Требуется уточнить у оператора возможность подключения в данном доме</p></div>';
 				} else {
 					html = '<div class="result result-error">Адрес не обслуживается</div>';
 				};
