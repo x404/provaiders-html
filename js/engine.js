@@ -517,6 +517,14 @@ $(document).ready(function(){
 	});
 
 
+	$("#scroll-provaiders").mCustomScrollbar({
+		axis:"y",
+		autoDraggerLength: "150px",
+		scrollbarPosition:"inside",
+		scrollButtons:{enable:false},
+		mouseWheel : false
+	});
+
 	// ОБРАБОТКА СПИСКОВ ГОРОДОВ
 
 	$('#opencity').on('shown.bs.modal', function (e) {

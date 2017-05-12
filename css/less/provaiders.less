@@ -159,6 +159,94 @@
 					}
 				}
 			}
+
+			span{
+				color: @color4;
+			}
+			i{
+				font-style: normal;
+				position: relative;
+				z-index: 1001;
+				span{
+					color: @color1;
+				}				
+			}
+
+			.mCSB_scrollTools{
+				background: @color11;
+				.mCSB_dragger .mCSB_dragger_bar{
+					background: #0090db;
+					width: 10px;
+					&:before,
+					&:after{
+						.before;
+						.sprite(-71px, -23px);
+						height: 4px;
+						width: 6px;
+						left: 2px;
+					}
+
+					&:before{
+						top: 4px;
+					}
+
+					&:after{
+						bottom: 4px;
+						.rotation(180deg);
+					}
+				}
+				.mCSB_draggerRail{
+					background: @color11;
+				}
+			}
+
+			.scroll{
+				// display: none;
+				.drop-shadow(0,0,10px, .2);
+				background: @color2;
+				height: 270px;
+				left: -10px;
+				position: absolute;
+				top: -8px;
+				width: 206px;
+				z-index: 1000;
+				// padding-top: 15px;
+				ul{
+					.font-size(1.5);
+					padding-left: 10px;
+					li{
+						display: block;
+						color: @color40;
+						margin-top: .7rem;
+						margin-right: 0;
+						&:after{
+							content: "";
+						}
+						&:hover{
+							color: @color1;
+						}
+					}
+				}
+			}
+
+			.scroll-wrapper{
+				height: 270px;
+			}
+
+			.select-provaiders{
+				cursor: pointer;
+				display: inline-block;
+				margin-left: 5px;
+				position: relative;
+				&:after{
+					.before;
+					.sprite(-72px, -143px);
+					height: 6px;
+					right: -15px;
+					top: 6px;
+					width: 9px;
+				}				
+			}
 		}
 	}
 }
