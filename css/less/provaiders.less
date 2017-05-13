@@ -142,9 +142,9 @@
 					&:after{
 						.before;
 						height: 6px;
-						width: 6px;
-						top: 7px;
 						right: -9px;
+						top: 7px;
+						width: 6px;
 					}
 				}
 				
@@ -166,14 +166,19 @@
 			i{
 				font-style: normal;
 				position: relative;
-				z-index: 1001;
+				z-index: 1002;
 				span{
 					color: @color1;
 				}				
 			}
 
+			.mCSB_container{
+				padding-top: 0;
+				padding-bottom: 0;
+			}
 			.mCSB_scrollTools{
-				background: @color11;
+				// background: @color11;
+				right: -16px !important;
 				.mCSB_dragger .mCSB_dragger_bar{
 					background: #0090db;
 					width: 10px;
@@ -182,8 +187,8 @@
 						.before;
 						.sprite(-71px, -23px);
 						height: 4px;
-						width: 6px;
 						left: 2px;
+						width: 6px;
 					}
 
 					&:before{
@@ -191,33 +196,35 @@
 					}
 
 					&:after{
-						bottom: 4px;
 						.rotation(180deg);
+						bottom: 4px;
 					}
 				}
 				.mCSB_draggerRail{
-					background: @color11;
+					background: none;
 				}
 			}
 
 			.scroll{
-				// display: none;
 				.drop-shadow(0,0,10px, .2);
 				background: @color2;
+				border-right: 16px solid #eef3fa;
+				display: none;				
 				height: 270px;
 				left: -10px;
+				padding-top: 30px;
 				position: absolute;
 				top: -8px;
 				width: 206px;
 				z-index: 1000;
-				// padding-top: 15px;
 				ul{
 					.font-size(1.5);
 					padding-left: 10px;
+					padding-bottom: 10px;
 					li{
 						display: block;
 						color: @color40;
-						margin-top: .7rem;
+						margin-top: .9rem;
 						margin-right: 0;
 						&:after{
 							content: "";
@@ -230,7 +237,7 @@
 			}
 
 			.scroll-wrapper{
-				height: 270px;
+				height: 235px;
 			}
 
 			.select-provaiders{
@@ -238,15 +245,98 @@
 				display: inline-block;
 				margin-left: 5px;
 				position: relative;
+				i{
+					padding-right: 20px;					
+				}
 				&:after{
 					.before;
 					.sprite(-72px, -143px);
 					height: 6px;
-					right: -15px;
+					right: 5px;
 					top: 6px;
 					width: 9px;
-				}				
+					z-index: 1001;
+				}
+
+				&.show{
+					.scroll{
+						display: block;
+					}
+					&:after{
+						.rotation(180deg);
+					}
+				}		
 			}
+
+
+/* Это для всех браузеров, кроме совсем старых, которые не поддерживают
+селекторы с плюсом. Показываем, что label кликабелен. */
+.checkbox + label {
+	cursor: pointer;
+	display: block;
+}
+
+/* Далее идет оформление чекбокса в современных браузерах, а также IE9 и выше.
+Благодаря тому, что старые браузеры не поддерживают селекторы :not и :checked,
+в них все нижеследующие стили не сработают. */
+
+/* Прячем оригинальный чекбокс. */
+.checkbox:not(checked) {
+	position: absolute;
+	opacity: 0;
+}
+.checkbox:not(checked) + label {
+	position: relative; /* будем позиционировать псевдочекбокс относительно label */
+	padding: 0 0 0 28px; /* оставляем слева от label место под псевдочекбокс */
+}
+
+.checkbox:checked + label {
+	color: @color1;
+}
+
+/* Оформление первой части чекбокса в выключенном состоянии (фон). */
+.checkbox:not(checked) + label:before {
+	background: #fff;
+	border-radius: 3px;
+	border: 1px solid #c3cdd8;
+	content: '';
+	height: 21px;
+	left: 0;
+	position: absolute;
+	top: -1px;
+	transition: all .2s;
+	width: 21px;
+	z-index: 1;
+}
+
+/* Оформление второй части чекбокса в выключенном состоянии (переключатель). */
+.checkbox:not(checked) + label:after {
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: 2px;
+	width: 22px;
+	height: 22px;
+	// border-radius: 10px;
+	background: #FFF;
+	transition: all .2s; /* анимация, чтобы чекбокс переключался плавно */
+}
+/* Меняем фон чекбокса, когда он включен. */
+.checkbox:checked + label:before {
+	background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAMAAACeyVWkAAAAVFBMVEUPiukPiukPiukPiukPiukPiukPiukPiukPiukgkuvS6fvP6Pv///8jlOva7fzX7Pun1Pfg8PyAwfPx+P4olutks/FSq+/d7vzu9/38/v+t1/cRi+kgrKkNAAAACHRSTlMG6oeE5+SNiveIHYgAAABxSURBVHhejdDJDoNADANQM2zODFv37f//s+KQRECk1sd3sGQDdctt2hpIPCahCrQCyWEbkn/p5RRoHrkcNAt5c3WU2bScJ8VivS+hZEXXKylvRW8Q8qNourKh6zDdOZZg2+MZL/6t8b8p0B7omp01Hb4eMRDNCAMALAAAAABJRU5ErkJggg==") no-repeat left top;
+	border: none;
+}
+
+/* Сдвигаем переключатель чекбокса, когда он включен. */
+.checkbox:checked + label:after {
+	// left: 26px;
+}
+/* Показываем получение фокуса. */
+.checkbox:focus + label:before {
+}
+
+
+
 		}
 	}
 }

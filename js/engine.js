@@ -147,6 +147,36 @@ $(document).ready(function(){
 	});
 
 
+
+	$('.select-provaiders i').click(function(e){
+		e.preventDefault();
+		$('.select-provaiders').toggleClass('show');
+	});
+
+	$('.select-provaiders .checkbox').click(function(){
+		var i = 0;
+		$('.select-provaiders .checkbox').each(function(){
+			if (this.checked) i++;
+		});
+
+		switch (i){
+			case 1 :
+				txt = ' провайдер'; 
+				break;
+			case 2:
+			case 3:
+			case 4:
+				txt = ' провайдера';
+				break;
+			default:
+			txt = ' провайдеров';
+		}
+		$('#count-provaiders').text(i + txt);
+	});
+
+
+
+
 	// чекбоксы фильтра в боковом меню + синхрон
 	$('.filter #internet').prop('checked',true);
 	$('.filter #tv').prop('checked',false);
@@ -520,9 +550,9 @@ $(document).ready(function(){
 	$("#scroll-provaiders").mCustomScrollbar({
 		axis:"y",
 		autoDraggerLength: "150px",
-		scrollbarPosition:"inside",
+		scrollbarPosition:"outside",
 		scrollButtons:{enable:false},
-		mouseWheel : false
+		mouseWheel : true
 	});
 
 	// ОБРАБОТКА СПИСКОВ ГОРОДОВ
@@ -542,7 +572,6 @@ $(document).ready(function(){
 			item.toggleClass('faq_item-expand');
 		})
 	});
-
 
 
 	// выбор города из ненумерованного списка
