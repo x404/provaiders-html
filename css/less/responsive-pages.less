@@ -138,8 +138,6 @@
 		.meta{
 			.date{
 				flex-basis: 15rem;
-
-				// text-align: center;
 			}
 		}
 	}
@@ -180,15 +178,11 @@
 		}
 	}
 
-	// contacts
+	// compare list
 	.main{
 		.contacts{
 			padding-left: 3rem;
 		}
-	}
-
-	// compare list
-	.main{
 		.comparison_column-first{
 			width: 30%;
 		}
@@ -281,6 +275,12 @@
 		}
 	}
 
+	.list_tarifs,
+	.card_tarifs{
+		.tarif_item_bottom{
+			display: block;
+		}
+	}
 
 	// card provaider
 	.neck_card{
@@ -505,6 +505,8 @@
 			padding-right: .5rem;
 		}
 	}
+
+
 }
 
 
@@ -720,7 +722,7 @@
 		}
 		&_bottom span{
 			display: inline;
-			white-space: nowrap;
+			// white-space: nowrap;
 			&:last-child{
 				margin-right: 0;
 			}
@@ -900,7 +902,6 @@
 
 
 @media (max-width: 930px){
-
 	.tarif_box .params{
 		p{
 			white-space: nowrap;
@@ -908,9 +909,6 @@
 		&:after{
 			margin-left: -11%;
 			width: 36%;
-		}
-		.channels{
-			 // margin-left: 0;
 		}
 	}
 
@@ -962,6 +960,19 @@
 
 	.connect{
 		margin-left: 21rem;
+	}
+
+	.list_tarifs .tarif_item_bottom,
+	.card_tarifs .tarif_item_bottom{
+		span{
+			margin-right: 1.5rem;
+		}
+	}
+
+	.list_tarifs .tarif_item_bottom span:last-child{
+		display: inline-block;
+		margin-top: .7rem;
+		white-space: nowrap;
 	}
 }
 
@@ -4073,6 +4084,12 @@
 			padding-left: 5px;
 			top: -2px;
 		}
+	}
+
+
+	.sortbox ul li .select-provaiders{
+		display: block;
+		margin-left: 0;
 	}
 
 	// card provider
