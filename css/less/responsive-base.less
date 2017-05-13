@@ -1049,12 +1049,19 @@
 
 
 @media (max-width: 360px){
+	header.header .logo{
+		width: 26rem;
+	}
+	
 	header.header .logo_link{
 		display: block;
 		padding-left: 0;
-		width: 98%;
+		// width: 98%;
+		text-align: center;
 		img{
-			display: block;			
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
 		}
 	}
 }
@@ -1112,8 +1119,16 @@
 		.center-block;
 		width: 100%;
 	}
-	header.header .proof-city{
-		left: 1.3rem;
+	header.header{
+		.logo_link{
+			width: 100%;
+			img{
+				width: 100%;
+			}
+		}
+		.proof-city{
+			left: 1.3rem;
+		}
 	}
 
 	#opencity{

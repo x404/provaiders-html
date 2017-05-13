@@ -251,23 +251,24 @@
 				margin-left: 5px;
 				position: relative;
 				i{
-					padding-right: 20px;					
-				}
-				&:after{
-					.before;
-					.sprite(-72px, -143px);
-					height: 6px;
-					right: 5px;
-					top: 6px;
-					width: 9px;
-					z-index: 1001;
+					padding-right: 20px;
+					position: relative;
+					&:after{
+						.before;
+						.sprite(-72px, -143px);
+						height: 6px;
+						right: 5px;
+						top: 6px;
+						width: 9px;
+						z-index: 1001;
+					}
 				}
 
 				&.show{
 					.scroll{
 						display: block;
 					}
-					&:after{
+					i:after{
 						.rotation(180deg);
 					}
 				}		
