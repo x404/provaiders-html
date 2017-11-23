@@ -46,11 +46,19 @@
 		}
 
 		.actions{
+			@w: 400px;
+			display: flex;
 			order: 2;
 			width: 100%;
+			justify-content: center;
+			.actions_carousel{
+				width: @w;
+				margin-left: 15px;
+				margin-right: 15px;
+			}
 			&_item{
-				float: left;
-				width: 50%;
+				width: @w;
+				height: 370px;
 				.info{
 					width: 90%;
 					h3{
@@ -59,7 +67,7 @@
 				}
 				img{
 					margin-left: auto;
-					margin-right: auto;					
+					margin-right: auto;
 				}
 			}
 		}
@@ -1138,7 +1146,20 @@
 @media (max-width: 860px){
 	.connect{
 		margin-left: 18rem;
-	}	
+	}
+
+	.rating-actions-filter{
+		.actions{
+			@w: 350px;
+			.actions_carousel{
+				width: @w;
+			}
+			&_item{
+				width: @w;
+				height: 310px;
+			}
+		}
+	}
 }
 
 
@@ -1738,6 +1759,19 @@
 	.reviewers_item_top .ranking .clearfix{
 		display: none;
 	}
+
+	.rating-actions-filter{
+		.actions{
+			@w: 300px;
+			.actions_carousel{
+				width: @w;
+			}
+			&_item{
+				width: @w;
+				height: 278px;
+			}
+		}
+	}	
 }
 
 
@@ -2201,6 +2235,20 @@
 				}
 			}
 		}
+	}
+
+
+	.rating-actions-filter{
+		.actions{
+			@w: 280px;
+			.actions_carousel{
+				width: @w;
+			}
+			&_item{
+				width: @w;
+				height: 260px;
+			}
+		}
 	}	
 }
 
@@ -2321,6 +2369,15 @@
 }
 
 
+@media (max-width: 630px){
+	.rating-actions-filter .actions{
+		// display: block;
+		.actions_carousel{
+			// margin: 0 auto 15px;
+		}		
+	}
+}
+
 @media (max-width: 620px){
 	h1{
 		.font-size(3);
@@ -2425,6 +2482,22 @@
 		}
 		.btn{
 			margin-top: 1rem;
+		}
+	}
+
+
+	.rating-actions-filter{
+		.actions{
+			@w: 265px;
+			.actions_carousel{
+				margin-left: 0;
+				margin-right: 0;
+				width: @w;
+			}
+			&_item{
+				width: @w;
+				height: 246px;
+			}
 		}
 	}
 }
@@ -2676,13 +2749,25 @@
 }
 
 @media (max-width: 550px){
-	.rating-actions-filter .rating .header{
-		.title{
-			display: block;
+	.rating-actions-filter{
+		.rating .header{
+			.title{
+				display: block;
+			}
+			.link{
+				float: none;
+			}
 		}
-		.link{
-			float: none;
-		}		
+		.actions{
+			@w: 250px;
+			.actions_carousel{
+				width: @w;
+			}
+			&_item{
+				width: @w;
+				height: 232px;
+			}
+		}
 	}
 
 	.tarif_box .params:after{
@@ -2922,6 +3007,22 @@
 		padding-right: 2rem;
 	}
 
+	.rating-actions-filter{
+		.actions{
+			@w: 220px;
+			.actions_carousel{
+				margin-left: 0;
+				margin-right: 0;
+				width: @w;
+			}
+			&_item{
+				width: @w;
+				height: 205px;
+			}
+		}
+	}
+
+
 	.about{
 		padding-left: 0;
 		padding-right: 0;
@@ -3091,13 +3192,28 @@
 			float: none;
 			width: 100%;
 		}
-	}	
-	.rating-actions-filter .actions_item .info{
-		width: 85%;
-		h3{
-			.font-size(1.5);
+		.actions_item .info{
+			width: 85%;
+			h3{
+				.font-size(1.5);
+			}
 		}
-	}
+
+
+		.actions{
+			display: block;			
+			@w: 100%;
+			.actions_carousel{
+				margin-bottom: 10px;
+				width: @w;
+			}
+			&_item{
+				width: @w;
+				height: auto;
+			}
+		}
+
+	}	
 
 	.tarif_box .params{
 		&:after{

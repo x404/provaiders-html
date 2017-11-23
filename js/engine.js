@@ -113,6 +113,31 @@ $(document).ready(function(){
 		}
 	});		
 
+	$('#actions1').owlCarousel({
+		loop:false,
+		nav:false,
+		dots: true,
+		items:1,
+		navText: ["", ""],
+		animateOut: 'slideOutDown',
+		animateIn: 'flipInX',
+		autoplay: true,
+		autoplayTimeout: 4000
+	});	
+
+	$('#actions2').owlCarousel({
+		loop:false,
+		nav:false,
+		dots: true,
+		items:1,
+		navText: ["", ""],
+		animateOut: 'slideOutDown',
+		animateIn: 'flipInX',
+		autoplay: true,
+		autoplayTimeout: 5000
+	});
+
+
 
 	$('.top_menu_flex').flexMenu({
 		linkText: 'Еще',
