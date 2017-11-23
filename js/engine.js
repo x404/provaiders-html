@@ -86,6 +86,43 @@ $(document).ready(function(){
 		}
 	});
 
+	$('#foo3').owlCarousel({
+		loop:false,
+		nav:true,
+		dots: false,
+		items:5,
+		lazyLoad: true,
+		navText: ["", ""],
+		autoplay: true,
+		loop: true,
+		responsive:{
+			0:{
+				items:1,
+				stagePadding: 40
+			},
+			360:{
+				items:1,
+				stagePadding: 50
+			},
+			420:{
+				items:1,
+				stagePadding: 70
+			},
+			480:{
+				items:2
+			},
+			767:{
+				items:3
+			},
+			991:{
+				items:4
+			},
+			1199:{
+				items:5
+			}
+		}
+	});
+
 	$('#gallery').owlCarousel({
 		loop:false,
 		nav:true,

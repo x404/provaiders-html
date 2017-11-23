@@ -550,7 +550,30 @@
 }
 
 .popular-tarifs,
-.popular-provaiders{
+.popular-provaiders,
+.partners_carousel
+{
+	.owl-controls{
+		top: -66px;
+		.owl-nav{
+			position: absolute;
+			right: 36px;
+			.owl{
+				.owl-button-1;
+				&-prev,
+				&-next{
+					&:before{
+						background-position: 0 -142px;
+					}
+				}
+			}
+		}
+	}	
+}
+
+.popular-tarifs,
+.popular-provaiders
+{
 	.container{
 		min-height: 45rem;
 		padding-top: 5.7rem;		
@@ -569,22 +592,7 @@
 			z-index: 99;
 		}
 	}	
-	.owl-controls{
-		top: -66px;
-		.owl-nav{
-			position: absolute;
-			right: 36px;
-			.owl{
-				.owl-button-1;
-				&-prev,
-				&-next{
-					&:before{
-						background-position: 0 -142px;
-					}
-				}
-			}
-		}
-	}	
+	
 
 	.moreall{
 		text-align: center;
@@ -790,12 +798,9 @@
 
 /* =/popular-provaiders
 ---------------------*/
-.popular-provaiders{
-	background:#f8f8f8 url(../images/bg-7.jpg) no-repeat center top / cover;
-	.owl-carousel{
-		border-left: 1px solid @color22;
-		border-right: 1px solid @color22;
-	}
+.popular-provaiders,
+.partners_carousel
+{
 	.owl-controls{
 		.owl-nav{
 			.owl{
@@ -813,7 +818,16 @@
 				}				
 			}
 		}
-	}	
+	}
+}
+
+.popular-provaiders{
+	background:#f8f8f8 url(../images/bg-7.jpg) no-repeat center top / cover;
+	.owl-carousel{
+		border-left: 1px solid @color22;
+		border-right: 1px solid @color22;
+	}
+
 	.provaiders_item{
 		background-color: @color11;
 		.payment{
@@ -1067,7 +1081,7 @@
 /* =about
 ---------------------*/
 .about{
-	background: url(../images/bg-2.jpg) no-repeat right -140px;
+	background: url(../images/bg-2.jpg) no-repeat right -140px;		
 	.left,
 	.center{
 		float: left;
@@ -1091,6 +1105,9 @@
 			width: 24rem;
 			img{
 				margin-bottom: .5rem;
+			}
+			&:last-child{
+				margin-bottom: 0
 			}
 		}
 	}
@@ -1138,7 +1155,7 @@
 		color: @color2;
 		float: right;
 		line-height: 1.2;
-		min-height: 561px;
+		min-height: 557px;
 		padding-left: 3rem;
 		padding-right: 3rem;
 		padding-top: 3.7rem;
@@ -1165,6 +1182,30 @@
 --------------------- */
 
 
+/* =partners
+--------------------- */
+.partners{
+	border-top: 2px solid @color11;
+	padding: 3.5rem 0;
+	margin-top: -2px;
+	.title{
+		text-transform: uppercase;
+	}
+	&_carousel{
+		margin-top: 3rem;
+		.owl-controls{
+			top: -60px;
+		}
+	}
+	&_item{
+		text-align: center;
+		img{
+			max-width: 100%;
+		}
+	}
+}
+/* =/partners
+--------------------- */
 
 .blur .outerwrapper{
 	filter: blur(3px);
