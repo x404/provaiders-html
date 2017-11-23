@@ -67,7 +67,17 @@
 				</ul>
 			</div>
 			<!-- =/menu -->
-
+			
+			<!-- =social -->
+			<div class="top_social">
+				<a href="#" title="Вконтакте" target="_blank"><img src="../images/social/vk.png" alt="" /></a>
+				<a href="#" title="Facebook" target="_blank"><img src="../images/social/fb.png" alt="" /></a>
+				<a href="#" title="Mail.ru" target="_blank"><img src="../images/social/mailru.png" alt="" /></a>
+				<a href="#" title="Одноклассники" target="_blank"><img src="../images/social/odn.png" alt="" /></a>
+				<a href="#" title="Twitter" target="_blank"><img src="../images/social/twitter.png" alt="" /></a>
+			</div>
+			<!-- =/social -->
+			
 			<!--  =phones -->
 			<div class="top_support">
 				<span class="visible-sm">ПОДДЕРЖКА</span> <a class="phone" href="tel:88002000000">8 800 200-00-00</a>
