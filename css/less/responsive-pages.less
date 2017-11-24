@@ -1697,7 +1697,7 @@
 			display: block;
 			float: left;
 			img{
-				vertical-align: top;				
+				vertical-align: top;
 			}
 		}
 		&_right{
@@ -2313,13 +2313,23 @@
 	.card_tarifs,
 	.list_tarifs{
 		.tarif_item{
-			display: block;			
+			display: block;
+			.tarif_more{
+				display: block;
+				&-link{
+					margin-left: 1.4rem;
+				}
+			}	
 		}
-		.buttons .buttons_wrapper{
-			flex: 1;
-			.btn-connect{
+		.buttons{
+			padding-bottom: 1rem;
+			.buttons_wrapper{
 				flex: 1;
-				text-align: center;
+				width: 100%;
+				.btn-connect{
+					flex: 1;
+					text-align: center;
+				}
 			}
 		}
 	}
@@ -2949,7 +2959,7 @@
 		width: 100%;
 		.pic{
 			img{
-				.center-block;				
+				.center-block;
 			}
 		}
 	}

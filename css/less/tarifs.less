@@ -166,9 +166,21 @@
 		}
 
 		.buttons{
+			flex-direction: column;
+			justify-content: center;
 			&_wrapper{
 				.flex;
 				.flex-align-items(center);
+			}
+		}
+
+		.tarif_more{
+			display: none;
+			margin-top: 1.2rem;
+			&-link{
+				color: @color89;
+				.font-size(1.5);
+				.tdu;
 			}
 		}
 	}
@@ -228,7 +240,7 @@
 				color: @color1;
 				span{
 					&:after{
-						border-color: #7092a3;						
+						border-color: #7092a3;
 					}
 					&:before{
 						top: 10px;
