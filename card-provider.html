@@ -658,7 +658,7 @@
 							<!-- bottom -->
 							<div class="reviewers_item_bottom">
 								<div class="left">
-									<button type="button" class="btn btn-rounded">Ответить на отзыв</button>
+									<button type="button" class="btn btn-rounded" data-toggle="modal" data-target="#addanswer">Ответить на отзыв</button>
 								</div>
 								<div class="like">
 									<a href="#" class="up">15</a>
@@ -1681,6 +1681,33 @@ $(document).ready(function(){
 	</div>
 </div>
 <!-- =/opencover popup -->
+
+
+<!-- =addanswer -->
+<div class="modal fade" id="addanswer" tabindex="-1" role="dialog" aria-labelledby="addanswerLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-title" id="addanswerLabel">Ответить на отзыв</div>
+			<form action="#" method="post" id="addanswer-form">
+				<fieldset>
+					<label for="answerinput" class="name-field">Ваш ответ</label>
+					<textarea id="answerinput" name="answerinput" class="form-control required"></textarea>
+
+					<div class="bottom row">
+						<input type="submit" class="submit" value="Отправить вопрос">						
+					</div>
+				</fieldset>
+			</form>
+			<button type="button" class="close" data-dismiss="modal"><img src="images/close-modal.png" alt="" /></button>
+		</div>
+	</div>
+</div>
+<script>
+	$('#addanswer').on('show.bs.modal', function (e){
+		$('body').addClass('static')
+	})
+</script>
+<!-- =/addanswer -->
 
 <!-- InstanceEndEditable -->
 <link rel="stylesheet" property='stylesheet' href="css/nouislider.css" />
