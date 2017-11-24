@@ -697,9 +697,7 @@
 	}
 }
 
-.reviewers,
-.faq_content
-{}
+
 // }
 .more-full{
 	a{
@@ -765,6 +763,7 @@
 		
 		.title{
 			.semibold;
+			text-transform: none;
 			.font-size(1.5);
 			color: @color1;
 			padding-top: 1rem;
@@ -874,14 +873,48 @@
 			}
 		}
 
+		// pin
+		&_pin{
+			background-color: @color2;
+			padding: 0 1.7rem 2.2rem 3rem;
+			.answer{
+				border: 1px solid @color90;
+				&__body{
+					border-left: 5px solid @color47;
+					padding-left: 2.3rem;
+				}
+				&__title{
+					padding: 1.6rem 1rem 1.1rem 0;
+				}
+				&__text{
+					border-top: 1px solid @color90;
+					color: @color48;
+					font-size: 15px;
+					line-height: 1.4;
+					padding: .9rem 1rem 1.2rem 0;
+				}
+			}
+		}
+
 		// bottom
 		&_bottom{
 			background-color: @color2;
 			border-top: 1px solid @color22;
-			padding-top: 1.3rem;
-			padding-bottom: 1.8rem;
-			text-align: right;
-			
+			display: flex;
+			padding-top: .9rem;
+			padding-bottom: .9rem;
+			align-items: center;
+			min-height: 5rem;
+
+			.like{
+				flex-grow: 1;
+				text-align: right;
+			}
+
+			.btn{
+				padding: .8rem 1rem; 
+			}
+
 			.up,
 			.down{
 				.font-size(1.4);
