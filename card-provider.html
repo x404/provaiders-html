@@ -1060,7 +1060,7 @@
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-title" id="add-connectLabel">Заявка на подключение</div>
-			<form action="#" method="post" id="connect-form">
+			<form action="#" method="post" id="connect-form" class="form-policy">
 				<fieldset>
 					<div class="connect_info">
 						<p>Оформление заявки на подключение тарифа:</p>
@@ -1109,7 +1109,10 @@
 							</div>
 						</div>
 					</div>
-
+					<div class="policy">
+						<input type="checkbox" id="checkbox-policy" value="" name="checkbox" checked="checked" class="user-access">
+						<label for="checkbox-policy">Я даю согласие на обработку <a href="#.pdf" title="" target="_blank">персональных данных</a></label>
+					</div>
 					<div class="bottom row">
 						<div class="captcha">
 							<img src="tmp/captcha.jpg" alt="" class="img-responsive" />
