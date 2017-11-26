@@ -52,9 +52,9 @@
 			width: 100%;
 			justify-content: center;
 			.actions_carousel{
-				width: @w;
 				margin-left: 15px;
 				margin-right: 15px;
+				width: @w;
 			}
 			&_item{
 				width: @w;
@@ -228,7 +228,11 @@
 					}
 
 					.price{
-						margin-left: 0;
+						background: @color2;
+						margin-left: -2rem;
+						padding-left: 1rem;
+						position: relative;
+						z-index: 9999;
 					}
 
 					.channels{
@@ -237,11 +241,7 @@
 					}
 
 					&:after{
-						.before;
-						border-top: 1px solid #dfe8f0;
-						left: 170px;
-						top: 33px;
-						width: 160px;
+						display: none;
 					}
 				}
 			}
@@ -252,13 +252,10 @@
 					margin-top: .5rem;
 				}
 			}
-			&_description{
-				&:after{
-					display: none;
-				}
-			}
 
 			.buttons{
+				padding-left: 0;
+				padding-right: 0;
 				&_wrapper{
 					// display: block;
 					.flex-wrap;
@@ -279,6 +276,16 @@
 						// order: 2;
 					}
 				}
+			}
+
+			&-twain{
+				.tarif_item_top:after{
+					.before;
+					border-top: 1px solid #dfe8f0;
+					left: 10px;
+					top: 90px;
+					width: 70%;
+				}				
 			}
 		}
 	}
@@ -513,8 +520,6 @@
 			padding-right: .5rem;
 		}
 	}
-
-
 }
 
 
@@ -723,19 +728,58 @@
 		}
 		&_top{
 			.params{
+				width: 100%;
 				&:after{
-					width: 70%;
+					width: 66%;
 				}
 			}
 		}
 		&_bottom span{
 			display: inline;
-			// white-space: nowrap;
 			&:last-child{
 				margin-right: 0;
 			}
 		}
 	}
+
+
+	.list_tarifs{
+		.tarif_item{
+			&_top{
+				.head{
+					.title-cat{
+						max-width: 100%;
+					}
+				}
+				&:after{
+					top: 90px;
+				}
+			}
+			&-twain	.tarif_item_top,
+			&_top{
+				&:after{
+					left: 50px;
+					width: 72%;
+				}
+			}
+		}
+	}
+
+	.card_tarifs{
+		.tarif_item{
+			&_top{
+				&:after{
+					left: 70px;
+					width: 38%;
+				}
+			}
+			&-twain	.tarif_item_top{
+				&:after{
+					width: 70%;
+				}
+			}
+		}
+	}	
 
 	.tarifs_page,
 	.providers_page,
@@ -818,12 +862,23 @@
 	}
 
 	// card provider
-	.card_tarifs .tarif_item_top .params .channels{
-		padding-left: 2rem;
-	}
-
-	.card_tarifs .tarif_item_top .params .price{
-		margin-left: 2rem;
+	.card_tarifs .tarif_item{
+		&_top{
+			.params {
+				width: 65%;
+				.channels{
+					padding-left: 1rem;
+					padding-right: 1rem;
+				}
+			}
+			&:after{
+				top: 44px;
+				width: 68%;
+			}
+		}
+		&-twain .tarif_item_top:after{
+			width: 68%;
+		}
 	}
 
 	.expert_reviews_info{
@@ -906,6 +961,7 @@
 	.connect{
 		margin-left: 22rem;
 	}
+
 }
 
 
@@ -986,6 +1042,31 @@
 	#addanswer .modal-dialog {
 		width: 600px;
 	}
+
+
+	.card_tarifs{
+		.tarif_item{
+			@w: 67%;
+			&_top{
+				.params{
+					.speed{
+						padding-right: 1rem;
+						margin-right: 1rem;
+					}
+				}
+				&:after{
+					width: @w;
+				}
+			}
+			&-twain{
+				.tarif_item_top{
+					&:after{
+						width: @w;
+					}
+				}
+			}
+		}
+	}
 }
 
 
@@ -1043,6 +1124,25 @@
 	}	
 	.result-check{
 		.font-size(2)
+	}
+
+
+	.card_tarifs{
+		.tarif_item{
+			@w: 65%;
+			&_top{
+				&:after{
+					width: @w;
+				}
+			}
+			&-twain{
+				.tarif_item_top{
+					&:after{
+						width: @w;
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -1143,6 +1243,13 @@
 
 	.connect{
 		margin-left: 19rem;
+	}
+}
+
+
+@media (max-width: 870px){
+	.card_tarifs .tarif_item_top .params{
+		width: 68%;
 	}
 }
 
@@ -1320,6 +1427,10 @@
 			}
 		}
 	}
+
+	.card_tarifs .tarif_item_top .params{
+		width: 71%;
+	}
 }
 
 @media (max-width: 835px){
@@ -1434,22 +1545,37 @@
 	}
 
 	// card provider
-	.card_tarifs .tarif_item_top{
-		display: block;
-		padding-left: .5rem;
-		padding-bottom: 1.2rem;
-		.head{
-			padding-bottom: .5rem;
-			.title-cat{
+	.card_tarifs .tarif_item{
+		@w: 59%;
+		&_description{
+			padding-right: 1.5rem;
+		}
+		&_top{
+			display: block;
+			padding-left: .5rem;
+			padding-bottom: 1.2rem;
+			.head{
+				padding-bottom: .5rem;
+				.title-cat{
+					max-width: 100%;
+					width: 100%;
+				}
+			}
+			.params{
+				padding-left: 0;
 				width: 100%;
-				max-width: 100%;
+			}
+			&:after{
+				width: @w;
+				top: 62px;
 			}
 		}
-		.params{
-			padding-left: 0;
+		&-twain{
+			.tarif_item_top:after{
+				width: @w;
+			}
 		}
 	}
-
 }
 
 
@@ -1591,6 +1717,15 @@
 						width: 55%;
 					}
 				}
+				&:after{
+					top: 96px;
+				}
+			}
+
+			&-twain{
+				.tarif_item_top:after{
+					top: 96px;
+				}
 			}
 
 			.buttons{
@@ -1630,15 +1765,29 @@
 	// card provider
 	.card_tarifs .tarif_item_top{
 		.params{
-			position: relative;
+			// position: relative;
 			.channels{
-				padding-right: 2rem;
+				// padding-right: 2rem;
 			}
 			&:after{
-				.before;
-				border-top: 1px solid @color22;
-				top: 32px;
-				width: 48%;
+				// .before;
+				// border-top: 1px solid @color22;
+				// top: 32px;
+				// width: 48%;
+			}
+		}
+	}
+
+	.card_tarifs .tarif_item{
+		@w: 56%;
+		&_top{
+			&:after{
+				width: @w;
+			}
+		}
+		&-twain{
+			.tarif_item_top:after{
+				width: @w;
 			}
 		}
 	}
@@ -2217,6 +2366,16 @@
 		left: 160px;
 	}
 
+
+	.card_tarifs .tarif_item_top{
+		padding-left: 0;
+		.params .speed{
+			padding-left: 0;
+		}
+	}
+
+
+
 	// card provider
 	.neck_card .graduate_info{
 		padding-left: 2rem;
@@ -2343,16 +2502,21 @@
 	}
 
 	.card_tarifs{
+		@w: 62%;
 		.tarif_item{
-			&_top .params{
-				.speed{
-					background: @color2;
-					padding-right: 1.5rem;
+			&_top{
+				.params{
+					.speed{
+						background: @color2;
+						padding-right: 1.5rem;
+					}
 				}
 				&:after{
-					left: 33%;
-					width: 61%;
+					width: @w;
 				}
+			}
+			&-twain .tarif_item_top:after{
+				width: @w;				
 			}
 		}
 
@@ -2360,7 +2524,7 @@
 			margin-left: 0;
 		}
 		.tarif_item_top .params:after{
-			width: 58%;
+			width: @w;
 		}
 	}
 
@@ -2376,6 +2540,13 @@
 		}
 		.tarif_box .head .ctitle{
 			.font-size(2);
+		}
+	}
+
+	.list_tarifs .tarif_item{
+		&_top:after,
+		&-twain .tarif_item_top:after{
+			top: 92px;
 		}
 	}
 }
@@ -2631,7 +2802,7 @@
 
 	// card provider
 	.card_tarifs .tarif_item_top .params .price{
-		width: 11rem;
+		// width: 11rem;
 	}	
 	
 	.card_tarifs .tarif_item_top .params .price_top .num{
@@ -2642,6 +2813,13 @@
 	.similar_tarifs .tarif_item .params:after{
 		margin-left: -45px;
 		width: 38%;
+	}
+
+	.card_tarifs .tarif_item{
+		&-twain .tarif_item_top:after,
+		&_top:after{
+			width: ~"calc(100% - 200px)";
+		}
 	}
 }
 
@@ -2778,13 +2956,15 @@
 		}
 	}
 
-	.tarif_box .params:after{
-		left: 49%;
+	.tarif_box{
+		.params:after{
+			left: 49%;
+		}
+		.head .ctitle{
+			.font-size(1.5)
+		}
 	}
 
-	.tarif_box .head .ctitle{
-		.font-size(1.5)
-	}
 
 	aside{
 		.rating_body .item .name{
@@ -3235,7 +3415,7 @@
 
 
 		.actions{
-			display: block;			
+			display: block;
 			@w: 100%;
 			.actions_carousel{
 				margin-bottom: 10px;
@@ -3767,6 +3947,109 @@
 }
 
 
+@media (max-width: 430px){
+	.card_tarifs .tarif_item_top .params .price{
+		width: 9rem;
+	}
+
+	.card_tarifs .tarif_item_top .params::after{
+		width: 58%;
+	}	
+
+
+	.card_tarifs,
+	.list_tarifs
+	{
+		.tarif_item{
+			&-twain .tarif_item_top:after,
+			&_top:after{
+				left: 60px;
+				width: ~"calc(100% - 155px)";
+			}
+			&_top{
+				.params{
+					.speed,
+					.channels{
+						display: block;
+						text-align: center;
+						p{
+							padding-left: 0;
+							&:before{
+								margin-left: -12px;
+								left: 50%;
+							}
+						}
+					}
+
+					.speed{
+						.num{
+							margin-top: .8rem;
+						}
+						p{
+							margin-top: 0;
+						}
+					}
+
+					.channels{
+						.num{
+							margin-top: 1rem;
+						}
+					}
+
+
+					.price_top{
+						.num{
+							.font-size(4);
+							line-height: 1;
+							margin-bottom: -4px;
+							overflow: visible;
+							float: none;
+							height: auto;
+							text-align: center;							
+						}
+						p{
+							position: relative;
+							z-index: 999;
+							float: none;
+							margin-top: 0;
+							padding-left: 0;
+							text-align: center;
+							&:before{
+								margin-left: -17px;
+								left: 50%;
+							}
+						}
+					}
+					.price_bottom{
+						float: none;
+						padding-top: 0;
+						padding-left: 0;
+						text-align: center;
+						position: static;
+					}
+
+					position: relative;
+					
+
+					&:after{
+						.before;
+						border-top: 1px solid #dfe8f0;
+						left: 0 !important;
+						margin-left: 0;
+						top: 29px;
+						width: ~"calc(100% - 100px)";
+					}		
+				}
+				&:after{
+					display: none !important;					
+				}
+			}
+		}
+	}
+
+}
+
+
 @media (max-width: 415px){
 	.rating-actions-filter .actions_item{
 		float: none;
@@ -3821,117 +4104,7 @@
 		}
 	}
 
-	// tarifs
-	.list_tarifs{
-		.tarif_item{
-			&_top{
-				.params{
-					&:after{
-						left: 120px;
-					}
-					.speed{
-						display: block;
-						text-align: center;
-						p{
-							margin-top: 0;
-							padding-left: 0;
-							&:before{
-								left: 50%;
-								margin-left: -12px;
-							}
-						}
-						&:after{
-							left: 110px;
-						}
-					}
-					.price{
-						&_top{
-							.num{
-								.font-size(4);
-								line-height: 1;
-								float: none;
-								margin-bottom: -4px;
-								overflow: visible;
-							}
-							p{
-								float: none;
-								margin-top: 0;
-								padding-left: 0;
-								position: relative;
-								text-align: center;
-								z-index: 999;
-								&:before{
-									left: 50%;
-									margin-left: -18px;
-								}
-							}
-						}
-						&_bottom{
-							position: static;
-						}
-					}
-				}
-			}
-		}
-	}
 
-	.card_tarifs .tarif_item_top .params{
-		.speed,
-		.channels{
-			display: block;
-			text-align: center;
-			p{
-				padding-left: 0;
-				&:before{
-					margin-left: -12px;
-					left: 50%;
-				}
-			}
-		}
-
-		.speed{
-			.num{
-				margin-top: .8rem;
-			}
-		}
-
-		.channels{
-			.num{
-				margin-top: 1rem;
-			}
-		}
-		.price_top{
-			.num{
-				float: none;
-				height: auto;				
-			}
-			p{
-				float: none;
-				margin-top: 0;
-				padding-left: 0;
-				text-align: center;
-				&:before{
-					margin-left: -17px;
-					left: 50%;
-				}
-			}
-		}
-		.price_bottom{
-			float: none;
-			position: static;
-			padding-top: 0;
-			text-align: center;
-		}
-	}
-
-
-	.card_tarifs .tarif_item_top .params .price{
-		width: 9rem;
-	}
-
-	.card_tarifs .tarif_item_top .params::after{
-		width: 58%;
-	}	
 
 	.card_tarif{
 		.services{
@@ -4152,25 +4325,7 @@
 	}
 
 	// tarifs
-	.list_tarifs{
-		.tarif_item{
-			&_top{
-				.params{
-					&:after{
-						left: 100px;
-						width: 55%;
-					}
-				}
-			}
-		}
-	}
 
-	.card_tarifs .tarif_item_top .params:after{
-		width: 55%;
-	}
-	.card_tarifs .tarif_item_top .params .price{
-		width: 8rem;
-	}
 
 	#add-opinion{
 		.modal-content{

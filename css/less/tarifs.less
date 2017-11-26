@@ -13,15 +13,9 @@
 		&_description{
 			flex: 1;
 			padding-left: 1.9rem;
-			padding-right: 2.2rem;
+			padding-right: 2rem;
 			position: relative;
-			&:after{
-				.before;
-				border-top: 1px solid #dfe8f0;
-				left: 170px;
-				top: 47px;
-				width: 260px;
-			}
+
 		}
 		&_top{
 			.flex;
@@ -30,6 +24,8 @@
 			padding-bottom: .7rem;
 			padding-top: .8rem;
 			min-height: 8.5rem;
+			position: relative;
+			
 			.head{
 				background-color: @color2;
 				height: auto;
@@ -51,7 +47,11 @@
 			}
 
 			.params{
+				background-color: @color2;
+				padding-left: 0;
 				padding-right: 0;
+				width: 360px;
+				// z-index: 999;
 				&:after{
 					display: none;
 				}
@@ -67,7 +67,8 @@
 					.flex-align-items(center);
 					.flex;
 					background-color: @color2;
-					padding-left: 1.6rem;
+					padding-left: 1.8rem;
+					padding-right: 2.6rem;
 					position: relative;
 					z-index: 99;
 					p{
@@ -81,14 +82,18 @@
 							top: 15px;
 							width: 25px;
 						}						
-					}					
+					}	
+					.num{
+						margin-left: 0;
+					}				
 				}
 
 				// channels
 				.channels{
 					.flex;
 					.flex-align-items(center);
-					padding-left: 3.5rem;
+					// padding-left: 2.7rem;
+					padding-left: 0;
 					padding-right: 0;
 					p{
 						padding-left: .8rem;
@@ -100,15 +105,18 @@
 
 				// price
 				.price{
-					margin-left: 2.5rem;
+					margin-left: .5rem;
 					padding-bottom: 1rem;
 					position: relative;
 					top: 8px;
+					&:before{
+						display: none;
+					}
 					&_top{
 						width: 100%;
 						.num{
 							float: left;
-							min-width: 65px;
+							min-width: 86px;
 							text-align: right;
 						}
 						p{
@@ -136,8 +144,17 @@
 						text-decoration: line-through;
 						width: 100%;
 						z-index: 999;
+						padding-left: 2rem;
 					}
 				}
+			}
+
+			&:after{
+				.before;
+				border-top: 1px solid #dfe8f0;
+				left: 170px;
+				top: 47px;
+				width: 130px;
 			}
 		}
 		&_bottom{
@@ -183,6 +200,12 @@
 				color: @color89;
 				.font-size(1.5);
 				.tdu;
+			}
+		}
+
+		&-twain{
+			.tarif_item_top:after{
+				width: 51%;
 			}
 		}
 	}
