@@ -699,9 +699,9 @@ $(document).ready(function(){
 			console.log($this.val());
 
 		if (isChecked) {
-			$('.card_tarifs_list article[data-tarif=' + $this.val() + ']').slideDown();
+			$('.card_tarifs_list article[data-tarif=' + $this.val() + ']').removeClass('hide');
 		} else {
-			$('.card_tarifs_list article[data-tarif=' + $this.val() + ']').slideUp();
+			$('.card_tarifs_list article[data-tarif=' + $this.val() + ']').addClass('hide');
 		}
 	});	
 
