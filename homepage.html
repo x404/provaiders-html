@@ -187,7 +187,16 @@
 						<a href="#" class="search-map-link btn-type-2 btn-sprite btn-sprite-balloon sec-btn" data-toggle="modal" data-target="#openmap" data-backdrop="true">На карте</a>
 					</div>
 					<div class="form">
-						<input type="text" value="" class="form-control" id="street" placeholder="Название улицы" />
+						<select data-placeholder="Название улицы" class="chosen-select form-control" id="street" tabindex="1">
+							<option value=""></option>
+							<option value="ул. Маерчака">ул. Маерчака</option>
+							<option value="ул. Матезалки">ул. Матезалки</option>
+							<option value="ул. Матросова">ул. Матросова</option>
+							<option value="ул. Карла Маркса ">ул. Карла Маркса </option>
+							<option value="ул. Дмитрия Мартынова">ул. Дмитрия Мартынова</option>
+							<option value="ул. Толстого">ул. Толстого</option>
+						</select>						
+						<!-- <input type="text" value="" class="form-control" id="street" placeholder="Название улицы" /> -->
 						<input type="text" value="" class="form-control" id="house" placeholder="Номер дома" />
 						<a href="#" class="submit btn btn-rounded">Проверить <span class="visible-sm">адрес</span></a>
 					</div>					
@@ -1614,8 +1623,20 @@ function init() {
 <script src="js/tmp.js"></script>
 <!-- =/temp JS -->
 
+
+
+<script src="js/chosen.jquery.js"></script>
+<link rel="stylesheet" property='stylesheet' href="css/chosen.css" />
+<link rel="stylesheet" property='stylesheet' href="js/docsupport/prism.css" />
+
+<script src="js/docsupport/prism.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/docsupport/init.js" type="text/javascript" charset="utf-8"></script>
+
+
+
 <script src="js/bootstrap-typeahead.min.js"></script>
 <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+
 
 <!-- =lightbox -->
 <script src="js/jquery.tosrus.min.all.js"></script>
