@@ -374,7 +374,8 @@ $(document).ready(function(){
 
 
 	// интерактивный поиск в полее ввода
-	$('#street, #check-street').typeahead({
+	// $('#street, #check-street').typeahead({
+	$('#check-street').typeahead({
 		items: 5, 
 		ajax: { 
 			url: '/address/list',
@@ -384,7 +385,8 @@ $(document).ready(function(){
 		}
 	});
 
-	$('#house, #check-house').typeahead({
+	// $('#house, #check-house').typeahead({
+	$('#check-house').typeahead({
 		items: 5, 
 		ajax: { 
 			url: '/house/list',
