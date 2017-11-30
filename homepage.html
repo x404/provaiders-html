@@ -1642,20 +1642,8 @@ function init() {
 <script src="js/tmp.js"></script>
 <!-- =/temp JS -->
 
-
-
-<script src="js/chosen.jquery.js"></script>
-<link rel="stylesheet" property='stylesheet' href="css/chosen.css" />
-<link rel="stylesheet" property='stylesheet' href="js/docsupport/prism.css" />
-
-<script src="js/docsupport/prism.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/docsupport/init.js" type="text/javascript" charset="utf-8"></script>
-
-
-
 <script src="js/bootstrap-typeahead.min.js"></script>
 <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-
 
 <!-- =lightbox -->
 <script src="js/jquery.tosrus.min.all.js"></script>
@@ -1665,7 +1653,16 @@ function init() {
 
 <script src="js/placeholders.min.js"></script>
 <script src="js/engine.js"></script>
-<!-- InstanceBeginEditable name="EditRegion5" --><!-- InstanceEndEditable --> 
+<!-- InstanceBeginEditable name="EditRegion5" -->
+<script src="js/chosen.jquery.js"></script>
+<link rel="stylesheet" property='stylesheet' href="css/chosen.css" />
+<link rel="stylesheet" property='stylesheet' href="js/docsupport/prism.css" />
+<script src="js/docsupport/prism.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/docsupport/init.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	$(".chosen-select").chosen({no_results_text: "Ничего не найдено"}); 	
+</script>
+<!-- InstanceEndEditable --> 
 <script src="js/modernizr.custom.js"></script>
 </body>
 <!-- InstanceEnd --></html>
