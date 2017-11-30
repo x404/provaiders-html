@@ -91,10 +91,8 @@
 		vertical-align: top;
 
 		&-active .chosen-single{
-			box-shadow:;
 			border: 1px solid @color9;
 			box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), inset 0px 0px 0 1px @color9;
-
 		}
 
 		.chosen-results{
@@ -104,6 +102,9 @@
 				padding-top: 1.2rem;
 				padding-bottom: 1.2rem;
 				padding-left: 2.4rem;
+				&.result-selected{
+					background-color: #e3eaf4;
+				}
 			}
 		}
 	}
@@ -130,10 +131,6 @@
 			font-size: 14px;
 		}
 	}
-
-
-
-
 
 
 	.submit{
