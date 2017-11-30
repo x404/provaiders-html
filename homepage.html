@@ -200,8 +200,8 @@
 							<option value="улица Варварка">улица Варварка</option>
 							<option value="Биржевая площадь">Биржевая площадь</option>
 						</select>
-						<!-- <input type="text" value="" class="form-control" id="street" placeholder="Название улицы" /> -->
 						<select data-placeholder="Номер дома" class="chosen-select form-control" id="house" tabindex="1">
+							<option value=""></option>
 							<option value="1">1</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
@@ -214,7 +214,6 @@
 							<option value="10">10</option>
 							<option value="11">11</option>
 						</select>	
-						<!-- <input type="text" value="" class="form-control" id="house" placeholder="Номер дома" /> -->
 						<a href="#" class="submit btn btn-rounded">Проверить <span class="visible-sm">адрес</span></a>
 					</div>					
 				</div>
@@ -1591,11 +1590,14 @@ function init() {
 				};
 			};
 
-			console.log(street);
-			console.log(house);
+			// console.log(street);
+			// console.log(house);
 
-			document.getElementById('street').value = street;
-			document.getElementById('house').value = house;
+			$('#street option[value="'+ street +'"]').prop("selected", true);
+			$('#house option[value="'+ house +'"]').prop("selected", true);
+			$('#street').trigger('chosen:updated');
+			$('#house').trigger('chosen:updated');
+
 			myPlacemark.properties
 				.set({
 					iconCaption: firstGeoObject.properties.get('name'),
