@@ -165,7 +165,7 @@ $(document).ready(function(){
 	});		
 
 	$('#actions1').owlCarousel({
-		loop:false,
+		loop:true,
 		nav:false,
 		dots: true,
 		items:1,
@@ -177,7 +177,7 @@ $(document).ready(function(){
 	});	
 
 	$('#actions2').owlCarousel({
-		loop:false,
+		loop:true,
 		nav:false,
 		dots: true,
 		items:1,
