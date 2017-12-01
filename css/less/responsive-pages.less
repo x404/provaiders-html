@@ -2756,11 +2756,22 @@
 			margin-right: 0;
 			margin-top: 1.4rem;
 		}
-		#street{
-			width: 100%;
-		}
-		#house{
-			width: 70%;
+
+		.check_address{
+			.form{
+				flex-wrap: wrap;
+				width: 100%;
+				.street{
+					margin-right: 0 !important;
+					margin-bottom: 1.4rem;
+					flex-basis: 100%;
+				}
+				.house{
+					margin-right: 0;
+					flex-basis: auto;
+					flex-grow: 1;
+				}
+			}
 		}
 		.submit{
 			margin-left: 3%;
@@ -3673,11 +3684,10 @@
 				content: "";
 				display: block;
 			}
+			.form{
+				display: block;				
+			}
 		}
-		#house{
-			width: 100%;
-		}
-
 		.submit{
 			margin-top: 1.5rem;
 			float: right;

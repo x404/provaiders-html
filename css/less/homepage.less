@@ -59,7 +59,19 @@
 			}
 
 			.form{
+				display: flex;
+				justify-content: space-between;
 				padding-top: .7rem;
+				.street{
+					flex-grow: 1;
+					margin-right: 2rem;
+				}
+				.house{
+					flex-basis: 17%;
+					margin-right: 2rem;
+				}
+
+
 			}
 		}
 	}
@@ -79,14 +91,13 @@
 		}
 	}
 	#street{
-		width: 60%;
+		width: 100%;
 	}
 	#house{
-		width: 17%;
+		width: 100%;
 	}
 
 	.chosen-container{
-		margin-right: 2rem;
 		font-size: 1.6rem;
 		vertical-align: top;
 
@@ -135,10 +146,11 @@
 
 	.submit{
 		.font-size(1.6);
-		width: 18%;
+		width: 170px;
 		text-align: center;
 		padding-left: 0;
 		padding-right: 0;
+		flex-shrink: 0;
 		&:focus{
 			&:after{
 				background-color: #0065b4;
