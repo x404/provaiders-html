@@ -50,6 +50,7 @@ __Используемые в проекте js плагины__
 * Всплывающие окна bootstrap modal[http://getbootstrap.com/javascript/#modals-methods](http://getbootstrap.com/javascript/#modals-methods)
 * Сообщение для устаревших браузеров Outdated Browser v1.1.3[https://github.com/burocratik/outdated-browser](https://github.com/burocratik/outdated-browser) [Демо](http://outdatedbrowser.com/ru)
 * Лайтбокс - touch, adaptive[http://tosrus.frebsite.nl/](http://tosrus.frebsite.nl/)
+* Выпадающие списки с поиском - [https://harvesthq.github.io/chosen/](https://harvesthq.github.io/chosen/)
 
 ---------------------------------------------------------
 
