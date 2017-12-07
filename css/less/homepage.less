@@ -101,7 +101,6 @@
 		font-size: 1.6rem;
 		vertical-align: top;
 		width: 100% !important;
-
 		&-active .chosen-single{
 			border: 1px solid @color9;
 			box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), inset 0px 0px 0 1px @color9;
@@ -264,15 +263,19 @@
 		padding-right: 40px;
 		flex-grow: 1;
 		.header{
+			display: flex;
 			.header-title-link;
 			padding-bottom: 1.7rem;
+			justify-content: space-between;
 			.title{
 				line-height: 1;
+				margin-right: 0;
 			}
 			.link{
 				float: right;
-				top: 1px;
 				padding-top: .8rem;
+				top: 1px;
+				white-space: nowrap;
 			}
 		}
 		.more{
@@ -303,7 +306,6 @@
 		}
 	}
 	.actions{
-		// width: 258px;
 		width: 28.9rem;
 		.owl-carousel{
 			.owl{
@@ -336,7 +338,6 @@
 			width: 289px;
 			height: 270px;
 			&:hover{
-				// .drop-shadow(0,0,20px, .4);
 				.pic img{
 					.scale(1.1);
 				}
@@ -607,8 +608,6 @@
 		text-transform: uppercase;
 	}
 	.link{
-		// line-height: 3.2rem;
-		
 		position: relative;
 		top: -7px;
 	}
