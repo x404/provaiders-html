@@ -238,6 +238,15 @@
 					.channels{
 						padding-left: 1rem;
 						padding-right: 1rem;
+						width: 118px;
+						&:after{
+							.before;
+							right: 0;
+							width: 5px;
+							top: 0;
+							height: 100%;
+							background: #fff;
+						}
 					}
 
 					&:after{
@@ -257,24 +266,10 @@
 				padding-left: 0;
 				padding-right: 0;
 				&_wrapper{
-					// display: block;
 					.flex-wrap;
+					.flex-justify-content(center);
 					width: 200px; 
 					text-align: center;
-					.flex-justify-content(center);
-					.btn-connect{
-						// order: 0;
-						// float: left;
-						// width: 100%;
-					}
-					.btn-compare{
-						// margin-top: 1rem;
-						// order: 1;
-					}
-					.btn-fav{
-						// margin-top: 1rem;
-						// order: 2;
-					}
 				}
 			}
 
@@ -285,7 +280,10 @@
 					left: 10px;
 					top: 90px;
 					width: 70%;
-				}				
+				}
+				.channels{
+					margin-left: 110px;
+				}			
 			}
 		}
 	}
@@ -721,30 +719,19 @@
 		}
 	}
 
-	.list_tarifs .tarif_item{
-		.buttons{
-			padding-left: 1rem;
-			padding-right: 1rem;
-		}
-		&_top{
-			.params{
-				width: 100%;
-				&:after{
-					width: 66%;
-				}
-			}
-		}
-		&_bottom span{
-			display: inline;
-			&:last-child{
-				margin-right: 0;
-			}
-		}
-	}
-
-
 	.list_tarifs{
 		.tarif_item{
+			.buttons{
+				padding-left: 1rem;
+				padding-right: 1rem;
+			}
+			&_bottom span{
+				display: inline;
+				&:last-child{
+					margin-right: 0;
+				}
+			}
+
 			&_top{
 				.head{
 					.title-cat{
@@ -754,12 +741,31 @@
 				&:after{
 					top: 90px;
 				}
+				.params{
+					width: 100%;
+					&:after{
+						width: 66%;
+					}
+				}
 			}
 			&-twain	.tarif_item_top,
 			&_top{
 				&:after{
-					left: 50px;
-					width: 72%;
+					left: 0;
+					// left: 50px;
+					width: ~"calc(72% + 50px)";
+				}
+			}
+
+			&-twain{
+				.channels{
+					left: 50%;
+					margin-left: -70px;
+					&:before{
+						top: 30px;
+						display: none;
+						
+					}
 				}
 			}
 		}
@@ -773,9 +779,11 @@
 					width: 38%;
 				}
 			}
-			&-twain	.tarif_item_top{
-				&:after{
-					width: 70%;
+			&-twain{
+				.tarif_item_top{
+					&:after{
+						width: 70%;
+					}
 				}
 			}
 		}
@@ -869,6 +877,7 @@
 				.channels{
 					padding-left: 1rem;
 					padding-right: 1rem;
+					width: 118px;
 				}
 			}
 			&:after{
@@ -876,8 +885,15 @@
 				width: 68%;
 			}
 		}
-		&-twain .tarif_item_top:after{
-			width: 68%;
+		&-twain .tarif_item_top{
+			.params .channels{
+				margin-left: ~"calc(50% - 62px)";
+				padding-right: 0;
+				width: 108px;
+			}
+			&:after{
+				width: 68%;
+			}
 		}
 	}
 
@@ -961,7 +977,6 @@
 	.connect{
 		margin-left: 22rem;
 	}
-
 }
 
 
@@ -1050,8 +1065,8 @@
 			&_top{
 				.params{
 					.speed{
-						padding-right: 1rem;
 						margin-right: 1rem;
+						padding-right: 1rem;
 					}
 				}
 				&:after{
@@ -1062,6 +1077,11 @@
 				.tarif_item_top{
 					&:after{
 						width: @w;
+					}
+					.params{
+						.channels{
+							margin-left: ~"calc(50% - 66px)";
+						}
 					}
 				}
 			}
@@ -1523,6 +1543,10 @@
 			}
 		}
 	}
+
+	.card_tarifs .tarif_item_top .params .price_top{
+		display: flex;
+	}
 }
 
 
@@ -1572,7 +1596,8 @@
 		}
 		&-twain{
 			.tarif_item_top:after{
-				width: @w;
+				width: 72%;
+				left: 5px;
 			}
 		}
 	}
@@ -1704,6 +1729,9 @@
 					}
 					.channels{
 						display: block;
+						width: auto;
+						text-align: center;
+						
 						p{
 							padding-left: 0;
 						}
@@ -1725,6 +1753,9 @@
 			&-twain{
 				.tarif_item_top:after{
 					top: 96px;
+				}
+				.channels{
+					margin-left: -44px;
 				}
 			}
 
@@ -1763,21 +1794,6 @@
 	}
 
 	// card provider
-	.card_tarifs .tarif_item_top{
-		.params{
-			// position: relative;
-			.channels{
-				// padding-right: 2rem;
-			}
-			&:after{
-				// .before;
-				// border-top: 1px solid @color22;
-				// top: 32px;
-				// width: 48%;
-			}
-		}
-	}
-
 	.card_tarifs .tarif_item{
 		@w: 56%;
 		&_top{
@@ -2008,7 +2024,6 @@
 		.flex;
 		.flex-wrap;
 		.box{
-			// flex-basis: 50%
 			width: 50%;
 		}
 		.visual{
@@ -2186,7 +2201,11 @@
 			padding-left: 106px;
 			width: 70%;
 		}
-	}	
+	}
+
+	.card_tarifs .tarif_item-twain .tarif_item_top .params .channels{
+		margin-left: ~"calc(50% - 63px)";
+	}
 }
 
 @media (max-width: 712px){
@@ -2378,6 +2397,9 @@
 	}
 
 
+	.card_tarifs .tarif_item-twain .tarif_item_top .params .channels{
+		margin-left: ~"calc(50% - 72px);"
+	}
 
 	// card provider
 	.neck_card .graduate_info{
@@ -2429,7 +2451,6 @@
 
 
 @media (max-width: 650px){
-
 	.rating-actions-filter .grid.right .filter_body .param_wrapper{
 		display: block;
 	}
@@ -2464,12 +2485,12 @@
 			.param_wrapper{
 				display: block;
 				.cell{
-					width: 100%;
 					margin-bottom: 1rem;
+					width: 100%;
 					.param{
 						border-bottom: 1px solid @color52;
-						padding-bottom: 3.5rem;
 						margin-bottom: 0;
+						padding-bottom: 3.5rem;
 					}
 				}
 				.param_title{
@@ -2556,6 +2577,10 @@
 		&-twain .tarif_item_top:after{
 			top: 92px;
 		}
+	}
+
+	.list_tarifs .tarif_item-twain .channels{
+		margin-left: -45px;
 	}
 }
 
@@ -2687,6 +2712,10 @@
 			}
 		}
 	}
+
+	.card_tarifs .tarif_item-twain .tarif_item_top .params .channels{
+		margin-left: ~"calc(50% - 70px)";
+	}
 }
 
 @media (max-width: 605px){
@@ -2762,7 +2791,6 @@
 		}
 		.form-control{
 			margin-right: 0;
-			// margin-top: 1.4rem;
 			margin-top: 0;
 			height: 3.5rem;
 		}
@@ -3217,7 +3245,11 @@
 			margin-left: 1.4rem;
 			padding-top: .6rem;
 		}
-	}	
+	}
+
+	.list_tarifs .tarif_item-twain .channels{
+		margin-left: -41px;
+	}
 }
 
 
@@ -3675,6 +3707,9 @@
 		}
 	}
 
+	.list_tarifs .tarif_item-twain .channels{
+		margin-left: -45px;
+	}
 
 	// partners
 	.partners{
@@ -3969,14 +4004,21 @@
 
 
 @media (max-width: 430px){
-	.card_tarifs .tarif_item_top .params .price{
-		width: 9rem;
+	.card_tarifs .tarif_item_top .params{
+		.channels{
+			width: auto;
+		}
+		.price{
+			width: 9rem;
+		}
+		.price_top{
+			display: block;
+		}
+
+		&:after{
+			width: 58%;			
+		}
 	}
-
-	.card_tarifs .tarif_item_top .params::after{
-		width: 58%;
-	}	
-
 
 	.card_tarifs,
 	.list_tarifs
@@ -4068,6 +4110,18 @@
 		}
 	}
 
+	.list_tarifs .tarif_item-twain .channels{
+		margin-left: -42px;
+	}
+
+
+	.card_tarifs .tarif_item-twain .tarif_item_top .params .channels{
+		// margin-left: ~"calc(50% - 72px);"
+		.num{
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
 }
 
 
@@ -4326,6 +4380,10 @@
 		.container{
 			padding-top: 2.5rem;
 		}
+	}
+
+	.list_tarifs .tarif_item-twain .channels{
+		margin-left: -41px;
 	}
 }
 
@@ -4736,4 +4794,7 @@
 		display: block;
 	}
 
+	.list_tarifs .tarif_item-twain .channels{
+		margin-left: -42px;
+	}
 }

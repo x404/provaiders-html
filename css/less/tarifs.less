@@ -94,13 +94,17 @@
 					.flex-align-items(center);
 					// padding-left: 2.7rem;
 					padding-left: 0;
-					padding-right: 0;
+					padding-right: 5px;
+					flex-shrink: 0;
+					width: 98px;
 					p{
 						padding-left: .8rem;
 					}
 					.num{
+						flex-shrink: 0;
 						height: 42px;
 					}
+
 				}
 
 				// price
@@ -207,8 +211,24 @@
 			.tarif_item_top:after{
 				width: 51%;
 			}
+
+			.channels{
+				margin-left: 129px;
+				&:before{
+					.before;
+					top: 32px;
+					left: -30px;
+					width: 30px;
+					border-top: 1px solid #fff;
+				}
+			}
 		}
 	}
+}
+
+
+.card_tarifs .tarif_item-twain .tarif_item_top .params .channels{
+	margin-left: 127px;
 }
 
 .tarifs_page,
