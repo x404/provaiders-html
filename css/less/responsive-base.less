@@ -372,9 +372,6 @@
 }
 
 @media (max-width: 810px){
-	.top_menu{
-		// width: 50%;
-	}
 	header.header nav ul>li:nth-child(1), header.header nav ul>li:nth-child(2){
 		width: 40%;
 	}
@@ -412,6 +409,7 @@
 			display: none;
 		}
 		&_social{
+			display: block;
 			text-align: left;
 		}
 		&_support{
@@ -1083,15 +1081,6 @@
 @media (max-width: 345px){
 	header.header .logo{
 		width: 24.5rem;
-		&_link{
-			// .font-size(1.8);
-			// padding-left: 36px;
-			&:before{
-				// height: 31px;
-				// top: -4px;
-				// width: 31px;
-			}
-		}
 	}
 
 	.city-choose-popup{
@@ -1104,6 +1093,25 @@
 @media (max-width: 340px){
 	header.header .city-select-link{
 		width: 6rem;
+	}
+
+	.top{
+		.container{
+			height: auto;			
+			display: block;
+			text-align: center;			
+			padding: 1rem 0;
+		}
+		&_social,
+		&_support{
+			text-align: center;
+		}
+		&_menu{
+			width: 100%;
+		}
+		&_support{
+			margin-top: 1rem;
+		}
 	}
 }
 
